@@ -1,0 +1,1120 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="这是 Bowling 的笔记本">
+      
+      
+        <meta name="author" content="Bowling">
+      
+      
+        <link rel="canonical" href="http://note.bowling233.top/WebPage/React%E5%9F%BA%E7%A1%80/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>React Basic - Bowling's TechStack</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#react-basic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Bowling&#39;s TechStack" class="md-header__button md-logo" aria-label="Bowling's TechStack" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bowling's TechStack
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              React Basic
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Tiandians/TechStack" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TechStack
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bowling&#39;s TechStack" class="md-nav__button md-logo" aria-label="Bowling's TechStack" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Bowling's TechStack
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Tiandians/TechStack" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TechStack
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        TechStack
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hello/" class="md-nav__link">
+        Hello
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misl/" class="md-nav__link">
+        杂项
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          BlogSetup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BlogSetup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          BlogSetup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BlogSetup/GithubPages/" class="md-nav__link">
+        GitHub Pages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BlogSetup/Mkdocs/" class="md-nav__link">
+        MkDocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BlogSetup/%E5%9F%9F%E5%90%8D%E5%92%8CDNS/" class="md-nav__link">
+        域名和 DNS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          WebPage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WebPage" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          WebPage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        CSS 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        CSS 进阶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        HTML 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HTML%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        HTML 进阶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          React Basic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        React Basic
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#props-and-states" class="md-nav__link">
+    Props and States
+  </a>
+  
+    <nav class="md-nav" aria-label="Props and States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passing-data-through-props" class="md-nav__link">
+    Passing Data Through Props
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-state" class="md-nav__link">
+    Use state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifting-state-up" class="md-nav__link">
+    Lifting State Up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immutability-is-important" class="md-nav__link">
+    Immutability Is Important
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-components" class="md-nav__link">
+    Function Components
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          WebServer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WebServer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          WebServer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebServer/Web%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2/" class="md-nav__link">
+        Service Deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          服务器运维
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="服务器运维" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          服务器运维
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebServer/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/%E9%98%B2%E7%81%AB%E5%A2%99/" class="md-nav__link">
+        MkDocs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          环境配置
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="环境配置" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          环境配置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebServer/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WebServer/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/PHP/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#props-and-states" class="md-nav__link">
+    Props and States
+  </a>
+  
+    <nav class="md-nav" aria-label="Props and States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passing-data-through-props" class="md-nav__link">
+    Passing Data Through Props
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-state" class="md-nav__link">
+    Use state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifting-state-up" class="md-nav__link">
+    Lifting State Up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immutability-is-important" class="md-nav__link">
+    Immutability Is Important
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-components" class="md-nav__link">
+    Function Components
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/Tiandians/TechStack/blob/master/docs/WebPage/React基础.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="react-basic">React Basic</h1>
+<blockquote>
+<p>Contents are from <a href="https://reactjs.org/tutorial/tutorial.html#setup-option-2-local-development-environment">Tutorial: Intro to React</a></p>
+</blockquote>
+<div class="toc">
+<ul>
+<li><a href="#react-basic">React Basic</a><ul>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#props-and-states">Props and States</a><ul>
+<li><a href="#passing-data-through-props">Passing Data Through Props</a></li>
+<li><a href="#use-state">Use state</a></li>
+<li><a href="#lifting-state-up">Lifting State Up</a></li>
+<li><a href="#immutability-is-important">Immutability Is Important</a></li>
+<li><a href="#function-components">Function Components</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>
+<p>Install <code>Node.js</code></p>
+</li>
+<li>
+<p>run the command, this will create a folder <code>my-app</code> under your working directory:</p>
+</li>
+</ul>
+<p><code>bash
+  npx create-react-app my-app</code></p>
+<ul>
+<li>Inside the folder, you can run <code>npm start</code> to view the compiled website.</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>
+<p>React is a declarative, efficient, and flexible <strong>JavaScript library for building user interfaces</strong>. It lets you compose complex UIs from small and isolated pieces of code called “<strong>components</strong>”.</p>
+</li>
+<li>
+<p>We use <strong>components</strong> to tell React what we want to see on the screen. When our data changes, React will efficiently update and re-render our components.</p>
+</li>
+<li>
+<p>A component takes in parameters, called <code>props</code> (short for “properties”), and returns a hierarchy of views to display via the <code>render</code> method.</p>
+</li>
+<li>
+<p>The <code>render</code> method returns a <em>description</em> of what you want to see on the screen. React takes the description and displays the result. In particular, <code>render</code> returns a <strong>React element</strong>, which is a lightweight description of what to render. Most React developers use a special syntax called “JSX” which makes these structures easier to write. The <code>&lt;div /&gt;</code> syntax is transformed at build time to <code>React.createElement('div')</code></p>
+<ul>
+<li>You can put <em>any</em> JavaScript expressions within braces inside JSX.</li>
+</ul>
+<blockquote>
+<p><strong>NOTE: WITHIN BRACES</strong></p>
+<p>Remember what we've learnt in MIT Web Crush Course:</p>
+<ul>
+<li><code>()</code> to write HTML inside JavaScript</li>
+<li><code>{}</code> to come back to JavaScript</li>
+</ul>
+</blockquote>
+<ul>
+<li>Each React element is a JavaScript object that you can store in a variable or pass around in your program.</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>```react
+  class ShoppingList extends React.Component {
+    render() {
+      return (
+        <div className="shopping-list">
+          <h1>Shopping List for {this.props.name}</h1>
+          <ul>
+            <li>Instagram</li>
+            <li>WhatsApp</li>
+            <li>Oculus</li>
+          </ul>
+        </div>
+      );
+    }
+  }</p>
+<p>// Example usage: <ShoppingList name="Mark" />
+  // The example above is equivalent to:
+  return React.createElement('div', {className: 'shopping-list'},
+    React.createElement('h1', /<em> ... h1 children ... </em>/),
+    React.createElement('ul', /<em> ... ul children ... </em>/)
+  );
+  ```</p>
+<h2 id="props-and-states">Props and States</h2>
+<h3 id="passing-data-through-props">Passing Data Through Props</h3>
+<pre><code class="language-react">class Board extends React.Component {
+  renderSquare(i) {
+    return &lt;Square value={i} /&gt;;//NOTE HERE
+  }
+}
+
+class Square extends React.Component {
+  render() {
+    return (
+      &lt;button className=&quot;square&quot;&gt;
+        {this.props.value}//NOTE HERE
+      &lt;/button&gt;
+    );
+  }
+}
+</code></pre>
+<ul>
+<li>Also you can pass functions with <code>props={()=&gt; function()}</code> to pass <code>function</code> as the <code>props</code> prop.</li>
+</ul>
+<blockquote>
+<p><strong>NOTICE</strong></p>
+<p>Do not write <code>props={function()}</code>. <a href="https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/">Here</a> is the reason.</p>
+</blockquote>
+<h3 id="use-state">Use state</h3>
+<ul>
+<li>React components can have state by setting <code>this.state</code> in their <strong>constructors</strong>.</li>
+<li><code>this.state</code> should be considered as private to a React component that it’s defined in.</li>
+<li>By calling <code>this.setState</code> from an <code>onClick</code> handler in the Square’s <code>render</code> method, we tell React to <strong>re-render that Square</strong> whenever its <code>&lt;button&gt;</code> is clicked.</li>
+</ul>
+<pre><code class="language-react">class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+ }
+  render() {
+    return (
+      &lt;button
+        className=&quot;square&quot;
+        onClick={() =&gt; this.setState({value: 'X'})}
+      &gt;
+        {this.state.value}
+      &lt;/button&gt;
+    );
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>In <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">JavaScript classes</a>, you need to always call <code>super</code> when defining the constructor of a subclass. All React component classes that have a <code>constructor</code> should start with a <code>super(props)</code> call.</p>
+<p>A bit like the C++ classes, uh-huh?</p>
+</blockquote>
+<h3 id="lifting-state-up">Lifting State Up</h3>
+<ul>
+<li>To collect data from <strong>multiple children</strong>, or to have two child components <strong>communicate with each other</strong>, you need to declare the <strong>shared state</strong> in their parent component instead. The parent component can pass the state back down to the children by using props; this keeps the child components in sync with each other and with the parent component.</li>
+</ul>
+<p>The Board's method will be changed to:</p>
+<pre><code class="language-react">renderSquare(i) {
+  return &lt;Square value={this.state.squares[i]} /&gt;;//pass state as props
+}
+</code></pre>
+<blockquote>
+<p>REMEMBER state is considered to be <strong>private to a component that defines it</strong>, we cannot update the Board’s state directly from Square.</p>
+</blockquote>
+<ul>
+<li>Instead, we’ll <strong>pass down a function</strong> from the Board to the Square, and we’ll have Square call that function when a square is clicked. </li>
+</ul>
+<pre><code class="language-react">class Square extends React.Component {//...
+      &lt;button
+        className=&quot;square&quot;
+        onClick={() =&gt; this.props.onClick()}&gt;//NOTICE how props function is used
+      //...
+}
+
+class Board extends React.Component {
+    //...
+  handleClick(i) {
+    const squares = this.state.squares.slice();//**NOTICE**
+    squares[i] = 'X';
+    this.setState({squares: squares});
+  } 
+  renderSquare(i) {
+    return (
+      &lt;Square
+        value={this.state.squares[i]}
+        onClick={() =&gt; this.handleClick(i)}/&gt;//NOTICE
+    );
+  }
+  //...
+}  
+</code></pre>
+<blockquote>
+<p>When a Square is clicked, the <code>onClick</code> function provided by the Board is called. Here’s a review of how this is achieved:</p>
+<ol>
+<li>The <code>onClick</code> prop on the built-in DOM <code>&lt;button&gt;</code> component tells React to set up a click event listener.</li>
+<li>When the button is clicked, React will call the <code>onClick</code> event handler that is defined in Square’s <code>render()</code> method.</li>
+<li>This event handler calls <code>this.props.onClick()</code>. The Square’s <code>onClick</code> prop was specified by the Board.</li>
+<li>Since the Board passed <code>onClick={() =&gt; this.handleClick(i)}</code> to Square, the Square calls the Board’s <code>handleClick(i)</code> when clicked.</li>
+<li>We have not defined the <code>handleClick()</code> method yet, so our code crashes. If you click a square now, you should see a red error screen saying something like “this.handleClick is not a function”.</li>
+</ol>
+<blockquote>
+<p>Note</p>
+<p>The DOM <code>&lt;button&gt;</code> element’s <code>onClick</code> attribute has a special meaning to React because it is a built-in component. For custom components like Square, the naming is up to you. We could give any name to the Square’s <code>onClick</code> prop or Board’s <code>handleClick</code> method, and the code would work the same. In React, it’s conventional to use <code>on[Event]</code> names for props which represent events and <code>handle[Event]</code> for the methods which handle the events.</p>
+</blockquote>
+</blockquote>
+<h3 id="immutability-is-important">Immutability Is Important</h3>
+<p>There are generally <strong>two approaches to changing data</strong>. The first approach is to <em>mutate</em> the data by directly changing the data’s values. The second approach is to replace the data with a new copy which has the desired changes.</p>
+<ul>
+<li>Data Change with Mutation</li>
+</ul>
+<pre><code>var player = {score: 1, name: 'Jeff'};
+player.score = 2;
+// Now player is {score: 2, name: 'Jeff'}
+</code></pre>
+<ul>
+<li>Data Change without Mutation</li>
+</ul>
+<pre><code>var player = {score: 1, name: 'Jeff'};
+
+var newPlayer = Object.assign({}, player, {score: 2});
+// Now player is unchanged, but newPlayer is {score: 2, name: 'Jeff'}
+
+// Or if you are using object spread syntax, you can write:
+// var newPlayer = {...player, score: 2};
+</code></pre>
+<p>The end result is the same but by not mutating (or changing the underlying data) directly, we gain several benefits described below.</p>
+<ul>
+<li>Complex Features Become Simple</li>
+</ul>
+<p>Immutability makes complex features much easier to implement. Later in this tutorial, we will implement a “time travel” feature that allows us to review the tic-tac-toe game’s history and “jump back” to previous moves. This functionality isn’t specific to games — an ability to <strong>undo and redo certain actions</strong> is a common requirement in applications. Avoiding direct data mutation lets us <strong>keep previous versions</strong> of the game’s history intact, and reuse them later.</p>
+<ul>
+<li>Detecting Changes</li>
+</ul>
+<p>Detecting changes in mutable objects is difficult because they are modified directly. This detection requires the mutable object to be compared to previous copies of itself and the entire object tree to be traversed.</p>
+<p>Detecting changes in immutable objects is considerably easier. If the immutable object that is being referenced is different than the previous one, then the object has changed.</p>
+<ul>
+<li>Determining When to Re-Render in React</li>
+</ul>
+<p>The main benefit of immutability is that it helps you build <em>pure components</em> in React. Immutable data can <strong>easily determine if changes have been made</strong>, which helps to determine when a component requires re-rendering.</p>
+<p>You can learn more about <code>shouldComponentUpdate()</code> and how you can build <em>pure components</em> by reading <a href="https://reactjs.org/docs/optimizing-performance.html#examples">Optimizing Performance</a>.</p>
+<h3 id="function-components">Function Components</h3>
+<ul>
+<li><strong>function components</strong> are a simpler way to write components that only contain a <code>render</code> method and don’t have their own state.</li>
+<li>Instead of defining a class which extends <code>React.Component</code>, we can write a function that takes <code>props</code> as input and returns what should be rendered.</li>
+<li>Function components are <strong>less tedious to write</strong> than classes, and many components can be expressed this way.</li>
+</ul>
+<pre><code class="language-react">function Square(props) {
+  return (
+    &lt;button className=&quot;square&quot; onClick={props.onClick}&gt;
+      {props.value}
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<blockquote>
+<p>NOTE:</p>
+<ul>
+<li>
+<p><code>this.props</code> changed to <code>props</code></p>
+</li>
+<li>
+<p>also changed <code>onClick={() =&gt; this.props.onClick()}</code> to a shorter <code>onClick={props.onClick}</code> (note the lack of parentheses on <em>both</em> sides).</p>
+</li>
+</ul>
+</blockquote>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../HTML%E8%BF%9B%E9%98%B6/" class="md-footer__link md-footer__link--prev" aria-label="Previous: HTML 进阶" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              HTML 进阶
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../WebServer/Web%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2/" class="md-footer__link md-footer__link--next" aria-label="Next: Service Deployment" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Service Deployment
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Bowling
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
