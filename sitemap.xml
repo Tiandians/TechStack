@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://note.bowling233.top/links/</loc>
+         <lastmod>2022-12-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://note.bowling233.top/misc/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
@@ -21,12 +26,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/theirNotebook/</loc>
-         <lastmod>2022-12-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://note.bowling233.top/Basic/Markdown/</loc>
+         <loc>http://note.bowling233.top/BlogSetup/Domain_and_DNS/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -36,52 +36,52 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/BlogSetup/%E4%BB%A3%E7%90%86/</loc>
+         <loc>http://note.bowling233.top/BlogSetup/Proxy/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/BlogSetup/%E5%9F%9F%E5%90%8D%E5%92%8CDNS/</loc>
+         <loc>http://note.bowling233.top/basic/Markdown/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/WebPage/CSS%E5%9F%BA%E7%A1%80/</loc>
+         <loc>http://note.bowling233.top/webdev/webpage/CSSAdvanced/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/WebPage/CSS%E8%BF%9B%E9%98%B6/</loc>
+         <loc>http://note.bowling233.top/webdev/webpage/CSSBasic/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/WebPage/HTML%E5%9F%BA%E7%A1%80/</loc>
+         <loc>http://note.bowling233.top/webdev/webpage/HTMLAdvanced/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/WebPage/HTML%E8%BF%9B%E9%98%B6/</loc>
+         <loc>http://note.bowling233.top/webdev/webpage/HTMLBasic/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/WebPage/React%E5%9F%BA%E7%A1%80/</loc>
+         <loc>http://note.bowling233.top/webdev/webpage/ReactBasic/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/WebServer/Web%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2/</loc>
+         <loc>http://note.bowling233.top/webdev/webserver/Docker/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/WebServer/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Docker/</loc>
+         <loc>http://note.bowling233.top/webdev/webserver/PHP/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/WebServer/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/PHP/</loc>
+         <loc>http://note.bowling233.top/webdev/webserver/WebServerDeploy/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
