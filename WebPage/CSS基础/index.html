@@ -55,12 +55,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,7 +112,64 @@
       </div>
     </div>
     
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
     
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
     
       <div class="md-header__source">
@@ -193,22 +254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Others/" class="md-nav__link">
-        他人的笔记
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../misl/" class="md-nav__link">
+      <a href="../../misc/" class="md-nav__link">
         杂项
       </a>
     </li>
@@ -237,22 +283,100 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../test/" class="md-nav__link">
+        Test
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../theirNotebook/" class="md-nav__link">
+        他人的笔记
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_6">
+          Basic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basic" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Basic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Basic/Markdown/" class="md-nav__link">
+        Markdown 生态
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
           BlogSetup
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="BlogSetup" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           BlogSetup
         </label>
@@ -266,20 +390,6 @@
     <li class="md-nav__item">
       <a href="../../BlogSetup/GithubPages/" class="md-nav__link">
         GitHub Pages
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../BlogSetup/Mkdocs/" class="md-nav__link">
-        MkDocs
       </a>
     </li>
   
@@ -333,18 +443,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_8">
           WebPage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="WebPage" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           WebPage
         </label>
@@ -649,18 +759,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+        <label class="md-nav__link" for="__nav_9">
           WebServer
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="WebServer" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           WebServer
         </label>
@@ -689,65 +799,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7_2">
-          服务器运维
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="服务器运维" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_2">
-          <span class="md-nav__icon md-icon"></span>
-          服务器运维
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../WebServer/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/%E9%98%B2%E7%81%AB%E5%A2%99/" class="md-nav__link">
-        MkDocs
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7_3">
+        <label class="md-nav__link" for="__nav_9_2">
           环境配置
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="环境配置" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_3">
+        <label class="md-nav__title" for="__nav_9_2">
           <span class="md-nav__icon md-icon"></span>
           环境配置
         </label>
@@ -1021,64 +1084,31 @@
   </a>
 
 
-<h1 id="css">CSS 基础</h1>
+<h1 id="css">CSS 基础<a class="headerlink" href="#css" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>大部分内容来自《Head First HTML》</p>
-<p>CSS <a href="https://jigsaw.w3.org/css-validator">验证器</a></p>
 </blockquote>
-<div class="toc">
 <ul>
-<li><a href="#css">CSS 基础</a><ul>
-<li><a href="#_1">概念性知识</a><ul>
-<li><a href="#html">与 HTML 相关的操作</a></li>
-<li><a href="#_2">内置规则</a></li>
-<li><a href="#_3">代码</a></li>
-<li><a href="#_4">选择器</a></li>
-<li><a href="#_5">继承</a></li>
-<li><a href="#_6">总结：如何知道你的元素应用了什么规则？</a></li>
-<li><a href="#_7">层叠</a></li>
+<li><a href="https://jigsaw.w3.org/css-validator">CSS 验证器</a></li>
 </ul>
-</li>
-<li><a href="#_8">网页设计知识</a><ul>
-<li><a href="#_9">字体</a></li>
-<li><a href="#_10">颜色</a></li>
-<li><a href="#_11">大小</a></li>
-</ul>
-</li>
-<li><a href="#_12">元素定位</a><ul>
-<li><a href="#_13">流与元素定位</a></li>
-</ul>
-</li>
-<li><a href="#_14">样式速查</a><ul>
-<li><a href="#_15">杂的</a></li>
-<li><a href="#_16">字体</a></li>
-<li><a href="#_17">文本</a></li>
-<li><a href="#_18">列表</a></li>
-<li><a href="#_19">盒模型</a></li>
-<li><a href="#_20">表格</a></li>
-<li><a href="#_21">列表</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="_1">概念性知识</h2>
-<h3 id="html">与 HTML 相关的操作</h3>
+<h2 id="_1">概念性知识<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="html">与 HTML 相关的操作<a class="headerlink" href="#html" title="Permanent link">&para;</a></h3>
 <ul>
 <li>在 HTML 内插入 CSS：将 CSS 放置在 HTML <code>&lt;head&gt;</code> 的 <code>&lt;style&gt;</code> 标签中。</li>
-<li>在 HTML 中链入 CSS 文件：<code>&lt;link rel="stylesheet" href="xx.css"&gt;</code>，<code>type="text/css"</code> 在新的 HTML 标准中不再必要。</li>
 <li>
-<p><code>media="screen and (max-device-width: 480px)"</code> media 属性允许指定应用该样式表的设备类型。</p>
+<p>在 HTML 中链入 CSS 文件：<code>&lt;link rel="stylesheet" href="xx.css"&gt;</code>，<code>type="text/css"</code> 在新的 HTML 标准中不再必要。</p>
 <ul>
-<li>设备可以是：<code>print</code>, <code>min-device-width</code>, <code>orientation(landscape, portrait)</code>, <code>max-width</code></li>
-</ul>
+<li><code>media="screen and (max-device-width: 480px)"</code> media 属性允许指定应用该样式表的设备类型。</li>
+<li>
+<p>设备可以是：<code>print</code>, <code>min-device-width</code>, <code>orientation(landscape, portrait)</code>, <code>max-width</code></p>
 </li>
 <li>
-<p>为了<strong>避免 CSS 文件过于庞大</strong>，建议使用 <code>&lt;link&gt;</code> 指定不同的设备样式表。</p>
+<p>为了 <strong>避免 CSS 文件过于庞大</strong>，建议使用 <code>&lt;link&gt;</code> 指定不同的设备样式表。</p>
 </li>
 </ul>
-<h3 id="_2">内置规则</h3>
+</li>
+</ul>
+<h3 id="_2">内置规则<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><code>@import</code> 允许导入其他 CSS 文件</p>
@@ -1087,13 +1117,13 @@
 <p><code>@media</code> 创建特定于某些媒体类型的 CSS （如桌面/手机），查询方式和 <code>&lt;link&gt;</code> 标签相同。</p>
 </li>
 </ul>
-<p><code>css
-  @media screen and (min-device-width: 481px) {
-      #guarantee {
-          /* rules */
-      }
-  }</code></p>
-<h3 id="_3">代码</h3>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">min-device-width</span><span class="o">:</span><span class="w"> </span><span class="nt">481px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">#</span><span class="nn">guarantee</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c">/* rules */</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="_3">代码<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>注释：<code>/*</code> 和 <code>*/</code> 之间。</li>
 </ul>
@@ -1103,14 +1133,14 @@
 <li>设置规则</li>
 <li>为元素加上类</li>
 </ol>
-<h3 id="_4">选择器</h3>
-<pre><code class="language-css">h1, h2 { }
-h1.thisClass {}
-.thisClass {}
-#thisID {}
-parent child {}
-a:link {}
-</code></pre>
+<h3 id="_4">选择器<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="o">,</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="nt">h1</span><span class="p">.</span><span class="nc">thisClass</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">.</span><span class="nc">thisClass</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">#</span><span class="nn">thisID</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="nt">parent</span><span class="w"> </span><span class="nt">child</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">link</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
 <blockquote>
 <p>为什么会使用 <code>p#id</code> ？</p>
 <p>在一组复杂的页面中，id 可能分配给不同元素。</p>
@@ -1120,29 +1150,33 @@ a:link {}
 <li><code>,</code> 分隔选择器</li>
 <li><code>.</code> 表示 class</li>
 <li><code>#</code> 表示 id</li>
-<li><code></code> 表示子孙选择器。父元素可以是元素/id</li>
+<li><code></code> 表示子孙选择器。父元素可以是元素/id<ul>
 <li>这将选择所有指定的子孙元素，不管嵌套得多深</li>
 <li><code>&gt;</code> 选择直接孩子</li>
 <li>更复杂的条件 <code>#elixirs blockquote h2</code></li>
-<li><code>:</code> 表示伪类（元素状态）（请保证冒号前后没有空格）</li>
+</ul>
+</li>
+<li><code>:</code> 表示伪类（元素状态）（请保证冒号前后没有空格）<ul>
 <li><code>&lt;a&gt;</code> : <code>link</code> <code>hover</code> <code>visited</code> <code>focus</code> <code>active</code></li>
 <li>通用伪类（Pseudo-class）：<code>first-child</code> <code>last-child</code></li>
 </ul>
-<h3 id="_5">继承</h3>
+</li>
+</ul>
+<h3 id="_5">继承<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>不是所有样式都能继承</li>
 <li>用树状结构来理解继承</li>
 <li>覆盖继承：更特定的规则</li>
 </ul>
-<h3 id="_6">总结：如何知道你的元素应用了什么规则？</h3>
+<h3 id="_6">总结：如何知道你的元素应用了什么规则？<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ol>
-<li>有没有某个选择器<strong>直接选择</strong>了这个元素？</li>
-<li>查看<strong>父元素</strong>，向上追溯整个继承体系</li>
+<li>有没有某个选择器 <strong>直接选择</strong> 了这个元素？</li>
+<li>查看 <strong>父元素</strong> ，向上追溯整个继承体系</li>
 <li>默认值</li>
 </ol>
 <p>在多个选择器中，更特定的胜出：元素 &lt; 类 &lt; 元素+类</p>
 <p>如果出现同级，最后的规则胜出。</p>
-<h3 id="_7">层叠</h3>
+<h3 id="_7">层叠<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>一些浏览器允许用户创建自己的样式：在属性声明的最后加上 <code>!important</code> 就能覆盖样式</p>
 <p>浏览器如何找到一个元素的属性？</p>
 <ol>
@@ -1170,11 +1204,11 @@ a:link {}
 <ol>
 <li>冲突规则：按在各自样式表中出现顺序排序</li>
 </ol>
-<h2 id="_8">网页设计知识</h2>
-<h3 id="_9">字体</h3>
+<h2 id="_8">网页设计知识<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">字体<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>[[#样式速查#字体]]</p>
 <ul>
-<li><strong>无衬线</strong>字体在在计算机上更容易阅读：<code>sans-serif</code></li>
+<li><strong>无衬线</strong> 字体在在计算机上更容易阅读：<code>sans-serif</code></li>
 </ul>
 <p>字体格式：</p>
 <ul>
@@ -1183,81 +1217,85 @@ a:link {}
 <li>Web 开放字体：<code>.woff</code></li>
 </ul>
 <p>在 CSS 中增加 <code>@font-face</code> 规则，置于 <code>body</code> 规则之上</p>
-<pre><code class="language-css">@font-face {
-    font-family: &quot;xxx&quot;;/*为该字体指定名称*/
-    src: url(&quot;http://xx.woff&quot;),
-        url (&quot;http://xx.ttf&quot;);/*浏览器可能支持不同种的字体*/
-}
-</code></pre>
-<h3 id="_10">颜色</h3>
-<p>Web 颜色由<strong>红、蓝、绿</strong>构成。</p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">font-face</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;xxx&quot;</span><span class="o">;</span><span class="c">/*为该字体指定名称*/</span><span class="w"></span>
+<span class="w">    </span><span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s2">&quot;http://xx.woff&quot;</span><span class="o">),</span><span class="w"></span>
+<span class="w">        </span><span class="nt">url</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;http://xx.ttf&quot;</span><span class="o">);</span><span class="c">/*浏览器可能支持不同种的字体*/</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="_10">颜色<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>Web 颜色由 <strong>红、蓝、绿</strong> 构成。</p>
 <ul>
 <li>浏览器一定具有下面列出的 16 种颜色名。</li>
 <li>百分比： <code>rgb(80%, 40%, 0%)</code></li>
 <li>数值： <code>rgb(205, 102, 0)</code> 从0~255</li>
-<li>十六进制分量：<code>#CC6600</code></li>
+<li>十六进制分量：<code>#CC6600</code><ul>
 <li>每组分量两位数字相同可以简写，如 <code>#cb0</code> = <code>#ccbb00</code></li>
+</ul>
+</li>
 <li>HTML <a href="http://en.wikipedia.org/wiki/Web_colors">颜色表</a></li>
 </ul>
-<h3 id="_11">大小</h3>
+<h3 id="_11">大小<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>先看一些 <code>font-size</code> 的大小指标：</p>
 <ul>
 <li><code>px</code> 像素</li>
 <li><code>%</code> 相对值，通常是相对父元素的 <code>font-size</code> 来说</li>
 <li><code>em</code> 比例因子，如 <code>1.2em</code></li>
 <li><code>pt</code> 磅数</li>
-<li>关键字：通常逐级乘 $120\%$ 的比例增长</li>
+<li>关键字：通常逐级乘 <span class="arithmatex">\(120\%\)</span> 的比例增长<ul>
 <li><code>xx-small</code>, <code>x-small</code>, <code>small</code> （一般为 12px）, <code>medium</code>, <code>large</code>, <code>x-large</code>, <code>xx-large</code></li>
 <li>建议：<code>body</code> 使用 <code>small</code></li>
 </ul>
-<h2 id="_12">元素定位</h2>
+</li>
+</ul>
+<h2 id="_12">元素定位<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <p>零碎的：</p>
 <ul>
-<li>内联元素</li>
+<li>内联元素<ul>
 <li>你只会看到左边和右边增加空间。上下边距不会影响其他内联元素的边距，所以会与其他内联元素重叠，看不出效果。</li>
-<li><strong>图像</strong>的宽度、内边距、外边距都表现得像是块元素。</li>
+<li><strong>图像</strong> 的宽度、内边距、外边距都表现得像是块元素。</li>
 </ul>
-<h3 id="_13">流与元素定位</h3>
+</li>
+</ul>
+<h3 id="_13">流与元素定位<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <ul>
+<li>流是浏览器摆放 HTML 的方法：沿着元素流逐个显示所遇到的各个元素。</li>
 <li>
-<p>流是浏览器摆放 HTML 的方法：沿着元素流逐个显示所遇到的各个元素。</p>
-</li>
-<li>
-<p><strong>块</strong>元素添加换行：<strong>这个换行很重要</strong>，表明两个块元素不会并排出现。</p>
-</li>
-<li>
-<p><strong>上下</strong>摆放的块元素，外边距合并，保留最大的那个。</p>
-</li>
-<li>
-<p>只要<strong>两个垂直外边距</strong>碰到一起就会折叠。</p>
-<blockquote>
+<p><strong>块</strong> 元素添加换行：<strong>这个换行很重要</strong>，表明两个块元素不会并排出现。</p>
+<ul>
+<li><strong>上下</strong> 摆放的块元素，外边距合并，保留最大的那个。</li>
+<li>只要 <strong>两个垂直外边距</strong> 碰到一起就会折叠。<blockquote>
 <p>这会引起很奇怪的情况：在嵌套元素中，如果外元素没有边框，那么两个元素的外边距会发生碰撞，进而折叠。这很可能让你莫名其妙。</p>
 </blockquote>
 </li>
-<li>
-<p><strong>内联</strong>元素水平摆放</p>
-</li>
-<li>
-<p><strong>并排</strong>放置的内联元素，外边距叠加。</p>
+<li><strong>内联</strong> 元素水平摆放</li>
+<li><strong>并排</strong> 放置的内联元素，外边距叠加。</li>
+</ul>
 </li>
 </ul>
 <p><code>float</code> 属性如何工作？</p>
 <ul>
-<li><code>float</code> 的元素从流中消失，所以可以和其他块元素并排了。</li>
+<li><code>float</code> 的元素从流中消失，所以可以和其他块元素并排了。<ul>
 <li>但其他块内的内联元素会围绕着浮动的元素。</li>
-<li><code>clear</code> 属性，使得这个元素流入页面时，某方向不允许有浮动内容。</li>
+</ul>
+</li>
+<li><code>clear</code> 属性，使得这个元素流入页面时，某方向不允许有浮动内容。<ul>
 <li><code>right</code>, <code>left</code>, </li>
+</ul>
+</li>
 </ul>
 <p>冻结布局</p>
 <ul>
 <li>可以避免一些因为窗口扩展带来的问题。</li>
-<li>冻结布局就是为页面主题<strong>固定宽度</strong>，并通过 <code>auto</code> 的左右边距使主体居中。</li>
+<li>冻结布局就是为页面主题 <strong>固定宽度</strong>，并通过 <code>auto</code> 的左右边距使主体居中。</li>
 </ul>
 <p>绝对定位</p>
 <ul>
-<li><code>positon: absolute</code>， 默认是 <code>static</code>。</li>
-<li><code>fixed</code> 将相对<strong>浏览器窗口</strong>而不是页面。</li>
+<li><code>positon: absolute</code>， 默认是 <code>static</code>。<ul>
+<li><code>fixed</code> 将相对 <strong>浏览器窗口</strong> 而不是页面。</li>
 <li><code>relative</code> <strong>正常流入页面</strong>，但进行偏移。</li>
+</ul>
+</li>
 <li><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> 这些属性表明相对页面某个边距的位置。</li>
 <li><code>z-index</code> 值越大，浮动元素越在顶部。</li>
 <li>元素将放置在指定的位置</li>
@@ -1269,73 +1307,78 @@ a:link {}
 <li><code>display: table;</code> 为整个表格指定</li>
 <li><code>display: table-row</code> 为表格内指定行或列</li>
 <li><code>display: table-cell</code> 指定表格内的元素</li>
-<li>表格元素的 <code>border-spacing</code> 被每个单元格继承</li>
+<li>表格元素的 <code>border-spacing</code> 被每个单元格继承<ul>
 <li>这一边距与 <code>margin</code> 不同，<strong>不会被折叠</strong></li>
+</ul>
+</li>
 <li><code>vertical-align: top;</code> 确保单元格中内容相对单元格顶部对齐 。还可以是 <code>middle</code> <code>bottom</code></li>
 </ul>
 <p>固定定位</p>
 <ul>
 <li><code>position: fixed</code></li>
-<li></li>
 </ul>
 <p><strong>小结</strong></p>
 <ul>
 <li>我们学习了几种布局：流体布局、浮动元素、冻结布局、凝胶布局</li>
 <li>4种定位：静态、绝对、固定、相对</li>
 </ul>
-<h2 id="_14">样式速查</h2>
-<h3 id="_15">杂的</h3>
+<h2 id="_14">样式速查<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">杂的<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>top</code></li>
 <li><code>left</code></li>
-<li><code>text-align</code></li>
-<li>对所有<strong>内联内容</strong>对齐，只能在块元素上设置（直接在内联元素上不起作用）</li>
-<li>嵌套的元素也对齐了，这是因为<strong>ji'cheng</strong></li>
-<li><code>center</code>, </li>
+<li><code>text-align</code><ul>
+<li>对所有 <strong>内联内容</strong> 对齐，只能在块元素上设置（直接在内联元素上不起作用）</li>
+<li>嵌套的元素也对齐了，这是因为 <strong>继承</strong></li>
+<li><code>center</code></li>
 </ul>
-<h3 id="_16">字体</h3>
+</li>
+</ul>
+<h3 id="_16">字体<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>font-weight</code></li>
+<li><code>font-weight</code><ul>
 <li><code>lighter</code>, <code>normal</code>, <code>bold</code>, <code>bolder</code> （比较级的两个是相对值）</li>
-<li><code>font-family</code></li>
-<li>每个 <code>font-family</code> 包含5个字体系列：<ul>
+</ul>
+</li>
+<li><code>font-family</code><ul>
+<li>每个 <code>font-family</code> 包含5个字体系列：</li>
 <li>无衬线 sans-serif: Verdana, Arial Black, Trebuchet MS, Arial, Geneva</li>
 <li>衬线 serif: Times, Times New Roman, Georgia</li>
 <li>定宽 monospace: Courier, Courier New, Andale Mono</li>
 <li>手写 cursive: Comic Sans, Apple Chancery</li>
 <li>装饰 fantasy: LAST NINJA, Impact</li>
+<li>工作方式：候选字体列表 + 字体系列名。注意：字体名区分大小写，带空格的需要加引号。</li>
 </ul>
 </li>
-<li>工作方式：候选字体列表 + 字体系列名。注意：字体名区分大小写，带空格的需要加引号。</li>
 <li><code>font-size</code> </li>
-<li><code>font-style</code> </li>
+<li><code>font-style</code> <ul>
 <li><code>italic</code> 和 <code>oblique</code> 都是斜体，有时看起来不同。</li>
+</ul>
+</li>
 <li><code>font-variant</code></li>
-<li><code>line-height</code> 可以按字体高度的比例指定</li>
-<li>特别的点：可以直接指定一个数，表示是<strong>自己字体大小的几倍</strong>。比如在 <code>&lt;div&gt;</code> 设为 1 ，那么里面的元素行高是各自的 1 倍，而不是 <code>&lt;div&gt;</code> 的行高的 1 倍。</li>
+<li><code>line-height</code> 可以按字体高度的比例指定<ul>
+<li>特别的点：可以直接指定一个数，表示是 <strong>自己字体大小的几倍</strong>。比如在 <code>&lt;div&gt;</code> 设为 1 ，那么里面的元素行高是各自的 1 倍，而不是 <code>&lt;div&gt;</code> 的行高的 1 倍。</li>
+</ul>
+</li>
 </ul>
 <blockquote>
 <p>它们可以简写为 <code>font</code></p>
 <p>必须指定大小，大小（行高放在字体大小后面的斜杠后）和其他元素的相对位置固定：</p>
 <p><code>font-style</code> <code>font-variant</code> <code>font-weight</code> <code>font-size</code>/<code>line-height</code> <code>font-family</code></p>
 </blockquote>
-<h3 id="_17">文本</h3>
+<h3 id="_17">文本<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><code>color</code></p>
-</li>
-<li>
-<p><code>Aqua</code>, <code>Black</code>, <code>Blue</code>, <code>Fuchsia</code>, <code>Gray</code>, <code>Green</code>, <code>Lime</code>, <code>Maroon</code>, <code>Navy</code>, <code>Olive</code>, <code>Purple</code>, <code>Red</code>, <code>Silver</code>, <code>Teal</code>, <code>White</code>, <code>Yellow</code></p>
-</li>
-<li>
-<p>实际上控制着一个元素的<strong>前景色</strong>，所以会控制文本和边框颜色</p>
+<ul>
+<li><code>Aqua</code>, <code>Black</code>, <code>Blue</code>, <code>Fuchsia</code>, <code>Gray</code>, <code>Green</code>, <code>Lime</code>, <code>Maroon</code>, <code>Navy</code>, <code>Olive</code>, <code>Purple</code>, <code>Red</code>, <code>Silver</code>, <code>Teal</code>, <code>White</code>, <code>Yellow</code></li>
+<li>实际上控制着一个元素的 <strong>前景色</strong>，所以会控制文本和边框颜色</li>
+</ul>
 </li>
 <li>
 <p><code>text-decoration</code> </p>
-</li>
-<li>
-<p><code>underline</code>, <code>overline</code>, <code>line-through</code>, <code>none</code></p>
-</li>
+<ul>
+<li><code>underline</code>, <code>overline</code>, <code>line-through</code>, <code>none</code></li>
 </ul>
 <blockquote>
 <p>规则的合并：</p>
@@ -1348,46 +1391,51 @@ a:link {}
 <li><code>&lt;del&gt;</code> 标记需要删除的内容</li>
 <li><code>&lt;ins&gt;</code> 标记插入的内容</li>
 </ul>
-<p>注意，使用 HTML 能让内容的含义更加清晰</p>
+<p>注意，使用 HTML 能让内容的含义更加清晰
+* <code>letter-spacing</code> 字符间距</p>
 </blockquote>
-<ul>
-<li><code>letter-spacing</code> 字符间距</li>
+</li>
 </ul>
-<h3 id="_18">列表</h3>
+<h3 id="_18">列表<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>list-style-none</code></li>
+<li><code>list-style-none</code><ul>
 <li><code>none</code> 删除项目符号</li>
-<li>（列表元素）<code>display</code></li>
+</ul>
+</li>
+<li>（列表元素）<code>display</code><ul>
 <li><code>block</code>, <code>inline</code></li>
 </ul>
-<h3 id="_19">盒模型</h3>
-<details>
-    <summary>盒模型由哪几个部分构成？</summary>
-    <ul>
-        <li>MARGIN</li>
-        <li>BORDER</li>
-        <li>PADDING</li>
-        <li>CONTENT</li>
-    </ul>
+</li>
+</ul>
+<h3 id="_19">盒模型<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<details class="note">
+<summary>盒模型由哪几个部分构成？</summary>
+<ul>
+<li>MARGIN</li>
+<li>BORDER</li>
+<li>PADDING</li>
+<li>CONTENT</li>
+</ul>
 </details>
-
 <p>与边框有关的属性：</p>
 <ul>
 <li><code>border-color</code></li>
-<li><code>border-width</code></li>
-<li>
-<p><code>thin</code>, <code>medium</code>, <code>thick</code></p>
+<li><code>border-width</code><ul>
+<li><code>thin</code>, <code>medium</code>, <code>thick</code></li>
+</ul>
 </li>
-<li>
-<p><code>border-style</code></p>
-</li>
+<li><code>border-style</code><ul>
 <li><code>solid</code>, <code>double</code>, <code>groove</code>, <code>outset</code>, <code>dotted</code>, <code>dashed</code>, <code>inset</code>, <code>ridge</code></li>
+</ul>
+</li>
 <li><code>border-radius</code></li>
-<li>指定某一边框</li>
+<li>指定某一边框<ul>
 <li><code>border-top-color</code></li>
 <li><code>border-right-style</code></li>
 <li><code>border-bottom-width</code></li>
 <li><code>border-top-left-radius</code></li>
+</ul>
+</li>
 </ul>
 <p>内衬：</p>
 <ul>
@@ -1411,27 +1459,39 @@ a:link {}
 </blockquote>
 <p>背景：</p>
 <ul>
-<li><code>background-image</code></li>
+<li><code>background-image</code><ul>
 <li><code>url</code></li>
-<li><code>background-repeat</code></li>
+</ul>
+</li>
+<li><code>background-repeat</code><ul>
 <li>默认平铺</li>
 <li><code>no-repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>, <code>inherit</code></li>
-<li><code>background-position</code></li>
+</ul>
+</li>
+<li><code>background-position</code><ul>
 <li><code>top</code>, <code>left</code></li>
+</ul>
+</li>
 </ul>
 <p>盒模型的宽度</p>
 <ul>
-<li><code>width</code> 内容区宽度</li>
+<li><code>width</code> 内容区宽度<ul>
 <li><code>auto</code> 延伸占满可以用的空间。</li>
 <li>百分比：所在容器为标准。</li>
-<li><code>height</code></li>
+</ul>
+</li>
+<li><code>height</code><ul>
 <li>高度可能导致内容区溢出，一般不指定。</li>
 </ul>
-<h3 id="_20">表格</h3>
+</li>
+</ul>
+<h3 id="_20">表格<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
 <p><code>&lt;table&gt;</code></p>
 <ul>
-<li><code>caption-side</code></li>
+<li><code>caption-side</code><ul>
 <li><code>bottom</code></li>
+</ul>
+</li>
 <li>表格元素没有外边距，取而代之的是针对整个表格定义的 <code>border-spacing</code> 属性。首先指定垂直间距，再指定水平间距。</li>
 <li><code>border-collapse</code> 折叠/合并边框 <code>collapse</code></li>
 </ul>
@@ -1445,16 +1505,16 @@ a:link {}
 <p>以下选择器分别选择了偶数、奇数段落；甚至可以使用 n 指定简单表达式</p>
 </li>
 </ul>
-<p><code>css
-  p:nth-child(even){}
-  p:nth-child(odd){}
-  p:nth-child(2n){}
-  p:nth-child(2n+1){}</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span><span class="p">{}</span><span class="w"></span>
+<span class="nt">p</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">odd</span><span class="o">)</span><span class="p">{}</span><span class="w"></span>
+<span class="nt">p</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">2n</span><span class="o">)</span><span class="p">{}</span><span class="w"></span>
+<span class="nt">p</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">2n</span><span class="o">+</span><span class="nt">1</span><span class="o">)</span><span class="p">{}</span><span class="w"></span>
+</code></pre></div>
 </blockquote>
-<h3 id="_21">列表</h3>
+<h3 id="_21">列表<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <p><code>&lt;li&gt;</code></p>
 <ul>
-<li><code>list-style-type</code></li>
+<li><code>list-style-type</code><ul>
 <li><code>disc</code></li>
 <li><code>circle</code></li>
 <li><code>square</code></li>
@@ -1464,11 +1524,14 @@ a:link {}
 <li><code>lower-alpha</code></li>
 <li><code>upper-roman</code></li>
 <li><code>lower-roman</code></li>
+</ul>
+</li>
 <li><code>list-stype-image</code></li>
-<li><code>list-style-position</code></li>
+<li><code>list-style-position</code><ul>
 <li><code>inside</code></li>
 <li><code>outside</code></li>
-<li></li>
+</ul>
+</li>
 </ul>
 
 
@@ -1538,6 +1601,19 @@ a:link {}
   
 </div>
       
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="http://bowling233.com" target="_blank" rel="noopener" title="bowling233.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="#CCD6DD" d="M22 10c0-1 1-3 1-5s0-3-1-4-2-1-2-1-1 0-2 1-1 2-1 4 1 4 1 5c0 3-4 5-4 9.084C14 22.417 16 29 17 31h6c1-2 3-8.583 3-11.916C26 15 22 13 22 10z"/><path fill="#BE1931" d="M18 10h4c0-.475.227-1.18.464-2h-4.927c.236.82.463 1.525.463 2zm5.902 4c-.494-.681-.976-1.333-1.332-2h-5.139c-.357.667-.839 1.319-1.332 2h7.803z"/><path fill="#CCD6DD" d="M32 13c0-1 1-3 1-5s0-3-1-4-2-1-2-1-1 0-2 1-1 2-1 4 1 4 1 5c0 3-4 5-4 9.084C24 25.417 26 32 27 34h6c1-2 3-8.583 3-11.916C36 18 32 16 32 13z"/><path fill="#BE1931" d="M28 13h4c0-.475.227-1.18.464-2h-4.927c.236.82.463 1.525.463 2zm5.902 4c-.494-.681-.976-1.333-1.332-2h-5.139c-.357.667-.839 1.319-1.332 2h7.803z"/><circle fill="#31373D" cx="12.562" cy="23.438" r="12.562"/><circle cx="12.915" cy="18.79" r="2.316"/><circle cx="6.505" cy="20.938" r="2.316"/><circle cx="11.431" cy="28.053" r="2.316"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1547,10 +1623,16 @@ a:link {}
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
     

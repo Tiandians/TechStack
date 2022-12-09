@@ -6,12 +6,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/Others/</loc>
-         <lastmod>2022-12-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://note.bowling233.top/misl/</loc>
+         <loc>http://note.bowling233.top/misc/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -21,12 +16,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/BlogSetup/GithubPages/</loc>
+         <loc>http://note.bowling233.top/test/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/BlogSetup/Mkdocs/</loc>
+         <loc>http://note.bowling233.top/theirNotebook/</loc>
+         <lastmod>2022-12-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://note.bowling233.top/Basic/Markdown/</loc>
+         <lastmod>2022-12-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://note.bowling233.top/BlogSetup/GithubPages/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -67,11 +72,6 @@
     </url>
     <url>
          <loc>http://note.bowling233.top/WebServer/Web%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2/</loc>
-         <lastmod>2022-12-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://note.bowling233.top/WebServer/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/%E9%98%B2%E7%81%AB%E5%A2%99/</loc>
          <lastmod>2022-12-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
