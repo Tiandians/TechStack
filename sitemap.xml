@@ -31,16 +31,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/basic/Latex/</loc>
-         <lastmod>2022-12-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://note.bowling233.top/basic/Markdown/</loc>
-         <lastmod>2022-12-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>http://note.bowling233.top/basic/Videos/</loc>
          <lastmod>2022-12-10</lastmod>
          <changefreq>daily</changefreq>
@@ -86,7 +76,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/basic/linux/tools/openssh/</loc>
+         <loc>http://note.bowling233.top/basic/linux/tools/ssh/</loc>
          <lastmod>2022-12-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -106,11 +96,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://note.bowling233.top/basic/miscellaneous/Vim/</loc>
-         <lastmod>2022-12-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>http://note.bowling233.top/basic/problem/2022/</loc>
          <lastmod>2022-12-10</lastmod>
          <changefreq>daily</changefreq>
@@ -122,6 +107,31 @@
     </url>
     <url>
          <loc>http://note.bowling233.top/basic/problem/SyncthingConf/</loc>
+         <lastmod>2022-12-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://note.bowling233.top/basic/writing/Copywriting/</loc>
+         <lastmod>2022-12-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://note.bowling233.top/basic/writing/Latex/</loc>
+         <lastmod>2022-12-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://note.bowling233.top/basic/writing/Markdown/</loc>
+         <lastmod>2022-12-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://note.bowling233.top/basic/writing/VSCode/</loc>
+         <lastmod>2022-12-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://note.bowling233.top/basic/writing/Vim/</loc>
          <lastmod>2022-12-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
