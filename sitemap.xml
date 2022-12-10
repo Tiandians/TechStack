@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://note.bowling233.top/basic/git/GitPro/</loc>
+         <lastmod>2022-12-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://note.bowling233.top/basic/linux/LinuxBasic/</loc>
          <lastmod>2022-12-10</lastmod>
          <changefreq>daily</changefreq>
@@ -92,6 +97,11 @@
     </url>
     <url>
          <loc>http://note.bowling233.top/basic/miscellaneous/RegularExpression/</loc>
+         <lastmod>2022-12-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://note.bowling233.top/basic/miscellaneous/Security/</loc>
          <lastmod>2022-12-10</lastmod>
          <changefreq>daily</changefreq>
     </url>

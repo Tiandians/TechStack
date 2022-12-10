@@ -807,8 +807,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../basic/git/GitPro.md" class="md-nav__link">
-        None
+      <a href="../../../basic/git/GitPro/" class="md-nav__link">
+        Git 进阶
       </a>
     </li>
   
@@ -854,8 +854,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../basic/miscellaneous/Vim.md" class="md-nav__link">
-        None
+      <a href="../../../basic/miscellaneous/Security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/miscellaneous/RegularExpression/" class="md-nav__link">
+        正则表达式
       </a>
     </li>
   
@@ -2279,9 +2293,8 @@
 <ul>
 <li>Nginx 在启动后，在 unix 系统中会以 daemon （守护进程）的方式在后台运行，后台进程包含一个 master 进程和多个 worker 进程。</li>
 <li>**master 进程**主要用来管理 worker 进程，包含：接收来自外界的信号，向各 worker 进程发送信号，监控 worker 进程的运行状态，当 worker 进程退出后(异常情况下)，会自动重新启动新的 worker 进程。</li>
-<li>基本的网络事件，则是放在 <strong>worker 进程**中来处理了。多个 worker 进程之间是**对等的</strong>，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个**请求**，只可能在一个 worker 进程中处理，一个 worker 进程，不可能处理其它进程的请求。worker 进程的个数是可以设置的，一般我们会设置与机器cpu核数一致，这里面的原因与 Nginx 的进程模型以及事件处理模型是分不开的。</li>
 <li>
-<p><img alt="img" src="assets/chapter-2-1.png" /></p>
+<p>基本的网络事件，则是放在 <strong>worker 进程**中来处理了。多个 worker 进程之间是**对等的</strong>，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个**请求**，只可能在一个 worker 进程中处理，一个 worker 进程，不可能处理其它进程的请求。worker 进程的个数是可以设置的，一般我们会设置与机器cpu核数一致，这里面的原因与 Nginx 的进程模型以及事件处理模型是分不开的。</p>
 </li>
 <li>
 <p>worker 进程又是如何处理请求的呢？</p>
