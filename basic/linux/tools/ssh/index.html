@@ -209,7 +209,7 @@
   
     <li class="md-tabs__item">
       <a href="../../../.." class="md-tabs__link">
-        🏠Home
+        🏠首页
       </a>
     </li>
   
@@ -424,14 +424,14 @@
       
       
         <label class="md-nav__link" for="__nav_1">
-          🏠Home
+          🏠首页
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="🏠Home" data-md-level="1">
+      <nav class="md-nav" aria-label="🏠首页" data-md-level="1">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
-          🏠Home
+          🏠首页
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -442,7 +442,21 @@
   
     <li class="md-nav__item">
       <a href="../../../.." class="md-nav__link">
-        🏡Home
+        🏡首页
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Project/" class="md-nav__link">
+        📝项目
       </a>
     </li>
   
@@ -1139,6 +1153,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../webdev/webserver/Protocol/" class="md-nav__link">
+        协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../webdev/webserver/HTTP/" class="md-nav__link">
+        HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../webdev/webserver/LinuxServer/" class="md-nav__link">
         Linux 服务器
       </a>
@@ -1156,18 +1198,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4" type="checkbox" id="__nav_3_2_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_3_2_2">
+        <label class="md-nav__link" for="__nav_3_2_4">
           环境及其配置
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="环境及其配置" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_2_2">
+        <label class="md-nav__title" for="__nav_3_2_4">
           <span class="md-nav__icon md-icon"></span>
           环境及其配置
         </label>
@@ -2034,6 +2076,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    进阶用法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    端口转发
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2076,8 +2132,8 @@
 </blockquote>
 <p><code>ssh</code> 最基本的用法就是远程登陆、远程执行命令、文件传输。</p>
 <ul>
-<li>远程登陆：<code>ssh username@server</code></li>
-<li><code>ssh</code> 支持 <strong>管道</strong>。你可以把本地输出传送到远程主机，也可以把远程主机的输出传送到本地：<code>ssh username@server ls | grep PATTERN</code></li>
+<li>远程登陆：<code>ssh username@server</code>。</li>
+<li><code>ssh</code> 支持 <strong>管道</strong>。你可以把本地输出传送到远程主机，也可以把远程主机的输出传送到本地：<code>ssh username@server ls | grep PATTERN</code>。</li>
 </ul>
 <p>使用 <code>ssh-key</code> 可以免密登陆：</p>
 <ul>
@@ -2086,33 +2142,44 @@
 <div class="highlight"><pre><span></span><code>ssh-keygen -a <span class="m">100</span> -t ed25519 -f ~/.ssh/id_ed25519
 </code></pre></div>
 <ul>
-<li><code>-a</code> 指定了迭代次数</li>
-<li><code>-t</code> 指定了加密方法，常用 <code>rsa</code>，近来推荐 <code>ed25519</code></li>
-<li><code>-f</code> 指定了密钥文件的存储位置
+<li><code>-a</code> 指定了迭代次数。</li>
+<li><code>-t</code> 指定了加密方法，常用 <code>rsa</code>，近来推荐 <code>ed25519</code>。</li>
+<li><code>-f</code> 指定了密钥文件的存储位置。
   !!! danger
     应当为密钥指定密码，防止他人获取密钥文件后直接使用。</li>
-<li><code>-p</code> 更改密钥密码</li>
+<li><code>-p</code> 更改密钥密码。</li>
 <li><code>-y</code> 读入一个私钥，输出一个公钥。用于验证是否存在密钥。</li>
 </ul>
 </li>
 <li>
-<p>使用 <code>ssh-copy-id</code> 将密钥添加到远程主机</p>
+<p>使用 <code>ssh-copy-id</code> 将密钥添加到远程主机：</p>
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code>ssh-copy-id -i .ssh/id_ed25519 foobar@remote
 </code></pre></div>
 <ul>
-<li>不指定参数将添加所有密钥</li>
-<li><code>-i</code> 指定密钥文件</li>
-<li><code>-p</code> 指定端口</li>
+<li>不指定参数将添加所有密钥。</li>
+<li><code>-i</code> 指定密钥文件。</li>
+<li><code>-p</code> 指定端口。</li>
 </ul>
-<p>使用 <code>SSH</code> </p>
+<p>使用 <code>SSH</code> 拷贝文件的三种方法：</p>
+<ul>
+<li>少量语句：<code>ssh + tee</code>，例如 <code>cat localfile | ssh remote_server tee serverfile</code>。</li>
+<li>单个文件：<code>scp</code>，例如 <code>scp path/to/local_file remote_host:path/to/remote_file</code>。</li>
+<li>多个文件：<code>rsync</code>，语法和 <code>scp</code> 类似，但是能够避免重复拷贝、支持断点续传（使用 <code>--partial</code> 参数）。</li>
+</ul>
+<h2 id="_2">进阶用法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>使用 <code>ssh-agent</code> 可以暂存解密的密钥<ul>
 <li><code>ssh-agent</code> 将解密的密钥暂存在内存中，直到指令删除或进程结束。</li>
 </ul>
 </li>
 </ul>
+<h2 id="_3">端口转发<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>预置知识：Linux 网络设备</p>
+</blockquote>
+<p>很多软件常默认监听本地端口，</p>
 
 
 
