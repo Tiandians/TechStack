@@ -692,40 +692,6 @@
     MkDocs
   </a>
   
-    <nav class="md-nav" aria-label="MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python-markdown" class="md-nav__link">
-    Python Markdown
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python-markdown-extensions" class="md-nav__link">
-    Python Markdown Extensions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    Plugins
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mathjax" class="md-nav__link">
-    MathJax
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1548,6 +1514,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../program/c/CPuzzle/" class="md-nav__link">
+        C 语言解惑（The C Puzzle Book）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../program/c/CSTL/" class="md-nav__link">
         C 标准库
       </a>
@@ -2217,40 +2197,6 @@
     MkDocs
   </a>
   
-    <nav class="md-nav" aria-label="MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python-markdown" class="md-nav__link">
-    Python Markdown
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python-markdown-extensions" class="md-nav__link">
-    Python Markdown Extensions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plugins" class="md-nav__link">
-    Plugins
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mathjax" class="md-nav__link">
-    MathJax
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2384,58 +2330,40 @@
 <li><a href="https://mermaid-js.github.io/mermaid/#/flowchart">更多节点和连接线</a></li>
 </ul>
 <h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h2>
+<p>配置和用法请参考官方文档，这里仅列出我使用的一些功能、文档里没有写明的技巧和注意事项。</p>
+<div class="admonition quote">
+<p class="admonition-title">官方文档</p>
+<p><a href="https://www.mkdocs.org/">MkDocs</a></p>
+<p><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">local server</p>
 <p>如果你想在服务器上利用 <code>mkdocs serve</code> 零时部署一个网站测试动态更改效果，你可以使用命令：
-<div class="highlight"><pre><span></span><code>mkdocs serve --livereload --dev-addr <span class="m">0</span>.0.0.0:8000
+<div class="highlight"><pre><span></span><code>mkdocs serve --dev-addr <span class="m">0</span>.0.0.0:8000
 </code></pre></div>
-这样就可以远程访问该零时部署的网站了。</p>
+这样就可以远程访问该零时部署的网站了。
+关于 <code>mkdocs serve</code> 的更多使用方法，请自行使用 <code>mkdocs serve -h</code> 查看。</p>
 </div>
 <ul>
-<li>设置页脚
-<div class="highlight"><pre><span></span><code><span class="nt">extra</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">social</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fontawesome/brands/twitter</span><span class="w"> </span>
-<span class="w">      </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://twitter.com/squidfunk</span><span class="w"></span>
-</code></pre></div></li>
+<li>Microsoft Edge Tools for VS Code<ul>
+<li>我使用该插件来实现所见即所得的 MkDocs 编辑。这需要开启 <code>navigation.tracking</code> 来保证浏览器刷新后保持位置固定。</li>
+<li>当文件越来越多时，建议添加 <code>--dirtyreload</code> 选项，这样只会重新构建发生了更改的文件，让浏览器的刷新过程更快一些。</li>
+<li>效果：<img alt="image-20221212104749090" src="../assets/image-20221212104749090.png" /></li>
+</ul>
+</li>
+<li>设置页脚，可以添加很多个 icon。</li>
 <li>代码块<ul>
-<li>MkDocs 中的代码块可以有标题 <code>title="xxx.py"</code>、脚注 <code>//(1)</code> （需要开启扩展）等</li>
-<li>请不要在嵌套的代码块中使用脚注，这会导致下面的子列表消失</li>
+<li>MkDocs 中的代码块可以有标题 <code>title="xxx.py"</code>、脚注 <code>//(1)</code> （需要开启扩展）等。</li>
+<li>请不要在嵌套的代码块中使用脚注，这会导致下面的子列表消失。</li>
 </ul>
 </li>
-<li>导航栏<ul>
-<li>建议开启这些功能：
-<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">features</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.instant</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tracking</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tabs</span><span class="w"></span>
-</code></pre></div></li>
-</ul>
-</li>
-</ul>
-<h3 id="python-markdown">Python Markdown<a class="headerlink" href="#python-markdown" title="Permanent link">&para;</a></h3>
-<ul>
+<li>导航栏</li>
 <li>配置推荐的 <a href="https://squidfunk.github.io/mkdocs-material/setup/extensions/#recommended-configuration">Markdown 扩展</a></li>
 <li>缩写 Abbreviations<ul>
-<li>可以创建一个全局的术语表 <code>includes/abbreviations.md</code>
-<div class="highlight"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.snippets</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">auto_append</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">includes/abbreviations.md</span><span class="w"></span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>*[abbr]: details
-</code></pre></div></li>
-<li>所有文档中的缩写都会得到应用</li>
+<li>可以创建一个全局的术语表，所有文档中的缩写都会得到应用。</li>
 </ul>
 </li>
 <li>警告 Admonition<ul>
-<li>警告体用四个空格缩进
-<div class="highlight"><pre><span></span><code>!!! note &quot;optional title&quot;
- details
-??? note &quot;expandable block&quot;
- details
-</code></pre></div></li>
 <li>支持这些 type<ul>
 <li><code>note</code> <code>abstract</code> <code>info</code> <code>tip</code> <code>success</code> <code>warning</code> <code>failure</code> <code>danger</code> <code>bug</code> <code>example</code> <code>quote</code></li>
 </ul>
@@ -2443,32 +2371,39 @@
 </ul>
 </li>
 <li>清单 List<ul>
-<li>待办列表：语法符合 Markdown 通用标准，但需要启用扩展</li>
+<li>待办列表：语法符合 Markdown 通用标准，但需要启用扩展。</li>
 </ul>
 </li>
 <li>目录 Table of Contents<ul>
-<li>需要配置的：目录深度默认为 6
+<li>需要配置，目录深度默认为 6 太深了。
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">toc</span><span class="p">:</span><span class="w"></span>
 <span class="w w-Error"> </span><span class="nt">toc_depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
 </code></pre></div></li>
 </ul>
 </li>
-</ul>
-<h3 id="python-markdown-extensions">Python Markdown Extensions<a class="headerlink" href="#python-markdown-extensions" title="Permanent link">&para;</a></h3>
-<ul>
 <li>Arithmatex 数学公式块 <code>$$</code> 语法支持</li>
 <li>Keys 按键标识<ul>
-<li>例：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></li>
-<li>用 <code>++</code> 将按键组合包裹起来即可</li>
-<li>对于逗号等按键，请使用别名，如 <code>comma</code> 才能被正确解析。详细列表见 <a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#punctuation-keys">文档</a></li>
+<li>例：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span>。</li>
+<li>用 <code>++</code> 将按键组合包裹起来即可。</li>
+<li>对于逗号等按键，请使用别名，如 <code>comma</code> 才能被正确解析。</li>
 </ul>
 </li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">Keys插件的官方文档</p>
+<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/">文档</a></p>
+</div>
+<ul>
 <li>SuperFences 超级栅栏<ul>
-<li>开启该扩展允许各类东西嵌套
-  !!! note
-    Marmaid 也需要在这里开启</li>
+<li>开启该扩展允许各类东西嵌套。</li>
 </ul>
 </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Marmaid 也需要在这里开启。</p>
+</div>
+<ul>
 <li>
 <p>Tabbed 卡片</p>
 <ul>
@@ -2494,11 +2429,10 @@
 </div>
 </div>
 </li>
-</ul>
-<h3 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h3>
+<li>
+<p>搜索插件 <code>search</code></p>
 <ul>
-<li>搜索插件 <code>search</code><ul>
-<li>不包括文件
+<li>不包括文件，可以在文件头输入：
 <div class="highlight"><pre><span></span><code><span class="nt">search</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div></li>
@@ -2507,26 +2441,37 @@
 </code></pre></div></li>
 </ul>
 </li>
-<li>标签插件 <code>tags</code><ul>
-<li>配置 tag 页面
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tags_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags.md</span><span class="w"></span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="gh"># Tags</span>
-Following is a list of relevant tags:
-[TAGS]
-</code></pre></div></li>
-<li>为文章设置 tag
-<div class="highlight"><pre><span></span><code><span class="nt">tags</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTML5</span><span class="w"></span>
-</code></pre></div></li>
+<li>标签插件 <code>tags</code></li>
+<li>MathJax：需要在 <code>docs/javascripts</code> 中添加脚本，即可渲染内嵌 Latex。请参考官方文档。</li>
 </ul>
-</li>
-</ul>
-<h3 id="mathjax">MathJax<a class="headerlink" href="#mathjax" title="Permanent link">&para;</a></h3>
-<p>需要在 <code>docs/javascripts</code> 中添加脚本，即可渲染内嵌 Latex。请参考官方文档。</p>
 <h2 id="_3">编辑器<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="typora">Typora 快捷键<a class="headerlink" href="#typora" title="Permanent link">&para;</a></h3>
+<p>都是很常用的快捷键，给我记住！</p>
+<ul>
+<li>选择操作：<span class="keys"><kbd class="key-control">Ctrl</kbd></span> 加上以下按键</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>组合</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-d">D</kbd></span></td>
+<td>词</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-l">L</kbd></span></td>
+<td>行/<strong>句</strong></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-e">E</kbd></span></td>
+<td>当前格式</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>编辑操作</li>
 </ul>
@@ -2571,11 +2516,7 @@ Following is a list of relevant tags:
 <td>表格（<strong>不如自己写表头方便</strong>）、新增行</td>
 </tr>
 <tr>
-<td>Ctrl + <code>Del</code></td>
-<td>删除表格下空行</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + <code>Del</code></td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span></td>
 <td>删除表格行</td>
 </tr>
 <tr>
@@ -2591,7 +2532,7 @@ Following is a list of relevant tags:
 <td>清除样式</td>
 </tr>
 <tr>
-<td>Ctrl + Shift + <code>M</code></td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span></td>
 <td>公式块</td>
 </tr>
 </tbody>
@@ -2599,6 +2540,10 @@ Following is a list of relevant tags:
 <ul>
 <li>文件和窗口操作</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Typora 没有选项卡概念，因此它其实是多窗口操作。打开文件一定会新建窗口而不是替换当前打开的文件，<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span> 也是在窗口之间切换。</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2608,49 +2553,24 @@ Following is a list of relevant tags:
 </thead>
 <tbody>
 <tr>
-<td>Ctrl + <code>P</code></td>
-<td>快速打开最近关闭文件</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span></td>
+<td>关闭</td>
 </tr>
 <tr>
-<td>Ctrl + Shift + C</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
+<td>快速打开文件（注意：有最近打开/匹配的，最近打开的文件可能被移动而打不开）</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span></td>
+<td>在已打开的文件中快速切换</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-c">C</kbd></span></td>
 <td>复制 Markdown 源码</td>
 </tr>
 <tr>
-<td>Ctrl + Shift + V</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-v">V</kbd></span></td>
 <td>粘贴纯文本</td>
-</tr>
-<tr>
-<td>Ctrl + W</td>
-<td>关闭</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>选择操作</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>组合</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>D</td>
-<td>词</td>
-</tr>
-<tr>
-<td>L</td>
-<td>行/<strong>句</strong></td>
-</tr>
-<tr>
-<td>E</td>
-<td>当前格式</td>
-</tr>
-<tr>
-<td>A</td>
-<td>全选</td>
 </tr>
 </tbody>
 </table>

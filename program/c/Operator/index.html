@@ -19,7 +19,7 @@
     
     
       
-        <title>Operator - Bowling's TechStack</title>
+        <title>C Operator - Bowling's TechStack</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cs-operator-precedence" class="md-skip">
+        <a href="#c-operator" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Operator
+              C Operator
             
           </span>
         </div>
@@ -1426,6 +1426,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../CPuzzle/" class="md-nav__link">
+        C 语言解惑（The C Puzzle Book）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../CSTL/" class="md-nav__link">
         C 标准库
       </a>
@@ -2060,6 +2074,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2068,8 +2084,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cs-operator-precedence" class="md-nav__link">
-    C's operator precedence
+  <a href="#c-operator-precedence" class="md-nav__link">
+    C Operator Precedence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dereference-and-increment" class="md-nav__link">
+    Dereference and Increment
   </a>
   
 </li>
@@ -2097,218 +2120,47 @@
   </a>
 
 
-  <h1>Operator</h1>
-
-<h2 id="cs-operator-precedence">C's operator precedence<a class="headerlink" href="#cs-operator-precedence" title="Permanent link">&para;</a></h2>
-<p>酱紫记忆：（后缀、调用、访问）&gt;（前 缀、一元、强制转换）&gt;二元数学&gt;<strong>移位</strong>&gt;顺序关系（小、大）&gt;等价关系&gt;二元位运算(与、异或、或)&gt;二元逻辑（与、或）&gt;三元逻辑&gt;赋值&gt;<strong>逗号</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">Precedence</th>
-<th align="left">Operator</th>
-<th align="left">Description</th>
-<th align="left">Associativity</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">1</td>
-<td align="left"><code>++</code> <code>--</code></td>
-<td align="left">Suffix/postfix increment and decrement</td>
-<td align="left">Left-to-right</td>
-</tr>
-<tr>
-<td align="center">后缀</td>
-<td align="left"><code>()</code></td>
-<td align="left">Function call</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">调用</td>
-<td align="left"><code>[]</code></td>
-<td align="left">Array subscripting</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">访问（数组、结构）</td>
-<td align="left"><code>.</code></td>
-<td align="left">Structure and union member access</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">复合字面量</td>
-<td align="left"><code>-&gt;</code></td>
-<td align="left">Structure and union member access through pointer</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>(*type*){*list*}</code></td>
-<td align="left">Compound literal(C99)</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="left"><code>++</code> <code>--</code></td>
-<td align="left">Prefix increment and decrement</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center">前缀</td>
-<td align="left"><code>+</code> <code>-</code></td>
-<td align="left"><strong>Unary plus and minus</strong></td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center">一元算符</td>
-<td align="left"><code>!</code> <code>~</code></td>
-<td align="left">Logical NOT and bitwise NOT</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center">强制转换</td>
-<td align="left"><code>(*type*)</code></td>
-<td align="left">Cast</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>*</code></td>
-<td align="left">Indirection (dereference)</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>&amp;</code></td>
-<td align="left">Address-of</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>sizeof</code></td>
-<td align="left">Size-of</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>_Alignof</code></td>
-<td align="left">Alignment requirement(C11)</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center">3二元数学运算</td>
-<td align="left"><code>*</code> <code>/</code> <code>%</code></td>
-<td align="left">Multiplication, division, and remainder</td>
-<td align="left">Left-to-right</td>
-</tr>
-<tr>
-<td align="center">4二元数学运算</td>
-<td align="left"><code>+</code> <code>-</code></td>
-<td align="left">Addition and subtraction</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">5移位</td>
-<td align="left"><code>&lt;&lt;</code> <code>&gt;&gt;</code></td>
-<td align="left">Bitwise left shift and right shift</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">6顺序关系</td>
-<td align="left"><code>&lt;</code> <code>&lt;=</code></td>
-<td align="left">For relational operators &lt; and ≤ respectively</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>&gt;</code> <code>&gt;=</code></td>
-<td align="left">For relational operators &gt; and ≥ respectively</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">7等价关系</td>
-<td align="left"><code>==</code> <code>!=</code></td>
-<td align="left">For relational = and ≠ respectively</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">8二元位运算</td>
-<td align="left"><code>&amp;</code></td>
-<td align="left">Bitwise AND</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">9</td>
-<td align="left"><code>^</code></td>
-<td align="left">Bitwise XOR (exclusive or)</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">10</td>
-<td align="left"><code>|</code></td>
-<td align="left">Bitwise OR (inclusive or)</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">11二元逻辑运算</td>
-<td align="left"><code>&amp;&amp;</code></td>
-<td align="left">Logical AND</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">12</td>
-<td align="left"><code>||</code></td>
-<td align="left">Logical OR</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">13三元逻辑运算</td>
-<td align="left"><code>?:</code></td>
-<td align="left">Ternary conditional</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center">14赋值</td>
-<td align="left"><code>=</code></td>
-<td align="left">Simple assignment</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>+=</code> <code>-=</code></td>
-<td align="left">Assignment by sum and difference</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>*=</code> <code>/=</code> <code>%=</code></td>
-<td align="left">Assignment by product, quotient, and remainder</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>&lt;&lt;=</code> <code>&gt;&gt;=</code></td>
-<td align="left">Assignment by bitwise left shift and right shift</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left"><code>&amp;=</code> <code>^=</code> <code>|=</code></td>
-<td align="left">Assignment by bitwise AND, XOR, and OR</td>
-<td align="left"><strong>Right-to-left</strong></td>
-</tr>
-<tr>
-<td align="center">15逗号</td>
-<td align="left"><code>,</code></td>
-<td align="left">Comma</td>
-<td align="left">Left-to-right</td>
-</tr>
-</tbody>
-</table>
+<h1 id="c-operator">C Operator<a class="headerlink" href="#c-operator" title="Permanent link">&para;</a></h1>
+<h2 id="c-operator-precedence">C Operator Precedence<a class="headerlink" href="#c-operator-precedence" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><a href="https://en.cppreference.com/w/c/language/operator_precedence">cppreference</a></p>
+</blockquote>
+<details class="note">
+<summary>Things you should remember!</summary>
+<ul>
+<li>First: suffix, access</li>
+<li>Second: unary, dereference, prefix<ul>
+<li>They are naturally right to left.</li>
+</ul>
+</li>
+<li>Third: Math<ul>
+<li>Where is remainder?</li>
+</ul>
+</li>
+<li>Forth: shift</li>
+<li>Relation, equality, then inequality</li>
+<li>Bitwise (AND, XOR, then OR)</li>
+<li>Logic: AND, then OR</li>
+<li>Ternary conditional</li>
+<li>Assignment</li>
+<li>Comma</li>
+</ul>
+</details>
 <ul>
 <li>The expression in the middle of the conditional operator (between <code>？</code> and <code>:</code>) is parsed <strong>as if parenthesized</strong>: its precedence relative to <code>?:</code> is ignored.</li>
 <li>unary prefix operators always associate right-to-left, unary postfix operators always associate left-to-right</li>
 </ul>
+<h2 id="dereference-and-increment">Dereference and Increment<a class="headerlink" href="#dereference-and-increment" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always remember the suffix increment operator first USE the value, THEN increse the value.</p>
+</div>
+<p>Common Puzzle:</p>
+<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="p">;</span><span class="c1">//NOTE HERE</span>
+<span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="o">++*</span><span class="n">p</span><span class="p">;</span><span class="w"></span>
+<span class="o">*++</span><span class="n">p</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 
 
 

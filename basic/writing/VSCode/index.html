@@ -640,6 +640,13 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     快捷键
   </a>
   
@@ -1473,6 +1480,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../program/c/CPuzzle/" class="md-nav__link">
+        C 语言解惑（The C Puzzle Book）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../program/c/CSTL/" class="md-nav__link">
         C 标准库
       </a>
@@ -2118,6 +2139,13 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     快捷键
   </a>
   
@@ -2157,7 +2185,46 @@
 
 <h1 id="vscode">VSCode<a class="headerlink" href="#vscode" title="Permanent link">&para;</a></h1>
 <p>VSCode 是一款强大的编辑器，好好掌握它的使用能极大提高生产力。以下仅记录自己经常使用的功能。</p>
-<h2 id="_1">快捷键<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">配置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>在 Linux 中配置 VSCode 简单而自然，请参考 <a href="https://dowww.spencerwoo.com/3-vscode/3-0-intro.html">Dev on WSL</a>。如果你仍然希望在 Windows 上编译，那么请参考 <a href="https://www.zhihu.com/question/30315894/answer/154979413">知乎：Visual Studio Code 如何编写运行 C、C++ 程序？</a>。</p>
+<p>必备插件：</p>
+<ul>
+<li>MS-CEINTL.vscode-language-pack-zh-hans</li>
+<li>formulahendry.code-runner</li>
+<li>请在 <code>settings.json</code> 配置：<code>"code-runner.runInTerminal": true, // 设置成false会在“输出”中输出，无法输入</code></li>
+</ul>
+<p>语言依赖：</p>
+<ul>
+<li>C/C++/C#</li>
+<li><code>ms-vscode.cpptools</code></li>
+<li>Java</li>
+<li>Markdown/Latex</li>
+<li><code>yzhang.markdown-all-in-one</code></li>
+<li>YAML</li>
+<li><code>redhat.vscode-yaml</code> </li>
+<li>汇编</li>
+<li><code>13xforever.language-x86-64-assembly</code> 为 x86 系列汇编语言提供支持。</li>
+</ul>
+<p>Web 开发一条龙：</p>
+<ul>
+<li>HTML/CSS</li>
+<li><code>esbenp.prettier-vscode</code> 所有 Web 开发人员都应当使用这个代码格式化插件！</li>
+<li>JavaScript</li>
+<li><code>mgmcdermott.vscode-language-babel</code> 为现代 JavaScript 提供更好的高亮，适用于 React.js 等。</li>
+<li>Edge 支持</li>
+<li>请参考 <a href="https://zhuanlan.zhihu.com/p/567519551">知乎：用于 VS Code 的 Edge 开发工具扩展太棒了</a></li>
+<li><code>ms-edgedevtools.vscode-edge-devtools</code></li>
+<li><code>ritwickdey.LiveServer</code></li>
+</ul>
+<p>以下是我喜欢的插件、主题等：</p>
+<ul>
+<li><code>adpyke.codesnap</code> 代码图片</li>
+<li><code>pnp.polacode</code> 有点问题，兼容性不是很好</li>
+<li><code>Equinusocio.vsc-community-material-theme</code> 非常好看的主题</li>
+<li><code>equinusocio.vsc-material-theme-icons</code> 配套图标</li>
+<li><code>ms-vscode.hexeditor</code> 二进制编辑器</li>
+</ul>
+<h2 id="_2">快捷键<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>我在 VSCode 中使用 Vim 插件映射快捷键，因此这里不记录关于编辑操作的快捷键。详见 <a href="../Vim/">Vim</a>。</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -2182,6 +2249,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>命令和窗口操作</td>
+<td></td>
+</tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
 <td>命令面板</td>
@@ -2211,8 +2282,24 @@
 <td>切换组（Vim 分割窗口将新建组）</td>
 </tr>
 <tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-k">K</kbd></span>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span></td>
+<td>关闭组</td>
+</tr>
+<tr>
+<td>文档操作</td>
+<td></td>
+</tr>
+<tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f">F</kbd></span></td>
 <td>格式化文档</td>
+</tr>
+<tr>
+<td>程序运行与调试</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-n">N</kbd></span></td>
+<td>运行代码（Run code）</td>
 </tr>
 </tbody>
 </table>
