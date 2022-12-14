@@ -637,7 +637,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -1277,6 +1277,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    -   地址转发表
+  </a>
   
 </li>
       
@@ -2157,7 +2164,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2280,6 +2287,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    -   地址转发表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tcpip" class="md-nav__link">
     TCP/IP 协议族
   </a>
@@ -2337,11 +2351,13 @@
 
 
 <h1 id="_1">协议<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>不同的计算机**网络体系结构**使用不同的协议。如：<abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr>/IP体系使用：IP, ICMP, <abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr>, <abbr title="User Datagram Protocol，用户报文协议">UDP</abbr>, <abbr title="Hypertext Transfer Protocol，超文本传输协议">HTTP</abbr>, TELNET 等协议。</p>
+<p>不同的计算机**网络体系结构**使用不同的协议。如：<abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr>/IP 体系使用：IP, ICMP, <abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr>, <abbr title="User Datagram Protocol，用户报文协议">UDP</abbr>, <abbr title="Hypertext Transfer Protocol，超文本传输协议">HTTP</abbr>, TELNET 等协议。</p>
 <ul>
-<li>计算机网络中最重要的一个协议是**分组交换协议**。它是什么？是如何工作的？</li>
+<li>计算机网络中最重要的一个协议是**分组交换协议**。它是什么？是如何工作的？<ul>
 <li>包 Packet</li>
 <li>报文首部</li>
+</ul>
+</li>
 </ul>
 <h2 id="_2">协议分层<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2409,40 +2425,51 @@
 <li>包：全能性述语</li>
 <li>帧：数据链路层</li>
 <li>数据报：网络层（IP/<abbr title="User Datagram Protocol，用户报文协议">UDP</abbr>）以上</li>
-<li>段：TCP流中的消息</li>
+<li>段：<abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr> 流中的消息</li>
 <li>消息：应用协议</li>
 </ul>
 <h3 id="_4">传输方式<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>是否连接</p>
 <ul>
-<li>面向有连接型</li>
+<li>面向有连接型<ul>
 <li>需要建立通信线路</li>
+</ul>
+</li>
 <li>面向无连接型</li>
 </ul>
 <p>交换类型</p>
 <ul>
-<li>电路交换</li>
+<li>电路交换<ul>
 <li>传输速度会变化吗？为什么？</li>
+</ul>
+</li>
 <li>分组交换、</li>
 </ul>
 <p>接收端数量</p>
 <ul>
 <li>单播 Unicast</li>
-<li>广播（多播）：同一数据链路内</li>
+<li>广播（多播）：同一数据链路内<ul>
 <li>实例：电视广播</li>
-<li>组播 Multicast：特定组</li>
+</ul>
+</li>
+<li>组播 Multicast：特定组<ul>
 <li>实例：电视会议</li>
-<li>任播 Anycast：特定组任一台</li>
+</ul>
+</li>
+<li>任播 Anycast：特定组任一台<ul>
 <li>实例：<abbr title="Domain Name System，域名系统">DNS</abbr></li>
+</ul>
+</li>
 </ul>
 <h3 id="_5">地址<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>地址分层</p>
 <ul>
-<li>分层地址：IP</li>
+<li>分层地址：IP<ul>
 <li>路由控制表</li>
-<li>无分层地址：MAC</li>
-<li>地址转发表</li>
-<li></li>
+</ul>
+</li>
+<li>无分层地址：MAC<h2 id="-">-   地址转发表<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+</li>
 </ul>
 <h2 id="tcpip"><abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr>/IP 协议族<a class="headerlink" href="#tcpip" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2478,7 +2505,7 @@
 </ul>
 <p><strong>更底层的层次由设备驱动程序和网络接口掌控</strong></p>
 <h3 id="_7">发送一个数据包<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>数据|TCP首部|IP首部|以太网首部</p>
+<p>数据|<abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr> 首部|IP 首部|以太网首部</p>
 <p>每一层首部都包含：</p>
 <ul>
 <li>发送端接收端地址</li>
@@ -2487,18 +2514,22 @@
 <p>回忆一下</p>
 <ul>
 <li>数据包发送过程</li>
-<li>数据包接收过程</li>
+<li>数据包接收过程<ul>
 <li>网络接口处理</li>
-<li>IP处理</li>
-<li>TCP处理</li>
+<li>IP 处理</li>
+<li><abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr> 处理</li>
 <li>应用程序处理</li>
+</ul>
+</li>
 </ul>
 <h2 id="_8">协议的标准化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ul>
 <li>OSI (Open Systems Interconnection 开放式通信系统互联参考模型) 由 ISO 指定</li>
-<li><abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr>/IP 协议由 IETF (Internet Engineering Task Force)  推进标准化</li>
-<li>RFC（Request For Comment 征求意见表）</li>
+<li><abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr>/IP 协议由 IETF (Internet Engineering Task Force) 推进标准化</li>
+<li>RFC（Request For Comment 征求意见表）<ul>
 <li>RFC 编码是既定的。如果要扩展已有协议规范，必须建立新的编号。如果修改现有规范，必须废除原文档，并发布新文档。</li>
+</ul>
+</li>
 </ul>
 
 

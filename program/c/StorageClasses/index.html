@@ -635,7 +635,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2049,7 +2049,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2145,30 +2145,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cant-use-formal-parameter-as-static" class="md-nav__link">
+    can't use formal parameter as static
+  </a>
+  
+    <nav class="md-nav" aria-label="can't use formal parameter as static">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#122-a-random-number-function-and-a-static-varibale" class="md-nav__link">
     12.2 A Random-Number Function and a Static Varibale
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#123-roll-em" class="md-nav__link">
     12.3 Roll 'Em
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#124-allocated-memory-malloc-and-free" class="md-nav__link">
     12.4 Allocated Memory: malloc() and free()
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#-sets-all-the-bits-in-the-block-to-zero" class="md-nav__link">
+    -   sets all the bits in the block to zero
+  </a>
+  
+    <nav class="md-nav" aria-label="-   sets all the bits in the block to zero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#125-ansi-c-type-qualifiers" class="md-nav__link">
     12.5 ANSI C Type Qualifiers
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2197,12 +2223,16 @@
 
 <h1 id="storage-classes-liknage-and-memory-management">Storage Classes, Liknage and Memory Management<a class="headerlink" href="#storage-classes-liknage-and-memory-management" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Keywords: </li>
+<li>Keywords:<ul>
 <li><code>auto, extern, static, register, const, volatile, restricted</code></li>
 <li><code>_Thread_local, _Atomic</code></li>
-<li>Functions</li>
+</ul>
+</li>
+<li>Functions<ul>
 <li><code>rand, srand, time</code></li>
 <li><code>malloc, calloc, free</code></li>
+</ul>
+</li>
 <li>scope, life time</li>
 </ul>
 <h3 id="121-storage-classes">12.1 Storage Classes<a class="headerlink" href="#121-storage-classes" title="Permanent link">&para;</a></h3>
@@ -2217,7 +2247,7 @@
 <ul>
 <li>
 <p>block scope</p>
-</li>
+<ul>
 <li>
 <p>the code controlled by a <strong>for, while, do while</strong> loop or <strong>if</strong> statement</p>
 <ul>
@@ -2231,26 +2261,26 @@
         int i = 0;//inside i in effect
     }//inside i disappear</code></p>
 </li>
+</ul>
+</li>
 <li>
 <p>function scope</p>
-</li>
+<ul>
 <li><strong>labels</strong> used with <code>goto</code> statements</li>
-<li>
-<p><strong>NOTICE:</strong> even if a label appears inside an <strong>inner</strong> block in a function, its scope extends to the <strong>whole</strong> function</p>
+<li><strong>NOTICE:</strong> even if a label appears inside an <strong>inner</strong> block in a function, its scope extends to the <strong>whole</strong> function</li>
+</ul>
 </li>
-<li>
-<p>function prototype scope</p>
-</li>
+<li>function prototype scope<ul>
 <li>variable <strong>names</strong> used in function prototypes</li>
 <li>only runs from the definition to the end of the prototype</li>
 <li>is all the compiler cares about when handling a function</li>
-<li>
-<p><strong>needn't</strong> match the name used in function definition (except for variable-length array parameters <code>int n, int m, ar[n][m]</code>)</p>
+<li><strong>needn't</strong> match the name used in function definition (except for variable-length array parameters <code>int n, int m, ar[n][m]</code>)</li>
+</ul>
 </li>
-<li>
-<p>file scope</p>
-</li>
+<li>file scope<ul>
 <li>variable with its definition placed <strong>outside of any function</strong></li>
+</ul>
+</li>
 </ul>
 <blockquote>
 <p>Translation Units:</p>
@@ -2262,8 +2292,10 @@
 </blockquote>
 <p><strong>Linkage:</strong> only variable with file scope can have linkage</p>
 <ul>
-<li>internal linkage: can be used anywhere in a single translation unit</li>
+<li>internal linkage: can be used anywhere in a single translation unit<ul>
 <li>Keyword: <code>static</code></li>
+</ul>
+</li>
 <li>external linkage: anywhere in a multifile program</li>
 </ul>
 <blockquote>
@@ -2272,41 +2304,58 @@
 <li>file scope with external/internal linkage</li>
 </ul>
 </blockquote>
-<p><strong>Storage Duration:</strong> </p>
+<p><strong>Storage Duration:</strong></p>
 <ul>
-<li>static storage duration</li>
+<li>static storage duration<ul>
 <li>exits <strong>throughout program execution</strong></li>
 <li>for <strong>file scope</strong> variables</li>
 <li>for <strong>block scope</strong> with <code>static</code></li>
-<li>thread storage duration</li>
+</ul>
+</li>
+<li>thread storage duration<ul>
 <li>exits <strong>from declaration until the thread terminates</strong></li>
 <li>Keyword: <code>_Thread_local</code> modified variable that defined outside any function, each thread gets its own <strong>private copy of the variable</strong></li>
-<li>automatic storage duration</li>
+</ul>
+</li>
+<li>automatic storage duration<ul>
 <li>for <strong>block scope</strong> normally</li>
 <li>have memory allocated for them when <strong>entering the block</strong> (except for VLA, from its <strong>definition</strong>) and space freed when <strong>exiting the block</strong></li>
 <li>these memory can be <strong>reused</strong></li>
+</ul>
+</li>
 <li>allocated storage duration</li>
 </ul>
 <p>Five <strong>Storage Classes</strong></p>
 <ul>
-<li><strong>automatic:</strong> in a block</li>
+<li><strong>automatic:</strong> in a block<ul>
 <li>automatic, block, none</li>
 <li>can use <strong>storage-class specifier</strong> <code>auto</code>, buy not compatible with C++, so <strong>DO NOT USE</strong></li>
-<li><strong>register:</strong> in a block with <code>register</code></li>
+</ul>
+</li>
+<li><strong>register:</strong> in a block with <code>register</code><ul>
 <li>automatic, block, none</li>
 <li><strong>NOTICE:</strong> CANNOT take the address of a register variable</li>
 <li>types that can be declared register may be restricted</li>
-<li><strong>static with external linkage:</strong> outside of all functions</li>
+</ul>
+</li>
+<li><strong>static with external linkage:</strong> outside of all functions<ul>
 <li>static, file, external</li>
 <li>declaring the variable in the second file with extern is <strong>mandatory</strong></li>
-<li><strong>static with internal linkage:</strong> outside of all functions with <code>static</code></li>
+</ul>
+</li>
+<li><strong>static with internal linkage:</strong> outside of all functions with <code>static</code><ul>
 <li>static, file, internal</li>
-<li><strong>static with no linkage:</strong> in a block with <code>static</code></li>
+</ul>
+</li>
+<li><strong>static with no linkage:</strong> in a block with <code>static</code><ul>
 <li>static, block, none</li>
 <li><strong>initialized</strong> only once</li>
 <li>the declaration <strong>actually isn't part of the function</strong></li>
-<li>can't use formal parameter as static</li>
-<li></li>
+<li>
+<h2 id="cant-use-formal-parameter-as-static">can't use formal parameter as static<a class="headerlink" href="#cant-use-formal-parameter-as-static" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="122-a-random-number-function-and-a-static-varibale">12.2 A Random-Number Function and a Static Varibale<a class="headerlink" href="#122-a-random-number-function-and-a-static-varibale" title="Permanent link">&para;</a></h3>
 <h3 id="123-roll-em">12.3 Roll 'Em<a class="headerlink" href="#123-roll-em" title="Permanent link">&para;</a></h3>
@@ -2320,10 +2369,7 @@
 </ul>
 <p><code>void free( void *ptr )</code></p>
 <p><code>void *calloc( size_t num, size_t size )</code></p>
-<ul>
-<li>sets all the bits in the block to <strong>zero</strong></li>
-<li></li>
-</ul>
+<h2 id="-sets-all-the-bits-in-the-block-to-zero">-   sets all the bits in the block to <strong>zero</strong><a class="headerlink" href="#-sets-all-the-bits-in-the-block-to-zero" title="Permanent link">&para;</a></h2>
 <h3 id="125-ansi-c-type-qualifiers">12.5 ANSI C Type Qualifiers<a class="headerlink" href="#125-ansi-c-type-qualifiers" title="Permanent link">&para;</a></h3>
 
 

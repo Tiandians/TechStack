@@ -639,7 +639,7 @@
   
     <li class="md-nav__item">
       <a href="../../writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -847,6 +847,13 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     本地用户管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-groupadd" class="md-nav__link">
+    -   groupadd
   </a>
   
 </li>
@@ -2117,7 +2124,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2233,6 +2240,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#-groupadd" class="md-nav__link">
+    -   groupadd
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2268,8 +2282,10 @@
 <h1 id="linux">Linux 用户<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
 <h2 id="_1">用户<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>一个用户想要登陆，它必须有什么？</li>
+<li>一个用户想要登陆，它必须有什么？<ul>
 <li>必要的文件、目录、权限、一个密码</li>
+</ul>
+</li>
 </ul>
 <p>Linux 一般有一下用户身份</p>
 <table>
@@ -2321,12 +2337,12 @@
 <ul>
 <li>
 <p><code>useradd</code> 添加用户</p>
-</li>
+<ul>
 <li>
 <p>常用参数 <code>-d(directory), -e(expire), -u(UID), -g(group), -G, -N, -s(shell)</code></p>
 <ul>
 <li>
-<p>分配ID，设置默认 shell，在 <code>shadow</code> 文件中放置 <code>!</code> 来阻止无密码用户登陆，创建 home目录（拷贝 <code>/etc/skel</code>，包括 <code>bash</code> 等启动文件）</p>
+<p>分配 ID，设置默认 shell，在 <code>shadow</code> 文件中放置 <code>!</code> 来阻止无密码用户登陆，创建 home 目录（拷贝 <code>/etc/skel</code>，包括 <code>bash</code> 等启动文件）</p>
 </li>
 <li>
 <p><code>useradd -g 1105 -c "Max R." max</code>：</p>
@@ -2335,30 +2351,32 @@
 <li><code>useradd -G sudo admin</code>：具有 sudo 组的用户</li>
 </ul>
 </li>
-<li>
-<p><code>userdel</code> 删除用户</p>
+</ul>
 </li>
 <li>
-<p>常用参数 <code>-f, -r</code></p>
+<p><code>userdel</code> 删除用户</p>
 <ul>
+<li>常用参数 <code>-f, -r</code><ul>
 <li><code>userdel -r debian</code>：完全移除用户（包括 home 和邮箱目录）</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <p><code>usermod</code> 修改用户信息</p>
-</li>
-<li>
-<p>常用参数 <code>-c(comment), -d, -m(move), -e, -g, -G, -L(lock), -U(unlock), -s, -u</code></p>
 <ul>
+<li>常用参数 <code>-c(comment), -d, -m(move), -e, -g, -G, -L(lock), -U(unlock), -s, -u</code><ul>
 <li><code>usermod debian -aG sudo</code>：将用户加入 sudo 组</li>
 <li><code>usermod -e "12/31/07" max</code>：设置用户有效期</li>
 </ul>
 </li>
-<li>
-<p><code>passwd</code> 设置用户密码</p>
+</ul>
 </li>
 <li>
-<p>常用参数 <code>-l, -u, --stdin, -d(允许空密码）, -e(强制登录时修改密码), -S(密码是否锁定以及加密算法名称)</code></p>
+<p><code>passwd</code> 设置用户密码</p>
+<ul>
+<li>常用参数 <code>-l, -u, --stdin, -d(允许空密码）, -e(强制登录时修改密码), -S(密码是否锁定以及加密算法名称)</code></li>
+</ul>
 </li>
 <li>
 <p><code>chpasswd</code> 批量修改用户密码</p>
@@ -2366,10 +2384,7 @@
 <li><code>id</code> 显示用户和组信息</li>
 </ul>
 <p>组管理工具</p>
-<ul>
-<li><code>groupadd</code></li>
-<li></li>
-</ul>
+<h2 id="-groupadd">-   <code>groupadd</code><a class="headerlink" href="#-groupadd" title="Permanent link">&para;</a></h2>
 
 
 

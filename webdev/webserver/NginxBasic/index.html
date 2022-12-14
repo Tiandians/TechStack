@@ -637,7 +637,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2143,7 +2143,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2320,12 +2320,12 @@
 <h1 id="nginx">Nginx 基础<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h1>
 <ul>
 <li>
-<p>Nginx ("engine x") 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。</p>
+<p>Nginx ("engine x") 是一个高性能的 <abbr title="Hypertext Transfer Protocol，超文本传输协议">HTTP</abbr> 和反向代理服务器，也是一个 IMAP/POP3/SMTP 服务器。</p>
 </li>
 <li>
-<p>其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</p>
+<p>其特点是占有内存少，并发能力强，事实上 nginx 的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用 nginx 网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</p>
 </li>
-<li>Nginx代码完全用C语言从头写成</li>
+<li>Nginx 代码完全用 C 语言从头写成</li>
 </ul>
 <blockquote>
 <p>帮助文档：</p>
@@ -2335,8 +2335,10 @@
 <p>以下是参考这两本手册学习的笔记摘录</p>
 <h2 id="_1">安装和使用<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>大部分 Linux 发行版和 BSD 衍生版的源里都有 Nginx，使用通常安装其他软件的方式即可安装</li>
+<li>大部分 Linux 发行版和 BSD 衍生版的源里都有 Nginx，使用通常安装其他软件的方式即可安装<ul>
 <li>这些包通常不是最新版本。如果你想使用最新功能和 Bug 修复，建议从源码编译安装</li>
+</ul>
+</li>
 </ul>
 <h3 id="_2">命令行参数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Nginx 仅有几个命令行参数，完全通过配置文件来配置。</p>
@@ -2352,18 +2354,24 @@
 <h3 id="_3">和主进程通信<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>启动：<code>sudo /usr/local/nginx/nginx</code></li>
-<li>从容重启：<code>kill -HUP pid</code></li>
 <li>
-<p>首先 master 进程在接到信号后，会先重新加载配置文件，然后再启动新的 worker 进程，并向所有老的 worker 进程发送信号，告诉他们可以光荣退休了。新的 worker 在启动后，就开始接收新的请求，而老的 worker 在收到来自 master 的信号后，就不再接收新的请求，并且在当前进程中的所有未处理完的请求处理完成后，再退出。</p>
+<p>从容重启：<code>kill -HUP pid</code></p>
+<ul>
+<li>首先 master 进程在接到信号后，会先重新加载配置文件，然后再启动新的 worker 进程，并向所有老的 worker 进程发送信号，告诉他们可以光荣退休了。新的 worker 在启动后，就开始接收新的请求，而老的 worker 在收到来自 master 的信号后，就不再接收新的请求，并且在当前进程中的所有未处理完的请求处理完成后，再退出。</li>
+</ul>
 </li>
 <li>
 <p>从容停止：等待请求结束后关闭服务：</p>
-</li>
+<ul>
 <li><code>ps -ef |grep nginx</code></li>
 <li><code>kill -QUIT  nginx 主进程号</code></li>
-<li>快速停止：立刻关闭</li>
+</ul>
+</li>
+<li>快速停止：立刻关闭<ul>
 <li><code>ps -ef |grep nginx</code></li>
 <li><code>kill -TERM nginx 主进程号</code></li>
+</ul>
+</li>
 </ul>
 <p>这些是 Nginx 主进程可以处理的信号：</p>
 <table>
@@ -2396,39 +2404,36 @@
 </tr>
 </tbody>
 </table>
-<p>涉及到平滑更新配置文件和二进制程序的操作， #暂不学习 。
-</p>
+<p>涉及到平滑更新配置文件和二进制程序的操作， #暂不学习 。</p>
 </blockquote>
 <h2 id="nginx_1">Nginx 架构<a class="headerlink" href="#nginx_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Nginx 在启动后，在 unix 系统中会以 daemon （守护进程）的方式在后台运行，后台进程包含一个 master 进程和多个 worker 进程。</li>
-<li>**master 进程**主要用来管理 worker 进程，包含：接收来自外界的信号，向各 worker 进程发送信号，监控 worker 进程的运行状态，当 worker 进程退出后(异常情况下)，会自动重新启动新的 worker 进程。</li>
 <li>
-<p>基本的网络事件，则是放在 <strong>worker 进程**中来处理了。多个 worker 进程之间是**对等的</strong>，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个**请求**，只可能在一个 worker 进程中处理，一个 worker 进程，不可能处理其它进程的请求。worker 进程的个数是可以设置的，一般我们会设置与机器cpu核数一致，这里面的原因与 Nginx 的进程模型以及事件处理模型是分不开的。</p>
+<p>Nginx 在启动后，在 unix 系统中会以 daemon （守护进程）的方式在后台运行，后台进程包含一个 master 进程和多个 worker 进程。</p>
+<ul>
+<li>**master 进程**主要用来管理 worker 进程，包含：接收来自外界的信号，向各 worker 进程发送信号，监控 worker 进程的运行状态，当 worker 进程退出后(异常情况下)，会自动重新启动新的 worker 进程。</li>
+<li>基本的网络事件，则是放在 <strong>worker 进程**中来处理了。多个 worker 进程之间是**对等的</strong>，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个**请求**，只可能在一个 worker 进程中处理，一个 worker 进程，不可能处理其它进程的请求。worker 进程的个数是可以设置的，一般我们会设置与机器 cpu 核数一致，这里面的原因与 Nginx 的进程模型以及事件处理模型是分不开的。</li>
+</ul>
 </li>
 <li>
 <p>worker 进程又是如何处理请求的呢？</p>
-</li>
-<li>
-<p>每个 worker 进程都是从 master 进程 fork 过来，在 master 进程里面，先建立好需要 listen 的 socket（listenfd）之后，然后再 fork 出多个 worker 进程。</p>
-</li>
+<ul>
+<li>每个 worker 进程都是从 master 进程 fork 过来，在 master 进程里面，先建立好需要 listen 的 socket（listenfd）之后，然后再 fork 出多个 worker 进程。</li>
 <li>所有 worker 进程的 listenfd 会在新连接到来时变得可读，为保证只有一个进程处理该连接，所有 worker 进程在注册 listenfd 读事件前抢 accept_mutex，抢到互斥锁的那个进程注册 listenfd 读事件，在读事件里调用 accept 接受该连接。</li>
-<li>
-<p>当一个 worker 进程在 accept 这个连接之后，就开始读取请求，解析请求，处理请求，产生数据后，再返回给客户端，最后才断开连接，这样一个完整的请求就是这样的了。</p>
+<li>当一个 worker 进程在 accept 这个连接之后，就开始读取请求，解析请求，处理请求，产生数据后，再返回给客户端，最后才断开连接，这样一个完整的请求就是这样的了。</li>
+</ul>
 </li>
 <li>
 <p>Nginx 采用这种进程模型有什么好处呢？</p>
-</li>
-<li>
-<p>对于每个 worker 进程来说，独立的进程，不需要加锁，所以省掉了锁带来的开销，同时在编程以及问题查找时，也会方便很多</p>
-</li>
+<ul>
+<li>对于每个 worker 进程来说，独立的进程，不需要加锁，所以省掉了锁带来的开销，同时在编程以及问题查找时，也会方便很多</li>
 <li>采用独立的进程，可以让互相之间不会影响，一个进程退出后，其它进程还在工作，服务不会中断，master 进程则很快启动新的 worker 进程</li>
-<li>
-<p>worker 进程的异常退出，肯定是程序有 bug 了，异常退出，会导致当前 worker 上的所有请求失败，不过不会影响到所有请求，所以降低了风险</p>
+<li>worker 进程的异常退出，肯定是程序有 bug 了，异常退出，会导致当前 worker 上的所有请求失败，不过不会影响到所有请求，所以降低了风险</li>
+</ul>
 </li>
 <li>
 <p>Nginx 如何做到高并发？</p>
-</li>
+<ul>
 <li>
 <p>Nginx 采用了**异步非阻塞**的方式来处理请求，也就是说，Nginx 是可以同时处理成千上万个请求的</p>
 </li>
@@ -2438,25 +2443,29 @@
 </blockquote>
 </li>
 </ul>
+</li>
+</ul>
 <p>接下来的内容涉及系统级进程管理， #暂不学习</p>
 <h2 id="nginx_2">Nginx 配置系统<a class="headerlink" href="#nginx_2" title="Permanent link">&para;</a></h2>
 <p>配置文件在 <code>/etc/nginx/nginx.conf</code></p>
-<p>Nginx 的配置系统由一个**主配置文件**和其他一些辅助的配置文件构成。这些配置文件均是纯文本文件，全部位于Nginx 安装目录下的 conf 目录下。由于除主配置文件 nginx.conf 以外的文件都是在某些情况下才使用的，而只有主配置文件是在任何情况下都被使用的。所以在这里我们就以主配置文件为例，来解释 Nginx 的配置系统。</p>
+<p>Nginx 的配置系统由一个**主配置文件**和其他一些辅助的配置文件构成。这些配置文件均是纯文本文件，全部位于 Nginx 安装目录下的 conf 目录下。由于除主配置文件 nginx.conf 以外的文件都是在某些情况下才使用的，而只有主配置文件是在任何情况下都被使用的。所以在这里我们就以主配置文件为例，来解释 Nginx 的配置系统。</p>
 <p>在 nginx.conf 中，包含若干**配置项**。每个配置项由配置指令和指令参数 2 个部分构成。指令参数也就是配置指令对应的配置值。</p>
 <ul>
 <li>**配置指令**是一个字符串，可以用单引号或者双引号括起来，也可以不括。但是如果配置指令包含空格，一定要引起来。</li>
-<li>**指令的参数**使用一个或者多个空格或者 TAB 字符与指令分开。指令的参数有一个或者多个 TOKEN 串组成。TOKEN 串之间由空格或者 TAB 键分隔。</li>
+<li>**指令的参数**使用一个或者多个空格或者 TAB 字符与指令分开。指令的参数有一个或者多个 TOKEN 串组成。TOKEN 串之间由空格或者 TAB 键分隔。<ul>
 <li>**TOKEN 串**分为简单字符串或者是复合配置块。复合配置块即是由大括号括起来的一堆内容。一个复合配置块中可能包含若干其他的配置指令。</li>
+</ul>
+</li>
 <li>对于简单配置，配置项的结尾使用**分号结束**。对于复杂配置项，包含多个 TOKEN 串的，一般都是简单 TOKEN 串放在前面，复合配置块一般位于最后，而且其结尾，并**不需要再添加分号**。</li>
 </ul>
 <h3 id="_4">上下文<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>nginx.conf 中的配置信息，根据其逻辑上的意义，对它们进行了分类，也就是分成了多个作用域，或者称之为配置指令上下文。不同的作用域含有一个或者多个配置项。</p>
 <p>当前 Nginx 支持的几个指令上下文：</p>
 <ul>
-<li>main: Nginx 在运行时与具体业务功能（比如http服务或者email服务代理）无关的一些参数，比如工作进程数，运行的身份等。</li>
-<li>http: 与提供 http 服务相关的一些配置参数。例如：是否使用 keepalive 啊，是否使用gzip进行压缩等。</li>
+<li>main: Nginx 在运行时与具体业务功能（比如 http 服务或者 email 服务代理）无关的一些参数，比如工作进程数，运行的身份等。</li>
+<li>http: 与提供 http 服务相关的一些配置参数。例如：是否使用 keepalive 啊，是否使用 gzip 进行压缩等。</li>
 <li>server: http 服务上支持若干虚拟主机。每个虚拟主机一个对应的 server 配置项，配置项里面包含该虚拟主机相关的配置。在提供 mail 服务的代理时，也可以建立若干 server，每个 server 通过监听的地址来区分。</li>
-<li>location: http 服务中，某些特定的URL对应的一系列配置项。</li>
+<li>location: http 服务中，某些特定的 <abbr title="Uniform Resource Locator，统一资源定位符">URL</abbr> 对应的一系列配置项。</li>
 <li>mail: 实现 email 相关的 SMTP/IMAP/POP3 代理时，共享的一些配置项（因为可能实现多个代理，工作在多个监听地址上）。</li>
 </ul>
 <p>指令上下文，可能有**包含**的情况出现。例如：通常 http 上下文和 mail 上下文一定是出现在 main 上下文里的。在一个上下文里，可能包含另外一种类型的上下文多次。例如：如果 http 服务，支持了多个虚拟主机，那么在 http 上下文里，就会出现多个 server 上下文。</p>
@@ -2468,26 +2477,26 @@
 <span class="w">        </span><span class="kn">worker_connections</span><span class="w">  </span><span class="mi">1024</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">http</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
-<span class="w">        </span><span class="kn">server</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
-<span class="w">            </span><span class="kn">listen</span><span class="w">          </span><span class="mi">80</span><span class="p">;</span><span class="w">  </span>
-<span class="w">            </span><span class="kn">server_name</span><span class="w">     </span><span class="s">www.linuxidc.com</span><span class="p">;</span><span class="w">  </span>
-<span class="w">            </span><span class="kn">access_log</span><span class="w">      </span><span class="s">logs/linuxidc.access.log</span><span class="w"> </span><span class="s">main</span><span class="p">;</span><span class="w">  </span>
-<span class="w">            </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
-<span class="w">                </span><span class="kn">index</span><span class="w"> </span><span class="s">index.html</span><span class="p">;</span><span class="w">  </span>
-<span class="w">                </span><span class="kn">root</span><span class="w">  </span><span class="s">/var/www/linuxidc.com/htdocs</span><span class="p">;</span><span class="w">  </span>
-<span class="w">            </span><span class="p">}</span><span class="w">  </span>
-<span class="w">        </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="k">http</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kn">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kn">listen</span><span class="w">          </span><span class="mi">80</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kn">server_name</span><span class="w">     </span><span class="s">www.linuxidc.com</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kn">access_log</span><span class="w">      </span><span class="s">logs/linuxidc.access.log</span><span class="w"> </span><span class="s">main</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="kn">index</span><span class="w"> </span><span class="s">index.html</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="kn">root</span><span class="w">  </span><span class="s">/var/www/linuxidc.com/htdocs</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">        </span><span class="kn">server</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
-<span class="w">            </span><span class="kn">listen</span><span class="w">          </span><span class="mi">80</span><span class="p">;</span><span class="w">  </span>
-<span class="w">            </span><span class="kn">server_name</span><span class="w">     </span><span class="s">www.Androidj.com</span><span class="p">;</span><span class="w">  </span>
-<span class="w">            </span><span class="kn">access_log</span><span class="w">      </span><span class="s">logs/androidj.access.log</span><span class="w"> </span><span class="s">main</span><span class="p">;</span><span class="w">  </span>
-<span class="w">            </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
-<span class="w">                </span><span class="kn">index</span><span class="w"> </span><span class="s">index.html</span><span class="p">;</span><span class="w">  </span>
-<span class="w">                </span><span class="kn">root</span><span class="w">  </span><span class="s">/var/www/androidj.com/htdocs</span><span class="p">;</span><span class="w">  </span>
-<span class="w">            </span><span class="p">}</span><span class="w">  </span>
-<span class="w">        </span><span class="p">}</span><span class="w">  </span>
+<span class="w">        </span><span class="kn">server</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="kn">listen</span><span class="w">          </span><span class="mi">80</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kn">server_name</span><span class="w">     </span><span class="s">www.Androidj.com</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kn">access_log</span><span class="w">      </span><span class="s">logs/androidj.access.log</span><span class="w"> </span><span class="s">main</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="kn">index</span><span class="w"> </span><span class="s">index.html</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="kn">root</span><span class="w">  </span><span class="s">/var/www/androidj.com/htdocs</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">mail</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -2868,7 +2877,7 @@ http
         location ~ .*.(htm|html|gif|jpg|jpeg|png|bmp|swf|ioc|rar|zip|txt|flv|mid|doc|ppt|
         pdf|xls|mp3|wma)$
         {
-            expires 15d; 
+            expires 15d;
         }
 
         location ~ .*.(js|css)?$

@@ -635,7 +635,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2049,7 +2049,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2261,6 +2261,24 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract-groups-of-bits-from-larger-units-ep-use-unsigned-long-value-to-represent-color" class="md-nav__link">
+    extract groups of bits from larger units (e.p. use unsigned long value to represent color)
+  </a>
+  
+    <nav class="md-nav" aria-label="extract groups of bits from larger units (e.p. use unsigned long value to represent color)">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#programming-example" class="md-nav__link">
     Programming Example
@@ -2275,17 +2293,24 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#154-bit-fields" class="md-nav__link">
     15.4 Bit Fields (位字段)
   </a>
   
-    <nav class="md-nav" aria-label="15.4 Bit Fields (位字段)">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-notice-bit-fields-tend-not-to-be-very-portable-but-are-used-for-nonportable-purposes-such-as-putting-data-in-the-exact-form-used-by-a-particular-hardware-device" class="md-nav__link">
+    -   NOTICE: bit fields tend not to be very portable, but are used for nonportable purposes such as putting data in the exact form used by a particular hardware device
+  </a>
+  
+    <nav class="md-nav" aria-label="-   NOTICE: bit fields tend not to be very portable, but are used for nonportable purposes such as putting data in the exact form used by a particular hardware device">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2299,11 +2324,6 @@
   <a href="#bit-fields-and-bitwise-operators" class="md-nav__link">
     Bit Fields and Bitwise Operators
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2404,7 +2424,7 @@
 <ul>
 <li>first mask the other bits in flags: <code>(flags &amp; MASK) == MASK</code></li>
 <li><strong>NOTICE:</strong> <code>bitwise</code> operators have lower precedence than <code>==</code></li>
-<li><strong>NOTICE:</strong> a mask should be at least as wide as the value it's masking </li>
+<li><strong>NOTICE:</strong> a mask should be at least as wide as the value it's masking</li>
 </ul>
 <h4 id="bitwise-shift-operators">Bitwise Shift Operators<a class="headerlink" href="#bitwise-shift-operators" title="Permanent link">&para;</a></h4>
 <ul>
@@ -2413,10 +2433,13 @@
 <li><code>A &gt;&gt; B</code>: for <em>unsigned</em> integers, fill 0s. for <em>signed</em> integers, the result is machine dependent</li>
 <li><code>&gt;&gt;=</code></li>
 <li><strong>NOTICE:</strong> shift operators do not change the value of the variables</li>
-<li>Usage</li>
+<li>Usage<ul>
 <li>multiplication and division by powers of 2 (if number is not negative)</li>
-<li><strong>extract groups of bits</strong> from larger units (e.p. use unsigned long value to represent color)</li>
-<li></li>
+<li>
+<h2 id="extract-groups-of-bits-from-larger-units-ep-use-unsigned-long-value-to-represent-color"><strong>extract groups of bits</strong> from larger units (e.p. use unsigned long value to represent color)<a class="headerlink" href="#extract-groups-of-bits-from-larger-units-ep-use-unsigned-long-value-to-represent-color" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</li>
 </ul>
 <h4 id="programming-example">Programming Example<a class="headerlink" href="#programming-example" title="Permanent link">&para;</a></h4>
 <ul>
@@ -2427,10 +2450,7 @@
 <li>Summary: <strong>try to think on the basis of directly operating the bits of data</strong></li>
 </ul>
 <h3 id="154-bit-fields">15.4 Bit Fields (位字段)<a class="headerlink" href="#154-bit-fields" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>NOTICE:</strong> bit fields tend <strong>not to be very portable</strong>, but are used for nonportable purposes such as <strong>putting data in the exact form used by a particular hardware device</strong></li>
-<li></li>
-</ul>
+<h2 id="-notice-bit-fields-tend-not-to-be-very-portable-but-are-used-for-nonportable-purposes-such-as-putting-data-in-the-exact-form-used-by-a-particular-hardware-device">-   <strong>NOTICE:</strong> bit fields tend <strong>not to be very portable</strong>, but are used for nonportable purposes such as <strong>putting data in the exact form used by a particular hardware device</strong><a class="headerlink" href="#-notice-bit-fields-tend-not-to-be-very-portable-but-are-used-for-nonportable-purposes-such-as-putting-data-in-the-exact-form-used-by-a-particular-hardware-device" title="Permanent link">&para;</a></h2>
 <h4 id="bit-field-example">Bit-field Example<a class="headerlink" href="#bit-field-example" title="Permanent link">&para;</a></h4>
 <h4 id="bit-fields-and-bitwise-operators">Bit Fields and Bitwise Operators<a class="headerlink" href="#bit-fields-and-bitwise-operators" title="Permanent link">&para;</a></h4>
 <h3 id="alignment-features-c11">Alignment Features (C11)<a class="headerlink" href="#alignment-features-c11" title="Permanent link">&para;</a></h3>

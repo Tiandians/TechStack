@@ -639,7 +639,7 @@
   
     <li class="md-nav__item">
       <a href="../../writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2144,7 +2144,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2321,7 +2321,7 @@
 
 <h1 id="linux">Linux 文件系统<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Linux系统中，<strong>一切都是文件</strong></li>
+<li>Linux 系统中，<strong>一切都是文件</strong></li>
 </ul>
 <h2 id="_1">文件类型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
@@ -2369,36 +2369,48 @@
 <p>每一个文件都对三类实体分配权限：user, group, others (合称 all)，均用首字母代表</p>
 <p>这些权限有：<code>r, w, x</code></p>
 <ul>
-<li>请回忆：对于目录来说，这三个符号代表什么？文件呢？</li>
+<li>请回忆：对于目录来说，这三个符号代表什么？文件呢？<ul>
 <li>这三个权限也采用位模式表示，比如<code>111</code>=7，说明可读可写可执行</li>
 <li><code>rwxrw-r--</code>代表什么？</li>
 </ul>
+</li>
+</ul>
 <h3 id="_3">权限管理工具<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>chmod [option] permission file|directory</code></li>
+<li><code>chmod [option] permission file|directory</code><ul>
 <li>可以使用数字设置权限</li>
-<li><code>chown [option] owner:group file|directory</code></li>
+</ul>
+</li>
+<li><code>chown [option] owner:group file|directory</code><ul>
 <li><code>-R</code> 它们都使用大写 <code>R</code> 表示递归操作</li>
+</ul>
+</li>
 </ul>
 <h3 id="_4">特殊权限位<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>SUID</li>
+<li>SUID<ul>
 <li>用于：二进制程序</li>
 <li>用途：让程序执行者临时拥有**属主**的权限</li>
 <li>例：<code>passwd</code> 程序修改密码，密码存放于 <code>/etc/shadow</code> 权限为 <code>000</code></li>
 <li>表示：<code>rwx</code> → <code>rws</code>，<code>rw-</code> → <code>rwS</code>，放置于 owner 的执行位上</li>
-<li>SGID</li>
+</ul>
+</li>
+<li>SGID<ul>
 <li>用于：目录、程序</li>
 <li>用途：在该目录中创建的文件自动**继承**目录用户组、执行者临时拥有**属组**的权限</li>
 <li>例：<code>ps</code>命令查看进程状态信息，<code>ps</code> 的属性是 <code>-r-xr-sr-x</code> ，它读取这个文件： <code>/dev/kmem</code> 是字符设备存储内核程序使用数据，属性为 <code>cr--r-----</code></li>
 <li>表示：放置于 group 的执行位上</li>
 <li>联系[[Linux用户#用户组]]</li>
 <li>文件创建时，默认情况下归属于该用户的**基本用户组**而非扩展用户组</li>
-<li>SBID （sticky bit）</li>
+</ul>
+</li>
+<li>SBID （sticky bit）<ul>
 <li>用于：目录</li>
 <li>用途：确保用户只能删除自己的文件，不能删除其他用户的文件</li>
 <li>例：<code>/tmp</code> 中的文件都只能被属组删除</li>
 <li>表示：放置于 others 的执行位上 <code>t/T</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="_5">隐藏权限<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>你可能在以下情况下碰到隐藏权限：权限充足却无法删除、只能在日志中追加而不能修改、删除。这些隐藏权限保障着 Linux 的安全性。</p>
@@ -2416,25 +2428,33 @@
 </li>
 <li>
 <p><code>/dev</code> 外部设备</p>
-</li>
+<ul>
 <li><code>zero</code>：这是一个不占用系统存储空间，却能提供无穷无尽数据的文件</li>
 <li><code>cdrom</code></li>
 <li><code>stdin, stdout, stderr</code></li>
-<li><code>/etc</code> 所有系统管理所需配置文件和子目录</li>
+</ul>
+</li>
+<li><code>/etc</code> 所有系统管理所需配置文件和子目录<ul>
 <li><code>passwd, shadow, group</code></li>
 <li><code>fstab</code></li>
 <li><code>/apt</code><ul>
 <li><code>sources.list</code></li>
 </ul>
 </li>
+</ul>
+</li>
 <li><code>/home</code> 用户主目录</li>
-<li><code>/usr</code> usr 是 unix shared resources(共享资源) 的缩写，这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于 windows 下的 program files 目录。</li>
+<li><code>/usr</code> usr 是 unix shared resources(共享资源) 的缩写，这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于 windows 下的 program files 目录。<ul>
 <li><code>/bin</code> 系统用户使用的应用程序。</li>
 <li><code>/sbin</code> 超级用户使用的比较高级的管理程序和系统守护程序。</li>
 <li><code>/src</code> 内核源代码默认的放置目录。</li>
-<li><code>/var</code> var 是 variable(变量) 的缩写，这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。</li>
+</ul>
+</li>
+<li><code>/var</code> var 是 variable(变量) 的缩写，这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。<ul>
 <li><code>/log</code><ul>
-<li><code>messages</code>：日志文件（Ubuntu无，Debian有）</li>
+<li><code>messages</code>：日志文件（Ubuntu 无，Debian 有）</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><code>/lib</code> 动态连接共享库，几乎所有应用程序都会用到这个库</li>

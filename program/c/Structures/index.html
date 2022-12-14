@@ -635,7 +635,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2049,7 +2049,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2191,6 +2191,19 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-where-the-arrays-are-stored" class="md-nav__link">
+    -   where the arrays are stored?
+  </a>
+  
+    <nav class="md-nav" aria-label="-   where the arrays are stored?">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#148-saving-the-structure-contents-in-a-file" class="md-nav__link">
@@ -2348,10 +2361,7 @@
 <li>called/calling function</li>
 </ul>
 <p><strong>【nodus】</strong> Character Arrays or Character Pointers in a Structure</p>
-<ul>
-<li>where the arrays are stored?</li>
-<li></li>
-</ul>
+<h2 id="-where-the-arrays-are-stored">-   where the arrays are stored?<a class="headerlink" href="#-where-the-arrays-are-stored" title="Permanent link">&para;</a></h2>
 <h3 id="148-saving-the-structure-contents-in-a-file">14.8 Saving the Structure Contents in a File<a class="headerlink" href="#148-saving-the-structure-contents-in-a-file" title="Permanent link">&para;</a></h3>
 <h3 id="149-structures-what-next">14.9 Structures: What Next?<a class="headerlink" href="#149-structures-what-next" title="Permanent link">&para;</a></h3>
 <h3 id="1410-unions-a-quick-look">14.10 Unions: A Quick Look<a class="headerlink" href="#1410-unions-a-quick-look" title="Permanent link">&para;</a></h3>
@@ -2359,7 +2369,7 @@
 <p>Union template:</p>
 <div class="highlight"><pre><span></span><code><span class="k">union</span><span class="w"> </span><span class="nc">hold</span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">digit</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">bigfl</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">bigfl</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <p>The compiler allots enough space so that it <strong>can hold the largest</strong> of the described possibilities.</p>
@@ -2402,7 +2412,7 @@
 <li>C allows you to apply the <code>++</code> operator to an enumeration variable</li>
 </ul>
 </blockquote>
-<p>Values: </p>
+<p>Values:</p>
 <ul>
 <li>
 <p>Default values: begin with 0</p>
@@ -2439,14 +2449,12 @@
 </li>
 <li>
 <p>To specify the function type, specify the function signature</p>
-</li>
-</ul>
 <p><code>int (*pf)(char *)</code></p>
-<ul>
-<li>Assign to it the addresses of functions: the name of a function represent the address of the function</li>
-</ul>
+</li>
+<li>
+<p>Assign to it the addresses of functions: the name of a function represent the address of the function</p>
 <p><code>pf = ToLower</code></p>
-<ul>
+</li>
 <li>
 <p>Usage: <code>(*pf)(mis)</code> or <code>pf(mis)</code></p>
 </li>
@@ -2460,7 +2468,7 @@
 <p>with array: <code>V_FP_CHARP arpf[4] = {ToUpper, ToLower}</code></p>
 </li>
 </ul>
-<p>*</p>
+<p>-</p>
 
 
 

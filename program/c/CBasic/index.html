@@ -637,7 +637,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2356,7 +2356,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2749,7 +2749,7 @@
 <h3 id="1-remember-some-basic-ranges-of-data">1. Remember some basic ranges of data<a class="headerlink" href="#1-remember-some-basic-ranges-of-data" title="Permanent link">&para;</a></h3>
 <p>These are common practice today:</p>
 <ul>
-<li>long long: 64bits = </li>
+<li>long long: 64bits =</li>
 <li>long: 32bits <span class="arithmatex">\(\in [-2 147 483 648, 2 147 483 647]\)</span></li>
 <li>short: 16bits <span class="arithmatex">\(\in [-32 768, 32767]\)</span></li>
 <li>int 32bits or 16bits</li>
@@ -2840,14 +2840,18 @@
 <h3 id="4other-types">4.Other Types<a class="headerlink" href="#4other-types" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>_Bool</code>: C99</li>
-<li>Portable types: <code>stdint.h</code>, <code>inttypes.h</code></li>
+<li>Portable types: <code>stdint.h</code>, <code>inttypes.h</code><ul>
 <li>exact-width integer: <code>int32_t</code></li>
 <li>minimum width types: <code>int_least8_t</code></li>
 <li>fastest minimum width types: <code>int_fast8_t</code></li>
 <li><code>intmax_t</code></li>
-<li>Complex and imaginary Floating Point:</li>
+</ul>
+</li>
+<li>Complex and imaginary Floating Point:<ul>
 <li><code>float _Complex</code></li>
 <li><code>double _Imaginary</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="format-strings-and-formatted-io">Format Strings and Formatted IO<a class="headerlink" href="#format-strings-and-formatted-io" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2859,7 +2863,7 @@
 <h3 id="42-character-strings-an-introduction">4.2 Character Strings: An Introduction<a class="headerlink" href="#42-character-strings-an-introduction" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>scanf()</code> stops reading at the first <em>whitespace(blank, tab, or newline)</em></li>
-<li><code>strlen()</code> gives the length of a string in characters, <strong>NOT includes the <code>'\0'</code> (but <code>sizeof()</code> includes)</strong> </li>
+<li><code>strlen()</code> gives the length of a string in characters, <strong>NOT includes the <code>'\0'</code> (but <code>sizeof()</code> includes)</strong></li>
 <li>two methods to <strong>handle long <code>printf()</code> statements</strong>: <strong>spreads over two lines</strong> or printf one line twice</li>
 <li><code>%zd</code> for return value of <code>sizeof</code> and <code>strlen()</code></li>
 </ul>
@@ -2874,13 +2878,11 @@
 <li>manifest constants (字面量)</li>
 <li>capitalize constants is a good behaviour, or use prefix <code>c_</code> or <code>k_</code></li>
 <li>round (四舍五入)</li>
-<li><code>const</code> : allows you to declare a type<blockquote>
-<p>see Chapter 12 Storage Classes, Linkage, and Memory  Management
-<code>enum</code> in Chapter 14 is also constants</p>
-</blockquote>
-</li>
+<li><code>const</code> : allows you to declare a type
+    &gt; see Chapter 12 Storage Classes, Linkage, and Memory Management
+    &gt; <code>enum</code> in Chapter 14 is also constants</li>
 <li><code>limits.h</code><ul>
-<li><code>INT_MAX</code> </li>
+<li><code>INT_MAX</code></li>
 <li><code>INT_MIN</code></li>
 <li><code>CHAR_BIT</code></li>
 <li><code>SHRT_MAX</code></li>
@@ -2890,7 +2892,7 @@
 </ul>
 </li>
 <li><code>float.h</code><ul>
-<li><code>FLT_DIG</code> : minimum number of significant decimal digits for a float </li>
+<li><code>FLT_DIG</code> : minimum number of significant decimal digits for a float</li>
 <li><code>DBL_DIG</code></li>
 <li><code>FLT_MIN</code> : minimum value for a positive float retaining full precision</li>
 <li><code>FLT_EPSILON</code> : difference between 1.00 and the least float value greater than 1.00</li>
@@ -2915,15 +2917,17 @@
 <li><code>l</code> and <code>ll</code>: for long, long long integer</li>
 <li><code>L</code>: for long double</li>
 <li><code>t</code>: for <code>ptrdiff_t</code> value <code>%td</code></li>
-<li><code>z</code>: for <code>size_t</code> value <code>%zd</code> (<code>sizeof, strlen</code>)</li>
+<li><code>z</code>: for <code>size_t</code> value <code>%zd</code> (<code>sizeof, strlen</code>)<ul>
 <li>reason for <code>z</code> and <code>t</code> is portability: the underlying type for <code>size_t</code> vary between machines</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>flags<ul>
 <li><code>-</code>: left-justified</li>
 <li><code>+</code>: signed values displayed with sign</li>
 <li><code>space</code> : signed values are displayed with a leading space, negative with a minus</li>
-<li><code>#</code>: <ul>
+<li><code>#</code>:<ul>
 <li>for <code>o</code> and <code>x</code>: print <code>0x</code></li>
 <li>for <code>float</code> : guarantees a decimal-point is printed</li>
 </ul>
@@ -2955,32 +2959,42 @@
 <p>Consecutive conversion specifications: <code>%d%f%s</code>, skip over the whitespace <strong>in between, except for <code>%c</code></strong></p>
 </li>
 <li>
-<p><strong>conversion specifications:</strong> </p>
-</li>
+<p><strong>conversion specifications:</strong></p>
+<ul>
 <li>float and double are the same</li>
-<li><strong>conversion specifications modifiers:</strong></li>
+</ul>
+</li>
+<li><strong>conversion specifications modifiers:</strong><ul>
 <li><code>*</code>: suppress assignment</li>
+</ul>
+</li>
 </ul>
 <h2 id="arrays-and-pointers">Arrays and Pointers<a class="headerlink" href="#arrays-and-pointers" title="Permanent link">&para;</a></h2>
 <h3 id="101-arrays">10.1 Arrays<a class="headerlink" href="#101-arrays" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Initialization</li>
+<li>Initialization<ul>
 <li><em>Note:</em> Using <code>const</code> with Arrays</li>
 <li><em>Note:</em> Storage Class Caveat</li>
 <li>Partially initialize an array: the remaining elements are set to 0</li>
 <li><strong>sizeof:</strong> <code>sizeof array</code> is the size of the whole array in bytes, <code>sizeof array[0]</code> is the size of one element in bytes</li>
-<li><strong>Designated Initializers (C99):</strong> </li>
-<li>pick and choose which elements are initialized</li>
+</ul>
+</li>
 <li>
-<p><strong>subscript</strong></p>
+<p><strong>Designated Initializers (C99):</strong></p>
+<ul>
+<li>pick and choose which elements are initialized</li>
+<li><strong>subscript</strong></li>
+</ul>
 </li>
 <li>
 <p>Assigning Array Values</p>
 </li>
-<li><strong>Array Bounds:</strong> </li>
-<li>It's your responsibility. <strong><em>The compiler isn't required to check for you!</em></strong></li>
 <li>
-<p>One simple habit to develop is to use a symbolic constant in the array declaration and in other places the array size is used.</p>
+<p><strong>Array Bounds:</strong></p>
+<ul>
+<li>It's your responsibility. <strong><em>The compiler isn't required to check for you!</em></strong></li>
+<li>One simple habit to develop is to use a symbolic constant in the array declaration and in other places the array size is used.</li>
+</ul>
 </li>
 <li>
 <p><strong>Specifying an Array Size</strong>: use a <em>constant integer expression</em>, <strong>a const value isn't</strong>, and the value must be greater than 0</p>
@@ -3002,10 +3016,12 @@
 </ul>
 <h3 id="104-functions-arrays-and-pointers">10.4 Functions, Arrays, and Pointers<a class="headerlink" href="#104-functions-arrays-and-pointers" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Question: array as parameter <a href="https://stackoverflow.com/questions/25680014/find-the-size-of-integer-array-received-as-an-argument-to-a-function-in-c">stackflow</a></li>
-<li>Explanation: <code>arr</code> is identified as an array only in its scope. When you pass <code>arr</code> to a function, <code>arr</code> is regarded as <code>int *</code></li>
 <li>
-<p>Remember: you can only pass a point but not an array</p>
+<p>Question: array as parameter <a href="https://stackoverflow.com/questions/25680014/find-the-size-of-integer-array-received-as-an-argument-to-a-function-in-c">stackflow</a></p>
+<ul>
+<li>Explanation: <code>arr</code> is identified as an array only in its scope. When you pass <code>arr</code> to a function, <code>arr</code> is regarded as <code>int *</code></li>
+<li>Remember: you can only pass a point but not an array</li>
+</ul>
 </li>
 <li>
 <p>Escape Sequence related to pointers</p>
@@ -3048,34 +3064,42 @@
 <h3 id="106-protecting-array-contents">10.6 Protecting Array Contents<a class="headerlink" href="#106-protecting-array-contents" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Using <code>const</code> with Formal Parameters</li>
-<li>More about <code>const</code></li>
+<li>More about <code>const</code><ul>
 <li>When you try to modify an <code>const</code> variable, you'll receive a <strong>compile-time</strong> error.</li>
 <li><strong>Pointers to constants</strong> can't be used to change values: <code>const type * ptc</code><ul>
 <li>but <code>ptc</code> itself can be changed</li>
-<li>valid to assign the address of either <strong>constant or non-constant</strong> data to <code>ptc</code> </li>
+<li>valid to assign the address of either <strong>constant or non-constant</strong> data to <code>ptc</code></li>
 </ul>
 </li>
 <li><strong>const pointers:</strong> <code>type * const cp</code> can be used to change values</li>
 </ul>
+</li>
+</ul>
 <h3 id="107-pointers-and-multidimensional-arrays">10.7 Pointers and Multidimensional Arrays<a class="headerlink" href="#107-pointers-and-multidimensional-arrays" title="Permanent link">&para;</a></h3>
-<p>Example: </p>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code>int zippo[4][2];
 </code></pre></div>
 <ul>
-<li>In value: <code>zippo</code> = <code>zippo[0]</code></li>
-<li><strong>NOTICE:</strong> <code>zippo[0][0] = *(zippo[0]) = **zippo</code>   is not a pointer. It's a int value.</li>
+<li>In value: <code>zippo</code> = <code>zippo[0]</code><ul>
+<li><strong>NOTICE:</strong> <code>zippo[0][0] = *(zippo[0]) = **zippo</code> is not a pointer. It's a int value.</li>
+</ul>
+</li>
 <li>The <strong>size of the referred-to object</strong> differ.</li>
 <li><code>zippo = &amp;zippo[0]</code>: actually <code>zippo</code> is an address of an address</li>
 <li><code>*zippo = zippo[0] = &amp;zippo[0][0]</code></li>
 <li>So: <code>*(*(zippo + 1) + 2) = zippo[1][2]</code></li>
-<li><strong>Pointers to Multidimensional Arrays</strong></li>
+<li><strong>Pointers to Multidimensional Arrays</strong><ul>
 <li><code>[]</code> has a higher precedence than <code>*</code></li>
 <li><code>int (* pz)[2]</code>: points to <strong>an array of 2 ints</strong></li>
 <li><code>int * pax[2]</code>: <strong>an array</strong> of two pointers-to-int</li>
 <li>You can use <code>pz</code> as <code>zippo</code>: <code>pz[1][2]</code></li>
-<li><strong>Pointer Compatibility</strong></li>
+</ul>
+</li>
+<li><strong>Pointer Compatibility</strong><ul>
 <li><strong>DONOT</strong> assign non-const to const</li>
 <li><strong>DONOT</strong> assign nested pointer types: const qualifier disregarded, behavior undefined</li>
+</ul>
+</li>
 </ul>
 <blockquote>
 <h4 id="c-const-and-c-const"><em>C</em> const and <em>C++</em> const:<a class="headerlink" href="#c-const-and-c-const" title="Permanent link">&para;</a></h4>
@@ -3086,12 +3110,14 @@
 </ul>
 </blockquote>
 <ul>
-<li><strong>Functions and Multidimensional Arrays</strong></li>
 <li>
-<p>How to make proper declaration for function arguments in functions that process multidimensional array</p>
-</li>
-<li></li>
+<p><strong>Functions and Multidimensional Arrays</strong></p>
+<ul>
+<li>How to make proper declaration for function arguments in functions that process multidimensional array</li>
 </ul>
+</li>
+</ul>
+<p>-</p>
 <h3 id="109-compound-literals-c99">10.9 Compound Literals (C99) 复合字面量<a class="headerlink" href="#109-compound-literals-c99" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Question:</strong> What's the difference between <strong>symbolic constant</strong> and <strong>literals</strong></li>
@@ -3102,9 +3128,11 @@
 </ul>
 <h2 id="character-strings-and-string-functions">Character Strings and String functions<a class="headerlink" href="#character-strings-and-string-functions" title="Permanent link">&para;</a></h2>
 <ul>
-<li>functions</li>
+<li>functions<ul>
 <li>gets, gets_s, fgets, puts, fputs</li>
 <li>strcat, strncat, strcmp, strncmp, strncpy, strncpy, sprintf, strchr</li>
+</ul>
+</li>
 <li>command-line arguments</li>
 </ul>
 <h3 id="111-representing-strings-and-string-io">11.1 Representing Strings and String I/O<a class="headerlink" href="#111-representing-strings-and-string-io" title="Permanent link">&para;</a></h3>
@@ -3113,12 +3141,14 @@
 </ul>
 <p>Ways to <em>define strings</em>:</p>
 <ul>
-<li>Character String Literals (String Constants)</li>
+<li>Character String Literals (String Constants)<ul>
 <li>string literals that are separated by nothing or by whitespace will be <em>concatenated</em></li>
 <li>placed in the <strong>static storage class</strong>, stored just once and lasts for <strong>the duration of the program</strong></li>
 <li>the entire quoted phrase acts as a <strong>pointer</strong> to where the string is stored</li>
+</ul>
+</li>
 <li>Character String Arrays and Initialization</li>
-<li><strong>Nodus: Array vs Pointer</strong></li>
+<li><strong>Nodus: Array vs Pointer</strong><ul>
 <li>Array:<ul>
 <li>the memory for the array is allocated only <strong>after the program begins running</strong>, and the quoted string is <strong>copied into the array</strong></li>
 <li>there are two copies of the string: one is the string literal in static memory, one is the string stored in the array (in dynamic memory)</li>
@@ -3134,56 +3164,56 @@
 </ul>
 </li>
 <li>Arrays of Character Strings<ul>
-<li>array of pointers</li>
+<li>array of pointers<ul>
 <li>don’t necessarily have to be stored consecutively in memory</li>
-<li>array of arrays</li>
+</ul>
+</li>
+<li>array of arrays<ul>
 <li>each array has the same length</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <h3 id="112-string-input">11.2 String Input<a class="headerlink" href="#112-string-input" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Creating Space</li>
-<li>
-<p>Don’t expect the computer to count the string length as it is read and then allot space for it.</p>
+<li>Creating Space<ol>
+<li>Don’t expect the computer to count the string length as it is read and then allot space for it.</li>
+</ol>
 </li>
 <li>
-<p>Read Strings: <code>scanf()</code>, <code>gets()</code>, and <code>fgets()</code> </p>
+<p>Read Strings: <code>scanf()</code>, <code>gets()</code>, and <code>fgets()</code></p>
 </li>
 <li>
 <p><code>gets()</code>: read an entire line, discards the newline character</p>
+<ol>
+<li>C11 has dropped <code>gets()</code> from the standard</li>
+</ol>
 </li>
-<li>
-<p>C11 has dropped <code>gets()</code> from the standard</p>
-</li>
-<li>
-<p><code>char *fgets(char *str, int count, FILE *stream)</code></p>
-</li>
+<li><code>char *fgets(char *str, int count, FILE *stream)</code><ol>
 <li>reads the newline</li>
 <li>reads up to <strong>n-1</strong> characters or newline</li>
 <li>return the same address as the first argument or NULL pointer if <em>encounters EOF</em></li>
 <li><strong>NULL</strong> pointer is guaranteed not to point to valid data, can be represented by <strong>0 and the marco <code>NULL</code></strong></li>
-<li>
-<p>the presence or absence of a newline character in the stored string can be used to tell <strong>whether the whole line was read</strong></p>
+<li>the presence or absence of a newline character in the stored string can be used to tell <strong>whether the whole line was read</strong></li>
+</ol>
 </li>
-<li>
-<p><code>int fputs(const char *str, FILE *stream)</code></p>
-</li>
+<li><code>int fputs(const char *str, FILE *stream)</code><ol>
 <li>doesn't automatically append a newline</li>
-<li>
-<p><strong>NOTICE: The system uses buffered I/O.</strong> This means the input is stored in temporary memory (the buffer) until the <strong>Return key</strong> is pressed. On output, when a <strong>newline is sent</strong>, the buffer contents are sent on to the display.</p>
+<li><strong>NOTICE: The system uses buffered I/O.</strong> This means the input is stored in temporary memory (the buffer) until the <strong>Return key</strong> is pressed. On output, when a <strong>newline is sent</strong>, the buffer contents are sent on to the display.</li>
+</ol>
 </li>
 <li>
 <p><code>gets_s()</code>: C11's optional function, DO NOT use</p>
 </li>
 <li>
 <p><code>scanf()</code>: starts at the first non-whitespace character, runs up to (<em>but not including</em>) the next whitespace character (blank, tab, or newline)</p>
+<p>but you can specify a field width</p>
 </li>
 </ol>
-<p>but you can specify a field width</p>
-<ol>
-<li></li>
-</ol>
+<p>8.</p>
 <h3 id="113-string-output">11.3 String Output<a class="headerlink" href="#113-string-output" title="Permanent link">&para;</a></h3>
 <h3 id="114the-do-it-yourself-option">11.4The Do-It-Yourself Option<a class="headerlink" href="#114the-do-it-yourself-option" title="Permanent link">&para;</a></h3>
 <h3 id="115-string-functions">11.5 String Functions<a class="headerlink" href="#115-string-functions" title="Permanent link">&para;</a></h3>
@@ -3196,7 +3226,7 @@
 <ul>
 <li><a href="../Operator/">运算符汇总</a></li>
 <li><a href="../StorageClasses/">内存管理</a></li>
-<li><a href="../FileIO/">文件IO</a></li>
+<li><a href="../FileIO/">文件 IO</a></li>
 <li><a href="../Structures/">结构和数据类型</a></li>
 <li><a href="../BitFiddling/">位运算</a></li>
 <li><a href="../Macro/">预处理器与宏</a></li>

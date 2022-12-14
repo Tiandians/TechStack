@@ -635,7 +635,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2049,7 +2049,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2224,41 +2224,53 @@
 
 <h2 id="chapter-13-file-inputoutput">Chapter 13 File Input/Output<a class="headerlink" href="#chapter-13-file-inputoutput" title="Permanent link">&para;</a></h2>
 <ul>
-<li>functions</li>
+<li>functions<ul>
 <li>fopen, getc, putc, exit, fclose</li>
 <li>fprintf, fscanf, fgets, fputs</li>
 <li>rewind, fseek, ftell, fflush</li>
 <li>fgetpos, fsetpos, feof, ferror</li>
 <li>ungetc, setvbuf, fread, fwrite</li>
 </ul>
+</li>
+</ul>
 <h3 id="131-communicating-with-files">13.1 Communicating with Files<a class="headerlink" href="#131-communicating-with-files" title="Permanent link">&para;</a></h3>
 <ul>
-<li>about <em>line break</em></li>
+<li>about <em>line break</em><ul>
 <li>C and Unix: <code>\n</code> (the line-feed character)</li>
-<li>pre-OS X Macintosh: <code>\r</code>  (the carriage-return character)</li>
+<li>pre-OS X Macintosh: <code>\r</code> (the carriage-return character)</li>
 <li>early MS-DOS and Windows Notepad: <code>\r\n</code>, with <code>Ctrl+Z</code> to denote EOF, pad with null character</li>
 <li><strong>NOTICE:</strong> but in C (text mode), all these things are <strong>mapped</strong> to the C view <code>\n</code></li>
-<li>Standard Files</li>
+</ul>
+</li>
+<li>Standard Files<ul>
 <li>standard input/output/error output</li>
+</ul>
+</li>
 </ul>
 <h3 id="132-standard-io">13.2 Standard I/O<a class="headerlink" href="#132-standard-io" title="Permanent link">&para;</a></h3>
 <ul>
 <li>input and output are <strong>buffered</strong> (transferred in large chunks)</li>
-<li><code>exit()</code>: in <code>stdlib.h</code>; terminate, <em>closing any open files</em>, argument is passed to operating systems</li>
+<li><code>exit()</code>: in <code>stdlib.h</code>; terminate, <em>closing any open files</em>, argument is passed to operating systems<ul>
 <li>different between <code>return</code> and <code>exit</code>: exit terminates the program even if called in a function</li>
-<li><code>fopen()</code>: (address of a string containing file name, open mode)</li>
-<li>r, w (truncate exist, create not exist), a (append exist, create not exist) </li>
+</ul>
+</li>
+<li><code>fopen()</code>: (address of a string containing file name, open mode)<ul>
+<li>r, w (truncate exist, create not exist), a (append exist, create not exist)</li>
 <li>r+ (r and w), w+ (truncate, r and w), a+ (read all file, only append)</li>
 <li>rb, ab+, a+b: binary mode</li>
 <li>wx, wbx, wb+x: fail if <strong>already exists</strong>, and open in <strong>exclusive mode</strong></li>
 <li>return: <em>file pointer</em>, or <strong>null pointer</strong> if cannot open the file</li>
+</ul>
+</li>
 <li><code>FILE *</code>: points to a data object containing information about the file and the buffer</li>
-<li><code>getc(fp)</code> and <code>putc(ch, fpout)</code>: like <code>getchar()</code> and <code>putchar()</code> </li>
+<li><code>getc(fp)</code> and <code>putc(ch, fpout)</code>: like <code>getchar()</code> and <code>putchar()</code></li>
 <li><strong>NOTICE:</strong> C discovers it has reached the end of a file <strong>only after it tries to read past the end of the file</strong>, so you should use an <strong>entry-condition loop</strong> (not a do while loop)</li>
 <li><em>dummy value</em></li>
-<li><code>fclose(fp)</code>: close file, flush buffers</li>
+<li><code>fclose(fp)</code>: close file, flush buffers<ul>
 <li>return value: 0 (successful), EOF (not succeeded)</li>
 <li>example: disk is full, removable storage device has been removed, or there has been an I/O error</li>
+</ul>
+</li>
 </ul>
 <h3 id="133-a-simple-minded-file-condensing-program">13.3 A simple-Minded File-condensing Program<a class="headerlink" href="#133-a-simple-minded-file-condensing-program" title="Permanent link">&para;</a></h3>
 <h3 id="134-file-io-fprintf-fscanf-fgets-and-fputs">13.4 File I/O: <code>fprintf(), fscanf(), fgets()</code> and <code>fputs()</code><a class="headerlink" href="#134-file-io-fprintf-fscanf-fgets-and-fputs" title="Permanent link">&para;</a></h3>

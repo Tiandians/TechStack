@@ -637,7 +637,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -1238,40 +1238,6 @@
           <li class="md-nav__item">
   <a href="#_12" class="md-nav__link">
     异步编程
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    模块
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    运行时
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    词汇语法
-  </a>
-  
-    <nav class="md-nav" aria-label="词汇语法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    运算符
   </a>
   
 </li>
@@ -2213,7 +2179,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2386,40 +2352,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    模块
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    运行时
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    词汇语法
-  </a>
-  
-    <nav class="md-nav" aria-label="词汇语法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    运算符
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2455,12 +2387,13 @@
 </blockquote>
 <h3 id="_2">让我们首先建立一些基础概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>JavaScript 是一种具有<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/First-class_Function">函数优先</a>特性的轻量级、解释型或者说<a href="https://zh.wikipedia.org/wiki/即時編譯">即时编译型</a>的编程语言。</li>
-</ul>
-<details><summary>什么是函数优先（first-class function）？</summary>指的是函数和变量没有区别</details>
-
-<ul>
-<li>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是**一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的**。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，Node.js 之类的服务器端环境，NoSQL 数据库（如开源的 Apache CouchDB）、嵌入式计算机，以及包括 GNOME（注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</li>
+<li>
+<p>JavaScript 是一种具有<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/First-class_Function">函数优先</a>特性的轻量级、解释型或者说<a href="https://zh.wikipedia.org/wiki/即時編譯">即时编译型</a>的编程语言。</p>
+<p><details><summary>什么是函数优先（first-class function）？</summary>指的是函数和变量没有区别</details></p>
+</li>
+<li>
+<p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是**一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的**。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，Node.js 之类的服务器端环境，NoSQL 数据库（如开源的 Apache CouchDB）、嵌入式计算机，以及包括 GNOME（注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
+</li>
 </ul>
 <h3 id="_3">数据类型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2469,7 +2402,7 @@
 </li>
 <li>
 <p><strong>所有其他东西都是</strong> <strong><em>对象</em></strong> 。</p>
-</li>
+<ul>
 <li>
 <p>常见的对象有：Function, Array, Date, RegExp, Error。</p>
 </li>
@@ -2477,13 +2410,15 @@
 <p>函数并不是什么特殊的数据结构。</p>
 </li>
 </ul>
+</li>
+</ul>
 <p>介绍基本数据类型：</p>
 <ul>
 <li>
 <p>Number：所有数都以 IEEE 754 浮点数标准存储，**看起来是整数的**也是浮点数。</p>
-</li>
+<ul>
 <li>
-<p>如果运算符需要整数（比如位运算），数字会被转换为**32位**整数。</p>
+<p>如果运算符需要整数（比如位运算），数字会被转换为**32 位**整数。</p>
 </li>
 <li>
 <p><details><summary>把字符串转换成数字的三种方式？</summary>
@@ -2500,12 +2435,14 @@
 <li>
 <p><code>NaN</code> 和 <code>Infinity</code> 有什么特别之处吗？</p>
 </li>
+</ul>
+</li>
 <li>
 <p>BigInt：以 <code>n</code> 作为后缀，无限大。不要将 BigInt 和 Number 混用。</p>
 </li>
 <li>
 <p>String：以 <strong>UTF-16</strong> 编码存储</p>
-</li>
+<ul>
 <li>
 <p>字符和字符串没有区别，所以 <code>''</code> 和 <code>""</code> 的作用相同。</p>
 </li>
@@ -2517,35 +2454,37 @@
 </li>
 <li>
 <p><code>`</code> 反点号用于**模板字符串**：</p>
-<div class="highlight"><pre><span></span><code><span class="sb">`string test </span><span class="si">${</span><span class="nx">expression</span><span class="si">}</span><span class="sb"> string text`</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="sb">`string test </span><span class="si">${</span><span class="nx">expression</span><span class="si">}</span><span class="sb"> string text`</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+</li>
+</ul>
 </li>
 <li>
 <p>Undefined：表明**缺少值**可以在以下情况下获得</p>
-</li>
-<li>
-<p>空的 return</p>
-</li>
+<ul>
+<li>空的 return</li>
 <li>访问不存在的属性</li>
-<li>
-<p>未初始化的声明</p>
+<li>未初始化的声明</li>
+</ul>
 </li>
 <li>
 <p>Null：表明**故意的没有值**</p>
 </li>
 <li>
 <p>Boolean：</p>
-</li>
-<li>
-<p>任何值都能使用 <code>Boolean()</code> 被转换为 Boolean，只有这些值转换成 false：<code>0</code>, <code>""</code>, <code>NaN</code>, <code>null</code>, <code>undefined</code>。</p>
-</li>
+<ul>
+<li>任何值都能使用 <code>Boolean()</code> 被转换为 Boolean，只有这些值转换成 false：<code>0</code>, <code>""</code>, <code>NaN</code>, <code>null</code>, <code>undefined</code>。</li>
 <li>当 JS 期望一个布尔值时，它会自动执行该转换（比如 if 语句）。</li>
+</ul>
+</li>
 </ul>
 <h3 id="_4">变量<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>let</code> 块作用域</li>
-<li><code>const</code> 块作用域，不可**重新赋值**，但**不保证变量的值被改变**。</li>
+<li><code>const</code> 块作用域，不可**重新赋值**，但**不保证变量的值被改变**。<ul>
 <li>注意：对象和基本类型不同：声明对象时，标识符是它的**引用**。使用 <code>const</code> 意味着引用不可更改，而非对象的值不可更改</li>
+</ul>
+</li>
 <li><code>var</code> 在现代 JS 中不推荐使用</li>
 </ul>
 <blockquote>
@@ -2563,8 +2502,10 @@
 <ul>
 <li><code>**</code>：指数运算</li>
 <li><code>==</code>：比较前尝试类型转换，<strong>不推荐使用</strong></li>
-<li><code>===</code>：比较前不尝试类型转换</li>
+<li><code>===</code>：比较前不尝试类型转换<ul>
 <li>它们都有不等形式：<code>!==</code>, <code>!=</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="_6">语法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>和 C 类似，也有些新的东西：</p>
@@ -2576,11 +2517,15 @@
 <p>也有新的东西：</p>
 <ul>
 <li><code>for...of</code>：遍历迭代量</li>
-<li><code>for...in</code>：访问一个对象所有*可列*的属性</li>
+<li><code>for...in</code>：访问一个对象所有*可列*的属性<ul>
 <li>它们的使用：<code>for (const property in object)</code>，记得用**const**。</li>
-<li><code>switch</code></li>
+</ul>
+</li>
+<li><code>switch</code><ul>
 <li>JS 中，任何表达式都可以是标签。</li>
 <li>与 C 的**跳转表**实现不同：JS 中，标签被逐个使用 <code>===</code> 测试是否相等。</li>
+</ul>
+</li>
 </ul>
 <p>控制结构是语句，不能被分配给变量（与 Rust 不同）</p>
 <p>错误处理 #暂不学习</p>
@@ -2594,72 +2539,76 @@
 </li>
 <li>
 <p>Key：总是字符串或 Symbol</p>
-</li>
-<li>
-<p>甚至数组下标也是**字符串**</p>
+<ul>
+<li>甚至数组下标也是**字符串**</li>
+</ul>
 </li>
 <li>
 <p>创建对象：</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Carrot&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="k">for</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Max&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">details</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;orange&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Carrot&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Max&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">details</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;orange&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<ul>
+</li>
 <li>
 <p>访问对象属性：</p>
-</li>
-<li>
-<p><code>.</code> 键必须是一个合法的标识符</p>
-</li>
+<ul>
+<li><code>.</code> 键必须是一个合法的标识符</li>
 <li><code>[expression]</code> 表达式应当估值为一个字符串或 Symbol</li>
-<li>
-<p>两种访问方式都能嵌套</p>
+<li>两种访问方式都能嵌套</li>
+</ul>
 </li>
 <li>
 <p>对象总是**引用**</p>
-</li>
-<li>
-<p>两个分别创建的对象永远不可能相等</p>
-</li>
+<ul>
+<li>两个分别创建的对象永远不可能相等</li>
 <li>赋值时拷贝的是引用而非对象</li>
+</ul>
+</li>
 </ul>
 <h3 id="_9">数组<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li>下标、长度与一般语言定义相同。</li>
-<li><code>{}</code> 换成了 <code>[]</code></li>
+<li><code>{}</code> 换成了 <code>[]</code><ul>
 <li>例：<code>const a = ["dog", "cat", "hen"];</code></li>
-<li>sparse array（稀疏数组）：多数情况下表现得像是填充了 <code>undefined</code>，某些情况下（尤其是迭代方法）会被略过。</li>
+</ul>
+</li>
+<li>sparse array（稀疏数组）：多数情况下表现得像是填充了 <code>undefined</code>，某些情况下（尤其是迭代方法）会被略过。<ul>
 <li>sparse array 会阻止引擎将它优化成**哈希表**，所以最好保证数组密度。</li>
+</ul>
+</li>
 <li>**下标越界**不会抛出异常，而是会得到 <code>undefined</code>。</li>
 <li><code>array</code> 是**类型松散的**，可以任意增长、缩小。</li>
-<li><code>array</code> 使用 <code>for...of</code> 语句遍历。</li>
+<li><code>array</code> 使用 <code>for...of</code> 语句遍历。<ul>
 <li>例：<code>for(const currentValue of a)</code></li>
-<li>数组也有一些方法：</li>
+</ul>
+</li>
+<li>数组也有一些方法：<ul>
 <li><code>map()</code>：接受一个函数。对每个元素调用回调函数，返回一个新数组。</li>
+</ul>
+</li>
 </ul>
 <h3 id="_10">函数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <ul>
-<li>基本函数声明：</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<li>
+<p>基本函数声明：</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<ul>
+</li>
 <li>
 <p>不 return 会得到 <code>undefined</code></p>
 </li>
 <li>
 <p>参数</p>
-</li>
+<ul>
 <li>
 <p>缺少的参数设置为 <code>undefined</code>，多的参数被忽略</p>
 </li>
@@ -2672,9 +2621,9 @@
 <div class="highlight"><pre><span></span><code>&gt; ```javascript
 &gt; // Note the { } braces: this is destructuring an object
 &gt; function area({ width, height }) {
-&gt;   return width * height;
+&gt;     return width * height;
 &gt; }
-&gt; 
+&gt;
 &gt; // The { } braces here create a new object
 &gt; console.log(area({ width: 2, height: 3 }));
 &gt; ```
@@ -2684,9 +2633,11 @@
 <li>
 <p>默认参数语法：<code>function avg(firstValue, secondValue, thirdValue = 0)</code></p>
 </li>
+</ul>
+</li>
 <li>
 <p>匿名函数</p>
-</li>
+<ul>
 <li>
 <p>匿名函数才能使用 <code>=&gt;</code> 符号。</p>
 </li>
@@ -2696,74 +2647,74 @@
 <li>
 <p>在声明的同时调用（单表达式）：</p>
 <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// …</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// …</span><span class="w"></span>
 <span class="p">})();</span><span class="w"></span>
 </code></pre></div>
 </li>
+</ul>
+</li>
 <li>
 <p>递归</p>
-</li>
-<li>
-<p>用于处理文档树等结构</p>
-</li>
+<ul>
+<li>用于处理文档树等结构</li>
 <li>
 <p>函数表达式也能被命名，进而递归</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">charsInBody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="nx">counter</span><span class="p">(</span><span class="nx">elm</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">elm</span><span class="p">.</span><span class="nx">nodeType</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// TEXT_NODE</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">elm</span><span class="p">.</span><span class="nx">nodeValue</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">child</span><span class="p">;</span><span class="w"> </span><span class="p">(</span><span class="nx">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">elm</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">counter</span><span class="p">(</span><span class="nx">child</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">count</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">elm</span><span class="p">.</span><span class="nx">nodeType</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// TEXT_NODE</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">elm</span><span class="p">.</span><span class="nx">nodeValue</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">child</span><span class="p">;</span><span class="w"> </span><span class="p">(</span><span class="nx">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">elm</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">counter</span><span class="p">(</span><span class="nx">child</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">count</span><span class="p">;</span><span class="w"></span>
 <span class="p">})(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 </li>
 <li>
 <p><strong>为了避免内存溢出，尽量不要使用递归</strong></p>
 </li>
+</ul>
+</li>
 <li>
 <p>函数优先：</p>
-</li>
-<li>
-<p><code>const add = (x) =&gt; (y) =&gt; x + y;</code>，返回函数的示例。</p>
-</li>
-<li>
-<p>函数的属性同样能被随时添加删除。</p>
+<ul>
+<li><code>const add = (x) =&gt; (y) =&gt; x + y;</code>，返回函数的示例。</li>
+<li>函数的属性同样能被随时添加删除。</li>
+</ul>
 </li>
 <li>
 <p><strong>闭包（Closures）</strong>：A <strong>closure</strong> is the combination of a function bundled together (enclosed) with references to its surrounding state (the <strong>lexical environment</strong>). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.</p>
-</li>
-</ul>
 <blockquote>
 <p>闭包是函数式编程的一个重要概念：<strong>函数和其周围的状态(词法环境)的引用捆绑在一起形成闭包。</strong></p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">makeFn</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hello function&#39;</span><span class="w"> </span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span><span class="w"> </span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">makeFn</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello function&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">fn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">makeFn</span><span class="p">()</span><span class="w"></span>
-<span class="nx">fn</span><span class="p">()</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">fn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">makeFn</span><span class="p">();</span><span class="w"></span>
+<span class="nx">fn</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
-<p>makeFn函数中又返回了一个内部函数并且赋值给fn，fn对这个内部函数就有了引用，内部里面访问了msg变量，当makeFn函数执行完毕时，因为**外部fn引用着内部函数，且内部函数访问了msg**，所以**msg变量并不会被释放**。这就形成了一个闭包。由此可见闭包的核心作用就是**把makeFn函数中的msg成员的作用范围延长。**</p>
+<p>makeFn 函数中又返回了一个内部函数并且赋值给 fn，fn 对这个内部函数就有了引用，内部里面访问了 msg 变量，当 makeFn 函数执行完毕时，因为**外部 fn 引用着内部函数，且内部函数访问了 msg**，所以**msg 变量并不会被释放**。这就形成了一个闭包。由此可见闭包的核心作用就是**把 makeFn 函数中的 msg 成员的作用范围延长。**</p>
 <p><strong>闭包可以在另一个作用域中调用一个函数的内部函数并访问到该函数的作用域中的成员。</strong></p>
 </blockquote>
-<ul>
-<li>嵌套函数：常常被用于把工具函数隐藏于一个函数内，减少全局函数的数量。内层函数能访问父函数的变量，这也能减少全局命名空间的污染。</li>
+</li>
+<li>
+<p>嵌套函数：常常被用于把工具函数隐藏于一个函数内，减少全局函数的数量。内层函数能访问父函数的变量，这也能减少全局命名空间的污染。</p>
+</li>
 </ul>
 <h3 id="_11">类<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>语法和 Java 类似。</p>
 <div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="nx">sayHello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`Hello, I&#39;m </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nx">sayHello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="sb">`Hello, I&#39;m </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;Maria&quot;</span><span class="p">);</span><span class="w"></span>
@@ -2775,32 +2726,30 @@
 </li>
 <li>
 <p>mixin 模式：类的创建可以根据需求很随意地变化</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">withAuthentication</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">cls</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="kd">class</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">cls</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">authenticate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="c1">// …</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="kd">class</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">cls</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">authenticate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// …</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
 
 <span class="kd">class</span><span class="w"> </span><span class="nx">Admin</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">withAuthentication</span><span class="p">(</span><span class="nx">Person</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// …</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// …</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<ul>
+</li>
 <li>
 <p>属性</p>
-</li>
-<li>
-<p>静态属性：<code>static</code></p>
-</li>
+<ul>
+<li>静态属性：<code>static</code></li>
 <li>私有属性：<code>#</code>，并且这个 <code>#</code> 是属性名称的一部分（把它当作 Python 中的 <code>_</code>）。绝对没有任何办法在类之外的地方访问私有属性，即使是派生类型。</li>
+</ul>
+</li>
 </ul>
 <h3 id="_12">异步编程<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <ul>
-<li>JS 天生是单**线程**的，没有并行（paralleling）的概念，只有并发（concurrency）。</li>
-</ul>
+<li>
+<p>JS 天生是单**线程**的，没有并行（paralleling）的概念，只有并发（concurrency）。</p>
 <blockquote>
 <ul>
 <li>并行：两个任务在**同一时刻互不干扰**的同时执行。</li>
@@ -2814,53 +2763,52 @@
 <li>并行（parallelism）：用并发使一个系统运行得更快</li>
 </ul>
 </blockquote>
-<ul>
+</li>
 <li>
 <p>JS 异步编程由**事件循环**驱动，允许一堆任务组织成队列等待完成。JS 有三种惯用的异步编程方法：</p>
-</li>
-<li>
-<p>回调函数</p>
-</li>
+<ul>
+<li>回调函数</li>
 <li><code>Promise</code></li>
 <li><code>async/await</code> ，只是 <code>Promise</code> 的语法糖</li>
 </ul>
 <p>例子：</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Callback-based</span><span class="w"></span>
 <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// This callback is invoked when the file is read, which could be after a while</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// This callback is invoked when the file is read, which could be after a while</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span><span class="w"></span>
 <span class="p">});</span><span class="w"></span>
 <span class="c1">// Code here will be executed while the file is waiting to be read</span><span class="w"></span>
 
 <span class="c1">// Promise-based</span><span class="w"></span>
 <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">content</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// What to do when the file is read</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">content</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// What to do when the file is read</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
 <span class="c1">// Code here will be executed while the file is waiting to be read</span><span class="w"></span>
 
 <span class="c1">// Async/await</span><span class="w"></span>
 <span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<ul>
+</li>
 <li>
 <p>异步编程需要注意与外界的交互。让那些可能长时间运行的操作保持异步，这样其他步骤可以在操作等待时保持运行。</p>
 </li>
 <li>
 <p>不可能同步地读取异步的值，只可能读取最终值。</p>
+<h1 id="_13">暂缓学习<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
 </li>
 </ul>
-<p>#暂缓学习</p>
-<h3 id="_13">模块<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<h3 id="_14">模块<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <ul>
 <li>模块通常是：a file, identified by it's file path or <abbr title="Uniform Resource Locator，统一资源定位符">URL</abbr></li>
 <li>可以 use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"><code>import</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export"><code>export</code></a> statements to exchange data between modules</li>
@@ -2868,23 +2816,23 @@
 <blockquote>
 <p>Different runtimes may use different module systems. For example, <a href="https://nodejs.org/en/">Node.js</a> uses the package manager <a href="https://www.npmjs.com/">npm</a> and is mostly file-system based, while <a href="https://deno.land/">Deno</a> and browsers are fully <abbr title="Uniform Resource Locator，统一资源定位符">URL</abbr>-based and modules can be resolved from <abbr title="Hypertext Transfer Protocol，超文本传输协议">HTTP</abbr> URLs.</p>
 </blockquote>
-<h3 id="_14">运行时<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h3 id="_15">运行时<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>A runtime, or a host, is something that feeds data to the JavaScript engine (the interpreter), provides extra global properties, and provides hooks for the engine to interact with the outside world.</p>
 <p>Module resolution, reading data, printing messages, sending network requests, etc. are all runtime-level operations.</p>
 <p>While you learn about JavaScript core features, it's also important to understand host-provided features in order to put the knowledge to use.</p>
-<h2 id="_15">词汇语法<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<h2 id="_16">词汇语法<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Identifiers</li>
+<li>Identifiers<ul>
 <li>标识符用于把值和名字联系起来。</li>
-<li>
-<p>标识符由数组、字符、下划线、<code>$</code> 组成。</p>
-<ul>
+<li>标识符由数组、字符、下划线、<code>$</code> 组成。<ul>
 <li>由于 Unicode，你甚至可以使用中文作为标识符。</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <p>Arrow function <code>=&gt;</code></p>
-</li>
+<ul>
 <li>
 <p>没有 <code>this</code>, <code>argument</code> 等的绑定，因此不应当被作为对象属性的方法使用</p>
 </li>
@@ -2905,11 +2853,13 @@
 </code></pre></div>
 </li>
 </ul>
-<h3 id="_16">运算符<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+</li>
+</ul>
+<h3 id="_17">运算符<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><code>...</code> Spread syntax</p>
-</li>
+<ul>
 <li>
 <p>有三种应用情况：</p>
 <div class="highlight"><pre><span></span><code><span class="nx">myFunction</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">iterableObj</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"></span>
@@ -2917,22 +2867,27 @@
 <span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">obj</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;value&#39;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </li>
+</ul>
+</li>
 <li>
 <p>Destructuring assignement</p>
-</li>
+<ul>
 <li>
 <p>只是把数组、对象标志放在了赋值表达式的左边，表示怎么从右侧的量中提取值</p>
 </li>
 <li>
 <p>常用例：</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">z</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="p">;</span><span class="c1">//y = 1, z = 2</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">z</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="p">;</span><span class="w"> </span><span class="c1">//y = 1, z = 2</span><span class="w"></span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">;</span><span class="c1">//a = obj.a, b = obj.b;</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">;</span><span class="w"> </span><span class="c1">//a = obj.a, b = obj.b;</span><span class="w"></span>
 </code></pre></div>
 <p>嵌套情况：</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">c</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">c</span><span class="o">:</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">;</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">a</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">c</span><span class="o">:</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>上面这些是“绑定模式”</p>
 </li>
@@ -2942,6 +2897,8 @@
 <span class="kd">const</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 <span class="p">({</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="nx">numbers</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="nx">numbers</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
+</li>
+</ul>
 </li>
 </ul>
 

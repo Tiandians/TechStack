@@ -637,7 +637,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2129,7 +2129,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2285,19 +2285,23 @@
 <h3 id="discard-unwanted-input">Discard unwanted input<a class="headerlink" href="#discard-unwanted-input" title="Permanent link">&para;</a></h3>
 <p><code>scanf()</code> always leave blanks and newline of one line. If the user uses <code>\n</code> to stop input, this can make the program exit without confirmation.</p>
 <ul>
-<li><code>getchar()</code> until the newline</li>
-</ul>
+<li>
+<p><code>getchar()</code> until the newline</p>
 <div class="highlight"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">getchar</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+</li>
+</ul>
 <p>If <code>scanf()</code> doesn't read the value it requires, the input data will be left unused in the buffer, preventing the program to advance. We can discard the wrong value by this method:</p>
 <ul>
-<li><code>scanf()</code> suppress assignment</li>
-</ul>
+<li>
+<p><code>scanf()</code> suppress assignment</p>
 <div class="highlight"><pre><span></span><code><span class="k">while</span><span class="p">(</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">floatNumber</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span><span class="w"></span>
 <span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%*s&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//discard wrong input</span>
 <span class="w">    </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;Please use correct input.&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
+</li>
+</ul>
 <h2 id="program-control">Program Control<a class="headerlink" href="#program-control" title="Permanent link">&para;</a></h2>
 <h3 id="loop-condition">Loop Condition<a class="headerlink" href="#loop-condition" title="Permanent link">&para;</a></h3>
 <ul>

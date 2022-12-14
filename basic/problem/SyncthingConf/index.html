@@ -635,7 +635,7 @@
   
     <li class="md-nav__item">
       <a href="../../writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2049,7 +2049,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2215,9 +2215,11 @@
 <ul>
 <li>syncthing 设置了需要的 systemd service 文件：<code>/lib/systemd/system/syncthing@.service</code></li>
 <li>设置你自己的服务：<code>systemctl enable syncthing@username.service</code></li>
-<li>启动前，记得检查 <code>syncthing@.service</code> 文件的内容。Execution 行的内容应该被配置为： <code>ExecStart=/usr/bin/syncthing  -no-browser -gui-address="0.0.0.0:8384" -no-restart -logflags=0</code></li>
 <li>
-<p>暂时没有查明，为什么不能启用 <code>serve</code> 参数。这会导致远程访问被拒绝连接。</p>
+<p>启动前，记得检查 <code>syncthing@.service</code> 文件的内容。Execution 行的内容应该被配置为： <code>ExecStart=/usr/bin/syncthing  -no-browser -gui-address="0.0.0.0:8384" -no-restart -logflags=0</code></p>
+<ul>
+<li>暂时没有查明，为什么不能启用 <code>serve</code> 参数。这会导致远程访问被拒绝连接。</li>
+</ul>
 </li>
 <li>
 <p>更改连接后，需要运行 <code>systemctl daemon-reload</code> 应用更改</p>
@@ -2227,7 +2229,7 @@
 <h2 id="syncthing_1">Syncthing 相关配置<a class="headerlink" href="#syncthing_1" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>参考文档：<a href="https://www.mankier.com/7/syncthing-faq">syncthing-faq</a></p>
-<p><a href="https://www.wenjinyu.me/syncthing-accesses-domain-names-through-nginx-anti-proxy/">syncthing域名配置</a></p>
+<p><a href="https://www.wenjinyu.me/syncthing-accesses-domain-names-through-nginx-anti-proxy/">syncthing 域名配置</a></p>
 </blockquote>
 <h3 id="gui">忘记 GUI 密码<a class="headerlink" href="#gui" title="Permanent link">&para;</a></h3>
 <ul>

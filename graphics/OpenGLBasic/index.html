@@ -1,0 +1,3196 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="这是 Bowling 的笔记本">
+      
+      
+        <meta name="author" content="Bowling">
+      
+      
+        <link rel="canonical" href="http://note.bowling233.top/graphics/OpenGLBasic/">
+      
+      <link rel="icon" href="../../assets/bowling.svg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>OpenGL 学习笔记 - Bowling's TechStack</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#opengl" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Bowling&#39;s TechStack" class="md-header__button md-logo" aria-label="Bowling's TechStack" data-md-component="logo">
+      
+  <img src="../../assets/bowling.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bowling's TechStack
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OpenGL 学习笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Tiandians/TechStack" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TechStack
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        🏠首页
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../basic/writing/VSCode/" class="md-tabs__link">
+        🔨基础技能
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../webdev/webpage/HTMLBasic/" class="md-tabs__link">
+        🌐WebDev
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../program/c/CBasic/" class="md-tabs__link">
+        ⚔️编程语言
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../operatesystem/MemoryHierarchy/" class="md-tabs__link">
+        🧮操作系统
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../hardware/LogicCircuit/" class="md-tabs__link">
+        💽硬件
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../think/MobileOffice/" class="md-tabs__link">
+        🤔思考
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../books/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA/" class="md-tabs__link">
+        📚图书馆
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course/Course/" class="md-tabs__link">
+        🏫课程笔记
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bowling&#39;s TechStack" class="md-nav__button md-logo" aria-label="Bowling's TechStack" data-md-component="logo">
+      
+  <img src="../../assets/bowling.svg" alt="logo">
+
+    </a>
+    Bowling's TechStack
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Tiandians/TechStack" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TechStack
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          🏠首页
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🏠首页" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          🏠首页
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        🏡首页
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/" class="md-nav__link">
+        📝项目
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tags/" class="md-nav__link">
+        🔖标签
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Links/" class="md-nav__link">
+        🔗链接
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Test/" class="md-nav__link">
+        ⚠️测试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Misc/" class="md-nav__link">
+        ☣️杂项
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          🔨基础技能
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🔨基础技能" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          🔨基础技能
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/writing/VSCode/" class="md-nav__link">
+        VSCode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          ✒写作
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="✒写作" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          ✒写作
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/writing/Copywriting/" class="md-nav__link">
+        中文文档写作规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/writing/Vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/writing/Markdown/" class="md-nav__link">
+        Markdown 生态
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/writing/Latex/" class="md-nav__link">
+        Latex 学习笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/Videos/" class="md-nav__link">
+        ▶️科普视频
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          🐧Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🐧Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          🐧Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/linux/LinuxBasic/" class="md-nav__link">
+        Linux 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/linux/LinuxUtility/" class="md-nav__link">
+        LinuxTools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_3" type="checkbox" id="__nav_2_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_3">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/linux/tools/gcc/" class="md-nav__link">
+        gcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/linux/tools/ssh/" class="md-nav__link">
+        ssh: OpenSSH remote login client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/linux/LinuxUsers/" class="md-nav__link">
+        Linux 用户
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/linux/LinuxFileSystem/" class="md-nav__link">
+        Linux 文件系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/linux/LinuxKernel/" class="md-nav__link">
+        Linux 内核
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          😼Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="😼Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          😼Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/git/GitBasic/" class="md-nav__link">
+        Git 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/git/GitPro/" class="md-nav__link">
+        Git 进阶
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          ⚙️杂项
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="⚙️杂项" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          ⚙️杂项
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/miscellaneous/Security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/miscellaneous/RegularExpression/" class="md-nav__link">
+        正则表达式
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          🔧问题和解决
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🔧问题和解决" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          🔧问题和解决
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/problem/2022/" class="md-nav__link">
+        Q&A 2022
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          🌐WebDev
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🌐WebDev" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          🌐WebDev
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          📄网页开发
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="📄网页开发" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          📄网页开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webpage/HTMLBasic/" class="md-nav__link">
+        HTML 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webpage/HTMLAdvanced/" class="md-nav__link">
+        HTML 进阶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webpage/CSSBasic/" class="md-nav__link">
+        CSS 基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webpage/CSSAdvanced/" class="md-nav__link">
+        CSS 进阶
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webpage/JavaScriptBasic/" class="md-nav__link">
+        JavaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webpage/JavaScriptAdvanced.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webpage/ReactBasic/" class="md-nav__link">
+        React Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webpage/ReactAdvanced.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          🖥Web服务器
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🖥Web服务器" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          🖥Web服务器
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webserver/Protocol/" class="md-nav__link">
+        协议
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webserver/HTTP/" class="md-nav__link">
+        HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webserver/LinuxServer/" class="md-nav__link">
+        Linux 服务器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4" type="checkbox" id="__nav_3_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_4">
+          环境及其配置
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="环境及其配置" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          环境及其配置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webserver/Docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webserver/PHP/" class="md-nav__link">
+        PHP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webserver/NginxBasic/" class="md-nav__link">
+        Nginx 基础
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          💻Blog搭建
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="💻Blog搭建" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          💻Blog搭建
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webserver/Domain_and_DNS/" class="md-nav__link">
+        域名和 DNS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webserver/Proxy/" class="md-nav__link">
+        代理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webdev/webserver/GitHubPages.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          ⚔️编程语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="⚔️编程语言" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          ⚔️编程语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          🏹C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🏹C" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          🏹C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program/c/CBasic/" class="md-nav__link">
+        C 语言基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program/c/CPuzzle/" class="md-nav__link">
+        C 语言解惑（The C Puzzle Book）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program/c/CSTL/" class="md-nav__link">
+        C 标准库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program/c/CTricks/" class="md-nav__link">
+        C 编程技巧
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          🧰C++
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🧰C++" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧰C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program/cpp/CppBasic/" class="md-nav__link">
+        CppBasic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program/cpp/CppAdvanced.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program/cpp/CppSTL.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          🔫Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🔫Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          🔫Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program/python/PythonBasic.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          🧨Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🧨Java" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          🧨Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../program/java/JavaBasic.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          🧮操作系统
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🧮操作系统" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          🧮操作系统
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operatesystem/MemoryHierarchy/" class="md-nav__link">
+        存储器层次结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operatesystem/VirtualMemory/" class="md-nav__link">
+        虚拟内存
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          💽硬件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="💽硬件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          💽硬件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/LogicCircuit/" class="md-nav__link">
+        逻辑电路
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/MOSFET/" class="md-nav__link">
+        MOSFET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/Storage/" class="md-nav__link">
+        存储技术
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          🤔思考
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🤔思考" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          🤔思考
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../think/MobileOffice/" class="md-nav__link">
+        移动办公
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          📚图书馆
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="📚图书馆" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          📚图书馆
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA/" class="md-nav__link">
+        计算机科学导论
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1_%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3/" class="md-nav__link">
+        计算机组成与设计 硬件软件接口
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/%E9%87%8F%E5%AD%90%E8%AE%A1%E7%AE%97%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        量子计算入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        深入理解计算机系统
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          🏫课程笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🏫课程笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          🏫课程笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/Course/" class="md-nav__link">
+        课程笔记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2">
+          🧪普通化学（H）
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🧪普通化学（H）" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          🧪普通化学（H）
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
+        普通化学 H 知识回忆提纲
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E5%8C%96%E5%AD%A6%E7%83%AD%E5%8A%9B%E5%AD%A6/" class="md-nav__link">
+        化学热力学
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E5%8C%96%E5%AD%A6%E5%8A%A8%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        化学动力学基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E7%94%B5%E5%8C%96%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        电化学基础
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    重要的资料
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    代码结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter3" class="md-nav__link">
+    Chapter3:数学知识
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter3:数学知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    矩阵
+  </a>
+  
+    <nav class="md-nav" aria-label="矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    理解矩阵
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    向量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    相机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    投影
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glsl" class="md-nav__link">
+    一些构建矩阵的 GLSL 函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter4-3d" class="md-nav__link">
+    Chapter4:管理 3D 数据
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter4:管理 3D 数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.缓冲区和顶点属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.统一变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.顶点属性插值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-" class="md-nav__link">
+    4.模型-视图和透视矩阵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-3d" class="md-nav__link">
+    5.第一个 3D 程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6.一个对象 多个副本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7.同场景的不同模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8.矩阵堆栈
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9z" class="md-nav__link">
+    9.Z 冲突
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    10.图元
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    11.性能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter5" class="md-nav__link">
+    Chapter5:纹理
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter5:纹理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1.加载纹理图像
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter63d" class="md-nav__link">
+    Chapter6:3D 模型
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter6:3D 模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    1.程序构建
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    为每个顶点指定纹理坐标
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix" class="md-nav__link">
+    Appendix
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    一些略去的代码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0visual-studio" class="md-nav__link">
+    0.Visual Studio
+  </a>
+  
+    <nav class="md-nav" aria-label="0.Visual Studio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    程序文件编码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1github" class="md-nav__link">
+    1.Github
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2codingopengl" class="md-nav__link">
+    2.Coding(OpenGL)
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Coding(OpenGL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glsl_1" class="md-nav__link">
+    GLSL 调试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glsl_2" class="md-nav__link">
+    GLSL 只能使用一维数组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opengl_1" class="md-nav__link">
+    OpenGL 动画卡顿
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lnk2019" class="md-nav__link">
+    链接器工具错误 LNK2019
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    init 卡住无输出
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3codingc" class="md-nav__link">
+    3.Coding(C++)
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Coding(C++)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    结构体输入输出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    测试文件输入编码
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.配置过程中
+  </a>
+  
+    <nav class="md-nav" aria-label="4.配置过程中">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-x64" class="md-nav__link">
+    1.按教程更改为 x64 位编码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    2.编译书本示范程序时发生错误
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-25" class="md-nav__link">
+    3.从书本 2.5 程序开始输出全部红色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-1" class="md-nav__link">
+    5.在教室电脑编译运行返回-1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6visual-studio-include" class="md-nav__link">
+    6.Visual Studio 更改 include 路径出现错误
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8obj" class="md-nav__link">
+    8.编译出现.obj 已定义错误
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/Tiandians/TechStack/blob/master/docs/graphics/OpenGLBasic.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="opengl">OpenGL 学习笔记<a class="headerlink" href="#opengl" title="Permanent link">&para;</a></h1>
+<h2 id="_1">重要的资料<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.jianshu.com/p/66b10062bd67">GLSL 语法基础</a></p>
+<p><a href="https://www.bilibili.com/video/BV1MJ411u7Bc">超棒的 OpenGL 教程</a></p>
+<h2 id="_2">结构<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>opengl.cpp</code>:opengl 实现代码</li>
+<li><code>vertShader.glsl</code>和<code>fragShader.glsl</code>:用于存放顶点着色器和片段着色器代码</li>
+<li><code>Utils.cpp</code>:书本提供的一些重用函数:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">readShaderFile</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">filePath</span><span class="p">)</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">checkOpenGLError</span><span class="p">()</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">printShaderLog</span><span class="p">(</span><span class="n">GLuint</span><span class="w"> </span><span class="n">shader</span><span class="p">)</span><span class="w"></span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">prepareShader</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">shaderTYPE</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">shaderPath</span><span class="p">)</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">printProgramLog</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">prog</span><span class="p">)</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">finalizeShaderProgram</span><span class="p">(</span><span class="n">GLuint</span><span class="w"> </span><span class="n">sprogram</span><span class="p">)</span><span class="w"></span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">createShaderProgram</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">vp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">)</span><span class="w"></span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">createShaderProgram</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">vp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">gp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">)</span><span class="w"></span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">createShaderProgram</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">vp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">tCS</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">tES</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_3">代码结构<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>OpenGL 程序对象包含了一系列编译过的着色器</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">//头文件部分</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;GL\glew.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;GLFW\glfw3.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SOIL2\soil2.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glm\gtc\type_ptr.hpp&gt;</span><span class="c1"> // glm::value_ptr</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glm\gtc\matrix_transform.hpp&gt;</span><span class="c1"> // glm::translate, glm::rotate, glm::scale, glm::perspective</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ImportedModel.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Utils.h&quot;</span><span class="cp"></span>
+
+<span class="c1">//全局定义部分</span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">vao</span><span class="p">[</span><span class="n">nmuVAOs</span><span class="p">];</span><span class="w"></span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">vbo</span><span class="p">[</span><span class="n">numVBOs</span><span class="p">];</span><span class="w"></span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">renderingProgram</span><span class="p">;</span><span class="c1">//程序对象ID</span>
+
+<span class="c1">//编写一个类给自己用</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setupVertices</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">vertexPositions</span><span class="p">[</span><span class="mi">108</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//顶点数据</span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//相当于在init中完成缓冲区的建立和激活</span>
+<span class="w">    </span><span class="n">glGenVertexArrays</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">vao</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glBindVertexArray</span><span class="p">(</span><span class="n">vao</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glGenBuffers</span><span class="p">(</span><span class="n">numVBOs</span><span class="p">,</span><span class="w"> </span><span class="n">vbo</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glBindBuffer</span><span class="p">(</span><span class="n">GL_ARRAY_BUFFER</span><span class="p">,</span><span class="w"> </span><span class="n">vbo</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glBufferData</span><span class="p">(</span><span class="n">GL_ARRAY_BUFFER</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">vertexPositions</span><span class="p">),</span><span class="w"> </span><span class="n">vertexPositions</span><span class="p">,</span><span class="w"> </span><span class="n">GL_STATIC_DRAW</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">renderingProgram</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">createShaderProgram</span><span class="p">(</span><span class="s">&quot;vertShader.glsl&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fragShader.glsl&quot;</span><span class="p">);</span><span class="c1">//创建程序对象</span>
+<span class="w">    </span><span class="n">cameraX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span><span class="w"> </span><span class="n">cameraY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span><span class="w"> </span><span class="n">cameraZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0f</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">currentTime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">glUseProgram</span><span class="p">(</span><span class="n">renderingProgram</span><span class="p">);</span><span class="c1">//调用程序对象，将着色器程序载入OpenGL管线阶段（GPU上）</span>
+<span class="w">    </span><span class="n">glPointSize</span><span class="p">(</span><span class="mf">30.0f</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glDrawArrays</span><span class="p">(</span><span class="n">GL_POINTS</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="c1">//启动运行管线过程</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="chapter3">Chapter3:数学知识<a class="headerlink" href="#chapter3" title="Permanent link">&para;</a></h2>
+<p>变换一览表：</p>
+<ul>
+<li>视图：指定观察者或相机位置</li>
+</ul>
+<p>在应用任何模型变换前，应当先应用视图变换（视图变换移动了工作坐标系）；透视投影中，观察点在原点；正投影中，观察者在 z 轴正方向无穷远的地方</p>
+<ul>
+<li>模型：在场景中移动物体；三种基本操作：Translation/Rotation/Scaling 顺序很重要</li>
+<li>模型视图：描述视图和模型变换的二元性</li>
+<li>投影：改变视景体的大小或重设他们的形状</li>
+<li>视口：对窗口上最终输出进行缩放：场景二维投影后映射到屏幕物理窗口坐标</li>
+</ul>
+<p>重要概念：<em>齐次坐标</em></p>
+<p>一些数据类型：</p>
+<ul>
+<li>vec4(GLM/GLSL)</li>
+<li>vec3(GLM/GLSL)</li>
+<li>mat4(GLM/GLSL)</li>
+</ul>
+<h3 id="_4">矩阵<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>列优先排序</li>
+<li>单位矩阵：对角线值为 1：<code>glm::mat4 m(1.0f)</code></li>
+<li>矩阵转置：<code>glm::transpose(mat4)</code>和<code>transpose(mat4)</code>(GLM)</li>
+<li>矩阵加减法：运算符在 GLSL 中进行了重载</li>
+<li>矩阵乘法：一般使用从右向左：点和矩阵相乘得到点：<code>vec4</code>和矩阵相乘(GLM/GLSL)</li>
+<li>由于会将一系列矩阵变换运用于场景中的每一个点，预先计算*相同的矩阵*可以成倍减少计算量</li>
+<li>逆矩阵：mat4.inverse()(GLM/GLSL)</li>
+<li>平移矩阵：单位矩阵和第三列的三个参数构成；<code>glm::translate(x,y,z)</code>构建平移矩阵;<code>mat4*vec4</code>平移点</li>
+<li>缩放矩阵：改变物体大小或者将点向原点相反方向移动/<em>切换坐标系</em>：由单位矩阵和对角线上的缩放因子构成：<code>glm::scale(x,y,z)</code>构建缩放矩阵；<code>mat4*vec4</code></li>
+<li>旋转矩阵；预备知识：围绕任何轴的旋转都可以表示为绕 xyz 轴旋转的组合，围绕每个轴的旋转角称为*欧拉角*；<code>glm::rotate(mat4,θ,x,y,z)</code>构建绕 xyz 轴旋转 θ 度的缩放矩阵；<code>mat4*vec4</code>；<em>反向旋转矩阵恰等于转置矩阵</em>；欧拉角有一些瑕疵，计算旋转时推荐使用*四元数*</li>
+</ul>
+<h4 id="_5">理解矩阵<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>矩阵的 16 个值表示了空间中的一个特定位置，以及相对视觉坐标系的 3 个轴上的方向。一个 4*4 矩阵包含了一个不同坐标系的位置和方向。</p>
+<p>矩阵的每一列都代表一个由 4 个元素组成的向量。前三个是 xyz 轴上的方向向量，第四列向量包含变换后坐标系原点的 xyz 值。</p>
+<h3 id="_6">向量<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>一些操作：<code>+-</code>,<code>normalize(vec3/4)</code>,<code>dot(vec3/4,vec3/4)</code>（点积）,<code>cross(vec3/4,vec3/4)</code>（叉积）</li>
+<li>其他：magnitude,reflection,refraction</li>
+<li><em>求解点到平面的最小有符号距离</em>：求法向量和原点到平面距离（P33）</li>
+<li><em>外向法向量</em>：右手定则，光照</li>
+</ul>
+<h3 id="_7">空间<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>局部空间(object space)：模型自己的方便空间：分层次地构建复杂的模型</li>
+<li>世界空间：将对象定位、定向在世界空间使用*模型矩阵*</li>
+</ul>
+<h3 id="_8">相机<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>合成相机：一个点：</p>
+</li>
+<li>
+<p>将相机放入世界的某个位置</p>
+</li>
+<li>调整相机的角度：有一套自己的坐标轴 U/V/N</li>
+<li>定义一个*视体(view volume)*</li>
+<li>将视体内的对象投影到投影平面(projection plane)上</li>
+</ul>
+<p>需要做的事情：</p>
+<ol>
+<li>把相机模拟移动到合适的位置和方向</li>
+<li><em>视图变换</em>：找出世界物体和期望相机的相对位置（基于 U/V/N 轴）：a.将点平移，向量为负的期望相机位置 b.将点旋转，角度是负的期望相机的欧拉角：视图变换矩阵<code>V</code>，相机平移矩阵<code>T</code>，相机旋转矩阵<code>R</code>,<code>V=R*T</code>先平移后旋转</li>
+<li>MV 矩阵：<code>MV=V*M</code>，模型-视图矩阵</li>
+</ol>
+<h3 id="_9">投影<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>视体(view volume)：需要 4 个参数：纵横比、视场、投影平面或近/远投影平面</li>
+<li>视场：可视空间的纵向角度</li>
+<li>纵横比：远近裁剪平面的宽高比</li>
+<li>这些元素构成一个视锥(frustum)</li>
+<li><code>glm::perspective()</code>构建一个透视矩阵</li>
+<li>LookAt 矩阵：<code>glm::lookAt()</code>：需要一个相机位置（眼睛）、目标位置和初始向上向量<code>Y</code>来构建：当你把相机放在某处并看向特定的位置时就需要用到它了。第 8 章生成阴影会用到</li>
+</ul>
+<h3 id="glsl">一些构建矩阵的 GLSL 函数<a class="headerlink" href="#glsl" title="Permanent link">&para;</a></h3>
+<p>主要是记住数学上这些矩阵的组成方式</p>
+<div class="highlight"><pre><span></span><code><span class="kt">mat4</span><span class="w"> </span><span class="n">buildScale</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="kt">mat4</span><span class="w"> </span><span class="n">buildTranslate</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w">   </span><span class="kt">mat4</span><span class="w"> </span><span class="n">trans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">mat4</span><span class="p">(</span><span class="w">  </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">trans</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">//  rotation around the X axis</span><span class="w"></span>
+<span class="kt">mat4</span><span class="w"> </span><span class="n">buildRotateX</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">rad</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w">   </span><span class="kt">mat4</span><span class="w"> </span><span class="n">xrot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">mat4</span><span class="p">(</span><span class="w">   </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">xrot</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">//  rotation around the Y axis</span><span class="w"></span>
+<span class="kt">mat4</span><span class="w"> </span><span class="n">buildRotateY</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">rad</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w">   </span><span class="kt">mat4</span><span class="w"> </span><span class="n">yrot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">mat4</span><span class="p">(</span><span class="w">   </span><span class="n">cos</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">yrot</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">//  rotation around the Z axis</span><span class="w"></span>
+<span class="kt">mat4</span><span class="w"> </span><span class="n">buildRotateZ</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">rad</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w">   </span><span class="kt">mat4</span><span class="w"> </span><span class="n">zrot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">mat4</span><span class="p">(</span><span class="w">   </span><span class="n">cos</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">zrot</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="chapter4-3d">Chapter4:管理 3D 数据<a class="headerlink" href="#chapter4-3d" title="Permanent link">&para;</a></h2>
+<h3 id="1">1.缓冲区和顶点属性<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>在 init()中创建缓冲区，在 C++段把顶点数据放入缓冲区，把缓冲区和着色器中声明的顶点属性相关联</p>
+<ul>
+<li>Vertex Buffer Object:顶点缓冲对象，每个顶点都需要一个，用于存储顶点的各类属性信息，在显卡存储空间中</li>
+<li>Vertex Array Object:顶点数组对象，是对很多个 VBO 的引用，用于组织缓冲区</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">GLuint</span><span class="w"> </span><span class="n">vao</span><span class="p">[</span><span class="n">nmuVAOs</span><span class="p">];</span><span class="w"></span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">vbo</span><span class="p">[</span><span class="n">numVBOs</span><span class="p">];</span><span class="w"></span>
+
+<span class="n">glGenVertexArrays</span><span class="p">(</span><span class="n">numVAOs</span><span class="p">,</span><span class="n">vao</span><span class="p">);</span><span class="err">\\</span><span class="n">创建VAO</span><span class="err">，</span><span class="n">返回整数ID保存在数组vao中</span><span class="w"></span>
+<span class="n">glBindVertexArrays</span><span class="p">(</span><span class="n">vao</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="err">\\</span><span class="n">标记活跃</span><span class="w"></span>
+<span class="n">glGenBuffers</span><span class="p">(</span><span class="n">numVBOs</span><span class="p">,</span><span class="n">vbo</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>init()中</p>
+<ul>
+<li>创建缓冲区</li>
+<li>把顶点复制到缓冲区</li>
+</ul>
+<p>display()中</p>
+<ul>
+<li>启用包含顶点数据的缓冲区</li>
+<li>缓冲区和顶点属性关联</li>
+<li>启用顶点属性</li>
+<li>绘制对象：<code>glDrawArrays()</code></li>
+</ul>
+<p>顶点着色器中</p>
+<div class="highlight"><pre><span></span><code><span class="k">layout</span><span class="w"> </span><span class="p">(</span><span class="n">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mo">0</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">vec3</span><span class="w"> </span><span class="n">position</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p><code>layout(location=0)</code>是 layout 修饰符，把顶点属性和特定缓冲区关联起来。顶点属性的识别号是 0.</p>
+<p>绘制一个立方体：</p>
+<ul>
+<li>将顶点值复制到缓冲区中</li>
+</ul>
+<p><code>glBindBuffer()</code>标记活跃</p>
+<p><code>glBufferData()</code>将顶点从数组复制到活跃缓冲区</p>
+<ul>
+<li>将活跃缓冲区和着色器顶点属性关联</li>
+</ul>
+<p><code>glVertexAttribPointr()</code>关联顶点属性到缓冲区</p>
+<p><code>glEnableVertexAttribArray()</code>启用顶点属性</p>
+<h3 id="2">2.统一变量<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p><code>uniform</code>关键字在着色器中声明统一变量</p>
+<p><code>glm::value_ptr()</code>返回对矩阵数据的引用</p>
+<p><code>glUniformMatrix*()</code>将矩阵值传递给统一变量</p>
+<p>glUniform*():数字表示几个数值，数值后缩写表示 GL 数值类型(GLfloat 等)，v 表示看作向量传递</p>
+<p>有一些常见的：</p>
+<ul>
+<li>i:int:GLint/GLsizei</li>
+<li>f:float:GLfloat/GLclampf</li>
+<li>d:double;GLdouble</li>
+<li>ui:unsigned int;GLuint,GLenum</li>
+</ul>
+<h3 id="3">3.顶点属性插值<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>光栅化过程会线性插值顶点</p>
+<p><code>gl_Position</code>顶点着色器中的内置 vec4 变量，自动输出到光栅着色器</p>
+<p>应该指定一个<code>out vec4 color</code>顶点属性</p>
+<h3 id="4-">4.模型-视图和透视矩阵<a class="headerlink" href="#4-" title="Permanent link">&para;</a></h3>
+<ul>
+<li>根据所需的摄像机构建视图矩阵</li>
+<li>对于每个模型：构建模型矩阵，模型和视图结合成 MV 矩阵，将 MV 和投影矩阵发送给着色器</li>
+</ul>
+<h3 id="5-3d">5.第一个 3D 程序<a class="headerlink" href="#5-3d" title="Permanent link">&para;</a></h3>
+<ul>
+<li>模型在自己的坐标系中定义</li>
+</ul>
+<p><code>vMat = glm::translate(glm::mat4(1.0f),glm::vec(-cameraX,..))</code>构建一个变换矩阵，从单位矩阵开始，以向量的形式指定变换值</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define numVAOs 1</span>
+<span class="cp">#define numVBOs 2</span>
+
+<span class="n">Utils</span><span class="w"> </span><span class="n">util</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utils</span><span class="p">();</span><span class="c1">//书本中本没有这一行，不太懂</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">cameraX</span><span class="p">,</span><span class="w"> </span><span class="n">cameraY</span><span class="p">,</span><span class="w"> </span><span class="n">cameraZ</span><span class="p">;</span><span class="c1">//位置</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">cubeLocX</span><span class="p">,</span><span class="w"> </span><span class="n">cubeLocY</span><span class="p">,</span><span class="w"> </span><span class="n">cubeLocZ</span><span class="p">;</span><span class="w"></span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">renderingProgram</span><span class="p">;</span><span class="c1">//渲染程序的ID</span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">vao</span><span class="p">[</span><span class="n">numVAOs</span><span class="p">];</span><span class="c1">//顶点数组对象等的ID储存在数组中</span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">vbo</span><span class="p">[</span><span class="n">numVBOs</span><span class="p">];</span><span class="w"></span>
+
+<span class="c1">// variable allocation for display</span>
+<span class="n">GLuint</span><span class="w"> </span><span class="n">mvLoc</span><span class="p">,</span><span class="w"> </span><span class="n">projLoc</span><span class="p">;</span><span class="c1">//display函数中的变量应该事先分配好</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">aspect</span><span class="p">;</span><span class="w"></span>
+<span class="n">glm</span><span class="o">::</span><span class="n">mat4</span><span class="w"> </span><span class="n">pMat</span><span class="p">,</span><span class="w"> </span><span class="n">vMat</span><span class="p">,</span><span class="w"> </span><span class="n">mMat</span><span class="p">,</span><span class="w"> </span><span class="n">mvMat</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setupVertices</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">vertexPositions</span><span class="p">[</span><span class="mi">108</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//此处省略一堆顶点，重要的是每个三角形都要声明一遍顶点，分别发送到管线</span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glGenVertexArrays</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">vao</span><span class="p">);</span><span class="c1">//创建、标记活跃、传送数据</span>
+<span class="w">    </span><span class="n">glBindVertexArray</span><span class="p">(</span><span class="n">vao</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glGenBuffers</span><span class="p">(</span><span class="n">numVBOs</span><span class="p">,</span><span class="w"> </span><span class="n">vbo</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glBindBuffer</span><span class="p">(</span><span class="n">GL_ARRAY_BUFFER</span><span class="p">,</span><span class="w"> </span><span class="n">vbo</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glBufferData</span><span class="p">(</span><span class="n">GL_ARRAY_BUFFER</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">vertexPositions</span><span class="p">),</span><span class="w"> </span><span class="n">vertexPositions</span><span class="p">,</span><span class="w"> </span><span class="n">GL_STATIC_DRAW</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">renderingProgram</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">createShaderProgram</span><span class="p">(</span><span class="s">&quot;vertShader.glsl&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fragShader.glsl&quot;</span><span class="p">);</span><span class="c1">//载入着色器程序，以后可以不用写这些了耶！（见appendix）</span>
+<span class="w">    </span><span class="n">cameraX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span><span class="w"> </span><span class="n">cameraY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span><span class="w"> </span><span class="n">cameraZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0f</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">cubeLocX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span><span class="w"> </span><span class="n">cubeLocY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-2.0f</span><span class="p">;</span><span class="w"> </span><span class="n">cubeLocZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span><span class="c1">//这里给定了立方体在世界中的位置</span>
+<span class="w">    </span><span class="n">setupVertices</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">currentTime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">glClear</span><span class="p">(</span><span class="n">GL_DEPTH_BUFFER_BIT</span><span class="p">);</span><span class="c1">//这里没有清除缓冲区的必要？</span>
+
+<span class="w">    </span><span class="n">glUseProgram</span><span class="p">(</span><span class="n">renderingProgram</span><span class="p">);</span><span class="c1">//启用着色器程序，在GPU上安装GLSL代码，让后续的调用确定着色器的顶点属性和统一变量的位置</span>
+<span class="w">    </span><span class="c1">//获取统一变量位置，构建各个矩阵</span>
+<span class="w">    </span><span class="n">mvLoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glGetUniformLocation</span><span class="p">(</span><span class="n">renderingProgram</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mv_matrix&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">projLoc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glGetUniformLocation</span><span class="p">(</span><span class="n">renderingProgram</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;proj_matrix&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glfwGetFramebufferSize</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">height</span><span class="p">);</span><span class="c1">//获得窗口的宽高比</span>
+<span class="w">    </span><span class="n">aspect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">height</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">pMat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">perspective</span><span class="p">(</span><span class="mf">1.0472f</span><span class="p">,</span><span class="w"> </span><span class="n">aspect</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1f</span><span class="p">,</span><span class="w"> </span><span class="mf">1000.0f</span><span class="p">);</span><span class="c1">//glm库的投影矩阵构建函数</span>
+
+<span class="w">    </span><span class="n">vMat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">translate</span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">mat4</span><span class="p">(</span><span class="mf">1.0f</span><span class="p">),</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="p">(</span><span class="o">-</span><span class="n">cameraX</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">cameraY</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">cameraZ</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">mMat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">translate</span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">mat4</span><span class="p">(</span><span class="mf">1.0f</span><span class="p">),</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="p">(</span><span class="n">cubeLocX</span><span class="p">,</span><span class="w"> </span><span class="n">cubeLocY</span><span class="p">,</span><span class="w"> </span><span class="n">cubeLocZ</span><span class="p">));</span><span class="c1">//glm许多变换支持“从单位矩阵开始，用向量的形式指定变换的值”的构建方式</span>
+<span class="w">    </span><span class="n">mvMat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vMat</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mMat</span><span class="p">;</span><span class="c1">//先m再v</span>
+
+<span class="w">    </span><span class="n">glUniformMatrix4fv</span><span class="p">(</span><span class="n">mvLoc</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">GL_FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">value_ptr</span><span class="p">(</span><span class="n">mvMat</span><span class="p">));</span><span class="c1">//传统一变量矩阵</span>
+<span class="w">    </span><span class="n">glUniformMatrix4fv</span><span class="p">(</span><span class="n">projLoc</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">GL_FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">value_ptr</span><span class="p">(</span><span class="n">pMat</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glBindBuffer</span><span class="p">(</span><span class="n">GL_ARRAY_BUFFER</span><span class="p">,</span><span class="w"> </span><span class="n">vbo</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="c1">//缓冲区活跃</span>
+<span class="w">    </span><span class="n">glVertexAttribPointer</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">GL_FLOAT</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="c1">//关联顶点属性</span>
+<span class="w">    </span><span class="n">glEnableVertexAttribArray</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="c1">//启用顶点属性</span>
+
+<span class="w">    </span><span class="n">glEnable</span><span class="p">(</span><span class="n">GL_DEPTH_TEST</span><span class="p">);</span><span class="c1">//开启深度测试</span>
+<span class="w">    </span><span class="n">glDepthFunc</span><span class="p">(</span><span class="n">GL_LEQUAL</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glDrawArrays</span><span class="p">(</span><span class="n">GL_TRIANGLES</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">glfwInit</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_CONTEXT_VERSION_MAJOR</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwWindowHint</span><span class="p">(</span><span class="n">GLFW_CONTEXT_VERSION_MINOR</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">GLFWwindow</span><span class="o">*</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glfwCreateWindow</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Chapter 4 - program 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwMakeContextCurrent</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">glewInit</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">GLEW_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwSwapInterval</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">init</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">glfwWindowShouldClose</span><span class="p">(</span><span class="n">window</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">display</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="n">glfwGetTime</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">glfwSwapBuffers</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">glfwPollEvents</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glfwDestroyWindow</span><span class="p">(</span><span class="n">window</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glfwTerminate</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="n">EXIT_SUCCESS</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">//vert shader</span><span class="w"></span>
+<span class="cp">#version 430</span><span class="w"></span>
+
+<span class="k">layout</span><span class="w"> </span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="mo">0</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">vec3</span><span class="w"> </span><span class="n">position</span><span class="p">;</span><span class="c1">//因为这里有layout，所以可以通过glVertexAttribPointer和glEnableVertexAttribArray调用0来引用这个变量</span><span class="w"></span>
+
+<span class="k">uniform</span><span class="w"> </span><span class="kt">mat4</span><span class="w"> </span><span class="n">mv_matrix</span><span class="p">;</span><span class="w"></span>
+<span class="k">uniform</span><span class="w"> </span><span class="kt">mat4</span><span class="w"> </span><span class="n">proj_matrix</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nb">gl_Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">proj_matrix</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mv_matrix</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="mf">1.0</span><span class="p">);</span><span class="c1">//注意这个vec4的构建，在vec3的后面加上1</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="c1">//矩阵应用于顶点，放入内置输出gl_Position通过管线又光栅着色器插值</span><span class="w"></span>
+<span class="c1">//fragment shader</span><span class="w"></span>
+<span class="cp">#version 430</span><span class="w"></span>
+
+<span class="k">out</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">color</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">uniform</span><span class="w"> </span><span class="kt">mat4</span><span class="w"> </span><span class="n">mv_matrix</span><span class="p">;</span><span class="w"></span>
+<span class="k">uniform</span><span class="w"> </span><span class="kt">mat4</span><span class="w"> </span><span class="n">proj_matrix</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w">   </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="c1">//修改以后这里变成varyingcolor，接收顶点着色器影响的颜色。其中在顶点着色器中应当使用out修饰符，片段着色器使用in修饰符</span><span class="w"></span>
+</code></pre></div>
+<h3 id="6">6.一个对象 多个副本<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<p>这样一个方法：在 display 函数中，把构建 mv 矩阵并绘制立方体的代码放到循环中重复执行</p>
+<p>更大的方法：实例化：改成 glDrawArrays()→glDrawArraysInstanced()绘制一堆副本</p>
+<p>顶点着色器可以访问内置变量 gl_InstanceID，指向当前正在处理对象的第几个实例</p>
+<p>这样做需要把构建不同模型和视图矩阵的计算移动到顶点着色器中，因为每个立方体需要重新计算旋转</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#version 430</span><span class="w"></span>
+
+<span class="k">layout</span><span class="w"> </span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="mo">0</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">vec3</span><span class="w"> </span><span class="n">position</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">uniform</span><span class="w"> </span><span class="kt">mat4</span><span class="w"> </span><span class="n">v_matrix</span><span class="p">;</span><span class="w"></span>
+<span class="k">uniform</span><span class="w"> </span><span class="kt">mat4</span><span class="w"> </span><span class="n">proj_matrix</span><span class="p">;</span><span class="w"></span>
+<span class="k">uniform</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">tf</span><span class="p">;</span><span class="c1">//这个是时间因子，可以改成我们的ID因子</span><span class="w"></span>
+
+<span class="k">out</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">varyingColor</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">mat4</span><span class="w"> </span><span class="n">buildRotateX</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">rad</span><span class="p">);</span><span class="w"></span>
+<span class="kt">mat4</span><span class="w"> </span><span class="n">buildRotateY</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">rad</span><span class="p">);</span><span class="w"></span>
+<span class="kt">mat4</span><span class="w"> </span><span class="n">buildRotateZ</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">rad</span><span class="p">);</span><span class="w"></span>
+<span class="kt">mat4</span><span class="w"> </span><span class="n">buildTranslate</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span><span class="p">);</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">gl_InstanceID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tf</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="mf">203.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="mf">8000.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">403.0</span><span class="p">;</span><span class="w">    </span><span class="c1">//when 100000 instances</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="mf">301.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="mf">4001.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">401.0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="mf">400.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="mf">6003.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">405.0</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="kt">mat4</span><span class="w"> </span><span class="n">localRotX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buildRotateX</span><span class="p">(</span><span class="mf">1.75</span><span class="o">*</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">mat4</span><span class="w"> </span><span class="n">localRotY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buildRotateY</span><span class="p">(</span><span class="mf">1.75</span><span class="o">*</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">mat4</span><span class="w"> </span><span class="n">localRotZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buildRotateZ</span><span class="p">(</span><span class="mf">1.75</span><span class="o">*</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">mat4</span><span class="w"> </span><span class="n">localTrans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buildTranslate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">mat4</span><span class="w"> </span><span class="n">newM_matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localTrans</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">localRotX</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">localRotY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">localRotZ</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">mat4</span><span class="w"> </span><span class="n">mv_matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v_matrix</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">newM_matrix</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nb">gl_Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">proj_matrix</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mv_matrix</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="mf">1.0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">varyingColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>向着色器中传递数组，使用 glUniform1fv(ID,个数,数组名)</p>
+<p>经光栅着色器插值后的像素位置（称为片段）发送到片段着色器，设置输出像素的颜色，为每个像素单独调用</p>
+<p>约定在程序员定义的插值顶点属性变量名称中包含 varying</p>
+<p>构建旋转矩阵的方式</p>
+<div class="highlight"><pre><span></span><code><span class="n">glm</span><span class="o">::</span><span class="n">rotate</span><span class="p">(</span><span class="n">单位矩阵</span><span class="p">,</span><span class="n">θ</span><span class="p">,</span><span class="n">旋转轴vec3</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="7">7.同场景的不同模型<a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<p>不会用到，省略</p>
+<h3 id="8">8.矩阵堆栈<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
+<p>不会用到，省略。但是很有意思</p>
+<h3 id="9z">9.Z 冲突<a class="headerlink" href="#9z" title="Permanent link">&para;</a></h3>
+<h3 id="10">10.图元<a class="headerlink" href="#10" title="Permanent link">&para;</a></h3>
+<h3 id="11">11.性能<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>减少动态内存分配，努力在 display 中实现最高的效率</p>
+</li>
+<li>
+<p>预先计算透视矩阵</p>
+</li>
+<li>
+<p>背面剔除</p>
+<p>三角形缠绕顺序：逆时针判定向前</p>
+<p>glEnable(GL_CULL_FACE)背面剔除</p>
+</li>
+</ul>
+<h2 id="chapter5">Chapter5:纹理<a class="headerlink" href="#chapter5" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">1.加载纹理图像<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p>Utils::loadTexture(“name”);</p>
+<h2 id="chapter63d">Chapter6:3D 模型<a class="headerlink" href="#chapter63d" title="Permanent link">&para;</a></h2>
+<h3 id="1_2">1.程序构建<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
+<p>做一个球</p>
+<ul>
+<li>选择水平切片精度</li>
+<li>切片圆周细分。在这个模型中，每个切片有相同数量顶点</li>
+<li>顶点分组为三角形：遍历顶点，每步构建两个三角形</li>
+<li>
+<h2 id="_10">为每个顶点指定纹理坐标<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+<h2 id="appendix">Appendix<a class="headerlink" href="#appendix" title="Permanent link">&para;</a></h2>
+<h3 id="_11">一些略去的代码<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">//Opengl部分</span>
+<span class="c1">//使用Utils.c中代替</span>
+
+<span class="n">GLuint</span><span class="w"> </span><span class="nf">renderingProgram</span><span class="p">(){</span><span class="w"></span>
+
+<span class="c1">//1.着色器源代码部分</span>
+<span class="w">    </span><span class="n">constchar</span><span class="w"> </span><span class="o">*</span><span class="n">vShaderSouce</span><span class="o">=</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="c1">//2.创建着色器和程序对象部分</span>
+<span class="w">    </span><span class="n">GLuint</span><span class="w"> </span><span class="n">vShader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glCreateShader</span><span class="p">(</span><span class="n">GL_VERTEX_SHADER</span><span class="p">);</span><span class="c1">//创建着色器，返货整数ID作为引用序号</span>
+<span class="w">    </span><span class="n">GLuint</span><span class="w"> </span><span class="n">fShader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glCreateShader</span><span class="p">(</span><span class="n">GL_FRAGMENT_SHADER</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">GLuint</span><span class="w"> </span><span class="n">vfprogram</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glCreateProgram</span><span class="p">();</span><span class="c1">//创建程序对象</span>
+<span class="c1">//3.载入和编译着色器</span>
+<span class="w">    </span><span class="n">glShaderSource</span><span class="p">(</span><span class="n">vShader</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vshaderSource</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="c1">//载入着色器GLSL代码</span>
+<span class="w">    </span><span class="n">glShaderSource</span><span class="p">(</span><span class="n">fShader</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">fshaderSource</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glCompileShader</span><span class="p">(</span><span class="n">vShader</span><span class="p">);</span><span class="c1">//编译着色器</span>
+<span class="w">    </span><span class="n">glCompileShader</span><span class="p">(</span><span class="n">fShader</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//4.载入和链接程序对象</span>
+<span class="w">    </span><span class="n">glAttachShader</span><span class="p">(</span><span class="n">vfprogram</span><span class="p">,</span><span class="w"> </span><span class="n">vShader</span><span class="p">);</span><span class="c1">//着色器加入程序对象</span>
+<span class="w">    </span><span class="n">glAttachShader</span><span class="p">(</span><span class="n">vfprogram</span><span class="p">,</span><span class="w"> </span><span class="n">fShader</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glLinkProgram</span><span class="p">(</span><span class="n">vfprogram</span><span class="p">);</span><span class="c1">//请求GLSL确保兼容</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">vfprogram</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>一个显示帧数的<a href="https://www.cnblogs.com/tjulym/p/5055020.html">函数</a></p>
+<p>```C#include <time.h>
+double CalFrequency()
+{
+     static int count;
+     static double save;
+     static clock_t last, current;
+     double timegap;</p>
+<div class="highlight"><pre><span></span><code> ++count;
+ if( count &lt;= 50 )
+     return save;
+ count = 0;
+ last = current;
+ current = clock();
+ timegap = (current-last)/(double)CLK_TCK;
+ save = 50.0/timegap;
+ return save;
+</code></pre></div>
+<p>}
+<code>关于[帧速率控制](https://www.zhihu.com/question/63302479/answer/207636037)：
+
+在渲染循环中计算 deltatime，后在物体运动时总是用速度乘以 deltatime 进行运动，可以实现在不同的帧速率下达到相同的运行速度。deltatime 计算可通过以下方式得到：float deltatime =0.0f;</code>
+float lastframe = 0.0f;
+...
+renderloop()
+{
+    float currectframe = glfwGetTime();
+    deltatime = currectframe -lastframe;
+    lastframe = currectframe;
+...
+}
+```
+</p>
+<h2 id="0visual-studio">0.Visual Studio<a class="headerlink" href="#0visual-studio" title="Permanent link">&para;</a></h2>
+<h3 id="_12">程序文件编码<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>在 visual studio 中应当使用<code>Unicode (UTF-8 带签名) -代码页 65001</code>编码
+</p>
+<h2 id="1github">1.Github<a class="headerlink" href="#1github" title="Permanent link">&para;</a></h2>
+<h2 id="2codingopengl">2.Coding(OpenGL)<a class="headerlink" href="#2codingopengl" title="Permanent link">&para;</a></h2>
+<h3 id="glsl_1">GLSL 调试<a class="headerlink" href="#glsl_1" title="Permanent link">&para;</a></h3>
+<p>要参考 Log 信息。解决习题 3.1 时 GLSL 矩阵代码写错，追踪 Utils.c 中的函数定义，找到出错位置，未定义标识符，说明是函数定义写错了。解决问题。
+</p>
+<h3 id="glsl_2">GLSL 只能使用一维数组<a class="headerlink" href="#glsl_2" title="Permanent link">&para;</a></h3>
+<h3 id="opengl_1">OpenGL 动画卡顿<a class="headerlink" href="#opengl_1" title="Permanent link">&para;</a></h3>
+<p>改用独立显卡即可
+</p>
+<h3 id="lnk2019"><a href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk2019?f1url=%3FappId%3DDev16IDEF1%26l%3DZH-CN%26k%3Dk(LNK2019)%26rd%3Dtrue&amp;view=msvc-160">链接器工具错误 LNK2019</a><a class="headerlink" href="#lnk2019" title="Permanent link">&para;</a></h3>
+<p>没有包括书本 cpp 文件
+</p>
+<h3 id="init">init 卡住无输出<a class="headerlink" href="#init" title="Permanent link">&para;</a></h3>
+<p>可能是着色器文件名输错了
+</p>
+<h2 id="3codingc">3.Coding(C++)<a class="headerlink" href="#3codingc" title="Permanent link">&para;</a></h2>
+<h3 id="_13">结构体输入输出<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>编写球的结构，文件输入输出，处理复杂方程的问题时犯了很多小错误
+
+1. 读数组没从零开始。导致产生数据溢出错误，自己改数据输出一样，仍没有发现是读取了同一内存导致。
+2. 浮点数精度问题。在 GDB 调试过程中发现小数点后几位出现了浮动，是 float 的毛病，在处理大量数据的时候要注意。
+</p>
+<h3 id="_14">测试文件输入编码<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>有一次重置所有项目文件编码为 UTF8withBOM 后，从文件流读取数据报错。自习检查文件流状态后发现可以打开，读入错误。查询后发现是文件格式原因
+
+普通 fstream 无法读取 UTF8withBOM 编码，应当使用宽字符的文件流
+</p>
+<h2 id="4">4.配置过程中<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="1-x64">1.按教程更改为 x64 位编码<a class="headerlink" href="#1-x64" title="Permanent link">&para;</a></h3>
+<p><a href="https://athena.ecs.csus.edu/~gordonvs/C1Elibraries.html">Book update</a>
+</p>
+<h3 id="2_1">2.编译书本示范程序时发生错误<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/bincrafters/community/issues/126">github issue</a>
+
+解决方案：my suggestion is to use /Z7 option instead of /Zi when building glfw as static library - this way debugging information is embedded into library and pdb files are not needed
+
+<a href="https://stackoverflow.com/questions/284778/what-are-the-implications-of-using-zi-vs-z7-for-visual-studio-c-projects">Stackoverflow answer</a>
+
+<a href="https://docs.microsoft.com/en-us/cpp/build/reference/z7-zi-zi-debug-information-format?view=msvc-160">Microsoft Docs on Z7</a>
+</p>
+<h3 id="3-25">3.从书本 2.5 程序开始输出全部红色<a class="headerlink" href="#3-25" title="Permanent link">&para;</a></h3>
+<p>解决：书中代码部分漏掉了填充缓冲区的代码，需要补上：
+
+<code>C
+    glClear(GL_DEPTH_BUFFER_BIT);
+    glClearColor(0.0, 0.0, 0.0, 1.0);
+    glClear(GL_COLOR_BUFFER_BIT);</code></p>
+<h3 id="5-1">5.在教室电脑编译运行返回-1<a class="headerlink" href="#5-1" title="Permanent link">&para;</a></h3>
+<p>原因：硬件 OpenGL 版本过老</p>
+<p>解决：更改<code>glWindowsint()</code>使用更老版本。经测试<code>4.0.0</code>版本后的可以兼容</p>
+<h3 id="6visual-studio-include">6.Visual Studio 更改 include 路径出现错误<a class="headerlink" href="#6visual-studio-include" title="Permanent link">&para;</a></h3>
+<p><a href="https://zhuanlan.zhihu.com/p/73638902">Zhihu</a></p>
+<p>尝试过的解决方案：</p>
+<ul>
+<li>使用<code>\ZW</code>，报错 platform.wind</li>
+</ul>
+<p>Visual Studio 中不应该使用相对路径，无法找到库文件和头文件</p>
+<h3 id="8obj">8.编译出现.obj 已定义错误<a class="headerlink" href="#8obj" title="Permanent link">&para;</a></h3>
+<p>尚未查明原因，猜测是：更换了 cpp 文件而 vs 没有识别，于是复用了之前的.obj 文件。进入 Debug 文件夹删除.obj 后正常编译</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Bowling
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="http://bowling233.com" target="_blank" rel="noopener" title="bowling233.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.07 4.93C17.22 3 14.66 1.96 12 2c-2.66-.04-5.21 1-7.06 2.93C3 6.78 1.96 9.34 2 12c-.04 2.66 1 5.21 2.93 7.06C6.78 21 9.34 22.04 12 22c2.66.04 5.21-1 7.06-2.93C21 17.22 22.04 14.66 22 12c.04-2.66-1-5.22-2.93-7.07M17 12v6h-3.5v-5h-3v5H7v-6H5l7-7 7.5 7H17Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "content.code.annotate", "navigation.instant", "navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>

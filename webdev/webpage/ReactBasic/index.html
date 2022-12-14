@@ -637,7 +637,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2192,7 +2192,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2426,12 +2426,12 @@
 </li>
 <li>
 <p>run the command, this will create a folder <code>my-app</code> under your working directory:</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><code>npx create-react-app my-app
 </code></pre></div>
-<ul>
-<li>Inside the folder, you can run <code>npm start</code> to view the compiled website.</li>
+</li>
+<li>
+<p>Inside the folder, you can run <code>npm start</code> to view the compiled website.</p>
+</li>
 </ul>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2449,8 +2449,6 @@
 </li>
 <li>
 <p>You can put <em>any</em> JavaScript expressions within braces inside JSX.</p>
-</li>
-</ul>
 <blockquote>
 <p><strong>NOTE: WITHIN BRACES</strong></p>
 <p>Remember what we've learnt in MIT Web Crush Course:</p>
@@ -2459,14 +2457,14 @@
 <li><code>{}</code> to come back to JavaScript</li>
 </ul>
 </blockquote>
-<ul>
-<li>Each React element is a JavaScript object that you can store in a variable or pass around in your program.</li>
+</li>
+<li>
+<p>Each React element is a JavaScript object that you can store in a variable or pass around in your program.</p>
+</li>
 </ul>
 </li>
 <li>
 <p>Example</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><code>class ShoppingList extends React.Component {
   render() {
     return (
@@ -2489,6 +2487,8 @@ return React.createElement(&#39;div&#39;, {className: &#39;shopping-list&#39;},
   React.createElement(&#39;ul&#39;, /* ... ul children ... */)
 );
 </code></pre></div>
+</li>
+</ul>
 <h2 id="props-and-states">Props and States<a class="headerlink" href="#props-and-states" title="Permanent link">&para;</a></h2>
 <h3 id="passing-data-through-props">Passing Data Through Props<a class="headerlink" href="#passing-data-through-props" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>class Board extends React.Component {
@@ -2559,7 +2559,7 @@ Do not write <code>props={function()}</code>. <a href="https://yehudakatz.com/20
 <p>REMEMBER state is considered to be <strong>private to a component that defines it</strong>, we cannot update the Board’s state directly from Square.</p>
 </blockquote>
 <ul>
-<li>Instead, we’ll <strong>pass down a function</strong> from the Board to the Square, and we’ll have Square call that function when a square is clicked. </li>
+<li>Instead, we’ll <strong>pass down a function</strong> from the Board to the Square, and we’ll have Square call that function when a square is clicked.</li>
 </ul>
 <div class="highlight"><pre><span></span><code>class Square extends React.Component {//...
       &lt;button
@@ -2574,7 +2574,7 @@ class Board extends React.Component {
     const squares = this.state.squares.slice();//**NOTICE**
     squares[i] = &#39;X&#39;;
     this.setState({squares: squares});
-  } 
+  }
   renderSquare(i) {
     return (
       &lt;Square
@@ -2583,7 +2583,7 @@ class Board extends React.Component {
     );
   }
   //...
-}  
+}
 </code></pre></div>
 <blockquote>
 <p>When a Square is clicked, the <code>onClick</code> function provided by the Board is called. Here’s a review of how this is achieved:</p>
@@ -2676,8 +2676,10 @@ var newPlayer = Object.assign({}, player, {score: 2});
 </ul>
 </blockquote>
 <ul>
-<li><strong>Props</strong>：从父组件到子组件的输入</li>
+<li><strong>Props</strong>：从父组件到子组件的输入<ul>
 <li>props 是不能改变的</li>
+</ul>
+</li>
 <li><strong>State</strong>：一个组件维护的私有信息</li>
 </ul>
 <h2 id="_2">写代码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -2693,27 +2695,35 @@ var newPlayer = Object.assign({}, player, {score: 2});
 <p>写一个评论组件：</p>
 <ol>
 <li>设置初始状态：like</li>
-<li>返回一个 div，并赋予合适的 id 和 className</li>
+<li>返回一个 div，并赋予合适的 id 和 className<ol>
 <li>注意：<mark>使用 className 访问 CSS 类</mark></li>
 <li>使用 props 访问需要的内容 <code>{props.content}</code>，让它可复用</li>
 </ol>
+</li>
+</ol>
 </blockquote>
 <ul>
-<li>HTML 与 JavaScript 的转化</li>
+<li>HTML 与 JavaScript 的转化<ul>
 <li><code>()</code> 在 JS 中写 HTML</li>
 <li><code>{}</code> 在 HTML 中回到 JS</li>
-<li>Props 的传递：</li>
+</ul>
+</li>
+<li>Props 的传递：<ul>
 <li>语法：<code>&lt;Component propName={propValue} /&gt;</code></li>
 <li>父组件：<code>&lt;Post propName={"Akshaj" text="Welcome"} /&gt;</code>，这些属性就是 props。在 JS 中体现为： <code>props={name:"Akshaj", text:"Welcome"}</code><ul>
 <li>更复杂的信息：<code>&lt;Photos links={["fisrt.jpg", "second.jpg"]} /&gt;</code></li>
 </ul>
 </li>
 <li>子组件：将具体信息替换为 <code>{props.content}</code></li>
-<li>State 的维护：</li>
+</ul>
+</li>
+<li>State 的维护：<ul>
 <li>需要 <code>import {useState} from "react"</code></li>
 <li>在子组件函数中，用 <code>const [something, setSomething] = useState(initialValue)</code> 声明状态变量</li>
 <li>在 return 的 HTML 中设置交互等 <code>&lt;button onClick={() =&gt; {setNumLikes(numLikes + 1);}}</code></li>
 <li>替换需要显示的地方为状态 <code>{numLikes}</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="_3">更进一步<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2722,9 +2732,11 @@ var newPlayer = Object.assign({}, player, {score: 2});
 <li>修改 state：<code>setXxx(xxx)</code></li>
 <li>与数组一起用 <code>setXXX([...pets, "dog"]);</code></li>
 <li>设置状态是**异步**的</li>
-<li><code>useEffect</code> <a href="https://reactjs.org/docs/hooks-reference.html">钩子</a></li>
+<li><code>useEffect</code> <a href="https://reactjs.org/docs/hooks-reference.html">钩子</a><ul>
 <li>语法：<code>useEffect(function, optional dependency array)</code></li>
 <li>三种更新方式</li>
+</ul>
+</li>
 </ul>
 <p>生命周期：初始化-返回网页-更改值-返回网页</p>
 <ul>
@@ -2737,26 +2749,22 @@ var newPlayer = Object.assign({}, player, {score: 2});
 </li>
 <li>
 <p>条件渲染：</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><code>return (
-  &lt;div&gt;
-    &lt;title&gt;a&lt;/title&gt;
-        &lt;p&gt;
-         {loading
-           ? &quot;xxx&quot;
-           : &quot;xxx&quot;}
-        &lt;/p&gt;
+    &lt;div&gt;
+        &lt;title&gt;a&lt;/title&gt;
+        &lt;p&gt;{loading ? &quot;xxx&quot; : &quot;xxx&quot;}&lt;/p&gt;
     &lt;/div&gt;
-)
+);
 </code></pre></div>
-<ul>
-<li>回顾 <code>map()</code> 如何提取数据？将回调函数应用到每一个元素上</li>
-</ul>
-<div class="highlight"><pre><span></span><code>return data.map( (item) =&gt;{
-  return &lt;div key={item.id}&gt;&lt;/div&gt;;
+</li>
+<li>
+<p>回顾 <code>map()</code> 如何提取数据？将回调函数应用到每一个元素上</p>
+<div class="highlight"><pre><span></span><code>return data.map((item) =&gt; {
+    return &lt;div key={item.id}&gt;&lt;/div&gt;;
 });
 </code></pre></div>
+</li>
+</ul>
 <h3 id="js">JS 库<a class="headerlink" href="#js" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Math</li>

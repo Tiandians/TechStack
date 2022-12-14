@@ -635,7 +635,7 @@
   
     <li class="md-nav__item">
       <a href="../../../basic/writing/Latex/" class="md-nav__link">
-        Latex学习笔记
+        Latex 学习笔记
       </a>
     </li>
   
@@ -2049,7 +2049,7 @@
   
     <li class="md-nav__item">
       <a href="../../../course/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6/%E6%99%AE%E9%80%9A%E5%8C%96%E5%AD%A6H/" class="md-nav__link">
-        普通化学H 知识回忆提纲
+        普通化学 H 知识回忆提纲
       </a>
     </li>
   
@@ -2140,7 +2140,14 @@
     Chapter 17 Advanced Data Representation
   </a>
   
-    <nav class="md-nav" aria-label="Chapter 17 Advanced Data Representation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#union" class="md-nav__link">
+    union
+  </a>
+  
+    <nav class="md-nav" aria-label="union">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2234,8 +2241,9 @@
 <ul>
 <li><code>malloc()</code></li>
 <li>structure</li>
-<li>union</li>
-<li></li>
+<li>
+<h2 id="union">union<a class="headerlink" href="#union" title="Permanent link">&para;</a></h2>
+</li>
 </ul>
 <p>Finding the right data representation is important in program design. You should think of these aspects:</p>
 <ul>
@@ -2259,7 +2267,7 @@
 <ul>
 <li>Type Name: Simple List</li>
 <li>Type Properties: Can hold a sequence of items.</li>
-<li>Type Operations:</li>
+<li>Type Operations:<ul>
 <li>Initialize list to empty.</li>
 <li>Determine whether list is empty.</li>
 <li>Determine whether list is full.</li>
@@ -2268,46 +2276,46 @@
 <li>Traverse list, processing each item in list.</li>
 <li>Empty the list.</li>
 </ul>
+</li>
+</ul>
 <p>Build an Interface: interface design should parallel the ADT description as closely as possible</p>
 <ol>
-<li>describes how the <strong>data will be represented</strong></li>
-</ol>
+<li>
+<p>describes how the <strong>data will be represented</strong></p>
 <p>should be expressed in terms of some <strong>general <code>Item</code> type</strong> instead of in terms of some specific type</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">specificType</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 <span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">specificType</span><span class="w"> </span><span class="n">Item</span><span class="p">;</span><span class="c1">//to generalize its concept</span>
 </code></pre></div>
-<ol>
-<li>how to <strong>store items</strong> of that type</li>
-</ol>
+</li>
+<li>
+<p>how to <strong>store items</strong> of that type</p>
 <p>belongs to the implementation stage</p>
 <div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">Node</span><span class="p">;</span><span class="w"></span>
 <span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">List</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
-<ol>
-<li>operations</li>
-</ol>
+</li>
+<li>
+<p>operations</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// operation: initialize a list</span>
 <span class="c1">// preconditions: plist points to a list</span>
 <span class="c1">// postconditions: the list is initialized to empty</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">InitializeList</span><span class="p">(</span><span class="n">List</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">plist</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
-<ol>
+</li>
 <li>
 <p>put these things into an <strong>header file</strong></p>
-</li>
-<li>
-<p>capitalizes each function name as a way of marking it as part of an interface package</p>
-</li>
-<li>
-<p>uses the <code>#ifndef</code> technique</p>
+<ol>
+<li>capitalizes each function name as a way of marking it as part of an interface package</li>
+<li>uses the <code>#ifndef</code> technique</li>
+</ol>
 </li>
 <li>
 <p>put functions implementations into an <code>.c</code> file</p>
-</li>
-<li>
-<p>there are functions that is part of the implementation but not part of the interface, called <strong>local function</strong>. We <strong>hide these functions usging the <code>static</code> storage class qualifier</strong></p>
-</li>
+<ol>
+<li>there are functions that is part of the implementation but not part of the interface, called <strong>local function</strong>. We <strong>hide these functions usging the <code>static</code> storage class qualifier</strong></li>
 <li>local functions are often type related</li>
+</ol>
+</li>
 </ol>
 <blockquote>
 <p>The Limitations of <code>const</code>:</p>
@@ -2321,7 +2329,7 @@
 <ul>
 <li>Type Name: Queue</li>
 <li>Type Properties: Can hold an ordered sequence of items.</li>
-<li>Type Operations:</li>
+<li>Type Operations:<ul>
 <li>Initialize queue to empty.</li>
 <li>Determine whether queue is empty.</li>
 <li>Determine whether queue is full.</li>
@@ -2330,7 +2338,9 @@
 <li>Remove and recover item from front of queue.</li>
 <li>Empty the queue.</li>
 </ul>
-<p>Implementation thoughts: </p>
+</li>
+</ul>
+<p>Implementation thoughts:</p>
 <ul>
 <li>adding an item to the end of <strong>arrays</strong> is easy,but ... <strong>removing the front items waste a lot of time to move the array left</strong></li>
 <li><strong>changing the indicator to the first item</strong>,but waste a lot of space</li>
@@ -2356,18 +2366,20 @@
 <ul>
 <li>Type Name: Binary Search Tree</li>
 <li>Type Properties: A binary tree is either an empty set of nodes (an empty tree) or a set of nodes with one node designated the root. Each node has exactly two trees, called the left subtree and the right subtree , descending from it.
-  Each subtree is itself a binary tree, which includes the possibility of being an empty tree.
-  A binary search tree is an ordered binary tree in which each node contains an item, in which all items in the left subtree precede the root item, and in which the root item precedes all items in the right subtree.</li>
-<li>Type Operations:</li>
-<li>Initializing tree to empty. </li>
-<li>Determining whether tree is empty. </li>
+    Each subtree is itself a binary tree, which includes the possibility of being an empty tree.
+    A binary search tree is an ordered binary tree in which each node contains an item, in which all items in the left subtree precede the root item, and in which the root item precedes all items in the right subtree.</li>
+<li>Type Operations:<ul>
+<li>Initializing tree to empty.</li>
+<li>Determining whether tree is empty.</li>
 <li>Determining whether tree is full.</li>
-<li>Determining the number of items in the tree. </li>
-<li>Adding an item to the tree. </li>
-<li>Removing an item from the tree. </li>
-<li>Searching the tree for an item. </li>
-<li>Visiting each item in the tree. </li>
+<li>Determining the number of items in the tree.</li>
+<li>Adding an item to the tree.</li>
+<li>Removing an item from the tree.</li>
+<li>Searching the tree for an item.</li>
+<li>Visiting each item in the tree.</li>
 <li>Emptying the tree.</li>
+</ul>
+</li>
 </ul>
 <h3 id="178-other-directions">17.8 Other Directions<a class="headerlink" href="#178-other-directions" title="Permanent link">&para;</a></h3>
 
