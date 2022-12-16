@@ -226,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../writing/VSCode/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../Basic/" class="md-tabs__link md-tabs__link--active">
         🔨基础技能
       </a>
     </li>
@@ -556,8 +556,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../writing/VSCode/" class="md-nav__link">
-        VSCode
+      <a href="../../../Basic/" class="md-nav__link">
+        🧱基础
       </a>
     </li>
   
@@ -579,14 +579,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2">
-          ✒写作
+          ✏️写作
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="✒写作" data-md-level="2">
+      <nav class="md-nav" aria-label="✏️写作" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          ✒写作
+          ✏️写作
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -598,6 +598,20 @@
     <li class="md-nav__item">
       <a href="../../../writing/Copywriting/" class="md-nav__link">
         中文文档写作规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../writing/VSCode/" class="md-nav__link">
+        VSCode
       </a>
     </li>
   
@@ -2282,8 +2296,8 @@
 <h1 id="gcc">gcc<a class="headerlink" href="#gcc" title="Permanent link">&para;</a></h1>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p><a href="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html">GCC and Make from NTU</a></p>
 </div>
+<p><a href="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html">GCC and Make from NTU</a></p>
 <p>GCC, formerly for "GNU C Compiler", has grown over times to support many languages such as C (gcc), C++ (g++), Objective-C, Objective-C++, Java (gcj), Fortran (gfortran), Ada (gnat), Go (gccgo), OpenMP, Cilk Plus, and OpenAcc. It is now referred to as "GNU Compiler Collection".</p>
 <p>GCC is a key component of so-called "GNU Toolchain", for developing applications and writing operating systems. The GNU Toolchain includes:</p>
 <ol>
@@ -2299,22 +2313,23 @@
 <p>首先你需要了解一些 Windows 上 GNU 编译器相关的知识。不想了解的话，无脑选择已编译好的下载即可。下载地址在 <a href="https://sourceforge.net/projects/mingw-w64/files/">SourceForge</a>，选择 <code>x86_64-posix-seh</code> 版本即可。</p>
 <details class="info">
 <summary>关于 mingw-w64 版本的疑惑</summary>
-<p>可以参看操作系统方面的笔记。</p>
-<p><code>posix</code> 和 <code>win32</code>：不用疑惑了，那些东西只影响是否能使用 <code>&lt;thread&gt;</code> 头文件。当你配置环境的时候，离学这东西还有很远。</p>
-<p><code>sjlj</code> 和 <code>seh</code>：与错误处理系统（exception handling systems）有关。在现代系统上，选择 <code>seh</code> 即可。</p>
 </details>
+<p>可以参看操作系统方面的笔记。</p>
+<div class="highlight"><pre><span></span><code>`posix` 和 `win32`：不用疑惑了，那些东西只影响是否能使用 `&lt;thread&gt;` 头文件。当你配置环境的时候，离学这东西还有很远。
+
+`sjlj` 和 `seh`：与错误处理系统（exception handling systems）有关。在现代系统上，选择 `seh` 即可。
+</code></pre></div>
 <h2 id="_1">基本知识<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="info">
 <summary>编译工具流</summary>
+</details>
 <p><img alt="Preprocessor, Compiler, Assembler and Linker" src="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/images/GCC_CompilationProcess.png" />
 接下来分步使用这些工具链：</p>
-<ol>
-<li>预处理（Pre-processing）：<code>cpp hello.c &gt; hello.i</code></li>
-<li>编译（compilation）：<code>gcc -S hello.i</code></li>
-<li>汇编（Assembly）：<code>as -o hello.o hello.s</code></li>
-<li>链接（Linker）：<code>ld -o hello.exe hello.o ...libraries...</code></li>
-</ol>
-</details>
+<div class="highlight"><pre><span></span><code>1. 预处理（Pre-processing）：`cpp hello.c &gt; hello.i`
+2. 编译（compilation）：`gcc -S hello.i`
+3. 汇编（Assembly）：`as -o hello.o hello.s`
+4. 链接（Linker）：`ld -o hello.exe hello.o ...libraries...`
+</code></pre></div>
 <h3 id="gcc_1"><code>gcc</code> 命令<a class="headerlink" href="#gcc_1" title="Permanent link">&para;</a></h3>
 <p>命令格式：<code>gcc [options] file...</code>，注意文件放在最后面。文件可以是源代码、目标代码……</p>
 <table>
@@ -2353,8 +2368,8 @@
 </table>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><code>gcc</code> 使用 <code>ld</code> 来执行链接。关于连接库的更多信息请看参考资料。</p>
 </div>
+<p><code>gcc</code> 使用 <code>ld</code> 来执行链接。关于连接库的更多信息请看参考资料。</p>
 <p>多文件编程只需要把文件依次放在后面就好了。但通常，我们单独编译，最后再一起链接（模块化编程）</p>
 <h3 id="_2">辅助工具<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>

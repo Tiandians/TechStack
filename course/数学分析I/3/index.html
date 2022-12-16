@@ -224,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../basic/writing/VSCode/" class="md-tabs__link">
+      <a href="../../../basic/Basic/" class="md-tabs__link">
         🔨基础技能
       </a>
     </li>
@@ -552,8 +552,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../basic/writing/VSCode/" class="md-nav__link">
-        VSCode
+      <a href="../../../basic/Basic/" class="md-nav__link">
+        🧱基础
       </a>
     </li>
   
@@ -575,14 +575,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2">
-          ✒写作
+          ✏️写作
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="✒写作" data-md-level="2">
+      <nav class="md-nav" aria-label="✏️写作" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          ✒写作
+          ✏️写作
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -594,6 +594,20 @@
     <li class="md-nav__item">
       <a href="../../../basic/writing/Copywriting/" class="md-nav__link">
         中文文档写作规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/writing/VSCode/" class="md-nav__link">
+        VSCode
       </a>
     </li>
   
@@ -2151,6 +2165,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    综合以上讨论：一切初等函数连续。
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2199,19 +2220,19 @@
 <ul>
 <li>【方法】：构造中间量 <span class="arithmatex">\(\frac{A+B}{2}\)</span>，思考如何取 <span class="arithmatex">\(\epsilon\)</span> 使两函数分别在中间值两侧？</li>
 <li>
-<p>推论1（不能无限靠近0）：若 <span class="arithmatex">\(\lim_{x \to x_0}f(x) = A \neq 0\)</span>，则存在 <strong><span class="arithmatex">\(\delta &gt; 0\)</span></strong>， 当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span> 时，成立 <strong><span class="arithmatex">\(|f(x)|&gt;\frac{|A|}{2}\)</span></strong></p>
+<p>推论 1（不能无限靠近 0）：若 <span class="arithmatex">\(\lim_{x \to x_0}f(x) = A \neq 0\)</span>，则存在 <strong><span class="arithmatex">\(\delta &gt; 0\)</span></strong>， 当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;\delta\)</span> 时，成立 <strong><span class="arithmatex">\(|f(x)|&gt;\frac{|A|}{2}\)</span></strong></p>
 <ul>
 <li>【方法】：证明 <span class="arithmatex">\(\lim |f(x)| = \frac{|A|}{2}\)</span> ，再直接由保序性得</li>
 </ul>
 </li>
 <li>
-<p>推论2（减弱的逆命题）：若 <span class="arithmatex">\(\lim_{x \to x_0}f(x) = A, \lim_{x \to x_0}g(x) = B\)</span>，且存在 <span class="arithmatex">\(r &gt; 0\)</span>，使得当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;r\)</span> 时，成立 <span class="arithmatex">\(g(x)\leq f(x)\)</span>， 则 <strong><span class="arithmatex">\(B\leq A\)</span></strong></p>
+<p>推论 2（减弱的逆命题）：若 <span class="arithmatex">\(\lim_{x \to x_0}f(x) = A, \lim_{x \to x_0}g(x) = B\)</span>，且存在 <span class="arithmatex">\(r &gt; 0\)</span>，使得当 <span class="arithmatex">\(0&lt;|x-x_0|&lt;r\)</span> 时，成立 <span class="arithmatex">\(g(x)\leq f(x)\)</span>， 则 <strong><span class="arithmatex">\(B\leq A\)</span></strong></p>
 <ul>
 <li>【方法】：反证法</li>
 </ul>
 </li>
 <li>
-<p>推论3（局部有界性）：若 <span class="arithmatex">\(\lim_{x\to x_0}f(x) = A\)</span>，则存在 <span class="arithmatex">\(\delta &gt; 0\)</span>，<strong>使得 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(O(x_0, \delta)\backslash \{x_0\}\)</span> 中有界</strong></p>
+<p>推论 3（局部有界性）：若 <span class="arithmatex">\(\lim_{x\to x_0}f(x) = A\)</span>，则存在 <span class="arithmatex">\(\delta &gt; 0\)</span>，<strong>使得 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(O(x_0, \delta)\backslash \{x_0\}\)</span> 中有界</strong></p>
 <ul>
 <li>【方法】：直接利用保序性</li>
 </ul>
@@ -2236,14 +2257,18 @@
 <li><span class="arithmatex">\(\lim_{x\to x_0}f(x) = A\)</span> 的充分必要条件是：对于任意满足条件 <span class="arithmatex">\(\lim_{n\to \infty}x_n = x_0\)</span> 且 <span class="arithmatex">\(x_n \neq x_0\)</span> 的数列 <span class="arithmatex">\(\{x_n\}\)</span> ，相应的函数值数列 <span class="arithmatex">\(\{f(x_n)\}\)</span> 成立 <span class="arithmatex">\(\lim_{n\to \infty}f(x_n) = A\)</span></li>
 <li>必要性：利用函数收敛的 <span class="arithmatex">\(\delta\)</span> 来限制 <span class="arithmatex">\(\{x_n\}\)</span> 中 <span class="arithmatex">\(N\)</span> 的取值，即可验证相应函数值数列收敛</li>
 <li>
-<p>充分性：<strong>反证法</strong>，假设函数不收敛，利用**否定的分析学表述**中 <span class="arithmatex">\(\forall \delta\)</span> 的取值来构造不收敛的函数值数列，从而与假设产生矛盾。</p>
+<p>充分性：<strong>反证法</strong>，假设函数不收敛，利用<strong>否定的分析学表述</strong>中 <span class="arithmatex">\(\forall \delta\)</span> 的取值来构造不收敛的函数值数列，从而与假设产生矛盾。</p>
 </li>
 <li>
-<p>用途：常用于证明**函数极限不存在**</p>
+<p>用途：常用于证明<strong>函数极限不存在</strong></p>
 </li>
 <li>另一种表述：对应的函数值列收敛。</li>
-<li>单侧极限</li>
-<li>函数极限定义扩充</li>
+</ul>
+</li>
+<li>
+<p>单侧极限</p>
+</li>
+<li>函数极限定义扩充<ul>
 <li>四种函数值极限情况</li>
 <li>六种自变量极限过程</li>
 </ul>
@@ -2251,13 +2276,8 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">多项式函数极限求法简单归纳</p>
-<p>有理函数的极限，看在哪里取的：
-1. 趋近于有限数时：先尝试代入，再尝试因式分解、消去，最后查看两侧的符号是否一致。
-2. 趋近于有限数时，分子含平方根：有理化。
-3. 趋于无穷时：将多项式代以首项。
-4. 趋于无穷时，分子含根式：同样代以最高次项；如果分子相趋近，尝试有理化。
-5. 趋于负无穷时：注意把首项拖进根式时，符号需要改变。</p>
 </div>
+<p>有理函数的极限，看在哪里取的： 1. 趋近于有限数时：先尝试代入，再尝试因式分解、消去，最后查看两侧的符号是否一致。 2. 趋近于有限数时，分子含平方根：有理化。 3. 趋于无穷时：将多项式代以首项。 4. 趋于无穷时，分子含根式：同样代以最高次项；如果分子相趋近，尝试有理化。 5. 趋于负无穷时：注意把首项拖进根式时，符号需要改变。</p>
 <h2 id="_3">连续函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>定义：<ul>
@@ -2302,8 +2322,9 @@
 <li>每层函数都在对应的点连续，则复合函数在这点连续。</li>
 </ul>
 </li>
-<li>综合以上讨论：一切初等函数连续。</li>
-<li></li>
+<li>
+<h2 id="_4">综合以上讨论：一切初等函数连续。<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+</li>
 </ul>
 
 

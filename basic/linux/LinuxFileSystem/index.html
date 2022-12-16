@@ -226,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../writing/VSCode/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../Basic/" class="md-tabs__link md-tabs__link--active">
         🔨基础技能
       </a>
     </li>
@@ -556,8 +556,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../writing/VSCode/" class="md-nav__link">
-        VSCode
+      <a href="../../Basic/" class="md-nav__link">
+        🧱基础
       </a>
     </li>
   
@@ -579,14 +579,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2">
-          ✒写作
+          ✏️写作
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="✒写作" data-md-level="2">
+      <nav class="md-nav" aria-label="✏️写作" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          ✒写作
+          ✏️写作
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -598,6 +598,20 @@
     <li class="md-nav__item">
       <a href="../../writing/Copywriting/" class="md-nav__link">
         中文文档写作规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing/VSCode/" class="md-nav__link">
+        VSCode
       </a>
     </li>
   
@@ -2390,18 +2404,18 @@
 <ul>
 <li>SUID<ul>
 <li>用于：二进制程序</li>
-<li>用途：让程序执行者临时拥有**属主**的权限</li>
+<li>用途：让程序执行者临时拥有<strong>属主</strong>的权限</li>
 <li>例：<code>passwd</code> 程序修改密码，密码存放于 <code>/etc/shadow</code> 权限为 <code>000</code></li>
 <li>表示：<code>rwx</code> → <code>rws</code>，<code>rw-</code> → <code>rwS</code>，放置于 owner 的执行位上</li>
 </ul>
 </li>
 <li>SGID<ul>
 <li>用于：目录、程序</li>
-<li>用途：在该目录中创建的文件自动**继承**目录用户组、执行者临时拥有**属组**的权限</li>
+<li>用途：在该目录中创建的文件自动<strong>继承</strong>目录用户组、执行者临时拥有<strong>属组</strong>的权限</li>
 <li>例：<code>ps</code>命令查看进程状态信息，<code>ps</code> 的属性是 <code>-r-xr-sr-x</code> ，它读取这个文件： <code>/dev/kmem</code> 是字符设备存储内核程序使用数据，属性为 <code>cr--r-----</code></li>
 <li>表示：放置于 group 的执行位上</li>
 <li>联系[[Linux用户#用户组]]</li>
-<li>文件创建时，默认情况下归属于该用户的**基本用户组**而非扩展用户组</li>
+<li>文件创建时，默认情况下归属于该用户的<strong>基本用户组</strong>而非扩展用户组</li>
 </ul>
 </li>
 <li>SBID （sticky bit）<ul>
@@ -2420,7 +2434,7 @@
 </ul>
 <h3 id="acl">ACL 访问控制列表<a class="headerlink" href="#acl" title="Permanent link">&para;</a></h3>
 <h2 id="linux_1">Linux 文件系统<a class="headerlink" href="#linux_1" title="Permanent link">&para;</a></h2>
-<p>什么是**挂载**？怎么使用 <code>mount</code> 命令进行挂载？</p>
+<p>什么是<strong>挂载</strong>？怎么使用 <code>mount</code> 命令进行挂载？</p>
 <p><code>/</code></p>
 <ul>
 <li>

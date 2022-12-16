@@ -224,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../basic/writing/VSCode/" class="md-tabs__link">
+      <a href="../../basic/Basic/" class="md-tabs__link">
         🔨基础技能
       </a>
     </li>
@@ -552,8 +552,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/writing/VSCode/" class="md-nav__link">
-        VSCode
+      <a href="../../basic/Basic/" class="md-nav__link">
+        🧱基础
       </a>
     </li>
   
@@ -575,14 +575,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2">
-          ✒写作
+          ✏️写作
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="✒写作" data-md-level="2">
+      <nav class="md-nav" aria-label="✏️写作" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          ✒写作
+          ✏️写作
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -594,6 +594,20 @@
     <li class="md-nav__item">
       <a href="../../basic/writing/Copywriting/" class="md-nav__link">
         中文文档写作规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/writing/VSCode/" class="md-nav__link">
+        VSCode
       </a>
     </li>
   
@@ -2657,11 +2671,11 @@
 <li>矩阵转置：<code>glm::transpose(mat4)</code>和<code>transpose(mat4)</code>(GLM)</li>
 <li>矩阵加减法：运算符在 GLSL 中进行了重载</li>
 <li>矩阵乘法：一般使用从右向左：点和矩阵相乘得到点：<code>vec4</code>和矩阵相乘(GLM/GLSL)</li>
-<li>由于会将一系列矩阵变换运用于场景中的每一个点，预先计算*相同的矩阵*可以成倍减少计算量</li>
+<li>由于会将一系列矩阵变换运用于场景中的每一个点，预先计算<em>相同的矩阵</em>可以成倍减少计算量</li>
 <li>逆矩阵：mat4.inverse()(GLM/GLSL)</li>
 <li>平移矩阵：单位矩阵和第三列的三个参数构成；<code>glm::translate(x,y,z)</code>构建平移矩阵;<code>mat4*vec4</code>平移点</li>
 <li>缩放矩阵：改变物体大小或者将点向原点相反方向移动/<em>切换坐标系</em>：由单位矩阵和对角线上的缩放因子构成：<code>glm::scale(x,y,z)</code>构建缩放矩阵；<code>mat4*vec4</code></li>
-<li>旋转矩阵；预备知识：围绕任何轴的旋转都可以表示为绕 xyz 轴旋转的组合，围绕每个轴的旋转角称为*欧拉角*；<code>glm::rotate(mat4,θ,x,y,z)</code>构建绕 xyz 轴旋转 θ 度的缩放矩阵；<code>mat4*vec4</code>；<em>反向旋转矩阵恰等于转置矩阵</em>；欧拉角有一些瑕疵，计算旋转时推荐使用*四元数*</li>
+<li>旋转矩阵；预备知识：围绕任何轴的旋转都可以表示为绕 xyz 轴旋转的组合，围绕每个轴的旋转角称为<em>欧拉角</em>；<code>glm::rotate(mat4,θ,x,y,z)</code>构建绕 xyz 轴旋转 θ 度的缩放矩阵；<code>mat4*vec4</code>；<em>反向旋转矩阵恰等于转置矩阵</em>；欧拉角有一些瑕疵，计算旋转时推荐使用<em>四元数</em></li>
 </ul>
 <h4 id="_5">理解矩阵<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>矩阵的 16 个值表示了空间中的一个特定位置，以及相对视觉坐标系的 3 个轴上的方向。一个 4*4 矩阵包含了一个不同坐标系的位置和方向。</p>
@@ -2676,7 +2690,7 @@
 <h3 id="_7">空间<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
 <li>局部空间(object space)：模型自己的方便空间：分层次地构建复杂的模型</li>
-<li>世界空间：将对象定位、定向在世界空间使用*模型矩阵*</li>
+<li>世界空间：将对象定位、定向在世界空间使用<em>模型矩阵</em></li>
 </ul>
 <h3 id="_8">相机<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2687,7 +2701,7 @@
 <p>将相机放入世界的某个位置</p>
 </li>
 <li>调整相机的角度：有一套自己的坐标轴 U/V/N</li>
-<li>定义一个*视体(view volume)*</li>
+<li>定义一个<em>视体(view volume)</em></li>
 <li>将视体内的对象投影到投影平面(projection plane)上</li>
 </ul>
 <p>需要做的事情：</p>

@@ -224,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../basic/writing/VSCode/" class="md-tabs__link">
+      <a href="../../basic/Basic/" class="md-tabs__link">
         🔨基础技能
       </a>
     </li>
@@ -554,8 +554,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/writing/VSCode/" class="md-nav__link">
-        VSCode
+      <a href="../../basic/Basic/" class="md-nav__link">
+        🧱基础
       </a>
     </li>
   
@@ -577,14 +577,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2">
-          ✒写作
+          ✏️写作
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="✒写作" data-md-level="2">
+      <nav class="md-nav" aria-label="✏️写作" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          ✒写作
+          ✏️写作
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -596,6 +596,20 @@
     <li class="md-nav__item">
       <a href="../../basic/writing/Copywriting/" class="md-nav__link">
         中文文档写作规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic/writing/VSCode/" class="md-nav__link">
+        VSCode
       </a>
     </li>
   
@@ -2288,7 +2302,7 @@
 </ul>
 <h2 id="ch2">Ch.2 数字系统<a class="headerlink" href="#ch2" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>CSAPP：建议你反复阅读数学原理描述和示例与讨论，直到你对该属性的说明内容及其重要性有了**牢固的直觉**。对于更加复杂的属性，你应该尝`````试推导。</p>
+<p>CSAPP：建议你反复阅读数学原理描述和示例与讨论，直到你对该属性的说明内容及其重要性有了<strong>牢固的直觉</strong>。对于更加复杂的属性，你应该尝`````试推导。</p>
 </blockquote>
 <p>关键词：位置化数字系统</p>
 <ul>
@@ -2314,8 +2328,8 @@
 </blockquote>
 <h2 id="ch3">Ch.3 数据储存<a class="headerlink" href="#ch3" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>CSAPP：大多数计算机中，8 位的字节（byte）是最小的可寻址的内存单位。每个字节以一个唯一的数字标识，它们的集合就是**虚拟地址空间 virtual address space**</p>
-<p>每台计算机都有一个**字长**，用于标称指针数据的大小。对于字长为<span class="arithmatex">\(\omega\)</span>的机器来说，虚拟地址的范围为<span class="arithmatex">\(0\sim 2^{\omega}-1\)</span></p>
+<p>CSAPP：大多数计算机中，8 位的字节（byte）是最小的可寻址的内存单位。每个字节以一个唯一的数字标识，它们的集合就是<strong>虚拟地址空间 virtual address space</strong></p>
+<p>每台计算机都有一个<strong>字长</strong>，用于标称指针数据的大小。对于字长为<span class="arithmatex">\(\omega\)</span>的机器来说，虚拟地址的范围为<span class="arithmatex">\(0\sim 2^{\omega}-1\)</span></p>
 </blockquote>
 <p>关键词：数据类型，整数储存，浮点数储存，文本，音频，图像，视频</p>
 <ul>
@@ -2323,7 +2337,7 @@
 <li>位模式</li>
 </ul>
 <h3 id="_5">存储数字<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>整数的储存：定点表示法。简述以下各表示方法的**数据范围，存储、译解步骤，溢出情况和应用**</p>
+<p>整数的储存：定点表示法。简述以下各表示方法的<strong>数据范围，存储、译解步骤，溢出情况和应用</strong></p>
 <ul>
 <li>
 <p>无符号表示法：<span class="arithmatex">\(0\sim 2^k-1\)</span></p>
@@ -2352,7 +2366,7 @@
 <li>
 <p>反码运算</p>
 </li>
-<li>补码运算**Two's completement**</li>
+<li>补码运算<strong>Two's completement</strong></li>
 <li>另一种补码：反码再+1</li>
 </ul>
 </li>
@@ -2360,20 +2374,20 @@
 <blockquote>
 <p>CSAPP：理解补码表示的方法：把最高位看作权重为<span class="arithmatex">\(-2^{w-1}\)</span>的位</p>
 <p>尝试给出反码运算的数学表达式，并理解反码的表达式是如何构建的？</p>
-<p>注意**反码操作**和**整数的反码表示**。反码表示的整数中，只有负数才进行反码操作。</p>
+<p>注意<strong>反码操作</strong>和<strong>整数的反码表示</strong>。反码表示的整数中，只有负数才进行反码操作。</p>
 </blockquote>
-<p>实数的储存：浮点表示法（具有**很大整数部分或很小小数部分的数**）：符号、位移量和定点数</p>
+<p>实数的储存：浮点表示法（具有<strong>很大整数部分或很小小数部分的数</strong>）：符号、位移量和定点数</p>
 <ul>
 <li>规范化：定点数小数点左侧只有一个非零数码。二进制数规范化后，左侧的 1 隐含了。</li>
 <li>十进制称为科学计数法，二进制称为浮点表示法</li>
-<li>尾数：小数点右边的二进制数定义了该数的精度，作为**无符号整数存储**</li>
-<li>指数：有符号，使用**余码系统**：偏移量<span class="arithmatex">\((2^{m-1}-1)\)</span>被加到每个数字中（m 为内存单元大小），统一移到非负的一遍。如 4 位存储单元使用余 7 码系统。这样做的优势是对这些整数进行比较或运算时不需要考虑符号。</li>
+<li>尾数：小数点右边的二进制数定义了该数的精度，作为<strong>无符号整数存储</strong></li>
+<li>指数：有符号，使用<strong>余码系统</strong>：偏移量<span class="arithmatex">\((2^{m-1}-1)\)</span>被加到每个数字中（m 为内存单元大小），统一移到非负的一遍。如 4 位存储单元使用余 7 码系统。这样做的优势是对这些整数进行比较或运算时不需要考虑符号。</li>
 <li>IEEE 标准：单进度为 1，8，23；双精度为 1，11，52</li>
 <li>储存：确定符号，转二进制，规范化，储存指数和尾数，连接三个部分</li>
 <li>还原：拆分为三个部分，确定符号，解码位移量，去规范化尾数，还原数字，转十进制，加上符号</li>
 <li><strong>浮点数的上溢和下溢</strong>：举例单精度浮点数最大负值为<span class="arithmatex">\(-(1-2^{-24})\times 2^{+128}\)</span>，其中，尾数 23 位无符号数，最大绝对值为<span class="arithmatex">\(2^{24}-1\)</span>，指数 8 位余码数，最大为<span class="arithmatex">\(2^{8-1}=128\)</span>。最小负值为<span class="arithmatex">\(-(1-2^{-1})\times 2^{-127}\)</span></li>
 <li>零的约定：三个部分都设置为 0</li>
-<li>什么是**截断错误**？</li>
+<li>什么是<strong>截断错误</strong>？</li>
 </ul>
 <h3 id="_6">存储文本<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -2466,7 +2480,7 @@
 </table>
 </blockquote>
 <h3 id="_7">存储音频<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>文本是**数字**数据的例子，音频是**模拟**数据的例子。</p>
+<p>文本是<strong>数字</strong>数据的例子，音频是<strong>模拟</strong>数据的例子。</p>
 <ul>
 <li>采样</li>
 <li>采样率</li>
@@ -2482,7 +2496,7 @@
 <p>光栅图或矢量图</p>
 <h4 id="_9">光栅图<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <ul>
-<li>采样称为**扫描**，样本称为像素</li>
+<li>采样称为<strong>扫描</strong>，样本称为像素</li>
 <li>解析度：扫描率，每英寸的方块记录多少像素。</li>
 <li>色彩深度：<ul>
 <li>真彩色：24 位，每个三原色 RGB 表示为 8 位，每种色彩都由 0~255 之间表示</li>
@@ -2518,10 +2532,10 @@
 </ul>
 </li>
 <li>算数移位运算<ul>
-<li>假定位模式是使用**二进制补码**存储的带符号整数。</li>
+<li>假定位模式是使用<strong>二进制补码</strong>存储的带符号整数。</li>
 <li>算数右移对整数除二，算数左移对整数乘二，这些运算本不应该改变符号位</li>
 <li>算数右移：保留符号位，并复制入右侧位中，因此保存符号</li>
-<li>算数左移：丢弃符号位，接受左边为符号位。如果新符号位与原先相同，运算**成功**，否则发生溢出</li>
+<li>算数左移：丢弃符号位，接受左边为符号位。如果新符号位与原先相同，运算<strong>成功</strong>，否则发生溢出</li>
 </ul>
 </li>
 </ul>
@@ -2593,7 +2607,7 @@
 <p>$ 0010001-0010110 = 0010001 + 1101010 = 1111011$，所得结果是补码表示，需要再进行一次补码以还原为无符号整数表示。</p>
 </blockquote>
 <h4 id="_17">实数的加减法<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
-<p>将实数的加减法简化为*小数点对齐后以符号加绝对值格式存储的两整数的加法和减法*</p>
+<p>将实数的加减法简化为<em>小数点对齐后以符号加绝对值格式存储的两整数的加法和减法</em></p>
 <ul>
 <li>统一为加法</li>
 <li>去规范化</li>

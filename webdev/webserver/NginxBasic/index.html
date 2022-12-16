@@ -224,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../basic/writing/VSCode/" class="md-tabs__link">
+      <a href="../../../basic/Basic/" class="md-tabs__link">
         🔨基础技能
       </a>
     </li>
@@ -554,8 +554,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../basic/writing/VSCode/" class="md-nav__link">
-        VSCode
+      <a href="../../../basic/Basic/" class="md-nav__link">
+        🧱基础
       </a>
     </li>
   
@@ -577,14 +577,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2">
-          ✒写作
+          ✏️写作
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="✒写作" data-md-level="2">
+      <nav class="md-nav" aria-label="✏️写作" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          ✒写作
+          ✏️写作
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -596,6 +596,20 @@
     <li class="md-nav__item">
       <a href="../../../basic/writing/Copywriting/" class="md-nav__link">
         中文文档写作规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/writing/VSCode/" class="md-nav__link">
+        VSCode
       </a>
     </li>
   
@@ -2411,8 +2425,8 @@
 <li>
 <p>Nginx 在启动后，在 unix 系统中会以 daemon （守护进程）的方式在后台运行，后台进程包含一个 master 进程和多个 worker 进程。</p>
 <ul>
-<li>**master 进程**主要用来管理 worker 进程，包含：接收来自外界的信号，向各 worker 进程发送信号，监控 worker 进程的运行状态，当 worker 进程退出后(异常情况下)，会自动重新启动新的 worker 进程。</li>
-<li>基本的网络事件，则是放在 <strong>worker 进程**中来处理了。多个 worker 进程之间是**对等的</strong>，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个**请求**，只可能在一个 worker 进程中处理，一个 worker 进程，不可能处理其它进程的请求。worker 进程的个数是可以设置的，一般我们会设置与机器 cpu 核数一致，这里面的原因与 Nginx 的进程模型以及事件处理模型是分不开的。</li>
+<li><strong>master 进程</strong>主要用来管理 worker 进程，包含：接收来自外界的信号，向各 worker 进程发送信号，监控 worker 进程的运行状态，当 worker 进程退出后(异常情况下)，会自动重新启动新的 worker 进程。</li>
+<li>基本的网络事件，则是放在 <strong>worker 进程</strong>中来处理了。多个 worker 进程之间是<strong>对等的</strong>，他们同等竞争来自客户端的请求，各进程互相之间是独立的。一个<strong>请求</strong>，只可能在一个 worker 进程中处理，一个 worker 进程，不可能处理其它进程的请求。worker 进程的个数是可以设置的，一般我们会设置与机器 cpu 核数一致，这里面的原因与 Nginx 的进程模型以及事件处理模型是分不开的。</li>
 </ul>
 </li>
 <li>
@@ -2435,7 +2449,7 @@
 <p>Nginx 如何做到高并发？</p>
 <ul>
 <li>
-<p>Nginx 采用了**异步非阻塞**的方式来处理请求，也就是说，Nginx 是可以同时处理成千上万个请求的</p>
+<p>Nginx 采用了<strong>异步非阻塞</strong>的方式来处理请求，也就是说，Nginx 是可以同时处理成千上万个请求的</p>
 </li>
 <li>
 <blockquote>
@@ -2448,15 +2462,15 @@
 <p>接下来的内容涉及系统级进程管理， #暂不学习</p>
 <h2 id="nginx_2">Nginx 配置系统<a class="headerlink" href="#nginx_2" title="Permanent link">&para;</a></h2>
 <p>配置文件在 <code>/etc/nginx/nginx.conf</code></p>
-<p>Nginx 的配置系统由一个**主配置文件**和其他一些辅助的配置文件构成。这些配置文件均是纯文本文件，全部位于 Nginx 安装目录下的 conf 目录下。由于除主配置文件 nginx.conf 以外的文件都是在某些情况下才使用的，而只有主配置文件是在任何情况下都被使用的。所以在这里我们就以主配置文件为例，来解释 Nginx 的配置系统。</p>
-<p>在 nginx.conf 中，包含若干**配置项**。每个配置项由配置指令和指令参数 2 个部分构成。指令参数也就是配置指令对应的配置值。</p>
+<p>Nginx 的配置系统由一个<strong>主配置文件</strong>和其他一些辅助的配置文件构成。这些配置文件均是纯文本文件，全部位于 Nginx 安装目录下的 conf 目录下。由于除主配置文件 nginx.conf 以外的文件都是在某些情况下才使用的，而只有主配置文件是在任何情况下都被使用的。所以在这里我们就以主配置文件为例，来解释 Nginx 的配置系统。</p>
+<p>在 nginx.conf 中，包含若干<strong>配置项</strong>。每个配置项由配置指令和指令参数 2 个部分构成。指令参数也就是配置指令对应的配置值。</p>
 <ul>
-<li>**配置指令**是一个字符串，可以用单引号或者双引号括起来，也可以不括。但是如果配置指令包含空格，一定要引起来。</li>
-<li>**指令的参数**使用一个或者多个空格或者 TAB 字符与指令分开。指令的参数有一个或者多个 TOKEN 串组成。TOKEN 串之间由空格或者 TAB 键分隔。<ul>
-<li>**TOKEN 串**分为简单字符串或者是复合配置块。复合配置块即是由大括号括起来的一堆内容。一个复合配置块中可能包含若干其他的配置指令。</li>
+<li><strong>配置指令</strong>是一个字符串，可以用单引号或者双引号括起来，也可以不括。但是如果配置指令包含空格，一定要引起来。</li>
+<li><strong>指令的参数</strong>使用一个或者多个空格或者 TAB 字符与指令分开。指令的参数有一个或者多个 TOKEN 串组成。TOKEN 串之间由空格或者 TAB 键分隔。<ul>
+<li><strong>TOKEN 串</strong>分为简单字符串或者是复合配置块。复合配置块即是由大括号括起来的一堆内容。一个复合配置块中可能包含若干其他的配置指令。</li>
 </ul>
 </li>
-<li>对于简单配置，配置项的结尾使用**分号结束**。对于复杂配置项，包含多个 TOKEN 串的，一般都是简单 TOKEN 串放在前面，复合配置块一般位于最后，而且其结尾，并**不需要再添加分号**。</li>
+<li>对于简单配置，配置项的结尾使用<strong>分号结束</strong>。对于复杂配置项，包含多个 TOKEN 串的，一般都是简单 TOKEN 串放在前面，复合配置块一般位于最后，而且其结尾，并<strong>不需要再添加分号</strong>。</li>
 </ul>
 <h3 id="_4">上下文<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>nginx.conf 中的配置信息，根据其逻辑上的意义，对它们进行了分类，也就是分成了多个作用域，或者称之为配置指令上下文。不同的作用域含有一个或者多个配置项。</p>
@@ -2468,7 +2482,7 @@
 <li>location: http 服务中，某些特定的 <abbr title="Uniform Resource Locator，统一资源定位符">URL</abbr> 对应的一系列配置项。</li>
 <li>mail: 实现 email 相关的 SMTP/IMAP/POP3 代理时，共享的一些配置项（因为可能实现多个代理，工作在多个监听地址上）。</li>
 </ul>
-<p>指令上下文，可能有**包含**的情况出现。例如：通常 http 上下文和 mail 上下文一定是出现在 main 上下文里的。在一个上下文里，可能包含另外一种类型的上下文多次。例如：如果 http 服务，支持了多个虚拟主机，那么在 http 上下文里，就会出现多个 server 上下文。</p>
+<p>指令上下文，可能有<strong>包含</strong>的情况出现。例如：通常 http 上下文和 mail 上下文一定是出现在 main 上下文里的。在一个上下文里，可能包含另外一种类型的上下文多次。例如：如果 http 服务，支持了多个虚拟主机，那么在 http 上下文里，就会出现多个 server 上下文。</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">user</span><span class="w">  </span><span class="s">nobody</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">worker_processes</span><span class="w">  </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">error_log</span><span class="w">  </span><span class="s">logs/error.log</span><span class="w">  </span><span class="s">info</span><span class="p">;</span><span class="w"></span>

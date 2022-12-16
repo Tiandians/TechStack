@@ -224,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../basic/writing/VSCode/" class="md-tabs__link">
+      <a href="../../../basic/Basic/" class="md-tabs__link">
         🔨基础技能
       </a>
     </li>
@@ -554,8 +554,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../basic/writing/VSCode/" class="md-nav__link">
-        VSCode
+      <a href="../../../basic/Basic/" class="md-nav__link">
+        🧱基础
       </a>
     </li>
   
@@ -577,14 +577,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2">
-          ✒写作
+          ✏️写作
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="✒写作" data-md-level="2">
+      <nav class="md-nav" aria-label="✏️写作" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          ✒写作
+          ✏️写作
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -596,6 +596,20 @@
     <li class="md-nav__item">
       <a href="../../../basic/writing/Copywriting/" class="md-nav__link">
         中文文档写作规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/writing/VSCode/" class="md-nav__link">
+        VSCode
       </a>
     </li>
   
@@ -2392,7 +2406,7 @@
 <p><details><summary>什么是函数优先（first-class function）？</summary>指的是函数和变量没有区别</details></p>
 </li>
 <li>
-<p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是**一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的**。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，Node.js 之类的服务器端环境，NoSQL 数据库（如开源的 Apache CouchDB）、嵌入式计算机，以及包括 GNOME（注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
+<p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是<strong>一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的</strong>。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，Node.js 之类的服务器端环境，NoSQL 数据库（如开源的 Apache CouchDB）、嵌入式计算机，以及包括 GNOME（注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
 </li>
 </ul>
 <h3 id="_3">数据类型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -2415,10 +2429,10 @@
 <p>介绍基本数据类型：</p>
 <ul>
 <li>
-<p>Number：所有数都以 IEEE 754 浮点数标准存储，**看起来是整数的**也是浮点数。</p>
+<p>Number：所有数都以 IEEE 754 浮点数标准存储，<strong>看起来是整数的</strong>也是浮点数。</p>
 <ul>
 <li>
-<p>如果运算符需要整数（比如位运算），数字会被转换为**32 位**整数。</p>
+<p>如果运算符需要整数（比如位运算），数字会被转换为<strong>32 位</strong>整数。</p>
 </li>
 <li>
 <p><details><summary>把字符串转换成数字的三种方式？</summary>
@@ -2450,17 +2464,17 @@
 <p>字符串具有一些功能函数，参阅 [MDN] 了解它们的使用方法。</p>
 </li>
 <li>
-<p>因为**字符串是基本数据类型**，基本数据类型**不可更改**。所以功能函数返回一个新的字符串。</p>
+<p>因为<strong>字符串是基本数据类型</strong>，基本数据类型<strong>不可更改</strong>。所以功能函数返回一个新的字符串。</p>
 </li>
 <li>
-<p><code>`</code> 反点号用于**模板字符串**：</p>
+<p><code>`</code> 反点号用于<strong>模板字符串</strong>：</p>
 <div class="highlight"><pre><span></span><code><span class="sb">`string test </span><span class="si">${</span><span class="nx">expression</span><span class="si">}</span><span class="sb"> string text`</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 </li>
 </ul>
 </li>
 <li>
-<p>Undefined：表明**缺少值**可以在以下情况下获得</p>
+<p>Undefined：表明<strong>缺少值</strong>可以在以下情况下获得</p>
 <ul>
 <li>空的 return</li>
 <li>访问不存在的属性</li>
@@ -2468,7 +2482,7 @@
 </ul>
 </li>
 <li>
-<p>Null：表明**故意的没有值**</p>
+<p>Null：表明<strong>故意的没有值</strong></p>
 </li>
 <li>
 <p>Boolean：</p>
@@ -2481,8 +2495,8 @@
 <h3 id="_4">变量<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>let</code> 块作用域</li>
-<li><code>const</code> 块作用域，不可**重新赋值**，但**不保证变量的值被改变**。<ul>
-<li>注意：对象和基本类型不同：声明对象时，标识符是它的**引用**。使用 <code>const</code> 意味着引用不可更改，而非对象的值不可更改</li>
+<li><code>const</code> 块作用域，不可<strong>重新赋值</strong>，但<strong>不保证变量的值被改变</strong>。<ul>
+<li>注意：对象和基本类型不同：声明对象时，标识符是它的<strong>引用</strong>。使用 <code>const</code> 意味着引用不可更改，而非对象的值不可更改</li>
 </ul>
 </li>
 <li><code>var</code> 在现代 JS 中不推荐使用</li>
@@ -2495,7 +2509,7 @@
 <li>在 TDZ 内，变量未被初始化，对变量的访问讲返回 <code>ReferenceError</code>。</li>
 <li>当程序执行到声明/初始化语句时，变量才具有值。如果没有初始化，会是 <code>undefined</code></li>
 </ul>
-<p>TDZ 会引起一些有趣的覆盖情况，总之记住：块内定义的变量，总是在**整个块中可见**。</p>
+<p>TDZ 会引起一些有趣的覆盖情况，总之记住：块内定义的变量，总是在<strong>整个块中可见</strong>。</p>
 </blockquote>
 <h3 id="_5">运算符<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>有些新的东西：</p>
@@ -2511,19 +2525,19 @@
 <p>和 C 类似，也有些新的东西：</p>
 <ul>
 <li>标识符可以是 Unicode 字符。</li>
-<li>分号是**可选的**：JS 会在需要的时候自动插入它们。</li>
+<li>分号是<strong>可选的</strong>：JS 会在需要的时候自动插入它们。</li>
 </ul>
 <h3 id="_7">控制结构<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>也有新的东西：</p>
 <ul>
 <li><code>for...of</code>：遍历迭代量</li>
-<li><code>for...in</code>：访问一个对象所有*可列*的属性<ul>
-<li>它们的使用：<code>for (const property in object)</code>，记得用**const**。</li>
+<li><code>for...in</code>：访问一个对象所有<em>可列</em>的属性<ul>
+<li>它们的使用：<code>for (const property in object)</code>，记得用<strong>const</strong>。</li>
 </ul>
 </li>
 <li><code>switch</code><ul>
 <li>JS 中，任何表达式都可以是标签。</li>
-<li>与 C 的**跳转表**实现不同：JS 中，标签被逐个使用 <code>===</code> 测试是否相等。</li>
+<li>与 C 的<strong>跳转表</strong>实现不同：JS 中，标签被逐个使用 <code>===</code> 测试是否相等。</li>
 </ul>
 </li>
 </ul>
@@ -2540,7 +2554,7 @@
 <li>
 <p>Key：总是字符串或 Symbol</p>
 <ul>
-<li>甚至数组下标也是**字符串**</li>
+<li>甚至数组下标也是<strong>字符串</strong></li>
 </ul>
 </li>
 <li>
@@ -2564,7 +2578,7 @@
 </ul>
 </li>
 <li>
-<p>对象总是**引用**</p>
+<p>对象总是<strong>引用</strong></p>
 <ul>
 <li>两个分别创建的对象永远不可能相等</li>
 <li>赋值时拷贝的是引用而非对象</li>
@@ -2579,11 +2593,11 @@
 </ul>
 </li>
 <li>sparse array（稀疏数组）：多数情况下表现得像是填充了 <code>undefined</code>，某些情况下（尤其是迭代方法）会被略过。<ul>
-<li>sparse array 会阻止引擎将它优化成**哈希表**，所以最好保证数组密度。</li>
+<li>sparse array 会阻止引擎将它优化成<strong>哈希表</strong>，所以最好保证数组密度。</li>
 </ul>
 </li>
-<li>**下标越界**不会抛出异常，而是会得到 <code>undefined</code>。</li>
-<li><code>array</code> 是**类型松散的**，可以任意增长、缩小。</li>
+<li><strong>下标越界</strong>不会抛出异常，而是会得到 <code>undefined</code>。</li>
+<li><code>array</code> 是<strong>类型松散的</strong>，可以任意增长、缩小。</li>
 <li><code>array</code> 使用 <code>for...of</code> 语句遍历。<ul>
 <li>例：<code>for(const currentValue of a)</code></li>
 </ul>
@@ -2698,7 +2712,7 @@
 <span class="kd">const</span><span class="w"> </span><span class="nx">fn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">makeFn</span><span class="p">();</span><span class="w"></span>
 <span class="nx">fn</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
-<p>makeFn 函数中又返回了一个内部函数并且赋值给 fn，fn 对这个内部函数就有了引用，内部里面访问了 msg 变量，当 makeFn 函数执行完毕时，因为**外部 fn 引用着内部函数，且内部函数访问了 msg**，所以**msg 变量并不会被释放**。这就形成了一个闭包。由此可见闭包的核心作用就是**把 makeFn 函数中的 msg 成员的作用范围延长。**</p>
+<p>makeFn 函数中又返回了一个内部函数并且赋值给 fn，fn 对这个内部函数就有了引用，内部里面访问了 msg 变量，当 makeFn 函数执行完毕时，因为<strong>外部 fn 引用着内部函数，且内部函数访问了 msg</strong>，所以<strong>msg 变量并不会被释放</strong>。这就形成了一个闭包。由此可见闭包的核心作用就是<strong>把 makeFn 函数中的 msg 成员的作用范围延长。</strong></p>
 <p><strong>闭包可以在另一个作用域中调用一个函数的内部函数并访问到该函数的作用域中的成员。</strong></p>
 </blockquote>
 </li>
@@ -2749,13 +2763,13 @@
 <h3 id="_12">异步编程<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>JS 天生是单**线程**的，没有并行（paralleling）的概念，只有并发（concurrency）。</p>
+<p>JS 天生是单<strong>线程</strong>的，没有并行（paralleling）的概念，只有并发（concurrency）。</p>
 <blockquote>
 <ul>
-<li>并行：两个任务在**同一时刻互不干扰**的同时执行。</li>
+<li>并行：两个任务在<strong>同一时刻互不干扰</strong>的同时执行。</li>
 <li>并发：同时安排若干个任务，这些任务可以彼此穿插着进行；有些任务可能是并行的，比如买菜、发邮件和去幼儿园的某些路途是重叠的，这时你的确同时在做三件事；但进菜市场和发邮件和接娃三者是互斥的，每个时刻只能完成其中一件。换句话说，并发允许两个任务彼此干扰。</li>
-<li>串行还是并发，这都是**任务安排者**视角看到的东西。</li>
-<li>相比之下，“并行”是**任务执行者**视角的东西。</li>
+<li>串行还是并发，这都是<strong>任务安排者</strong>视角看到的东西。</li>
+<li>相比之下，“并行”是<strong>任务执行者</strong>视角的东西。</li>
 </ul>
 <p>《深入理解计算机系统》对两个术语作了清晰明了的定义：</p>
 <ul>
@@ -2765,7 +2779,7 @@
 </blockquote>
 </li>
 <li>
-<p>JS 异步编程由**事件循环**驱动，允许一堆任务组织成队列等待完成。JS 有三种惯用的异步编程方法：</p>
+<p>JS 异步编程由<strong>事件循环</strong>驱动，允许一堆任务组织成队列等待完成。JS 有三种惯用的异步编程方法：</p>
 <ul>
 <li>回调函数</li>
 <li><code>Promise</code></li>

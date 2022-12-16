@@ -226,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../VSCode/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../Basic/" class="md-tabs__link md-tabs__link--active">
         🔨基础技能
       </a>
     </li>
@@ -556,8 +556,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../VSCode/" class="md-nav__link">
-        VSCode
+      <a href="../../Basic/" class="md-nav__link">
+        🧱基础
       </a>
     </li>
   
@@ -581,14 +581,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2">
-          ✒写作
+          ✏️写作
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="✒写作" data-md-level="2">
+      <nav class="md-nav" aria-label="✏️写作" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          ✒写作
+          ✏️写作
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -600,6 +600,20 @@
     <li class="md-nav__item">
       <a href="../Copywriting/" class="md-nav__link">
         中文文档写作规范
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VSCode/" class="md-nav__link">
+        VSCode
       </a>
     </li>
   
@@ -2288,15 +2302,6 @@
                   
   
 
-  <nav class="md-tags" >
-    
-      
-      
-        <a href="../../../Tags/#ongoing" class="md-tag">Ongoing</a>
-      
-    
-  </nav>
-
 
 
   <a href="https://github.com/Tiandians/TechStack/blob/master/docs/basic/writing/Markdown.md" title="Edit this page" class="md-content__button md-icon">
@@ -2314,19 +2319,15 @@
 <li>我会将 Obsidian 的双向链接配置为 Markdown 格式的 <strong>相对链接</strong>，附件存储于当前文件夹下的 <code>assest</code> 文件夹。这将为 MkDocs 和 Typora 提供便利</li>
 </ul>
 </li>
-<li>
-<p>我使用 <strong>Typora</strong> 作为主力编辑器。它可以胜任基于 GFM 的基础语法的 Markdown 编辑工作。</p>
-<ul>
-<li>为了兼容 MkDocs 语法，Typora 列表缩进设定为 Tab</li>
+<li>我使用 <strong>Typora</strong> 作为主力编辑器。它可以胜任基于 GFM 的基础语法的 Markdown 编辑工作。<ul>
+<li>列表缩进设定为 4。</li>
 </ul>
 </li>
-<li>
-<p>我使用 <strong>MkDocs</strong> 发布自己的笔记。MkDocs 提供了一些扩展语法，我会调整 Obsidian 的配置使之适应 MkDocs，若有冲突，MkDocs 规则优先。</p>
-<ul>
-<li>需要发布的笔记存放在 Obsidian 库的子文件夹中，它们也是独立的 git 仓库。因为同步库的存在，我不需要在各个设备间重复 pull/push 操作，只需要在其中一台设备上完成，git 状态即可同步至其他设备。</li>
+<li>我使用 <strong>MkDocs</strong> 发布自己的笔记。<ul>
+<li>需要发布的笔记存放在 Obsidian 库的子文件夹中，是独立的 git 仓库。因为 Syncthing 的同步，我不需要在各个设备间重复 pull/push 操作，只需要在其中一台设备上完成，git 状态即可同步至其他设备。</li>
 </ul>
 </li>
-<li><del>我会使用 VSCode 扩展 <code>MarkdownLint</code> 来自动格式化文档。</del> 因为 MkDocs 的扩展语法，我已不在使用自动格式化，这会破坏 Admonition 等扩展的工作。</li>
+<li>我会使用 VSCode 扩展 <code>Prettier</code> 来自动格式化文档。对于 MkDocs 中的 Admonition 等扩展语法，应当使用 <code>&lt;!-- prettier-ignore --&gt;</code> 将语法块包裹起来避免遭到破坏。</li>
 </ul>
 <h2 id="_2">扩展语法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2347,26 +2348,29 @@
 <li><code>[^ref]</code> 脚注</li>
 <li><code>:----:</code> 表格对齐符</li>
 </ul>
+<!-- prettier-ignore-start -->
 <details class="note" open="open">
 <summary>For Compatible with MkDocs</summary>
 <ul>
-<li>MkDocs <strong>只能识别</strong> 4 个空格或 1 个制表符的列表缩进。</li>
-<li>MkDocs 的代码块必须使用支持的语言标签才能正常工作。这些标签涵盖了几乎所有语言，因此只要设置正常，无需担心无法工作。<ul>
-<li>配置正确后，嵌套在列表中的代码块应该不会出现问题，比如
-<div class="highlight"><span class="filename">example</span><pre><span></span><code>this is markdown
+<li>MkDocs<strong>只能识别</strong> 4 个空格或 1 个制表符的列表缩进。</li>
+<li>MkDocs 的代码块必须使用支持的语言标签才能正常工作。这些标签涵盖了几乎所有语言，因此只要设置正常，无需担心无法工作。
+    <div class="highlight"><span class="filename">example</span><pre><span></span><code>this is markdown
 </code></pre></div></li>
 </ul>
-</li>
-<li>为了让该警告块在 Obsidian 不会被渲染成一行，顶部应该与内容有一行的距离。</li>
-<li>这样做使得警告体在 Typora/Obsidian 中被渲染代码块，请自己注意。</li>
-<li>为了便于解析，MkDocs 的各种 <strong>粗体</strong> 等格式，两侧都需要有空格！</li>
-</ul>
 </details>
+<!-- prettier-ignore-end -->
+
 <h2 id="mermaid">Mermaid<a class="headerlink" href="#mermaid" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>官方文档: <a href="https://mermaid-js.github.io/mermaid/#/">GitHub Pages</a>
-<a href="https://mermaid-js.github.io/mermaid-live-editor/">Mermaid Live Editor</a></p>
-</blockquote>
+<!-- prettier-ignore-start -->
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<ul>
+<li><a href="https://mermaid-js.github.io/mermaid/#/">GitHub Pages</a></li>
+<li><a href="https://mermaid-js.github.io/mermaid-live-editor/">Mermaid Live Editor</a></li>
+</ul>
+</div>
+<!-- prettier-ignore-end -->
+
 <ul>
 <li>首先声明图表的类型</li>
 <li>流程图 <code>flowchart &lt;type&gt;</code><ul>
@@ -2381,23 +2385,33 @@
 </li>
 </ul>
 </li>
-<li><a href="https://mermaid-js.github.io/mermaid/#/flowchart">更多节点和连接线</a></li>
 </ul>
 <h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h2>
 <p>配置和用法请参考官方文档，这里仅列出我使用的一些功能、文档里没有写明的技巧和注意事项。</p>
+<!-- prettier-ignore-start -->
 <div class="admonition quote">
 <p class="admonition-title">官方文档</p>
-<p><a href="https://www.mkdocs.org/">MkDocs</a></p>
-<p><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></p>
+<ul>
+<li><a href="https://www.mkdocs.org/">MkDocs</a></li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">中文粗体失效</p>
+<p>感谢 <a href="https://tonycrane.cc/">@TonyCrane</a> 学长帮助解决该问题！</p>
+<p>在配置 Mkdocs Material 时，你可能遇到中文粗体失效的问题，只需要删去配置文件中的 <code>betterem</code> 即可。
+问题的原因是 Markdown 语法解析规则。关于 Markdown 加粗语法解析的细节，可以查看这篇掘金的 <a href="https://juejin.cn/post/7064565848421171213">文章</a>。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">local server</p>
 <p>如果你想在服务器上利用 <code>mkdocs serve</code> 零时部署一个网站测试动态更改效果，你可以使用命令：
 <div class="highlight"><pre><span></span><code>mkdocs serve --dev-addr <span class="m">0</span>.0.0.0:8000
 </code></pre></div>
-这样就可以远程访问该零时部署的网站了。
-关于 <code>mkdocs serve</code> 的更多使用方法，请自行使用 <code>mkdocs serve -h</code> 查看。</p>
+这样就可以远程访问该零时部署的网站了。</p>
+<p>关于 <code>mkdocs serve</code> 的更多使用方法，请自行使用 <code>mkdocs serve -h</code> 查看。</p>
 </div>
+<!-- prettier-ignore-end -->
+
 <ul>
 <li>Microsoft Edge Tools for VS Code<ul>
 <li>我使用该插件来实现所见即所得的 MkDocs 编辑。这需要开启 <code>navigation.tracking</code> 来保证浏览器刷新后保持位置固定。</li>
@@ -2405,23 +2419,16 @@
 <li>效果：<img alt="image-20221212104749090" src="../assets/image-20221212104749090.png" /></li>
 </ul>
 </li>
-<li>设置页脚，可以添加很多个 icon。</li>
 <li>代码块<ul>
-<li>MkDocs 中的代码块可以有标题 <code>title="xxx.py"</code>、脚注 <code>//(1)</code> （需要开启扩展）等。</li>
-<li>请不要在嵌套的代码块中使用脚注，这会导致下面的子列表消失。</li>
+<li>MkDocs 中的代码块可以有标题 <code>title="xxx.py"</code>。</li>
 </ul>
 </li>
-<li>导航栏</li>
-<li>配置推荐的 <a href="https://squidfunk.github.io/mkdocs-material/setup/extensions/#recommended-configuration">Markdown 扩展</a></li>
 <li>缩写 Abbreviations<ul>
 <li>可以创建一个全局的术语表，所有文档中的缩写都会得到应用。</li>
 </ul>
 </li>
 <li>警告 Admonition<ul>
-<li>支持这些 type<ul>
-<li><code>note</code> <code>abstract</code> <code>info</code> <code>tip</code> <code>success</code> <code>warning</code> <code>failure</code> <code>danger</code> <code>bug</code> <code>example</code> <code>quote</code></li>
-</ul>
-</li>
+<li>支持这些 type：<code>note</code> <code>abstract</code> <code>info</code> <code>tip</code> <code>success</code> <code>warning</code> <code>failure</code> <code>danger</code> <code>bug</code> <code>example</code> <code>quote</code></li>
 </ul>
 </li>
 <li>清单 List<ul>
@@ -2431,7 +2438,7 @@
 <li>目录 Table of Contents<ul>
 <li>需要配置，目录深度默认为 6 太深了。
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">toc</span><span class="p">:</span><span class="w"></span>
-<span class="w w-Error"> </span><span class="nt">toc_depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<span class="w">  </span><span class="nt">toc_depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
 </code></pre></div></li>
 </ul>
 </li>
@@ -2443,29 +2450,28 @@
 </ul>
 </li>
 </ul>
-<div class="admonition quote">
-<p class="admonition-title">Keys插件的官方文档</p>
-<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/">文档</a></p>
-</div>
+<!-- prettier-ignore-start -->
+<div class="highlight"><pre><span></span><code>    !!! quote &quot;Keys 插件的官方文档&quot;
+        [文档](https://facelessuser.github.io/pymdown-extensions/extensions/keys/)
+</code></pre></div>
+<!-- prettier-ignore-end -->
+
 <ul>
-<li>SuperFences 超级栅栏<ul>
-<li>开启该扩展允许各类东西嵌套。</li>
+<li>SuperFences 超级栅栏 - 开启该扩展允许各类东西嵌套。</li>
 </ul>
-</li>
-</ul>
+<!-- prettier-ignore-start -->
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Marmaid 也需要在这里开启。</p>
 </div>
+<!-- prettier-ignore-end -->
+
 <ul>
-<li>
-<p>Tabbed 卡片</p>
-<ul>
-<li>可以把内容组织成卡片，并且可以把卡片嵌套在警告中：</li>
+<li>Tabbed 卡片 - 可以把内容组织成卡片，并且可以把卡片嵌套在警告中：</li>
 </ul>
+<!-- prettier-ignore-start -->
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Unordered List</label><label for="__tabbed_1_2">Ordered List</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2482,13 +2488,14 @@
 </div>
 </div>
 </div>
-</li>
-<li>
-<p>搜索插件 <code>search</code></p>
+</div>
+<!-- prettier-ignore-end -->
+
 <ul>
+<li>搜索插件 <code>search</code><ul>
 <li>不包括文件，可以在文件头输入：
 <div class="highlight"><pre><span></span><code><span class="nt">search</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div></li>
 <li>不包括部分或文段
 <div class="highlight"><pre><span></span><code><span class="gu">## section {data-search-exclude}</span>
@@ -2507,22 +2514,22 @@
 <table>
 <thead>
 <tr>
-<th>组合</th>
-<th>用途</th>
+<th>keys</th>
+<th>select range</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><span class="keys"><kbd class="key-d">D</kbd></span></td>
-<td>词</td>
+<td>word</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-l">L</kbd></span></td>
-<td>行/<strong>句</strong></td>
+<td>line/sentence</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-e">E</kbd></span></td>
-<td>当前格式</td>
+<td>format</td>
 </tr>
 </tbody>
 </table>
@@ -2532,14 +2539,14 @@
 <table>
 <thead>
 <tr>
-<th>组合</th>
-<th>用途</th>
+<th>keys</th>
+<th>function</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Ctrl + <code>B, I, K, U</code></td>
-<td>粗体、斜体、超链接、下划线（识别方法同 Vim 的一个 word）</td>
+<td>粗体、斜体、超链接、下划线</td>
 </tr>
 <tr>
 <td>Alt + Shift + <code>5, I</code></td>
@@ -2578,10 +2585,6 @@
 <td>移动行列</td>
 </tr>
 <tr>
-<td></td>
-<td>表格侧边出现双向箭头支持上下拖动行、列调整顺序</td>
-</tr>
-<tr>
 <td>Ctrl + <code>\</code></td>
 <td>清除样式</td>
 </tr>
@@ -2594,10 +2597,13 @@
 <ul>
 <li>文件和窗口操作</li>
 </ul>
+<!-- prettier-ignore-start -->
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Typora 没有选项卡概念，因此它其实是多窗口操作。打开文件一定会新建窗口而不是替换当前打开的文件，<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span> 也是在窗口之间切换。</p>
 </div>
+<!-- prettier-ignore-end -->
+
 <table>
 <thead>
 <tr>
@@ -2612,7 +2618,7 @@
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
-<td>快速打开文件（注意：有最近打开/匹配的，最近打开的文件可能被移动而打不开）</td>
+<td>快速打开文件</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span></td>
