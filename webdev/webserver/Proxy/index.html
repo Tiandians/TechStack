@@ -997,8 +997,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../basic/problem/2022/" class="md-nav__link">
+      <a href="../../../basic/problem/QA2022/" class="md-nav__link">
         Q&A 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/problem/BlogSetupRecord/" class="md-nav__link">
+        Blog 搭建记录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basic/problem/UbuntuSetupRecord/" class="md-nav__link">
+        电脑折腾记
       </a>
     </li>
   
@@ -1434,6 +1462,13 @@
         <li class="md-nav__item">
   <a href="#hosts" class="md-nav__link">
     hosts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI 下的代理
   </a>
   
 </li>
@@ -2219,6 +2254,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI 下的代理
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2268,6 +2310,10 @@
 </ol>
 <h2 id="hosts">hosts<a class="headerlink" href="#hosts" title="Permanent link">&para;</a></h2>
 <p>因为使用 <a href="https://github.com/521xueweihan/GitHub520">GitHub: GitHub520</a> 无效，所以才使用了代理的方法。在该 hosts 中，GitHub 的 IP 地址为 <code>20.205.243.166</code>，我始终无法连接。使用代理，发现我可以连接的 IP 是：<code>192.30.255.112</code>。这时，在 hosts 文件中配置好 IP，也可以不使用代理。</p>
+<h2 id="gui">GUI 下的代理<a class="headerlink" href="#gui" title="Permanent link">&para;</a></h2>
+<p>我自己还没弄清楚这块内容，暂且记录一些。</p>
+<p>目前了解到，Linux 好像因为安全原因无法设置系统级别的代理，只能转发固定端口？</p>
+<p>在 Linux 上配置 Clash for Windows GUI，可以参考这篇 <a href="https://www.jianshu.com/p/02e3e8ccfe80">简书</a> 的文章，但他也只给出了终端环境代理的方法。个人感觉这还不如上面基于命令行的配置直观。</p>
 
 
 

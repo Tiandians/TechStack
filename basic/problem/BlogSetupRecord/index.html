@@ -218,13 +218,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../Basic/" class="md-tabs__link">
+      <a href="../../Basic/" class="md-tabs__link md-tabs__link--active">
         🔨基础技能
       </a>
     </li>
@@ -524,12 +526,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -967,12 +971,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
       
       
       
@@ -995,8 +1001,124 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022/" class="md-nav__link">
+      <a href="../QA2022/" class="md-nav__link">
         Q&A 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Blog 搭建记录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Blog 搭建记录
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    控制台
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    系统配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hexo" class="md-nav__link">
+    本地 Hexo 配置
+  </a>
+  
+    <nav class="md-nav" aria-label="本地 Hexo 配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npm" class="md-nav__link">
+    npm 换源
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hexo-git" class="md-nav__link">
+    Hexo 和 git 自动部署配置
+  </a>
+  
+    <nav class="md-nav" aria-label="Hexo 和 git 自动部署配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    分配 git 用户
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UbuntuSetupRecord/" class="md-nav__link">
+        电脑折腾记
       </a>
     </li>
   
@@ -2153,28 +2275,15 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    服务器配置
-  </a>
-  
-    <nav class="md-nav" aria-label="服务器配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
     控制台
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     系统配置
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2242,8 +2351,7 @@
 
 
 <h1 id="blog">Blog 搭建记录<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
-<h2 id="_1">服务器配置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">控制台<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_1">控制台<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>在<a href="https://home.console.aliyun.com/home/dashboard/ProductAndService">服务器控制台</a>，检查以下端口的开启情况：</p>
 <ul>
 <li><code>22</code> 用于 <code>SSH</code> 远程登陆</li>
@@ -2252,7 +2360,7 @@
 <blockquote>
 <p>有些情况下你可能需要重置云盘等，参考服务器手册即可</p>
 </blockquote>
-<h3 id="_3">系统配置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_2">系统配置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>使用 SSH 远程登陆 root 用户，第一件事是：<code>apt update &amp;&amp; apt upgrade</code></p>
 <ul>
 <li><code>update</code> 获取所有源的包信息。如果不执行该命令，你会发现 apt 提示找不到软件。</li>
@@ -2321,6 +2429,42 @@ chmod -R <span class="m">755</span> /path/to/repo
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../QA2022/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Q&amp;A 2022" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Q&A 2022
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../UbuntuSetupRecord/" class="md-footer__link md-footer__link--next" aria-label="Next: 电脑折腾记" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              电脑折腾记
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
