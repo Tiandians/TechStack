@@ -270,8 +270,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../program/c/CBasic/" class="md-tabs__link">
-        ⚔️编程语言
+      <a href="../../../language/c/CBasic/" class="md-tabs__link">
+        ⚔️语言
       </a>
     </li>
   
@@ -1566,14 +1566,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          ⚔️编程语言
+          ⚔️语言
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="⚔️编程语言" data-md-level="1">
+      <nav class="md-nav" aria-label="⚔️语言" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          ⚔️编程语言
+          ⚔️语言
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1609,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../program/c/CBasic/" class="md-nav__link">
+      <a href="../../../language/c/CBasic/" class="md-nav__link">
         C 语言基础
       </a>
     </li>
@@ -1623,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../program/c/CPuzzle/" class="md-nav__link">
+      <a href="../../../language/c/CPuzzle/" class="md-nav__link">
         C 语言解惑（The C Puzzle Book）
       </a>
     </li>
@@ -1637,7 +1637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../program/c/CSTL/" class="md-nav__link">
+      <a href="../../../language/c/CSTL/" class="md-nav__link">
         C 标准库
       </a>
     </li>
@@ -1651,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../program/c/CTricks/" class="md-nav__link">
+      <a href="../../../language/c/CTricks/" class="md-nav__link">
         C 编程技巧
       </a>
     </li>
@@ -1698,7 +1698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../program/cpp/CppBasic/" class="md-nav__link">
+      <a href="../../../language/cpp/CppBasic/" class="md-nav__link">
         CppBasic
       </a>
     </li>
@@ -1712,7 +1712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../program/cpp/CppAdvanced.md" class="md-nav__link">
+      <a href="../../../language/cpp/CppAdvanced.md" class="md-nav__link">
         None
       </a>
     </li>
@@ -1726,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../program/cpp/CppSTL.md" class="md-nav__link">
+      <a href="../../../language/cpp/CppSTL.md" class="md-nav__link">
         None
       </a>
     </li>
@@ -1773,7 +1773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../program/python/PythonBasic.md" class="md-nav__link">
+      <a href="../../../language/python/PythonBasic.md" class="md-nav__link">
         None
       </a>
     </li>
@@ -1820,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../program/java/JavaBasic.md" class="md-nav__link">
+      <a href="../../../language/java/JavaBasic.md" class="md-nav__link">
         None
       </a>
     </li>
@@ -2439,6 +2439,76 @@
 <div class="highlight"><pre><span></span><code><span class="nt">&quot;window.titleBarStyle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;custom&quot;</span><span class="w"></span>
 </code></pre></div>
 <p>即可。你还可以进一步隐藏菜单栏，设置 <code>"window.menuBarVisibility"</code> 即可，参考 <a href="https://blog.csdn.net/qq_28120673/article/details/81544136">CSDN</a>。</p>
+<ul>
+<li>用户代码片段</li>
+</ul>
+<p>你可以在 VSCode 中配置用户代码片段，为常用的代码片段提供便捷的智能输入。<a href="https://snippet-generator.app/">Snippet Generator</a> 是一个用户代码片段生成器。</p>
+<!-- prettier-ignore-start -->
+<details class="note">
+<summary>我的代码片段</summary>
+<div class="highlight"><span class="filename">markdown.json</span><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="nt">&quot;mkdocs-admonition-normal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ad-normal&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-start --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;!!! $1 \&quot;$2\&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;    $3&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-end --&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mkdocs-admonition-normal&quot;</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+<span class="nt">&quot;mkdocs-admonition-collapsible&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ad-collapsible&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-start --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;??? $1 \&quot;$2\&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;    $3&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-end --&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mkdocs-admonition-collapsible&quot;</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+<span class="nt">&quot;mkdocs-admonition-expanded&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ad-expanded&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-start --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;???+ $1 \&quot;$2\&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;    $3&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-end --&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mkdocs-admonition-expanded&quot;</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+<span class="nt">&quot;mkdocs-tabs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tab&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-start --&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;=== \&quot;$1\&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;    $2&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;=== \&quot;$3\&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;    $4&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-end --&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mkdocs-tabs&quot;</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+<span class="nt">&quot;prettier-ignore-start&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;start-prettier&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-start --&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;prettier-ignore-start&quot;</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+<span class="nt">&quot;prettier-ignore-end&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;end-prettier&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;&lt;!-- prettier-ignore-end --&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;prettier-ignore-end&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>这些代码片段为 Markdown 中插入 MkDocs 模块提供了较为方便的方式。</p>
+</details>
+<!-- prettier-ignore-end -->
+
 <h2 id="_5">快捷键<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>我在 VSCode 中使用 Vim 插件映射快捷键，详见 <a href="../Vim/">Vim</a>。VSCode 所支持的编辑操作，在 Vim 中全都有，应当多了解 Vim 如何实现这些编辑。</p>
 <!-- prettier-ignore-start -->

@@ -12,14 +12,14 @@
         <meta name="author" content="Bowling">
       
       
-        <link rel="canonical" href="http://note.bowling233.top/program/c/BitFiddling/">
+        <link rel="canonical" href="http://note.bowling233.top/language/c/Macro/">
       
       <link rel="icon" href="../../../assets/bowling.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>BitFiddling - Bowling's TechStack</title>
+        <title>C 预处理器与宏 - Bowling's TechStack</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-15-bit-fiddling" class="md-skip">
+        <a href="#c" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              BitFiddling
+              C 预处理器与宏
             
           </span>
         </div>
@@ -269,7 +269,7 @@
   
     <li class="md-tabs__item">
       <a href="../CBasic/" class="md-tabs__link">
-        ⚔️编程语言
+        ⚔️语言
       </a>
     </li>
   
@@ -1465,14 +1465,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          ⚔️编程语言
+          ⚔️语言
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="⚔️编程语言" data-md-level="1">
+      <nav class="md-nav" aria-label="⚔️语言" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          ⚔️编程语言
+          ⚔️语言
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2170,6 +2170,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2178,206 +2180,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#chapter-15-bit-fiddling" class="md-nav__link">
-    Chapter 15 Bit Fiddling
+  <a href="#c_1" class="md-nav__link">
+    C 预处理器
   </a>
-  
-    <nav class="md-nav" aria-label="Chapter 15 Bit Fiddling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#151-binary-numbers-bits-and-bytes" class="md-nav__link">
-    15.1 Binary Numbers, Bits, and Bytes
-  </a>
-  
-    <nav class="md-nav" aria-label="15.1 Binary Numbers, Bits, and Bytes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#binary-integers" class="md-nav__link">
-    Binary Integers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#signed-integers" class="md-nav__link">
-    Signed Integers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#binary-floating-point" class="md-nav__link">
-    Binary Floating Point
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#152-other-number-bases" class="md-nav__link">
-    15.2 Other Number Bases
-  </a>
-  
-    <nav class="md-nav" aria-label="15.2 Other Number Bases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#octal" class="md-nav__link">
-    Octal
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hexadecimal" class="md-nav__link">
-    Hexadecimal
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#153-cs-bitwise-operators" class="md-nav__link">
-    15.3 C's Bitwise Operators
-  </a>
-  
-    <nav class="md-nav" aria-label="15.3 C's Bitwise Operators">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bitwise-logical-operators" class="md-nav__link">
-    Bitwise Logical Operators
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage-masks" class="md-nav__link">
-    Usage: Masks
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage-turning-bits-on-setting-bits" class="md-nav__link">
-    Usage: Turning Bits On (Setting Bits)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage-turning-bits-off-clearing-bits" class="md-nav__link">
-    Usage: Turning Bits Off (Clearing Bits)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage-toggling-bits" class="md-nav__link">
-    Usage: Toggling Bits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage-checking-the-value-of-a-bit" class="md-nav__link">
-    Usage: Checking the Value of a Bit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bitwise-shift-operators" class="md-nav__link">
-    Bitwise Shift Operators
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#extract-groups-of-bits-from-larger-units-ep-use-unsigned-long-value-to-represent-color" class="md-nav__link">
-    extract groups of bits from larger units (e.p. use unsigned long value to represent color)
+  <a href="#define" class="md-nav__link">
+    #define
   </a>
-  
-    <nav class="md-nav" aria-label="extract groups of bits from larger units (e.p. use unsigned long value to represent color)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#programming-example" class="md-nav__link">
-    Programming Example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#another-example" class="md-nav__link">
-    Another Example
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#154-bit-fields" class="md-nav__link">
-    15.4 Bit Fields (位字段)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#-notice-bit-fields-tend-not-to-be-very-portable-but-are-used-for-nonportable-purposes-such-as-putting-data-in-the-exact-form-used-by-a-particular-hardware-device" class="md-nav__link">
-    -   NOTICE: bit fields tend not to be very portable, but are used for nonportable purposes such as putting data in the exact form used by a particular hardware device
-  </a>
-  
-    <nav class="md-nav" aria-label="-   NOTICE: bit fields tend not to be very portable, but are used for nonportable purposes such as putting data in the exact form used by a particular hardware device">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bit-field-example" class="md-nav__link">
-    Bit-field Example
+  <a href="#include" class="md-nav__link">
+    #include
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#bit-fields-and-bitwise-operators" class="md-nav__link">
-    Bit Fields and Bitwise Operators
+      
+        <li class="md-nav__item">
+  <a href="#undef" class="md-nav__link">
+    #undef
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#alignment-features-c11" class="md-nav__link">
-    Alignment Features (C11)
+      
+        <li class="md-nav__item">
+  <a href="#ifdef-ifndef-else-endif" class="md-nav__link">
+    #ifdef, #ifndef, #else, #endif
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#if-elif-else-endif" class="md-nav__link">
+    #if, #elif, #else, #endif
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#line-error" class="md-nav__link">
+    #line, #error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pragma" class="md-nav__link">
+    #pragma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    内联函数
+  </a>
   
 </li>
       
@@ -2398,104 +2259,162 @@
 
 
 
-  <a href="https://github.com/Tiandians/TechStack/blob/master/docs/program/c/BitFiddling.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/Tiandians/TechStack/blob/master/docs/language/c/Macro.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>BitFiddling</h1>
-
-<h2 id="chapter-15-bit-fiddling">Chapter 15 Bit Fiddling<a class="headerlink" href="#chapter-15-bit-fiddling" title="Permanent link">&para;</a></h2>
+<h1 id="c">C 预处理器与宏<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
+<p>知识概要：</p>
 <ul>
-<li>Operators: <code>~ &amp; | ^ &lt;&lt; &gt;&gt; &amp;= |= ^= &gt;&gt;= &lt;&lt;=</code></li>
-<li>Two C facilities for handling the individual bits: bitwise operators and bit fields</li>
-<li>Keywords: <code>_Alignas, _Alignof</code></li>
+<li>预处理指令：<code>#define</code>，<code>#include</code>，<code>#ifdef</code>，<code>#else</code>，<code>#endif</code>，<code>#ifndef</code>，<code>#if</code>，<code>#elif</code>，<code>#line</code>，<code>#error</code>，<code>#pragma</code></li>
+<li>关键字：<code>_Generic</code>，<code>_Noreturn</code>，<code>_Static_assert</code></li>
+<li>函数和宏：<code>sqrt()</code>, <code>atan()</code>, <code>atan2()</code>, <code>exit()</code>, <code>atexit()</code>, <code>assert()</code>, <code>memcpy()</code>, <code>memmove()</code>, <code>va_start()</code>, <code>va_arg()</code>, <code>va_copy()</code>, <code>va_end()</code></li>
+<li>通用选择表达式</li>
+<li>内联函数</li>
 </ul>
-<h3 id="151-binary-numbers-bits-and-bytes">15.1 Binary Numbers, Bits, and Bytes<a class="headerlink" href="#151-binary-numbers-bits-and-bytes" title="Permanent link">&para;</a></h3>
-<h4 id="binary-integers">Binary Integers<a class="headerlink" href="#binary-integers" title="Permanent link">&para;</a></h4>
+<h2 id="c_1">C 预处理器<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>a <strong>byte</strong> contains 8 bits</li>
-<li>C uses <strong>byte</strong> to denote the size used to hold a system's character set, it could be 8 bits, 9 bits ...</li>
-<li>8-bit byte is called <strong>octet</strong>: <strong>describe memory chips and data transfer rates</strong></li>
-<li>bits are numbered from <strong>7 ~ 0, left to right</strong> ,<strong>bit 7</strong> is called the <strong>high-order bit</strong></li>
-<li><strong>magnitude</strong>: 绝对值</li>
+<li>预处理器在什么时候执行？有什么功能？<ul>
+<li>想一想 <code>#include, #define, #if</code></li>
 </ul>
-<h4 id="signed-integers">Signed Integers<a class="headerlink" href="#signed-integers" title="Permanent link">&para;</a></h4>
-<ul>
-<li>two's-completement</li>
+</li>
+<li>翻译程序的步骤<ul>
+<li>字符映射【源字符集】【多字节字符和三字节字符】【字符扩展】 #Question</li>
+<li>转换<strong>物理行</strong>（反斜杠+换行符）为<strong>逻辑行</strong><ul>
+<li>预处理表达式的长度如何？这一步如何为预处理器做准备？</li>
+<li>动手写一个两行的 <code>#define</code> 指令</li>
 </ul>
-<h4 id="binary-floating-point">Binary Floating Point<a class="headerlink" href="#binary-floating-point" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>fraction</strong>: 小数</li>
+</li>
+<li>划分<strong>预处理记号序列、空白序列、注释序列</strong><ul>
+<li>注释被替换为什么？<mark>重要</mark></li>
+<li>空白序列可能被替换为什么？</li>
 </ul>
-<h3 id="152-other-number-bases">15.2 Other Number Bases<a class="headerlink" href="#152-other-number-bases" title="Permanent link">&para;</a></h3>
-<h4 id="octal">Octal<a class="headerlink" href="#octal" title="Permanent link">&para;</a></h4>
-<ul>
-<li>each octal digit corresponds to <strong>three binary digits</strong></li>
-<li>Note: the internal 0s are not dropped</li>
-<li><code>0876</code></li>
+</li>
 </ul>
-<h4 id="hexadecimal">Hexadecimal<a class="headerlink" href="#hexadecimal" title="Permanent link">&para;</a></h4>
-<ul>
-<li>In C you can use <strong>either lowercase or uppercase letters for the additional hex digits</strong></li>
-<li><code>0x3F</code></li>
-<li>hexadecimal is a natural choice for <strong>representing byte values</strong></li>
-<li>remember: <strong>A = <code>1010</code> = 10, C = <code>1100</code> = 12, F = <code>1111</code> = 15, </strong></li>
+</li>
+<li>宏是什么？<ul>
+<li>类对象宏（object-like macro）</li>
+<li>类函数宏（function-like macro）</li>
+<li>宏的名称规则</li>
+<li>宏展开</li>
+<li>宏参数</li>
+<li>宏调用<ul>
+<li>传递参数记号</li>
 </ul>
-<h3 id="153-cs-bitwise-operators">15.3 C's Bitwise Operators<a class="headerlink" href="#153-cs-bitwise-operators" title="Permanent link">&para;</a></h3>
-<h4 id="bitwise-logical-operators">Bitwise Logical Operators<a class="headerlink" href="#bitwise-logical-operators" title="Permanent link">&para;</a></h4>
-<ul>
-<li>work on <strong>integer-type data</strong></li>
-<li><code>~</code>: one's complement or <strong>Bitwise Negation</strong></li>
-<li><strong>NOTICE</strong>: there is no <code>~=</code> operator</li>
-<li><code>&amp;</code>: <strong>Bitwise AND</strong></li>
-<li><code>&amp;=</code></li>
-<li><code>|</code>: <strong>Bitwise OR</strong></li>
-<li><code>|=</code></li>
-<li><code>^</code>: <strong>Bitwise EXCLUSIVE OR</strong>: but not both</li>
-<li><code>^=</code></li>
+</li>
+<li><strong>避免在宏中使用递增/递减运算符</strong></li>
 </ul>
-<h4 id="usage-masks">Usage: Masks<a class="headerlink" href="#usage-masks" title="Permanent link">&para;</a></h4>
-<p>Bitwise AND</p>
-<h4 id="usage-turning-bits-on-setting-bits">Usage: Turning Bits On (Setting Bits)<a class="headerlink" href="#usage-turning-bits-on-setting-bits" title="Permanent link">&para;</a></h4>
-<h4 id="usage-turning-bits-off-clearing-bits">Usage: Turning Bits Off (Clearing Bits)<a class="headerlink" href="#usage-turning-bits-off-clearing-bits" title="Permanent link">&para;</a></h4>
-<p><code>flags = flags &amp; ~MASK</code>: the <code>mask</code> indicates the bits needed to be toggled</p>
-<h4 id="usage-toggling-bits">Usage: Toggling Bits<a class="headerlink" href="#usage-toggling-bits" title="Permanent link">&para;</a></h4>
-<h4 id="usage-checking-the-value-of-a-bit">Usage: Checking the Value of a Bit<a class="headerlink" href="#usage-checking-the-value-of-a-bit" title="Permanent link">&para;</a></h4>
-<ul>
-<li>first mask the other bits in flags: <code>(flags &amp; MASK) == MASK</code></li>
-<li><strong>NOTICE:</strong> <code>bitwise</code> operators have lower precedence than <code>==</code></li>
-<li><strong>NOTICE:</strong> a mask should be at least as wide as the value it's masking</li>
+</li>
+<li>C 中有哪些预定义宏？预定义标识符？</li>
+<li>预处理器运算符是什么？你能想起几个？【defined(), _Pragma()】<ul>
+<li>运算符不是宏，所以它可以如何使用？</li>
+<li><code>_Pragma()</code> 解字符串的操作是什么？</li>
 </ul>
-<h4 id="bitwise-shift-operators">Bitwise Shift Operators<a class="headerlink" href="#bitwise-shift-operators" title="Permanent link">&para;</a></h4>
+</li>
+</ul>
+<h2 id="define"><code>#define</code><a class="headerlink" href="#define" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>A &lt;&lt; B</code>: shifts A to the left by B and fill 0s</li>
-<li><code>&lt;&lt;=</code></li>
-<li><code>A &gt;&gt; B</code>: for <em>unsigned</em> integers, fill 0s. for <em>signed</em> integers, the result is machine dependent</li>
-<li><code>&gt;&gt;=</code></li>
-<li><strong>NOTICE:</strong> shift operators do not change the value of the variables</li>
-<li>Usage<ul>
-<li>multiplication and division by powers of 2 (if number is not negative)</li>
+<li>预处理器如何识别预处理指令？</li>
+<li>预处理指令对 <code>#</code> 两侧的空格有要求吗？</li>
 <li>
-<h2 id="extract-groups-of-bits-from-larger-units-ep-use-unsigned-long-value-to-represent-color"><strong>extract groups of bits</strong> from larger units (e.p. use unsigned long value to represent color)<a class="headerlink" href="#extract-groups-of-bits-from-larger-units-ep-use-unsigned-long-value-to-represent-color" title="Permanent link">&para;</a></h2>
+<p>指令的有效区域有多大？</p>
+</li>
+<li>
+<p>指令有哪些部分？</p>
 </li>
 </ul>
+<blockquote>
+<p>多学一些：记号（token）型字符串与字符型字符串</p>
+<p>实际应用中，预处理器可能把替换体视为字符串或记号</p>
+<p>编译器则不关心，它理解 C 的语法</p>
+<ul>
+<li>这涉及到了<strong>重定义常量</strong>的内容：记号相同、顺序相同</li>
+<li>使用 <code>const</code> 和作用域会更简单些</li>
+</ul>
+</blockquote>
+<ul>
+<li>宏可以表示哪些东西？</li>
+<li>哪些地方的宏不能被替换？</li>
+<li>如何在 <code>#define</code> 中使用参数？</li>
+<li><strong>字符串化</strong>是什么？如何用宏参数创建字符串？<ul>
+<li>这利用了字符串的串联特性</li>
+</ul>
+</li>
+<li><strong>记号粘合剂</strong> <code>##</code>怎么使用？<ul>
+<li>尝试写一个 <code>PRIN_XN(X)</code> 宏，能够打印变量 <code>xX</code></li>
+</ul>
+</li>
+<li><strong>变参宏</strong>怎么使用？<ul>
+<li>它在哪个头文件？</li>
+<li>尝试写一个 <code>PR(...)</code> 宏，它的用法和 <code>printf()</code> 类似</li>
+</ul>
+</li>
+<li>宏有哪些注意事项？<ul>
+<li>命名</li>
+<li>圆括号</li>
+</ul>
 </li>
 </ul>
-<h4 id="programming-example">Programming Example<a class="headerlink" href="#programming-example" title="Permanent link">&para;</a></h4>
+<h2 id="include"><code>#include</code><a class="headerlink" href="#include" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>CHAR_BIT * sizeof(int)</code>: remember <code>sizeof</code> operator return the size <strong>in bytes</strong></li>
+<li>两种形式，有什么区别？</li>
+<li>头文件中常包含哪些内容？【明示常量，宏函数，函数声明，结构模板定义，类型定义】<ul>
+<li>对应的源文件如何编写？</li>
+<li>如何编译多文件？</li>
+<li>头文件声明外部变量的方式是什么？</li>
 </ul>
-<h4 id="another-example">Another Example<a class="headerlink" href="#another-example" title="Permanent link">&para;</a></h4>
+</li>
+</ul>
+<h2 id="undef"><code>#undef</code><a class="headerlink" href="#undef" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Summary: <strong>try to think on the basis of directly operating the bits of data</strong></li>
+<li>C 预处理器怎么判别<strong>已定义</strong>和<strong>未定义</strong>的<strong>标识符</strong>？<ul>
+<li>不是<strong>宏</strong>的标识符一律判定为未定义</li>
 </ul>
-<h3 id="154-bit-fields">15.4 Bit Fields (位字段)<a class="headerlink" href="#154-bit-fields" title="Permanent link">&para;</a></h3>
-<h2 id="-notice-bit-fields-tend-not-to-be-very-portable-but-are-used-for-nonportable-purposes-such-as-putting-data-in-the-exact-form-used-by-a-particular-hardware-device">-   <strong>NOTICE:</strong> bit fields tend <strong>not to be very portable</strong>, but are used for nonportable purposes such as <strong>putting data in the exact form used by a particular hardware device</strong><a class="headerlink" href="#-notice-bit-fields-tend-not-to-be-very-portable-but-are-used-for-nonportable-purposes-such-as-putting-data-in-the-exact-form-used-by-a-particular-hardware-device" title="Permanent link">&para;</a></h2>
-<h4 id="bit-field-example">Bit-field Example<a class="headerlink" href="#bit-field-example" title="Permanent link">&para;</a></h4>
-<h4 id="bit-fields-and-bitwise-operators">Bit Fields and Bitwise Operators<a class="headerlink" href="#bit-fields-and-bitwise-operators" title="Permanent link">&para;</a></h4>
-<h3 id="alignment-features-c11">Alignment Features (C11)<a class="headerlink" href="#alignment-features-c11" title="Permanent link">&para;</a></h3>
+</li>
+<li>哪些宏是不能取消定义的？</li>
+</ul>
+<h2 id="ifdef-ifndef-else-endif"><code>#ifdef, #ifndef, #else, #endif</code><a class="headerlink" href="#ifdef-ifndef-else-endif" title="Permanent link">&para;</a></h2>
+<ul>
+<li>较新的编译器可以使用缩进</li>
+<li>如何使用 <code>#ifndef</code> 避免多次包含同一个头文件？<ul>
+<li>标准头文件：一般使用文件名作为标识符，下划线做前后缀并代替点字符</li>
+<li>自己的头文件：不要用下划线前缀</li>
+</ul>
+</li>
+</ul>
+<h2 id="if-elif-else-endif"><code>#if, #elif, #else, #endif</code><a class="headerlink" href="#if-elif-else-endif" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><code>#if</code> 后面跟什么表达式？</p>
+</li>
+<li>
+<p>较新的指令可以使用 <code>#if defined (VAX)</code></p>
+</li>
+</ul>
+<h2 id="line-error"><code>#line, #error</code><a class="headerlink" href="#line-error" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>#line</code> 可以重置哪些预定义宏？</li>
+<li><code>#error</code> 由谁发出？发出什么？一般如何使用？<ul>
+<li>尝试写一个 <code>#error</code> 指令，当编译器不支持 C11 时预编译失败</li>
+</ul>
+</li>
+</ul>
+<h2 id="pragma"><code>#pragma</code><a class="headerlink" href="#pragma" title="Permanent link">&para;</a></h2>
+<h2 id="_1">内联函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>怎么声明一个内联函数？</li>
+<li>内联函数可以得到地址吗？为什么？能不能在调试器中显示？</li>
+<li>内联函数的链接是什么类型的？为什么可以在头文件中定义？</li>
+</ul>
+<blockquote>
+<p>参考材料：</p>
+<ul>
+<li>泛型选择（C11）</li>
+<li><code>_Noreturn</code> 函数</li>
+</ul>
+</blockquote>
 
 
 

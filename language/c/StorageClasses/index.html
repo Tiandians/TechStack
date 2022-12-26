@@ -12,14 +12,14 @@
         <meta name="author" content="Bowling">
       
       
-        <link rel="canonical" href="http://note.bowling233.top/program/c/Macro/">
+        <link rel="canonical" href="http://note.bowling233.top/language/c/StorageClasses/">
       
       <link rel="icon" href="../../../assets/bowling.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>C 预处理器与宏 - Bowling's TechStack</title>
+        <title>Storage Classes, Liknage and Memory Management - Bowling's TechStack</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#c" class="md-skip">
+        <a href="#storage-classes-liknage-and-memory-management" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              C 预处理器与宏
+              Storage Classes, Liknage and Memory Management
             
           </span>
         </div>
@@ -269,7 +269,7 @@
   
     <li class="md-tabs__item">
       <a href="../CBasic/" class="md-tabs__link">
-        ⚔️编程语言
+        ⚔️语言
       </a>
     </li>
   
@@ -1465,14 +1465,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          ⚔️编程语言
+          ⚔️语言
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="⚔️编程语言" data-md-level="1">
+      <nav class="md-nav" aria-label="⚔️语言" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          ⚔️编程语言
+          ⚔️语言
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2180,65 +2180,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
-    C 预处理器
+  <a href="#121-storage-classes" class="md-nav__link">
+    12.1 Storage Classes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#define" class="md-nav__link">
-    #define
+  <a href="#cant-use-formal-parameter-as-static" class="md-nav__link">
+    can't use formal parameter as static
   </a>
+  
+    <nav class="md-nav" aria-label="can't use formal parameter as static">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#122-a-random-number-function-and-a-static-varibale" class="md-nav__link">
+    12.2 A Random-Number Function and a Static Varibale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-roll-em" class="md-nav__link">
+    12.3 Roll 'Em
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-allocated-memory-malloc-and-free" class="md-nav__link">
+    12.4 Allocated Memory: malloc() and free()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#include" class="md-nav__link">
-    #include
+  <a href="#-sets-all-the-bits-in-the-block-to-zero" class="md-nav__link">
+    -   sets all the bits in the block to zero
+  </a>
+  
+    <nav class="md-nav" aria-label="-   sets all the bits in the block to zero">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#125-ansi-c-type-qualifiers" class="md-nav__link">
+    12.5 ANSI C Type Qualifiers
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#undef" class="md-nav__link">
-    #undef
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ifdef-ifndef-else-endif" class="md-nav__link">
-    #ifdef, #ifndef, #else, #endif
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-elif-else-endif" class="md-nav__link">
-    #if, #elif, #else, #endif
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#line-error" class="md-nav__link">
-    #line, #error
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pragma" class="md-nav__link">
-    #pragma
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    内联函数
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2259,162 +2257,162 @@
 
 
 
-  <a href="https://github.com/Tiandians/TechStack/blob/master/docs/program/c/Macro.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/Tiandians/TechStack/blob/master/docs/language/c/StorageClasses.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="c">C 预处理器与宏<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
-<p>知识概要：</p>
+<h1 id="storage-classes-liknage-and-memory-management">Storage Classes, Liknage and Memory Management<a class="headerlink" href="#storage-classes-liknage-and-memory-management" title="Permanent link">&para;</a></h1>
 <ul>
-<li>预处理指令：<code>#define</code>，<code>#include</code>，<code>#ifdef</code>，<code>#else</code>，<code>#endif</code>，<code>#ifndef</code>，<code>#if</code>，<code>#elif</code>，<code>#line</code>，<code>#error</code>，<code>#pragma</code></li>
-<li>关键字：<code>_Generic</code>，<code>_Noreturn</code>，<code>_Static_assert</code></li>
-<li>函数和宏：<code>sqrt()</code>, <code>atan()</code>, <code>atan2()</code>, <code>exit()</code>, <code>atexit()</code>, <code>assert()</code>, <code>memcpy()</code>, <code>memmove()</code>, <code>va_start()</code>, <code>va_arg()</code>, <code>va_copy()</code>, <code>va_end()</code></li>
-<li>通用选择表达式</li>
-<li>内联函数</li>
+<li>Keywords:<ul>
+<li><code>auto, extern, static, register, const, volatile, restricted</code></li>
+<li><code>_Thread_local, _Atomic</code></li>
 </ul>
-<h2 id="c_1">C 预处理器<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h2>
+</li>
+<li>Functions<ul>
+<li><code>rand, srand, time</code></li>
+<li><code>malloc, calloc, free</code></li>
+</ul>
+</li>
+<li>scope, life time</li>
+</ul>
+<h3 id="121-storage-classes">12.1 Storage Classes<a class="headerlink" href="#121-storage-classes" title="Permanent link">&para;</a></h3>
+<p>Here are some basic concepts:</p>
 <ul>
-<li>预处理器在什么时候执行？有什么功能？<ul>
-<li>想一想 <code>#include, #define, #if</code></li>
+<li>All data is stored in memory. <strong>Object</strong> is the term used to describe such <em>chunk of memory</em></li>
+<li><strong>Identifier:</strong> a name used to designate the contents of a object</li>
+<li><strong>lvalue:</strong> an expression that designates and object</li>
 </ul>
-</li>
-<li>翻译程序的步骤<ul>
-<li>字符映射【源字符集】【多字节字符和三字节字符】【字符扩展】 #Question</li>
-<li>转换<strong>物理行</strong>（反斜杠+换行符）为<strong>逻辑行</strong><ul>
-<li>预处理表达式的长度如何？这一步如何为预处理器做准备？</li>
-<li>动手写一个两行的 <code>#define</code> 指令</li>
-</ul>
-</li>
-<li>划分<strong>预处理记号序列、空白序列、注释序列</strong><ul>
-<li>注释被替换为什么？<mark>重要</mark></li>
-<li>空白序列可能被替换为什么？</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>宏是什么？<ul>
-<li>类对象宏（object-like macro）</li>
-<li>类函数宏（function-like macro）</li>
-<li>宏的名称规则</li>
-<li>宏展开</li>
-<li>宏参数</li>
-<li>宏调用<ul>
-<li>传递参数记号</li>
-</ul>
-</li>
-<li><strong>避免在宏中使用递增/递减运算符</strong></li>
-</ul>
-</li>
-<li>C 中有哪些预定义宏？预定义标识符？</li>
-<li>预处理器运算符是什么？你能想起几个？【defined(), _Pragma()】<ul>
-<li>运算符不是宏，所以它可以如何使用？</li>
-<li><code>_Pragma()</code> 解字符串的操作是什么？</li>
-</ul>
-</li>
-</ul>
-<h2 id="define"><code>#define</code><a class="headerlink" href="#define" title="Permanent link">&para;</a></h2>
+<p>We can describe an object in terms of its storage duration, identifier by its <strong>scope and linkage</strong></p>
+<p><strong>Scope:</strong> the region of a program that can access an identifier</p>
 <ul>
-<li>预处理器如何识别预处理指令？</li>
-<li>预处理指令对 <code>#</code> 两侧的空格有要求吗？</li>
 <li>
-<p>指令的有效区域有多大？</p>
+<p>block scope</p>
+<ul>
+<li>
+<p>the code controlled by a <strong>for, while, do while</strong> loop or <strong>if</strong> statement</p>
+<ul>
+<li>Two parts: <strong>control section, loop body</strong>. They are nested.</li>
+</ul>
 </li>
 <li>
-<p>指令有哪些部分？</p>
+<p><code>C
+    for(int i = 1;i &lt; 0;i++)//outside i in efect, so the judgement is based on outside i
+    {
+        int i = 0;//inside i in effect
+    }//inside i disappear</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>function scope</p>
+<ul>
+<li><strong>labels</strong> used with <code>goto</code> statements</li>
+<li><strong>NOTICE:</strong> even if a label appears inside an <strong>inner</strong> block in a function, its scope extends to the <strong>whole</strong> function</li>
+</ul>
+</li>
+<li>function prototype scope<ul>
+<li>variable <strong>names</strong> used in function prototypes</li>
+<li>only runs from the definition to the end of the prototype</li>
+<li>is all the compiler cares about when handling a function</li>
+<li><strong>needn't</strong> match the name used in function definition (except for variable-length array parameters <code>int n, int m, ar[n][m]</code>)</li>
+</ul>
+</li>
+<li>file scope<ul>
+<li>variable with its definition placed <strong>outside of any function</strong></li>
+</ul>
 </li>
 </ul>
 <blockquote>
-<p>多学一些：记号（token）型字符串与字符型字符串</p>
-<p>实际应用中，预处理器可能把替换体视为字符串或记号</p>
-<p>编译器则不关心，它理解 C 的语法</p>
+<p>Translation Units:</p>
 <ul>
-<li>这涉及到了<strong>重定义常量</strong>的内容：记号相同、顺序相同</li>
-<li>使用 <code>const</code> 和作用域会更简单些</li>
+<li>What <strong>you view as several files</strong> may appear to the compiler as a <strong>single file</strong></li>
+<li>e.g.<code>#include</code> inform <strong>C preprocessing</strong> to insert the header file, this single file is called a <strong>translation unit</strong></li>
+<li>file scope actually means visible the <strong>translation unit</strong></li>
 </ul>
 </blockquote>
+<p><strong>Linkage:</strong> only variable with file scope can have linkage</p>
 <ul>
-<li>宏可以表示哪些东西？</li>
-<li>哪些地方的宏不能被替换？</li>
-<li>如何在 <code>#define</code> 中使用参数？</li>
-<li><strong>字符串化</strong>是什么？如何用宏参数创建字符串？<ul>
-<li>这利用了字符串的串联特性</li>
+<li>internal linkage: can be used anywhere in a single translation unit<ul>
+<li>Keyword: <code>static</code></li>
 </ul>
 </li>
-<li><strong>记号粘合剂</strong> <code>##</code>怎么使用？<ul>
-<li>尝试写一个 <code>PRIN_XN(X)</code> 宏，能够打印变量 <code>xX</code></li>
-</ul>
-</li>
-<li><strong>变参宏</strong>怎么使用？<ul>
-<li>它在哪个头文件？</li>
-<li>尝试写一个 <code>PR(...)</code> 宏，它的用法和 <code>printf()</code> 类似</li>
-</ul>
-</li>
-<li>宏有哪些注意事项？<ul>
-<li>命名</li>
-<li>圆括号</li>
-</ul>
-</li>
-</ul>
-<h2 id="include"><code>#include</code><a class="headerlink" href="#include" title="Permanent link">&para;</a></h2>
-<ul>
-<li>两种形式，有什么区别？</li>
-<li>头文件中常包含哪些内容？【明示常量，宏函数，函数声明，结构模板定义，类型定义】<ul>
-<li>对应的源文件如何编写？</li>
-<li>如何编译多文件？</li>
-<li>头文件声明外部变量的方式是什么？</li>
-</ul>
-</li>
-</ul>
-<h2 id="undef"><code>#undef</code><a class="headerlink" href="#undef" title="Permanent link">&para;</a></h2>
-<ul>
-<li>C 预处理器怎么判别<strong>已定义</strong>和<strong>未定义</strong>的<strong>标识符</strong>？<ul>
-<li>不是<strong>宏</strong>的标识符一律判定为未定义</li>
-</ul>
-</li>
-<li>哪些宏是不能取消定义的？</li>
-</ul>
-<h2 id="ifdef-ifndef-else-endif"><code>#ifdef, #ifndef, #else, #endif</code><a class="headerlink" href="#ifdef-ifndef-else-endif" title="Permanent link">&para;</a></h2>
-<ul>
-<li>较新的编译器可以使用缩进</li>
-<li>如何使用 <code>#ifndef</code> 避免多次包含同一个头文件？<ul>
-<li>标准头文件：一般使用文件名作为标识符，下划线做前后缀并代替点字符</li>
-<li>自己的头文件：不要用下划线前缀</li>
-</ul>
-</li>
-</ul>
-<h2 id="if-elif-else-endif"><code>#if, #elif, #else, #endif</code><a class="headerlink" href="#if-elif-else-endif" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><code>#if</code> 后面跟什么表达式？</p>
-</li>
-<li>
-<p>较新的指令可以使用 <code>#if defined (VAX)</code></p>
-</li>
-</ul>
-<h2 id="line-error"><code>#line, #error</code><a class="headerlink" href="#line-error" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>#line</code> 可以重置哪些预定义宏？</li>
-<li><code>#error</code> 由谁发出？发出什么？一般如何使用？<ul>
-<li>尝试写一个 <code>#error</code> 指令，当编译器不支持 C11 时预编译失败</li>
-</ul>
-</li>
-</ul>
-<h2 id="pragma"><code>#pragma</code><a class="headerlink" href="#pragma" title="Permanent link">&para;</a></h2>
-<h2 id="_1">内联函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>怎么声明一个内联函数？</li>
-<li>内联函数可以得到地址吗？为什么？能不能在调试器中显示？</li>
-<li>内联函数的链接是什么类型的？为什么可以在头文件中定义？</li>
+<li>external linkage: anywhere in a multifile program</li>
 </ul>
 <blockquote>
-<p>参考材料：</p>
+<p>Formal Terms:</p>
 <ul>
-<li>泛型选择（C11）</li>
-<li><code>_Noreturn</code> 函数</li>
+<li>file scope with external/internal linkage</li>
 </ul>
 </blockquote>
+<p><strong>Storage Duration:</strong></p>
+<ul>
+<li>static storage duration<ul>
+<li>exits <strong>throughout program execution</strong></li>
+<li>for <strong>file scope</strong> variables</li>
+<li>for <strong>block scope</strong> with <code>static</code></li>
+</ul>
+</li>
+<li>thread storage duration<ul>
+<li>exits <strong>from declaration until the thread terminates</strong></li>
+<li>Keyword: <code>_Thread_local</code> modified variable that defined outside any function, each thread gets its own <strong>private copy of the variable</strong></li>
+</ul>
+</li>
+<li>automatic storage duration<ul>
+<li>for <strong>block scope</strong> normally</li>
+<li>have memory allocated for them when <strong>entering the block</strong> (except for VLA, from its <strong>definition</strong>) and space freed when <strong>exiting the block</strong></li>
+<li>these memory can be <strong>reused</strong></li>
+</ul>
+</li>
+<li>allocated storage duration</li>
+</ul>
+<p>Five <strong>Storage Classes</strong></p>
+<ul>
+<li><strong>automatic:</strong> in a block<ul>
+<li>automatic, block, none</li>
+<li>can use <strong>storage-class specifier</strong> <code>auto</code>, buy not compatible with C++, so <strong>DO NOT USE</strong></li>
+</ul>
+</li>
+<li><strong>register:</strong> in a block with <code>register</code><ul>
+<li>automatic, block, none</li>
+<li><strong>NOTICE:</strong> CANNOT take the address of a register variable</li>
+<li>types that can be declared register may be restricted</li>
+</ul>
+</li>
+<li><strong>static with external linkage:</strong> outside of all functions<ul>
+<li>static, file, external</li>
+<li>declaring the variable in the second file with extern is <strong>mandatory</strong></li>
+</ul>
+</li>
+<li><strong>static with internal linkage:</strong> outside of all functions with <code>static</code><ul>
+<li>static, file, internal</li>
+</ul>
+</li>
+<li><strong>static with no linkage:</strong> in a block with <code>static</code><ul>
+<li>static, block, none</li>
+<li><strong>initialized</strong> only once</li>
+<li>the declaration <strong>actually isn't part of the function</strong></li>
+<li>
+<h2 id="cant-use-formal-parameter-as-static">can't use formal parameter as static<a class="headerlink" href="#cant-use-formal-parameter-as-static" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="122-a-random-number-function-and-a-static-varibale">12.2 A Random-Number Function and a Static Varibale<a class="headerlink" href="#122-a-random-number-function-and-a-static-varibale" title="Permanent link">&para;</a></h3>
+<h3 id="123-roll-em">12.3 Roll 'Em<a class="headerlink" href="#123-roll-em" title="Permanent link">&para;</a></h3>
+<h3 id="124-allocated-memory-malloc-and-free">12.4 Allocated Memory: <code>malloc()</code> and <code>free()</code><a class="headerlink" href="#124-allocated-memory-malloc-and-free" title="Permanent link">&para;</a></h3>
+<p><code>void *malloc( size_t size )</code></p>
+<ul>
+<li>size: the number of <strong>bytes</strong> of memory you want</li>
+<li>the return value is <strong>typecast</strong> to the proper value</li>
+<li>returns the null pointer if fails to find the required memory</li>
+<li>e.g.<code>double * ptd = (double *) malloc(30 * sizeof(double))</code></li>
+</ul>
+<p><code>void free( void *ptr )</code></p>
+<p><code>void *calloc( size_t num, size_t size )</code></p>
+<h2 id="-sets-all-the-bits-in-the-block-to-zero">-   sets all the bits in the block to <strong>zero</strong><a class="headerlink" href="#-sets-all-the-bits-in-the-block-to-zero" title="Permanent link">&para;</a></h2>
+<h3 id="125-ansi-c-type-qualifiers">12.5 ANSI C Type Qualifiers<a class="headerlink" href="#125-ansi-c-type-qualifiers" title="Permanent link">&para;</a></h3>
 
 
 

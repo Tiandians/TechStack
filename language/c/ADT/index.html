@@ -12,14 +12,14 @@
         <meta name="author" content="Bowling">
       
       
-        <link rel="canonical" href="http://note.bowling233.top/program/cpp/CppBasic/">
+        <link rel="canonical" href="http://note.bowling233.top/language/c/ADT/">
       
       <link rel="icon" href="../../../assets/bowling.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>CppBasic - Bowling's TechStack</title>
+        <title>ADT - Bowling's TechStack</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#chapter-17-advanced-data-representation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CppBasic
+              ADT
             
           </span>
         </div>
@@ -252,8 +257,6 @@
         
   
   
-    
-  
 
 
   
@@ -265,8 +268,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../c/CBasic/" class="md-tabs__link md-tabs__link--active">
-        ⚔️编程语言
+      <a href="../CBasic/" class="md-tabs__link">
+        ⚔️语言
       </a>
     </li>
   
@@ -1451,27 +1454,25 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
       
         <label class="md-nav__link" for="__nav_4">
-          ⚔️编程语言
+          ⚔️语言
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="⚔️编程语言" data-md-level="1">
+      <nav class="md-nav" aria-label="⚔️语言" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          ⚔️编程语言
+          ⚔️语言
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1507,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../c/CBasic/" class="md-nav__link">
+      <a href="../CBasic/" class="md-nav__link">
         C 语言基础
       </a>
     </li>
@@ -1521,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../c/CPuzzle/" class="md-nav__link">
+      <a href="../CPuzzle/" class="md-nav__link">
         C 语言解惑（The C Puzzle Book）
       </a>
     </li>
@@ -1535,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../c/CSTL/" class="md-nav__link">
+      <a href="../CSTL/" class="md-nav__link">
         C 标准库
       </a>
     </li>
@@ -1549,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../c/CTricks/" class="md-nav__link">
+      <a href="../CTricks/" class="md-nav__link">
         C 编程技巧
       </a>
     </li>
@@ -1568,14 +1569,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
       
@@ -1596,19 +1595,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../cpp/CppBasic/" class="md-nav__link">
         CppBasic
       </a>
-      
     </li>
   
 
@@ -1620,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CppAdvanced.md" class="md-nav__link">
+      <a href="../../cpp/CppAdvanced.md" class="md-nav__link">
         None
       </a>
     </li>
@@ -1634,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CppSTL.md" class="md-nav__link">
+      <a href="../../cpp/CppSTL.md" class="md-nav__link">
         None
       </a>
     </li>
@@ -2180,6 +2171,90 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-17-advanced-data-representation" class="md-nav__link">
+    Chapter 17 Advanced Data Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#union" class="md-nav__link">
+    union
+  </a>
+  
+    <nav class="md-nav" aria-label="union">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-exploring-data-representation" class="md-nav__link">
+    17.1 Exploring Data Representation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-beyond-the-array-to-the-linked-list" class="md-nav__link">
+    17.2 Beyond the Array to the Linked List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173-abstract-data-types" class="md-nav__link">
+    17.3 Abstract Data Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#174-getting-queued-with-an-adt" class="md-nav__link">
+    17.4 Getting Queued with an ADT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#175-simulating-with-a-queue" class="md-nav__link">
+    17.5 Simulating with a Queue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#176-the-linked-list-versus-the-array" class="md-nav__link">
+    17.6 The Linked List Versus the Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#177-binary-search-trees" class="md-nav__link">
+    17.7 Binary Search Trees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#178-other-directions" class="md-nav__link">
+    17.8 Other Directions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2195,15 +2270,160 @@
 
 
 
-  <a href="https://github.com/Tiandians/TechStack/blob/master/docs/program/cpp/CppBasic.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/Tiandians/TechStack/blob/master/docs/language/c/ADT.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>CppBasic</h1>
+  <h1>ADT</h1>
 
-
+<h2 id="chapter-17-advanced-data-representation">Chapter 17 Advanced Data Representation<a class="headerlink" href="#chapter-17-advanced-data-representation" title="Permanent link">&para;</a></h2>
+<p>the knowledge you should know:</p>
+<ul>
+<li><code>malloc()</code></li>
+<li>structure</li>
+<li>
+<h2 id="union">union<a class="headerlink" href="#union" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+<p>Finding the right data representation is important in program design. You should think of these aspects:</p>
+<ul>
+<li>What <strong>operation</strong> will be necessary</li>
+</ul>
+<h3 id="171-exploring-data-representation">17.1 Exploring Data Representation<a class="headerlink" href="#171-exploring-data-representation" title="Permanent link">&para;</a></h3>
+<h3 id="172-beyond-the-array-to-the-linked-list">17.2 Beyond the Array to the Linked List<a class="headerlink" href="#172-beyond-the-array-to-the-linked-list" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Linked List: a list in which each item contains information <strong>describing where to find the next item</strong></li>
+<li>Head Pointer: the head pointer points to the first item in a linked list of items</li>
+</ul>
+<p>Next step: Separating the user interface from the details will make the program easier to understand and to update.</p>
+<h3 id="173-abstract-data-types">17.3 Abstract Data Types<a class="headerlink" href="#173-abstract-data-types" title="Permanent link">&para;</a></h3>
+<p>Way to define new data types:</p>
+<ol>
+<li>Provide an abstract description of the type’s properties and of the operations you can perform on the type. This description shouldn’t be tied to any particular implementation. It shouldn’t even be tied to a particular programming language. Such a formal abstract description is called an abstract data type (ADT).</li>
+<li>Develop a <strong>programming interface</strong> that implements the ADT. That is, indicate how to store the data and describe a set of functions that perform the desired operations. In C, for example, you might supply <strong>a structure definition along with prototypes for functions to manipulate the structures</strong>. These functions play the same role for the user-defined type that C’s built-in operators play for the fundamental C types. Someone who wants to use the new type will use this interface for her or his programming.</li>
+<li>Write code to implement the interface. This step is essential, of course, but the programmer using the new type need not be aware of the details of the implementation.</li>
+</ol>
+<p>List:</p>
+<ul>
+<li>Type Name: Simple List</li>
+<li>Type Properties: Can hold a sequence of items.</li>
+<li>Type Operations:<ul>
+<li>Initialize list to empty.</li>
+<li>Determine whether list is empty.</li>
+<li>Determine whether list is full.</li>
+<li>Determine number of items in the list.</li>
+<li>Add item to end of list.</li>
+<li>Traverse list, processing each item in list.</li>
+<li>Empty the list.</li>
+</ul>
+</li>
+</ul>
+<p>Build an Interface: interface design should parallel the ADT description as closely as possible</p>
+<ol>
+<li>
+<p>describes how the <strong>data will be represented</strong></p>
+<p>should be expressed in terms of some <strong>general <code>Item</code> type</strong> instead of in terms of some specific type</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">specificType</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">specificType</span><span class="w"> </span><span class="n">Item</span><span class="p">;</span><span class="c1">//to generalize its concept</span>
+</code></pre></div>
+</li>
+<li>
+<p>how to <strong>store items</strong> of that type</p>
+<p>belongs to the implementation stage</p>
+<div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">Node</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">list</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">List</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p>operations</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// operation: initialize a list</span>
+<span class="c1">// preconditions: plist points to a list</span>
+<span class="c1">// postconditions: the list is initialized to empty</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">InitializeList</span><span class="p">(</span><span class="n">List</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">plist</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p>put these things into an <strong>header file</strong></p>
+<ol>
+<li>capitalizes each function name as a way of marking it as part of an interface package</li>
+<li>uses the <code>#ifndef</code> technique</li>
+</ol>
+</li>
+<li>
+<p>put functions implementations into an <code>.c</code> file</p>
+<ol>
+<li>there are functions that is part of the implementation but not part of the interface, called <strong>local function</strong>. We <strong>hide these functions usging the <code>static</code> storage class qualifier</strong></li>
+<li>local functions are often type related</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>The Limitations of <code>const</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="o">*</span><span class="n">plist</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">item</span><span class="p">.</span><span class="n">rating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// allowed even if *plist is const</span>
+</code></pre></div>
+<p>That’s because this code doesn’t change <em>plist ; it changes data that </em>plist points to.</p>
+<p>You can’t necessarily rely on const to catch programming errors that accidentally modify data.</p>
+</blockquote>
+<h3 id="174-getting-queued-with-an-adt">17.4 Getting Queued with an ADT<a class="headerlink" href="#174-getting-queued-with-an-adt" title="Permanent link">&para;</a></h3>
+<p>Queue:</p>
+<ul>
+<li>Type Name: Queue</li>
+<li>Type Properties: Can hold an ordered sequence of items.</li>
+<li>Type Operations:<ul>
+<li>Initialize queue to empty.</li>
+<li>Determine whether queue is empty.</li>
+<li>Determine whether queue is full.</li>
+<li>Determine number of items in the queue.</li>
+<li>Add item to rear of queue.</li>
+<li>Remove and recover item from front of queue.</li>
+<li>Empty the queue.</li>
+</ul>
+</li>
+</ul>
+<p>Implementation thoughts:</p>
+<ul>
+<li>adding an item to the end of <strong>arrays</strong> is easy,but ... <strong>removing the front items waste a lot of time to move the array left</strong></li>
+<li><strong>changing the indicator to the first item</strong>,but waste a lot of space</li>
+<li><strong>make the queue circular</strong></li>
+<li>Best choice: <strong>list</strong></li>
+</ul>
+<p>Implementation:</p>
+<div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">queue</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">front</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">rear</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">items</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">Queue</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="175-simulating-with-a-queue">17.5 Simulating with a Queue<a class="headerlink" href="#175-simulating-with-a-queue" title="Permanent link">&para;</a></h3>
+<h3 id="176-the-linked-list-versus-the-array">17.6 The Linked List Versus the Array<a class="headerlink" href="#176-the-linked-list-versus-the-array" title="Permanent link">&para;</a></h3>
+<h3 id="177-binary-search-trees">17.7 Binary Search Trees<a class="headerlink" href="#177-binary-search-trees" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ordering: the item in a left node precedes the item in the parent node, and the item in the right node follows the item in the parent node.</li>
+<li>Relationship: all items that can trace their ancestry back to a left node of a parent contain items that precede the parent item in order, and every item descended from the right node contains items that follow the parent item in order.</li>
+<li><strong>Hierarchical</strong> organization: the data is organized in <strong>ranks</strong>, or levels, with each rank, in general, having ranks above and below it</li>
+</ul>
+<p>Binary Tree ADT:</p>
+<ul>
+<li>Type Name: Binary Search Tree</li>
+<li>Type Properties: A binary tree is either an empty set of nodes (an empty tree) or a set of nodes with one node designated the root. Each node has exactly two trees, called the left subtree and the right subtree , descending from it.
+    Each subtree is itself a binary tree, which includes the possibility of being an empty tree.
+    A binary search tree is an ordered binary tree in which each node contains an item, in which all items in the left subtree precede the root item, and in which the root item precedes all items in the right subtree.</li>
+<li>Type Operations:<ul>
+<li>Initializing tree to empty.</li>
+<li>Determining whether tree is empty.</li>
+<li>Determining whether tree is full.</li>
+<li>Determining the number of items in the tree.</li>
+<li>Adding an item to the tree.</li>
+<li>Removing an item from the tree.</li>
+<li>Searching the tree for an item.</li>
+<li>Visiting each item in the tree.</li>
+<li>Emptying the tree.</li>
+</ul>
+</li>
+</ul>
+<h3 id="178-other-directions">17.8 Other Directions<a class="headerlink" href="#178-other-directions" title="Permanent link">&para;</a></h3>
 
 
 
@@ -2219,42 +2439,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../../c/CTricks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: C 编程技巧" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              C 编程技巧
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../../operatesystem/MemoryHierarchy/" class="md-footer__link md-footer__link--next" aria-label="Next: 存储器层次结构" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              存储器层次结构
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
