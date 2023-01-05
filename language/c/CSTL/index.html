@@ -711,6 +711,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../basic/linux/Ubuntu/" class="md-nav__link">
+        Ubuntu 日常使用指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../basic/linux/LinuxBasic/" class="md-nav__link">
         Linux 基础
       </a>
@@ -742,18 +756,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_3" type="checkbox" id="__nav_2_4_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4" type="checkbox" id="__nav_2_4_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_4_3">
+        <label class="md-nav__link" for="__nav_2_4_4">
           Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Tools" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_4_3">
+        <label class="md-nav__title" for="__nav_2_4_4">
           <span class="md-nav__icon md-icon"></span>
           Tools
         </label>
@@ -1551,9 +1565,67 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          C 标准库
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         C 标准库
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概述
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    来自 C 标准的一些内容
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命名空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    库的实现和编程风格
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2189,6 +2261,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概述
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    来自 C 标准的一些内容
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命名空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    库的实现和编程风格
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2220,6 +2334,42 @@
 
 
 <h1 id="c">C 标准库<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
+<!-- prettier-ignore-start -->
+<div class="admonition quote">
+<p class="admonition-title">参考书籍</p>
+<p>《C 标准库》</p>
+</div>
+<!-- prettier-ignore-end -->
+<h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>C 库的设计是与实现是一个很宏大的工程，需要长期的使用和大量的代码阅读才能比较好地理解。我是初次接触库文件，仅简单记忆一些库文件的设计规则。库的测试和一些细节内容就暂不学习了。</p>
+<h3 id="c_1">来自 C 标准的一些内容<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>保留标识符：所有以下划线加一个大写字母或两条下划线开头的标识符都被保留</li>
+<li>库函数的使用</li>
+<li>如果函数参数是无效值（函数定义域外的值、程序地址空间外的指针、空指针），则行为未定义。</li>
+<li>任何一个函数可能又作为宏实现了。即使作为宏实现了，也允许获得该函数的地址。</li>
+<li>函数的任何宏定义可以通过用括号把函数名字括住来局部抑制它，或者使用 <code>#undef</code> 移除宏定义。</li>
+<li>通常情况下，对作为宏实现的库函数使用任何表达式作为参数都是安全的。</li>
+<li>如果一个库函数不引用头文件中的任何类型定义，那么不用包含它的相关头文件就能使用它。</li>
+</ul>
+<h3 id="_2">命名空间<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><img alt="image-20230103184959111" src="../assets/image-20230103184959111.png" /> 图中左侧命名空间掩盖右边的命名空间。</li>
+<li>块：引入两个命名空间，分别是所有名字（类型定义、函数、数据对象和枚举常量）和标记（枚举、结构和联合）。</li>
+<li>结构或联合：引入一个命名空间，其中包括所有成员的名字。</li>
+<li>声明函数原型：引入一个命名空间，其中包括所有参数名</li>
+<li>定义函数：引入一个命名空间，其中包括所有标号的名字。</li>
+</ul>
+<h3 id="_3">库的实现和编程风格<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>库中每个可见函数都占据着单独的 C 源文件，文件名就是函数名。</li>
+<li>C 源文件名至多有 8 个小写字母。</li>
+<li>隐藏的名字都以下划线加一个大写字母开头。</li>
+<li>隐藏的函数和数据对象通常占据以 <code>x</code> 开头命名的 C 源文件。</li>
+<li>尽可能在嵌套里层的函数中声明数据对象。</li>
+<li>在每个函数的左大括号后面写上注释。</li>
+<li>可见函数的定义中，函数名用一对括号括住，阻止宏识别和展开。</li>
+</ul>
 
 
 

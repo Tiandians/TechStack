@@ -713,6 +713,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../linux/Ubuntu/" class="md-nav__link">
+        Ubuntu 日常使用指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../linux/LinuxBasic/" class="md-nav__link">
         Linux 基础
       </a>
@@ -744,18 +758,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_3" type="checkbox" id="__nav_2_4_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4" type="checkbox" id="__nav_2_4_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_2_4_3">
+        <label class="md-nav__link" for="__nav_2_4_4">
           Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Tools" data-md-level="3">
-        <label class="md-nav__title" for="__nav_2_4_3">
+        <label class="md-nav__title" for="__nav_2_4_4">
           <span class="md-nav__icon md-icon"></span>
           Tools
         </label>
@@ -2453,7 +2467,7 @@
 
 <h3 id="_4">有线连接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>拆机修理过程中，我弄断了笔记本无线网卡的天线，不得不被迫体验一把 Ubuntu 连有线网络。目前个人尝试下来，GUI 界面最好使用 GNOME 自带的 VPN，CLI 最好使用求是潮的 <a href="https://github.com/QSCTech/zjunet">zjunet</a>。如果会使用 CLI，那么 <code>zjunet</code> 不需要我过多介绍，你能自己了解它的使用方法（阅读 README 和使用 <code>-h</code>）。以下介绍 GNOME 的配置。</p>
-<p>首先，Linux 发行版基本都不会附带 L2TP 协议支持，所以必须先用有线联网，或在其他电脑上下载好相关软件包。在 Ubuntu 中使用图形界面的 <code>network-manager</code> 时，需要：</p>
+<p>首先，Linux 发行版基本都不会附带 L2TP 协议支持，所以必须先用无线联网，或在其他电脑上下载好相关软件包。在 Ubuntu 中使用图形界面的 <code>network-manager</code> 时，需要：</p>
 <div class="highlight"><pre><span></span><code>sudo apt install network-manager-l2tp network-manager-l2tp-gnome
 </code></pre></div>
 <p>安装完成后，重启。在 VPN 界面可以创建 L2TP VPN，网关填写 <code>10.5.1.9</code>。在 PPP 选项中，“身份验证”全选，安全性及压缩仅勾选 BSD 和 Deflate。配置就完成啦！</p>
