@@ -2496,19 +2496,22 @@
 </div>
 <!-- prettier-ignore-end -->
 
+<p>Shell 执行一条命令分为以下几个步骤：</p>
+<ol>
+<li><strong>路径</strong>。用户输入的是绝对路径或相对路径吗？是的话直接执行相应程序。</li>
+<li><strong>别名</strong>。用户输入的是用 <code>alias</code> 命令创建的别名？</li>
+<li><strong>内部命令</strong>。用户输入的是解释器的内部指令吗？是的话直接执行。</li>
+<li><strong>查找</strong>。系统在 <code>PATH</code> 变量定义的路径中查找命令文件。</li>
+</ol>
+<p>好的，你已经了解了 Shell 如何工作的。更多关于 Shell 的内容请见 <a href="">LinuxShell</a></p>
 <h3 id="man">man<a class="headerlink" href="#man" title="Permanent link">&para;</a></h3>
 <p>其实 <code>man</code> 使用的是 <code>less</code>。此处介绍的即为 <code>less</code> 的操作。<code>less</code> 的操作和 <code>vim</code> 十分相似。</p>
 <ul>
 <li><code>q</code> 退出</li>
 <li><code>j</code> <code>k</code> 移动行</li>
-<li><code>f</code> <code>b</code> 移动页</li>
-<li><code>d</code> <code>u</code> 移动半页</li>
-<li>
-<p><code>g</code> <code>G</code> 跳至文件头尾（可指定行数）</p>
-</li>
-<li>
-<p><code>/</code>：从上至下搜索关键词</p>
-</li>
+<li><code>f</code> <code>b</code> 移动页（记忆：forward 和 backward）</li>
+<li><code>g</code> <code>G</code> 跳至文件头尾（可指定行数）</li>
+<li><code>/</code>：从上至下搜索关键词</li>
 <li><code>?</code>：从下至上搜索关键词</li>
 <li><code>n</code>：定位到下一个关键词</li>
 <li><code>N</code>：定位到上一个关键词</li>
@@ -2543,31 +2546,31 @@
 <li><code>-r</code> recursive</li>
 </ul>
 </li>
-<li><code>ps [option]</code><ul>
+<li>
+<p><code>ps [option]</code></p>
+<ul>
 <li><code>-a</code> all 所有进程</li>
 <li><code>-u</code> user 用户和其他信息</li>
 <li><code>-x</code> 没有控制终端的进程</li>
-<li>用例：<code>ps aux | grep {{string}}</code></li>
+<li>用例：<code>ps aux | grep {{string}}</code>
+<!-- prettier-ignore-start --></li>
 </ul>
-</li>
-</ul>
-<!-- prettier-ignore-start -->
 <div class="admonition info">
 <p class="admonition-title">进程状态</p>
+</div>
 <ul>
 <li>R: running 运行或运行队列等待。</li>
 <li>S: sleep 休眠，等待条件或信号脱离状态。</li>
 <li>D: 不响应系统异步信号 不能被 <code>kill</code> 中断。</li>
 <li>Z: zombie 已终止，但进程描述符存在，需要父进程调用系统函数释放。</li>
-<li>T: ternimated 收到停止信号后停止。</li>
-</ul>
-</div>
-<!-- prettier-ignore-end -->
-<ul>
+<li>T: ternimated 收到停止信号后停止。
+<!-- prettier-ignore-end --></li>
 <li><code>top</code> 动态监视进程活动和系统负载，相当于 Windows 的任务管理器</li>
 <li><code>pidof [option] [name]</code> 查询指定服务进程的 PID 值</li>
 <li><code>kill [option] [PID]</code> 终止指定服务进程</li>
 <li><code>killall [option] [name]</code> 终止名称对应全部进程</li>
+</ul>
+</li>
 </ul>
 <!-- prettier-ignore-start -->
 <div class="admonition tip">

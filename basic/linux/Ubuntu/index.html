@@ -800,14 +800,7 @@
     各种软件
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-amberol-lollypop" class="md-nav__link">
-    - Amberol。音乐播放器，极致简洁，比 Lollypop 好看一些，但只支持播放列表，播放体验并不好。
-  </a>
-  
-    <nav class="md-nav" aria-label="- Amberol。音乐播放器，极致简洁，比 Lollypop 好看一些，但只支持播放列表，播放体验并不好。">
+    <nav class="md-nav" aria-label="各种软件">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2366,14 +2359,7 @@
     各种软件
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-amberol-lollypop" class="md-nav__link">
-    - Amberol。音乐播放器，极致简洁，比 Lollypop 好看一些，但只支持播放列表，播放体验并不好。
-  </a>
-  
-    <nav class="md-nav" aria-label="- Amberol。音乐播放器，极致简洁，比 Lollypop 好看一些，但只支持播放列表，播放体验并不好。">
+    <nav class="md-nav" aria-label="各种软件">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2428,7 +2414,7 @@
 
 
 <h1 id="ubuntu">Ubuntu 日常使用指南<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h1>
-<p>目前我在笔记本上使用 Ubuntu 作为主力系统。Ubuntu 一定是最容易上手和使用的 Linux 系统。深入使用了一段时间后，发现 Windows 上常用的软件都能在 Ubunut上找到替代品。以下记录一下我做了哪些配置来提升 Ubuntu 的使用体验。</p>
+<p>目前我在笔记本上使用 Ubuntu 作为主力系统。Ubuntu 一定是最容易上手和使用的 Linux 系统。深入使用了一段时间后，发现 Windows 上常用的软件都能在 Ubunut 上找到替代品。以下记录一下我做了哪些配置来提升 Ubuntu 的使用体验。</p>
 <h2 id="_1">代理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>我们首先要保证网络畅通，才能进行各种各样的配置。一些简单的命令可以通过设置 <code>clash</code> 代理来完成。</p>
 <h3 id="clash">Clash<a class="headerlink" href="#clash" title="Permanent link">&para;</a></h3>
@@ -2446,52 +2432,42 @@
 <p>按照 <a href="https://einverne.github.io/post/2021/03/linux-use-clash.html">在 Linux 上使用 Clash 作代理</a> 的安装步骤，将 CFW 客户端放进 <code>/usr/local/bin</code>，这样就能在命令行中使用 <code>clash</code> 来运行 CFW 了。</p>
 <p>从你的代理商处获取 clash 配置文件，替换掉 <code>~/.config/clash/config.yaml</code>。</p>
 <p>在命令行中运行 <code>clash</code>，你可能看见如下输出：</p>
-<div class="highlight"><pre><span></span><code>INFO<span class="o">[</span><span class="m">0000</span><span class="o">]</span> Mixed<span class="o">(</span>http+socks<span class="o">)</span> proxy listening at: <span class="m">127</span>.0.0.1:7890
-INFO<span class="o">[</span><span class="m">0000</span><span class="o">]</span> RESTful API listening at: <span class="o">[</span>::<span class="o">]</span>:9090 
+<div class="highlight"><pre><span></span><code>INFO[0000] Mixed(http+socks) proxy listening at: 127.0.0.1:7890
+INFO[0000] RESTful API listening at: [::]:9090
 </code></pre></div>
 <p>第一行是 clash 的代理监听地址，第二行是 clash 的 API 监听地址。把你的系统代理设置为第一行的地址即可。</p>
 <!-- prettier-ignore-start -->
 <details class="note">
 <summary>为 CFW 设置开机启动、配置 UI 界面</summary>
-<div class="highlight"><pre><span></span><code>首先将配置文件移动到 `/etc` 下：
-
-```bash
-sudo mv ~/.config/clash /etc
-```
-
-下载 [yacd: Yet Another Clash Dashboard](https://github.com/haishanh/yacd) 的压缩包并解压到 `/etc/clash/ui`。
-
-在 `config.yaml` 中修改并添加添加：
-
-``yaml
+<p>首先将配置文件移动到 <code>/etc</code> 下：</p>
+<div class="highlight"><pre><span></span><code>sudo mv ~/.config/clash /etc
+</code></pre></div>
+<p>下载 <a href="https://github.com/haishanh/yacd">yacd: Yet Another Clash Dashboard</a> 的压缩包并解压到 <code>/etc/clash/ui</code>。</p>
+<p>在 <code>config.yaml</code> 中修改并添加添加：</p>
+<p>``yaml
 external-control: 127.0.0.1:9090
 external-ui: ui
-```
-
-访问 `127.0.0.1:9090/ui` 就可以看到 Clash 的图形界面啦。
+<div class="highlight"><pre><span></span><code>访问 `127.0.0.1:9090/ui` 就可以看到 Clash 的图形界面啦。
 
 使用 `vim` 增加 systemd 配置：`sudo vim /etc/systemd/system/clash.service`，内容如下：
 
 ```text
 [Unit]
-</code></pre></div>
-<p>Description=Clash Daemon</p>
-<p>[Service]
+Description=Clash Daemon
+
+[Service]
 ExecStart=/usr/local/bin/clash -d /etc/clash/
-Restart=on-failure</p>
-<p>[Install]
+Restart=on-failure
+
+[Install]
 WantedBy=multi-user.target
-    <div class="highlight"><pre><span></span><code>启用服务：
-
-```bash
-sudo systemctl enable clash.service
-sudo systemctl start clash.service
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code>查看日志：
-
-```bash
-journalctl -e -u clash.service
-```
+<p>启用服务：</p>
+<div class="highlight"><pre><span></span><code>sudo systemctl <span class="nb">enable</span> clash.service
+sudo systemctl start clash.service
+</code></pre></div>
+<p>查看日志：</p>
+<div class="highlight"><pre><span></span><code>journalctl -e -u clash.service
 </code></pre></div>
 </details>
 <!-- prettier-ignore-end -->
@@ -2520,24 +2496,26 @@ sudo systemctl start syncthing@username.service
 </ul>
 <!-- prettier-ignore-start -->
 <div class="admonition note">
-<p class="admonition-title">更多软件<p>这些软件也不错，但并不推荐。它们的功能较少或不太完善、界面不够美观或很久没有更新。</p>
-<h2 id="-amberol-lollypop">- <a href="https://flathub.org/apps/details/io.bassi.Amberol">Amberol</a>。音乐播放器，极致简洁，比 Lollypop 好看一些，但只支持播放列表，播放体验并不好。<a class="headerlink" href="#-amberol-lollypop" title="Permanent link">&para;</a></h2>
-</p>
+<p class="admonition-title">更多软件</p>
+<p>这些软件也不错，但并不推荐。它们的功能较少或不太完善、界面不够美观或很久没有更新。</p>
+<ul>
+<li><a href="https://flathub.org/apps/details/io.bassi.Amberol">Amberol</a>。音乐播放器，极致简洁，比 Lollypop 好看一些，但只支持播放列表，播放体验并不好。</li>
+</ul>
 </div>
 <!-- prettier-ignore-end -->
 
 <h3 id="appimage">使用 Appimage 格式的软件<a class="headerlink" href="#appimage" title="Permanent link">&para;</a></h3>
 <!-- prettier-ignore-start -->
 <div class="admonition info">
-<p class="admonition-title">什么是 AppImage ？<p>参见官方文档：<a href="https://appimage.org/">AppImage 让 Linux 应用随处运行</a>。</p>
-</p>
+<p class="admonition-title">什么是 AppImage ？</p>
+<p>参见官方文档：<a href="https://appimage.org/">AppImage 让 Linux 应用随处运行</a>。</p>
 </div>
 <!-- prettier-ignore-end -->
 
 <!-- prettier-ignore-start -->
 <div class="admonition tip">
-<p class="admonition-title">好习惯<p>把所有 AppImage 文件放在 <code>~/Application</code> 或 <code>/opt</code> 下，一些工具会自动扫描这些文件夹。</p>
-</p>
+<p class="admonition-title">好习惯</p>
+<p>把所有 AppImage 文件放在 <code>~/Application</code> 或 <code>/opt</code> 下，一些工具会自动扫描这些文件夹。</p>
 </div>
 <!-- prettier-ignore-end -->
 
@@ -2545,19 +2523,19 @@ sudo systemctl start syncthing@username.service
 <!-- prettier-ignore-start -->
 <details class="info">
 <summary>什么是 <code>.desktop</code> 文件？</summary>
-<div class="highlight"><pre><span></span><code>- [](https://specifications.freedesktop.org/desktop-entry-spec/latest/index.html#introduction)
-
-Both the KDE and GNOME desktop environments have adopted a similar format for &quot;desktop entries&quot;, or configuration files describing how a particular program is to be launched, how it appears in menus, etc. It is to the larger community&#39;s benefit that a unified standard be agreed upon by all parties such that interoperation between the two environments, and indeed any additional environments that implement the specification, becomes simpler.
-</code></pre></div>
+<ul>
+<li><a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/index.html#introduction"></a></li>
+</ul>
+<p>Both the KDE and GNOME desktop environments have adopted a similar format for "desktop entries", or configuration files describing how a particular program is to be launched, how it appears in menus, etc. It is to the larger community's benefit that a unified standard be agreed upon by all parties such that interoperation between the two environments, and indeed any additional environments that implement the specification, becomes simpler.</p>
 </details>
 <!-- prettier-ignore-end -->
 
 <p>把需要自动启动的 <code>.desktop</code> 文件拷贝到 <code>~/.config/autostart</code> 即可实现自动启动。</p>
 <!-- prettier-ignore-start -->
 <div class="admonition info">
-<p class="admonition-title">参考资料<p><a href="https://askubuntu.com/questions/1115321/extract-icon-from-appimage">Ask Ubuntu: Extract icon from appimage</a>。
+<p class="admonition-title">参考资料</p>
+<p><a href="https://askubuntu.com/questions/1115321/extract-icon-from-appimage">Ask Ubuntu: Extract icon from appimage</a>。
 <a href="https://askubuntu.com/questions/81383/how-can-i-add-new-autostart-programs-in-lubuntu">Ask Ubuntu: How can I add new autostart programs in Lubuntu?</a></p>
-</p>
 </div>
 <!-- prettier-ignore-end -->
 
