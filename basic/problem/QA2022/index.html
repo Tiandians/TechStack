@@ -2561,6 +2561,7 @@
 <h2 id="syncthing-git">Syncthing 和 git 共用<a class="headerlink" href="#syncthing-git" title="Permanent link">&para;</a></h2>
 <h3 id="_5">问题背景<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p><a href="https://forum.syncthing.net/t/is-putting-a-git-workspace-in-a-synced-floder-really-a-good-idea">Syncthing Forum</a> 上的帖子表示：将 git 仓库放在 Syncthing 文件夹中不会导致问题，并且能让 git 状态在所有 Syncthing 文件夹中保持一致。我采用了这一方法。但在新配置 git 的系统上编辑时，我的远程系统上的 git 显示仓库中的所有文件被更新。</p>
+<p>我真是吐了 <img alt="fatal: CRLF would be replaced by LF" src="https://toub.es/2012/05/28/fatal-crlf-would-be-replaced-by-lf/firstcommit.png" /></p>
 <h3 id="_6">产生原因<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>Linux 和 Windows 系统换行符不一致。git 默认在检出时让文件换行适应当前系统，但如果再套上一层非 git 同步就会导致令人哭笑不得的结果。比如，仓库中所有文件都是 <abbr title="Line Feed，换行符，0x0a">LF</abbr>，在 Windows 上用 git 检出为 CRLF，这一更改又被 Syncthing 同步到其他 Linux 系统上，在这些 Linux 系统上就会检测到大量更改。</p>
 <h3 id="_7">解决办法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
