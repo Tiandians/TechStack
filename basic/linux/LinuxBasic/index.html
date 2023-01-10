@@ -907,6 +907,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../tools/tmux/" class="md-nav__link">
+        tmux: terminal multiplexer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../tools/ssh/" class="md-nav__link">
         ssh: OpenSSH remote login client
       </a>
@@ -2418,7 +2432,7 @@
 
 
 <h1 id="linux">Linux 基础<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
-<p>这里包含了以下知识：系统内核、终端、解释器等概念简介、与运维有关的基础命令、管道重定向和环境变量等基本功能。</p>
+<p>这里包含了以下知识：系统内核、终端、解释器等概念简介，Shell 的简单使用，一些基础命令。</p>
 <h2 id="_1">基础概念<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>内核与系统</li>
@@ -2429,7 +2443,7 @@
 <ul>
 <li>各种 Linux 发行版</li>
 </ul>
-<p>这里列出一些简洁的各发行版的第三方中文指南，它们往往比官方文档容易入门。</p>
+<p>这里列出一些发行版的第三方中文指南，它们往往比官方文档容易入门。</p>
 <p><a href="https://blog.ddupan.top/Chinaskills-Debian/">Debian 系 Linux 快速入门与参考</a></p>
 <p><a href="https://arch.icekylin.online/">ArchLinux 指南</a></p>
 <p>RedHat/CentOS/Fedora：《Linux 就该这么学》</p>
@@ -2481,13 +2495,13 @@
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>：<strong>终结</strong>前台作业</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>：<strong>暂停</strong>前台作业</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span>：从一个 Shell 中<strong>登出</strong></li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-r">R</kbd></span>：搜索历史命令</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-r">R</kbd></span>：搜索历史命令（fish 中无效）</li>
 </ul>
 <p>编辑：</p>
 <ul>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span>：清除屏幕</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-u">U</kbd></span>：删除整行输入</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span>：删除光标左侧的所有字符</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span>：删除一个词</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>：移动至行首</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-e">E</kbd></span>：移动至行末</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>：允许插入控制字符</li>
@@ -2565,10 +2579,10 @@
 <li>Z: zombie 已终止，但进程描述符存在，需要父进程调用系统函数释放。</li>
 <li>T: ternimated 收到停止信号后停止。
 <!-- prettier-ignore-end --></li>
-<li><code>top</code> 动态监视进程活动和系统负载，相当于 Windows 的任务管理器</li>
-<li><code>pidof [option] [name]</code> 查询指定服务进程的 PID 值</li>
-<li><code>kill [option] [PID]</code> 终止指定服务进程</li>
-<li><code>killall [option] [name]</code> 终止名称对应全部进程</li>
+<li><code>top</code></li>
+<li><code>pidof [option] [name]</code></li>
+<li><code>kill [option] [PID]</code></li>
+<li><code>killall [option] [name]</code></li>
 </ul>
 </li>
 </ul>
@@ -2582,7 +2596,7 @@
 <h3 id="_4">系统状态<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>ifconfig [网络设备] [option]</code>: network <strong>i</strong>nter<strong>f</strong>ace <strong>config</strong>urator<ul>
-<li>该命令从属于 <code>net-tools</code> 包，一般不会默认安装</li>
+<li>该命令属于 <code>net-tools</code> 包，一般不会默认安装</li>
 <li>你知道这些信息在哪吗？网卡名称、IP 地址、MAC 地址</li>
 </ul>
 </li>
@@ -2603,7 +2617,7 @@
 </ul>
 </li>
 <li><code>sos report</code><ul>
-<li><code>sosreport</code> 命令现在以及替换为 <code>sos</code> 命令</li>
+<li><code>sosreport</code> 命令现在已经替换为 <code>sos</code> 命令</li>
 <li>在需要输入的地方敲击回车即可。</li>
 </ul>
 </li>

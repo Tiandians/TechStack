@@ -218,13 +218,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../Basic/" class="md-tabs__link">
+      <a href="../../../Basic/" class="md-tabs__link md-tabs__link--active">
         🔨基础技能
       </a>
     </li>
@@ -524,12 +526,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -681,12 +685,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
       
       
       
@@ -749,12 +755,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4" type="checkbox" id="__nav_2_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4" type="checkbox" id="__nav_2_4_4" checked>
       
       
       
@@ -780,6 +788,95 @@
       <a href="../gcc/" class="md-nav__link">
         gcc
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          tmux: terminal multiplexer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        tmux: terminal multiplexer
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    基本概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命令
+  </a>
+  
+    <nav class="md-nav" aria-label="命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    内置命令行
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    状态栏
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    操作
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2194,15 +2291,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#keybindings" class="md-nav__link">
-    Keybindings
+  <a href="#_1" class="md-nav__link">
+    基本概念
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#_2" class="md-nav__link">
+    命令
+  </a>
+  
+    <nav class="md-nav" aria-label="命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    内置命令行
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    状态栏
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    操作
   </a>
   
 </li>
@@ -2246,39 +2370,99 @@
 <li><a href="https://github.com/tmux/tmux/wiki/Getting-Started">GitHub Wiki</a></li>
 </ul>
 </div>
-<p>窗口层级：</p>
+<p>tmux 的三大使用场景：</p>
+<ol>
+<li>保护运行在远程主机的程序不因为连接终端而关闭。</li>
+<li>允许运行在远程主机的程序被多个不同的本地电脑访问。</li>
+<li>在一个终端中运行多个程序和解释器。</li>
+</ol>
+<h2 id="_1">基本概念<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>session<ul>
-<li>window<ul>
-<li>pane</li>
+<li>tmux 服务端和客户端</li>
+</ul>
+<p>tmux 将所有状态保存在一个单独的主进程，称为 tmux 服务端。服务端在后台运行，管理运行在 tmux 中的所有程序并跟踪它们的输出。</p>
+<p>用户通过启动一个客户端来附着（attach）到服务端。客户端将会控制终端，并使用 <code>/tmp</code> 中的 socket 文件与服务端通信。</p>
+<ul>
+<li>
+<p>会话、窗口和窗格（sessions, windows and panes）</p>
+<ul>
+<li>Programs run in terminals in panes, which each belong to one window.</li>
+<li>Each window has a name and one active pane.</li>
+<li>Windows are linked to one or more sessions.</li>
+<li>Each session has a list of windows, each with an index.</li>
+<li>One of the windows in a session is the current window.</li>
+<li>Sessions are attached to one or more clients, or are detached (attached to no clients).</li>
+<li>Each client is attached to one session.</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<p>输入 <code>tmux</code> 时发生了什么？</p>
-<h2 id="keybindings">Keybindings<a class="headerlink" href="#keybindings" title="Permanent link">&para;</a></h2>
+<p>注意：会话没有序号，但必须有一个唯一的名字。窗口有序号，也可以有不唯一的名字。</p>
+<h2 id="_2">命令<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>Ctrl+B</code>：脱离输入<ul>
+<li>创建会话：<code>tmux new</code></li>
+<li><code>-s</code> 指定会话名称</li>
+<li><code>-n</code> 指定窗口名称</li>
+<li><code>-d</code> 创建会话而不附着</li>
+<li><code>-A</code> 如果会话存在则附着</li>
+<li><code>command</code> 最后可以附带需要在窗口中运行的命令</li>
+<li>Example: <code>tmux new -n mytopwindow top</code></li>
+<li>附着：<code>tmux attach</code></li>
+<li><code>-t</code> 指定会话的名称</li>
+<li><code>-d</code> 使其他附着到该会话的客户端脱离</li>
+<li>列出会话：<code>tmux ls</code></li>
+</ul>
+<h3 id="_3">内置命令行<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><code>C-b :</code> 打开内置命令行。</p>
+<ul>
+<li><code>:kill-server</code> 关闭服务端，结束所有会话。</li>
+<li><code>:neww</code> 新的窗口</li>
+<li><code>-d</code> 创建但不设为当前窗口</li>
+<li><code>-n</code> 设置名字</li>
+<li><code>-t</code> 设定序号</li>
+<li><code>command</code> 最后跟执行的命令</li>
+<li><code>:split-window</code> 分割窗格</li>
+<li><code>-h</code>, <code>-v</code> 水平、垂直分割</li>
+<li><code>-d</code> 不改变活动窗格</li>
+<li><code>-f</code> 让新窗格占据整个横、纵向位置</li>
+<li><code>-b</code> 将新窗格置于左、上方</li>
+<li></li>
+</ul>
+<h2 id="_4">状态栏<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><img alt="status bar" src="https://github.com/tmux/tmux/wiki/images/tmux_status_line_diagram.png" /></p>
+<h2 id="_5">操作<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>使用 <code>C-b ?</code> 查看按键列表。</p>
+<ul>
 <li><code>d</code>：detach</li>
 <li><code>c</code>：create</li>
 <li><code>p</code>：previous</li>
 <li><code>c</code>：create</li>
 <li><code>&lt;num&gt;</code>：switch to the tab</li>
 <li><code>,</code>：rename</li>
+</ul>
+<p>分割窗格</p>
+<ul>
 <li><code>"</code>：split horizontally</li>
 <li><code>%</code>：split vertically</li>
 <li><code>↑↓←→</code>：navigate through panes</li>
-<li><code></code>：switch through different layouts</li>
-<li><code>z</code>：zoom in/out</li>
 </ul>
-</li>
-</ul>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<p>改变当前窗口</p>
 <ul>
-<li><code>new -t &lt;name&gt;</code></li>
-<li><code>a -t &lt;name&gt;</code>：attach</li>
-<li><code>ls</code></li>
+<li><code>0-9</code> 跳转到指定窗口</li>
+<li><code>'</code> 调出窗口提示符，输入窗口编号后跳转</li>
+<li><code>n</code> 下一个窗口</li>
+<li><code>p</code> 前一个窗口</li>
+<li><code>l</code> 上一个窗口</li>
+</ul>
+<p>改变活动窗格</p>
+<ul>
+<li><code>q</code> 显示窗格序号和它们的大小。在数字消失前按下数字可以跳转到指定窗格。</li>
+<li>
+<p><code>o</code> 跳转到下一个窗格</p>
+</li>
+<li>
+<p><code></code>：switch through different layouts</p>
+</li>
+<li><code>z</code>：zoom in/out</li>
 </ul>
 
 
@@ -2295,6 +2479,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../gcc/" class="md-footer__link md-footer__link--prev" aria-label="Previous: gcc" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              gcc
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ssh/" class="md-footer__link md-footer__link--next" aria-label="Next: ssh: OpenSSH remote login client" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              ssh: OpenSSH remote login client
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

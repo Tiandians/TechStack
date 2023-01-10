@@ -820,6 +820,19 @@
     使用技巧
   </a>
   
+    <nav class="md-nav" aria-label="使用技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    终端重度使用者
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -893,6 +906,20 @@
     <li class="md-nav__item">
       <a href="../tools/gcc/" class="md-nav__link">
         gcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/tmux/" class="md-nav__link">
+        tmux: terminal multiplexer
       </a>
     </li>
   
@@ -2379,6 +2406,19 @@
     使用技巧
   </a>
   
+    <nav class="md-nav" aria-label="使用技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    终端重度使用者
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2418,13 +2458,13 @@
 <h2 id="_1">代理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>我们首先要保证网络畅通，才能进行各种各样的配置。一些简单的命令可以通过设置 <code>clash</code> 代理来完成。</p>
 <h3 id="clash">Clash<a class="headerlink" href="#clash" title="Permanent link">&para;</a></h3>
-<p>不要 <code>apt isntall clash</code>，你会安装上一个好像是 Haskell 制作程序的东西。</p>
+<p>不要 <code>apt install clash</code>，你会安装上一个好像是 Haskell 制作程序的东西。</p>
 <p>我们将使用 Clash for Windows，这是一个基于 Clash 和 Electron 的 Windows、Linux 和 macOS 通用的 clash 客户端。</p>
 <!-- prettier-ignore-start -->
 <div class="admonition info">
 <p class="admonition-title">参考资料</p>
 <ul>
-<li><a href="https://docs.cfw.lbyczf.com/">GitHub 主页：Clash for Windows</a></li>
+<li><a href="https://docs.cfw.lbyczf.com/">Docs for clash for Windows</a></li>
 </ul>
 </div>
 <!-- prettier-ignore-end -->
@@ -2444,15 +2484,12 @@ INFO[0000] RESTful API listening at: [::]:9090
 </code></pre></div>
 <p>下载 <a href="https://github.com/haishanh/yacd">yacd: Yet Another Clash Dashboard</a> 的压缩包并解压到 <code>/etc/clash/ui</code>。</p>
 <p>在 <code>config.yaml</code> 中修改并添加添加：</p>
-<p>``yaml
-external-control: 127.0.0.1:9090
-external-ui: ui
-<div class="highlight"><pre><span></span><code>访问 `127.0.0.1:9090/ui` 就可以看到 Clash 的图形界面啦。
-
-使用 `vim` 增加 systemd 配置：`sudo vim /etc/systemd/system/clash.service`，内容如下：
-
-```text
-[Unit]
+<div class="highlight"><pre><span></span><code><span class="nt">external-control</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1:9090</span><span class="w"></span>
+<span class="nt">external-ui</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ui</span><span class="w"></span>
+</code></pre></div>
+<p>访问 <code>127.0.0.1:9090/ui</code> 就可以看到 Clash 的图形界面啦。</p>
+<p>使用 <code>vim</code> 增加 systemd 配置：<code>sudo vim /etc/systemd/system/clash.service</code>，内容如下：</p>
+<div class="highlight"><pre><span></span><code>[Unit]
 Description=Clash Daemon
 
 [Service]
@@ -2461,7 +2498,7 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-</code></pre></div></p>
+</code></pre></div>
 <p>启用服务：</p>
 <div class="highlight"><pre><span></span><code>sudo systemctl <span class="nb">enable</span> clash.service
 sudo systemctl start clash.service
@@ -2504,6 +2541,14 @@ sudo systemctl start syncthing@username.service
 </div>
 <!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
+<p>!!! bug "Linux 上的安卓子系统</p>
+<div class="highlight"><pre><span></span><code>不要试图在 Linux 上运行安卓子系统，会变得不幸。
+
+如果你对安卓应用有重度需求，可以尝试 [Waydroid](https://waydro.id/) 项目。它使用 LineageOS 的安卓镜像，比 Anbox 新，对当前的安卓应用有较好的兼容性。
+</code></pre></div>
+<!-- prettier-ignore-end -->
+
 <h3 id="appimage">使用 Appimage 格式的软件<a class="headerlink" href="#appimage" title="Permanent link">&para;</a></h3>
 <!-- prettier-ignore-start -->
 <div class="admonition info">
@@ -2524,7 +2569,7 @@ sudo systemctl start syncthing@username.service
 <details class="info">
 <summary>什么是 <code>.desktop</code> 文件？</summary>
 <ul>
-<li><a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/index.html#introduction"></a></li>
+<li><a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/index.html#introduction">Desktop Entry Specification</a></li>
 </ul>
 <p>Both the KDE and GNOME desktop environments have adopted a similar format for "desktop entries", or configuration files describing how a particular program is to be launched, how it appears in menus, etc. It is to the larger community's benefit that a unified standard be agreed upon by all parties such that interoperation between the two environments, and indeed any additional environments that implement the specification, becomes simpler.</p>
 </details>
@@ -2534,8 +2579,10 @@ sudo systemctl start syncthing@username.service
 <!-- prettier-ignore-start -->
 <div class="admonition info">
 <p class="admonition-title">参考资料</p>
-<p><a href="https://askubuntu.com/questions/1115321/extract-icon-from-appimage">Ask Ubuntu: Extract icon from appimage</a>。
-<a href="https://askubuntu.com/questions/81383/how-can-i-add-new-autostart-programs-in-lubuntu">Ask Ubuntu: How can I add new autostart programs in Lubuntu?</a></p>
+<ul>
+<li><a href="https://askubuntu.com/questions/1115321/extract-icon-from-appimage">Ask Ubuntu: Extract icon from appimage</a>。</li>
+<li><a href="https://askubuntu.com/questions/81383/how-can-i-add-new-autostart-programs-in-lubuntu">Ask Ubuntu: How can I add new autostart programs in Lubuntu?</a></li>
+</ul>
 </div>
 <!-- prettier-ignore-end -->
 
@@ -2544,6 +2591,33 @@ sudo systemctl start syncthing@username.service
 <li>窗口飘到屏幕外去了</li>
 </ul>
 <p>按 <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-space">Space</kbd></span> 跳出窗口选项菜单。参见 <a href="https://stackoverflow.com/questions/12477435/window-appears-off-screen-on-ubuntu">StackOverflow: Window appears off screen on ubuntu</a>。</p>
+<ul>
+<li>桌面管理</li>
+</ul>
+<p><a href="https://www.zhihu.com/question/447039478">知乎：平铺式窗口管理器真的好用吗？</a></p>
+<p>Ubuntu 自带的 Gnome 也有不少快捷键方便使用：</p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>++meta+leftarrow+</td>
+<td>quick</td>
+</tr>
+</tbody>
+</table>
+<p>详见：<a href="https://help.gnome.org/users/gnome-help/stable/shell-keyboard-shortcuts.html.en">Useful keyboard shortcuts</a></p>
+<h3 id="_5">终端重度使用者<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="">Lynx</a> 使用终端浏览网页。</li>
+</ul>
+<p>测试下来，大部分国外网站对终端纯文本界面有较好的兼容性。国内网站使用终端浏览就是依托答辩。</p>
+<p>与 Lynx 同类的还有 links、</p>
+<p><code>brwosh</code> 是一个更现代化的文本浏览器，能够渲染页面上的 JavaScript 等元素。依赖 Firefox，需要下载二进制文件使用。</p>
 
 
 
