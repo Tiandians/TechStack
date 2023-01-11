@@ -881,13 +881,47 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    硬盘
+  </a>
+  
+    <nav class="md-nav" aria-label="硬盘">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分区建议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raidredundant-array-of-inexpensiveindependent-disks" class="md-nav__link">
+    RAID（Redundant Array of Inexpensive/Independent Disks，冗余廉价/独立磁盘阵列）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lvmlogical-volume-manager" class="md-nav__link">
+    LVM（Logical Volume Manager）：逻辑卷管理程序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     文件类型
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     文件权限与归属
   </a>
   
@@ -895,21 +929,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     权限管理工具
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     特殊权限位
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     隐藏权限
   </a>
   
@@ -2304,13 +2338,47 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    硬盘
+  </a>
+  
+    <nav class="md-nav" aria-label="硬盘">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    分区建议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raidredundant-array-of-inexpensiveindependent-disks" class="md-nav__link">
+    RAID（Redundant Array of Inexpensive/Independent Disks，冗余廉价/独立磁盘阵列）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lvmlogical-volume-manager" class="md-nav__link">
+    LVM（Logical Volume Manager）：逻辑卷管理程序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     文件类型
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     文件权限与归属
   </a>
   
@@ -2318,21 +2386,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     权限管理工具
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     特殊权限位
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     隐藏权限
   </a>
   
@@ -2393,7 +2461,46 @@
 <ul>
 <li>Linux 系统中，<strong>一切都是文件</strong></li>
 </ul>
-<h2 id="_1">文件类型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">硬盘<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>分区（partition）：是硬盘的一部分，具有设备名称（如 <code>/dev/sda1</code>），可以<strong>独立于硬盘其他部分独立寻址</strong>。<ul>
+<li>仅安装期间：<code>ubiquity</code> 可以在硬盘上建立分区。</li>
+<li><code>parted</code> 可以操作分区。</li>
+</ul>
+</li>
+<li>分区表：存放与硬盘分区相关的信息。建立第一个分区前必须建立一个空白的分区表。对分区的修改将会记录到分区表。如果删除分区表，就无法访问硬盘上的信息。</li>
+<li>文件系统：在将程序写入分区前，需要将称为文件系统的<strong>数据结构</strong>写入到分区中。<ul>
+<li><code>mkfs</code> （make filesystem）能够在分区上创建文件系统。</li>
+<li><code>fsck</code> （filesystem check）能够检查文件系统数据结构的完整性。</li>
+<li>Ubuntu 通常使用 <code>ext3</code> 文件系统。</li>
+<li>文件系统之间是独立的，不会相互影响。</li>
+</ul>
+</li>
+<li>格式化：将文件系统写入某个分区。</li>
+<li>挂载点：用于把分区和系统目录关联起来。使用挂载点就可以访问分区中的文件系统了。<ul>
+<li>在引导过程中，Ubuntu 查看 fstab（filesystem table，文件系统表）文件，将每个分区与对应的挂载点关联起来。</li>
+<li>举例：将分区 <code>/dev/sda2</code> 挂在到 <code>/home</code> 目录上。</li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">分区建议<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>(swap)</code>：当 Linux 没有足够的内存保存正在处理的信息时，Linux 会将程序和数据临时存放在交换分区。这个分区<strong>不是必须的</strong>。交换分区的建议大小为内存的两倍。交换分区不会与任何挂载点关联。</li>
+<li><code>/boot</code>：存放内核和系统启动所需的数据。该分区必须位于磁盘起始处附近。</li>
+<li><code>/var</code>：存放大量<strong>系统日志、软件包信息和记账数据</strong>，这个分区的数据变化非常频繁。将其作为独立分区，可以避免磁盘空间耗尽时日志受到影响。</li>
+<li><code>/home</code>：用户的主目录。将其作为独立分区，在全新安装的时候就不会覆盖掉。</li>
+<li><code>/usr</code>：软件包的存放地址，分区上的数据很少发生变化。将其作为独立分区，能够导出到另一个系统、增强安全性。</li>
+<li><code>/usr/local</code> 和 <code>/opt</code>：存放其他软件包。</li>
+</ul>
+<h3 id="raidredundant-array-of-inexpensiveindependent-disks">RAID（Redundant Array of Inexpensive/Independent Disks，冗余廉价/独立磁盘阵列）<a class="headerlink" href="#raidredundant-array-of-inexpensiveindependent-disks" title="Permanent link">&para;</a></h3>
+<p>将多个硬盘或分区合并起来提高容错性和性能，视为一个逻辑设备。可以通过硬件或软件方式实现。软件 RAID 占用大量的 CPU 时间，硬件 RAID 需要专门为实现 RAID 设计的硬件。</p>
+<p>不要用 RAID 取代备份。在移动介质上存放备份是较好的方式。</p>
+<h3 id="lvmlogical-volume-manager">LVM（Logical Volume Manager）：逻辑卷管理程序<a class="headerlink" href="#lvmlogical-volume-manager" title="Permanent link">&para;</a></h3>
+<ul>
+<li>逻辑卷：LVM 将磁盘的各个组成部分（分区、硬盘或存储阵列，称为<strong>物理卷</strong>）划分成<strong>存储池或虚拟硬盘</strong>，称为<strong>卷组（volume group）</strong>。卷组的一部分分配出来建立逻辑卷。</li>
+</ul>
+<p>逻辑卷在功能上类似于传统磁盘分区，可以建立文件系统。对于修改和移动来说，逻辑卷更加容易。当用户升级物理卷时，LVM 可以将数据转移到新的物理卷上。</p>
+<h2 id="_3">文件类型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -2435,7 +2542,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_2">文件权限与归属<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_4">文件权限与归属<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>每一个文件都对三类实体分配权限：user, group, others (合称 all)，均用首字母代表</p>
 <p>这些权限有：<code>r, w, x</code></p>
 <ul>
@@ -2445,7 +2552,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="_3">权限管理工具<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_5">权限管理工具<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>chmod [option] permission file|directory</code><ul>
 <li>可以使用数字设置权限</li>
@@ -2456,7 +2563,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="_4">特殊权限位<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_6">特殊权限位<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
 <li>SUID<ul>
 <li>用于：二进制程序</li>
@@ -2482,7 +2589,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="_5">隐藏权限<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_7">隐藏权限<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>你可能在以下情况下碰到隐藏权限：权限充足却无法删除、只能在日志中追加而不能修改、删除。这些隐藏权限保障着 Linux 的安全性。</p>
 <ul>
 <li><code>chattr [option] file</code></li>

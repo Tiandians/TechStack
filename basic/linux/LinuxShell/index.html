@@ -2208,9 +2208,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    命令和基本语法
+  <a href="#shell" class="md-nav__link">
+    Shell
   </a>
+  
+    <nav class="md-nav" aria-label="Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shell_1" class="md-nav__link">
+    Shell 是命令解释器和编程语言
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell_2" class="md-nav__link">
+    Shell 特性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    文本界面
+  </a>
+  
+    <nav class="md-nav" aria-label="文本界面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    历史
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    术语表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    终端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    登录
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    虚拟控制台
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    系统控制台
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    终端操作
+  </a>
+  
+    <nav class="md-nav" aria-label="终端操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    错误纠正
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2223,49 +2318,49 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     重定向
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     管道
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     通配符
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     转义字符
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     别名
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     内部命令
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     环境变量
   </a>
   
@@ -2277,7 +2372,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#shell" class="md-nav__link">
+  <a href="#shell_3" class="md-nav__link">
     编写 Shell 脚本
   </a>
   
@@ -2285,21 +2380,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     基本结构
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     一些变量
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     测试语句
   </a>
   
@@ -2343,8 +2438,104 @@
 
 
 <h1 id="linux-shell">Linux Shell<a class="headerlink" href="#linux-shell" title="Permanent link">&para;</a></h1>
-<p>Linux 拥有许多命令解释器，如 <code>bash</code>、<code>zsh</code> 和 <code>fish</code>。它们有许多共同的特性，因此就合并在一个文档中介绍。先讲讲通用的东西，再讲讲它们的不同。</p>
-<h2 id="_1">命令和基本语法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Linux 拥有许多命令解释器，如 <code>bash</code>、<code>zsh</code> 和 <code>fish</code>。它们有许多共同的特性，因此就合并在一个文档中介绍。这里同样介绍终端、控制台等与文本界面有关的内容。</p>
+<h2 id="shell">Shell<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h2>
+<p>本节介绍关于 Shell 的通用知识。</p>
+<h3 id="shell_1">Shell 是命令解释器和编程语言<a class="headerlink" href="#shell_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>作为命令解释器（command interpreter），Shell 对用户输入的命令进行解释，调用相应的程序。Shell 建立了用户和操作系统之间的接口。</li>
+<li>作为编程语言，Shell 命令可以安排在一个文件中供以后执行，称为 Shell 脚本。</li>
+</ul>
+<h3 id="shell_2">Shell 特性<a class="headerlink" href="#shell_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>通配符：这是一些对 Shell 具有特殊意义的字符，用于构造模式。</li>
+<li>设备无关I/O：输入输出可以被重定向，并且可以重定向到任何合适的设备。</li>
+<li>函数：可以编写函数，Shell 将它们放在内存中。Shell 还用内部方式存储函数，这样不必耗费大量时间解释命令。</li>
+<li>作业控制：允许用户同时运行多个作业，进行前后台切换。</li>
+</ul>
+<h2 id="_1">文本界面<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">历史<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>参考资料：</p>
+<ul>
+<li><a href="https://www.eet-china.com/mp/a46011.html">控制台、终端和 Shell 的关系</a>。</li>
+<li><a href="https://waynerv.com/posts/how-tty-system-works/">Unix 终端系统（TTY）是如何工作的？</a></li>
+<li><a href="https://www.yabage.me/2016/07/08/tty-under-the-hood/">TTY: under the hood</a></li>
+</ul>
+<p>1970 年以前，K&amp;R 开发 UNIX 系统，他们打算让该系统支持多用户，于是使用了电传打字机（teletype，简称 tty）做终端设备。</p>
+<p>终端是通过线缆连接在主机上的，主机上还有一个直接集成的特殊终端，称为<strong>控制台</strong>。控制台只能被管理员使用，可以做一些普通终端不能做的事情。比如，打印系统启动失败的信息。</p>
+<p>上面这些都是历史了。在现在的 Linux 中已经淡化了控制台和终端的区别，我们都是通过虚拟控制台与计算机交互。</p>
+<h3 id="_3">术语表<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>English</th>
+<th>Chinese</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>terminal</td>
+<td>终端</td>
+<td>处理计算机输入输出的一套设备</td>
+</tr>
+<tr>
+<td>console</td>
+<td>控制台</td>
+<td>显示系统消息的终端就是控制台，Linux 默认所有虚拟终端都是控制台</td>
+</tr>
+<tr>
+<td>terminal emulator</td>
+<td>终端模拟器</td>
+<td>图形界面中用于呈现命令行界面的窗口，打开它就能和 Shell 交互</td>
+</tr>
+<tr>
+<td>textual virtual console</td>
+<td>文本界面虚拟控制台</td>
+<td></td>
+</tr>
+<tr>
+<td>CLI (Command Line Interface)</td>
+<td>命令行界面</td>
+<td></td>
+</tr>
+<tr>
+<td>pseudograhpical interface</td>
+<td>伪图形界面</td>
+<td></td>
+</tr>
+<tr>
+<td>prompt</td>
+<td>提示符</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">终端<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>本地终端：显示器+键盘就是本地终端。</li>
+<li>串口终端：通过串口将主机连接到另外一个具有显示器和键盘的主机，通过终端模拟程序将这台主机的显示器和键盘借给串口对端的主机，这就是串口终端。</li>
+<li>远程终端：由 <abbr title="Transmission Control Protocol，传输控制协议">TCP</abbr>/IP 承载，如 telnet 和 ssh。这是伪终端，因为它们没有关联任何物理设备。</li>
+</ul>
+<h3 id="_5">登录<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>使用文本设备登录前，系统显示一条 issue 消息（存放在 <code>/etc/issue</code>），说明系统版本。</p>
+<p>随后是登录提示符，登录成功后显示 shell 提示符。shell 提示符前可能有一条简短的“当日消息（the message of the day）”，存放在 <code>/etc/motd</code>。</p>
+<h3 id="_6">虚拟控制台<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>旧的系统包含多个物理控制台设备，现在一个主机模拟了多个控制台，称为虚拟控制台。Linux 系统默认情况下有 6 个虚拟控制台处于活动状态，它们是 <code>/dev/tty1-6</code>，而 <code>/dev/tty0</code> 是当前虚拟控制台的别名。在 X 窗口系统下，使用 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-f1">F1</kbd></span> 可以切换到对应的控制台，<code>tty1</code> 和 <code>tty2</code> 都是 X 窗口系统，其余是虚拟字符终端。</p>
+<h3 id="_7">系统控制台<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><code>/dev/console</code>，用于接收系统消息。系统消息不会发送到 <code>tty</code>，而是发送给 <code>console</code>。</p>
+<h2 id="_8">终端操作<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">错误纠正<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>使用 <code>stty</code> 可以查看当前终端的键位设置。</p>
+<ul>
+<li>擦除字符：<span class="keys"><kbd class="key-backspace">Backspace</kbd></span>，<span class="keys"><kbd class="key-delete">Del</kbd></span>，<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-h">H</kbd></span>。</li>
+<li>删除单词：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span></li>
+<li>删除一行：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-u">U</kbd></span>，<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-x">X</kbd></span></li>
+<li>终止执行：</li>
+<li>发送中断信号（terminal interrupt signal）：<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>，<span class="keys"><kbd class="key-delete">Del</kbd></span> </li>
+<li>挂起程序：ctrl+z++
+  -</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="nb">command</span> <span class="o">[</span>arg1<span class="o">]</span> <span class="o">[</span>arg2<span class="o">]</span> <span class="o">[</span>arg3<span class="o">]</span> ...
 </code></pre></div>
 <ul>
@@ -2371,7 +2562,7 @@
 </table>
 <h2 id="bash">bash<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h2>
 <p>几乎所有 Linux 发行版自带的 Shell 都是 <code>bash</code>，多数脚本也都基于 <code>bash</code> 运行。因此一定要熟练掌握 <code>bash</code> 的使用。</p>
-<h3 id="_2">重定向<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_10">重定向<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>重定向用于将文件导入到命令、将输出写入到文件。</p>
 <ul>
 <li>输入重定向</li>
@@ -2431,9 +2622,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_3">管道<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_11">管道<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>管道命令符 <code>|</code> 的作用是将前一个命令的输出作为后一个命令的输入</p>
-<h3 id="_4">通配符<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_12">通配符<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2499,7 +2690,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_5">转义字符<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_13">转义字符<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2526,11 +2717,11 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_6">别名<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_14">别名<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <p>使用 <code>alias 别名=命令</code> 创建别名，用 <code>unalias</code> 取消别名。</p>
-<h3 id="_7">内部命令<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_15">内部命令<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>使用 <code>type [commandName]</code> 来判断一个命令是否是内部命令。</p>
-<h3 id="_8">环境变量<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_16">环境变量<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p>Linux 中，变量名称一般都是大写的。</p>
 <!-- prettier-ignore-start -->
 <div class="admonition tip">
@@ -2593,14 +2784,14 @@
 </tbody>
 </table>
 <p>环境变量会因为用户身份和 shell 的不同而具有不同的值。使用 <code>export</code> 命令可以将一个变量提升为全局变量。</p>
-<h2 id="shell">编写 Shell 脚本<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h2>
-<h3 id="_9">基本结构<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h2 id="shell_3">编写 Shell 脚本<a class="headerlink" href="#shell_3" title="Permanent link">&para;</a></h2>
+<h3 id="_17">基本结构<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <ul>
 <li>脚本声明（<code>#!</code>）</li>
 <li>注释（<code>#</code> 开头）</li>
 <li>命令</li>
 </ul>
-<h3 id="_10">一些变量<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="_18">一些变量<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2631,7 +2822,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_11">测试语句<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h3 id="_19">测试语句<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>[ expression ]
 </code></pre></div>
 <p>注意条件表达式两侧必须有一个空格。</p>
